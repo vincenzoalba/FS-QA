@@ -1,0 +1,244 @@
+\documentclass[12pt,a4paper,final]{iopart} 
+\usepackage{graphicx}
+%\pdfoutput=1
+\usepackage{amsfonts, dsfont}
+
+\usepackage{leftidx}
+\usepackage{cite}
+\usepackage{booktabs}
+
+
+\usepackage{verbatim}
+\usepackage{color}
+\usepackage[colorlinks,bookmarks=false,citecolor=blue,
+linkcolor=red,urlcolor=blue]{hyperref}
+\usepackage{times}
+
+
+
+
+%%%%%%%%%%%%%   useful shortcuts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\begin{document}
+
+
+\author{Vincenzo Alba}
+\affiliation{International School for Advanced Studies (SISSA),
+Via Bonomea 265, 34136, Trieste, Italy, 
+INFN, Sezione di Trieste}
+
+\date{\today}
+
+
+\title{String content of the N\'eel state} 
+
+
+\begin{abstract} 
+Bla bla bla ...
+\end{abstract}
+
+% \pacs{73.43.Cd, 71.10.Pm  {\tt check!}}
+
+\maketitle
+
+\section{Reduced overlaps with the Neel state}
+
+Let us consider a generic $n$-string state
+%
+\begin{equation}
+\lambda_\alpha^{n,a}=\lambda_\alpha^n+\frac{i}{2}(n+1-2a)+i\delta_\alpha^{n,a}\quad\textrm{with}\, a=1,\dots, n.
+\end{equation}
+%
+The overlap with the Neel state reads 
+%
+\begin{equation}
+\frac{\langle\Psi_0|\{\pm\lambda_j\}_{j=1}^m,n_\infty\rangle}{|||\{\lambda_j\}_{j=1}^m,n_\infty\rangle||}=
+\frac{\sqrt{2}N_{\infty}!}{\sqrt{(2N_\infty)!}}\left[\prod_{j=1}^m\frac{\sqrt{\lambda_j^2+1/4}}{4\lambda_j}\right]
+\sqrt{\frac{\textrm{det}_m(G^+)}{\textrm{det}_m(G^-)}}
+\end{equation}
+%
+where 
+%
+\begin{equation}
+G^{\pm}_{jk}=\delta_{jk}\left(NK_{1/2}(\lambda_j)-\sum\limits_{l=1}^mK_1^+(\lambda_j,\lambda_l)\right)
++K_{1}^{\pm}(\lambda_j,\lambda_k),\quad\,j,k=1,\dots,m
+\end{equation}
+%
+and 
+%
+\begin{equation}
+K_1^\pm(\lambda,\mu)=K_1(\lambda-\mu)\pm K_1(\lambda+\mu)
+\end{equation}
+%
+and 
+%
+\begin{equation}
+K_\alpha(\lambda)\equiv\frac{2\alpha}{\lambda^2+\alpha^2}
+\end{equation}
+%
+We start focusing on $G^+$. The term $K_1^+(\lambda,\mu)$ diverges when 
+$|\lambda-\mu|=i$, which happens if $\lambda$ and $\mu$ are successive members 
+of the same string. 
+
+\begin{comment}
+For the generic case one has 
+that
+%
+\begin{equation}
+G^+_{n,\alpha,m,\beta}=\left\{\begin{array}{cc}
+2L\frac{d}{d\lambda_\alpha^n}\theta(\lambda_\alpha^n/n)
+-2\sum\limits_{(l,\gamma)\ne(n,\alpha)}\frac{d}{d\lambda_\alpha^n}(\Theta_{n,l}
+(\lambda_\alpha^n-\lambda_\gamma^l)+\Theta_{n,l}
+(\lambda_\alpha^n+\lambda_\gamma^l)) & \quad\textrm{if}\,(n,\alpha)= (m,\beta)\\
+2\frac{d}{d\lambda_\alpha^n}(\Theta_{n,m}
+(\lambda_\alpha^n-\lambda_\beta^m)+\Theta_{n,m}
+(\lambda_\alpha^n+\lambda_\beta^m)) & \quad\textrm{if}\,(n,\alpha)\ne(m,\beta)
+\end{array}\right.
+\end{equation}
+%
+where 
+%
+\begin{equation}
+\Theta_{nm}(x)\equiv\theta(x/(|n-m|))+2\theta(x/(|n-m|+2))+\cdots+
+2\theta(x/(n+m-2))+\theta(x/(n+m))
+\end{equation}
+%
+and $\theta(x)\equiv 2\arctan(x)$. For $G^-$ one obtains 
+%
+\begin{equation}
+G^-_{n,\alpha,m,\beta}=\left\{\begin{array}{cc}
+2(L-1)\frac{d}{d\lambda_\alpha^n}\theta(\lambda_\alpha^n/n)-4\sum\limits_{k=1}^{n-1}\frac{d}{d\lambda_\alpha^n}\theta(\lambda_\alpha^n/k)
+-2\sum\limits_{(l,\gamma)\ne(n,\alpha)}\frac{d}{d\lambda_\alpha^n}(\Theta_{n,l}
+(\lambda_\alpha^n-\lambda_\gamma^l)+\Theta_{n,l}
+(\lambda_\alpha^n+\lambda_\gamma^l)) & \quad\textrm{if}\,(n,\alpha)= (m,\beta)\\
+2\frac{d}{d\lambda_\alpha^n}(\Theta_{n,m}
+(\lambda_\alpha^n-\lambda_\beta^m)-\Theta_{n,m}
+(\lambda_\alpha^n+\lambda_\beta^m)) & \quad\textrm{if}\,(n,\alpha)\ne(m,\beta)
+\end{array}\right.
+\end{equation}
+%
+with
+%
+\begin{equation}
+\Theta_{nn}(x)\equiv2\theta(x/2)+2\theta(x/4)+\cdots+
+2\theta(x/(2n-2))+\theta(x/(2n))
+\end{equation}
+%
+Moreover for a $n$-string one has for odd $n$
+%
+\begin{equation}
+\prod\limits_{a=1}^n\frac{\sqrt{(\lambda_{\alpha}^{n,a})^2+1/4}}{4\lambda_{\alpha}^{n,a}}=
+\frac{1}{4^n}\left(\frac{\lambda_\alpha^n}{\sqrt{n^2+(\lambda_\alpha^n)^2}}
+\prod\limits_{k=0}^{\lfloor n/2\rfloor}\frac{(2k+1)^2+(\lambda^n_{\alpha})^2}{(2k)^2+
+(\lambda_\alpha^n)^2}\right)
+\end{equation}
+%
+while for even $n$ one has 
+%
+\begin{equation}
+\prod\limits_{a=1}^n\frac{\sqrt{(\lambda_{\alpha}^{n,a})^2+1/4}}{4\lambda_{\alpha}^{n,a}}=
+\frac{1}{4^n}\left(\frac{\sqrt{n^2+(\lambda_\alpha^n)^2}}{\lambda_\alpha^n}
+\prod\limits_{k=0}^{\lfloor n/2\rfloor-1}\frac{(2k)^2+(\lambda^n_{\alpha})^2}{(2k+1)^2+
+(\lambda_\alpha^n)^2}\right)
+\end{equation}
+%
+\subsection{Zero-momentum strings}
+\end{comment}
+
+\begin{table}[h]
+\scriptsize
+\centering
+Bethe states with nonzero N\'eel overlap ($N=12$)\\[1ex]
+\begin{tabular}{rrrrr}
+String content & $2I^+_n$ & E & $|\langle \{\lambda\}| \Psi_0 \rangle|^2$ & here \\[0.3em]
+\toprule
+6 inf & - & $0$ & $0.002164502165$ & $0.002164502165$ \\
+\midrule
+2 one, 4 inf &$1_1 $ & $-3.918985947229$ & $0.096183409244$ & $0.096183409244237$ \\
+ &$3_1 $ & $-3.309721467891$ & $0.011288497947$ &  $0.0112884979464673$\\
+ &$5_1 $ & $-2.284629676547$ & $0.004542580506$ &  $0.0045425805061850$\\
+ &$7_1 $ & $-1.169169973996$ & $0.002752622983$ &  $0.0027526229835876$\\
+ &$9_1 $ & $-0.317492934338$ & $0.002116006203$ &  $0.0021160062026402$\\
+\midrule
+4 one, 2 inf &$1_1 3_1 $ & $-7.070529325964$ & $0.310133033838$ &$ 0.554809782804$ \\
+  &$1_1 5_1 $ & $-5.847128730477$ & $0.129277023687$ \\
+  &$ 1_1 7_1$ & $-4.570746557876$ & $0.085992436024$ \\
+  &$ 3_1 5_1$ & $-5.153853093221$ & $0.015256395523$ \\
+  &$3_1 7_1 $ & $-3.916336243695$ & $0.010091113504$ \\
+  &$5_1 7_1 $ & $-2.817696043731$ & $0.004059780228$ \\
+  \midrule
+2 two, 2 inf &$1_2 $ & $-1.905667167442$ & $0.001207238321$ & $0.005468702625$\\
+  &$3_2 $ & $-1.368837200825$ & $0.002340453815$ \\
+  &$5_2 $ & $-0.681173793635$ & $0.001921010489$ \\
+    \midrule
+1 one, 1 three, 2 inf &$0_1 0_3 $ & $-2.668031843135$ & $0.034959609810$ & $0.034959609810$ \\
+    \midrule
+6 one &$1_1 3_1 5_1 $ & $-8.387390917445$ & $0.153412152966$ & $0.153412152966$ \\
+  \midrule
+2 two, 2 one &$1_1 1_2 $ & $-5.401838225870$ & $0.040162686361$ & $0.046134750850$ \\
+  &$3_1 1_2 $ & $-4.613929948329$ & $0.004636541934$ \\
+  &$5_1 1_2 $ & $-3.147465758841$ & $0.001335522556$ \\
+    \midrule
+1 three, 3 one &$0_1 2_1 0_3$ & $-6.340207488736$ & $0.052743525774$ & $0.078910020729$ \\
+  &$0_1 4_1 0_3$ & $-5.203653009936$ & $0.015022005621$ \\
+  &$0_1 6_1 0_3$ & $-3.788693957250$ & $0.011144489334$ \\
+      \midrule
+1 five, 1 one &$0_1 0_5$ & $-2.444293750583$ & $0.005887902992$ & $0.005887902992$ \\
+      \midrule
+2 three &$1_3$ & $-1.111855930538$ & $0.001342476001$ & $0.001342476001$ \\
+      \midrule
+1 two, 1 four &$0_2 0_4$ & $-1.560671012472$ & $0.000026982174$ & $0.000026982174$ \\
+  \bottomrule
+ \end{tabular}
+\caption{All Bethe states for $N=12$ with nonzero overlap with the zero-momentum N\'eel state. The overlap squares add up to $1$ up to the precision in which the Bethe equations were solved. The $2I^+_n$ in the second column give the positive $n$-string quantum numbers of the parity-invariant Bethe states.}
+\label{table:RV:sumruleN12}
+\end{table}
+
+The number of eigenstates excluding the zero-momentum strings is given by the sequence A014495.
+It is given as a function of the chain length as 
+%
+\begin{equation}
+C\left(\frac{L}{2},\left\lfloor\frac{L}{4}\right\rfloor\right)-1
+\end{equation}
+%
+with $C(x,y)$ denoting the binomial coefficient. Notice that the number of states, which have non-zero 
+overlap with the Neel state, is in principle 
+%
+\begin{equation}
+2^{\frac{L}{2}-1}+\frac{(1+(-1)^{\frac{L}{2}})}{4}C\left(\frac{L}{2},\frac{L}{4}\right)
+\end{equation}
+%
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

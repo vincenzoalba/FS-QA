@@ -1,0 +1,331 @@
+\documentclass[onecolumn,superscriptaddress,pr]{revtex4}
+\usepackage{verbatim}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[colorlinks,bookmarks=false,citecolor=blue,
+linkcolor=red,urlcolor=blue]{hyperref}
+\usepackage{times}
+
+%\usepackage[dvips]{graphics}
+
+
+
+%%%%%%%%%%%%%   useful shortcuts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def \h{\hbar}   %  \h won't be used for any greek letter
+\def \refe{\eqref}
+\def \trm{\textrm}
+\def \f{\frac}
+\def \del{\partial}    % for writing partial derivatives
+\def \hf{\tfrac{1}{2}}    \def \HF{\dfrac{1}{2}}
+\def \u{\uparrow}
+\def \d{\downarrow}
+
+\def \ord{\mathcal{O}}
+\newcommand{\ra}{\rightarrow}   \newcommand{\lra}{\longrightarrow}  
+
+\def\lba{\left(}    \def\rba{\right)}
+\def\lbc{\left[}    \def\rbc{\right]}
+\def\lbb{\left\{}    \def\rbb{\right\}}
+
+\def\tr{\textrm{Tr}}
+\def\refe{\eqref}
+
+\newcommand{\bra}[1]{\langle\left.{#1}\right|}
+\newcommand{\ket}[1]{\left|{#1}\right.\rangle}
+\newcommand{\xpct}[1]{\langle{#1}\rangle}    % expectatn value
+
+%\DeclareMathOperator{\tr}{tr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\vp}{{\bf p}}  % usual vector quantities
+\newcommand{\vq}{{\bf q}}  % double bracketing not required with \vec
+\newcommand{\vk}{{\bf k}}  % but required with \bf
+
+\renewcommand{\vr}{{\bf r}} 
+\newcommand{\vx}{{\bf x}}
+
+\newcommand{\hc}{\hat{c}}  \newcommand{\hcd}{\hat{c}^\dag} 
+\newcommand{\hd}{\hat{d}}  \newcommand{\hdd}{\hat{d}^\dag} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% definitions specific to this document
+
+\newcommand{\domwll}{\S} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\begin{document}
+
+
+\author{Vincenzo Alba}
+\affiliation{International School for Advanced Studies (SISSA),
+Via Bonomea 265, 34136, Trieste, Italy, 
+INFN, Sezione di Trieste}
+
+\date{\today}
+
+
+\title{String content of the N\'eel state} 
+
+
+\begin{abstract} 
+Bla bla bla ...
+\end{abstract}
+
+% \pacs{73.43.Cd, 71.10.Pm  {\tt check!}}
+
+\maketitle
+
+\section{Reduced overlaps with the Neel state}
+
+Let us consider a generic $n$-string state
+%
+\begin{equation}
+\lambda_\alpha^{n,a}=\lambda_\alpha^n+\frac{i}{2}(n+1-2a)+i\delta_\alpha^{n,a}\quad\textrm{with}\, a=1,\dots, n.
+\end{equation}
+%
+The overlap with the Neel state reads 
+%
+\begin{equation}
+\frac{\langle\Psi_0|\{\pm\lambda_j\}_{j=1}^m,n_\infty\rangle}{|||\{\lambda_j\}_{j=1}^m,n_\infty\rangle||}=
+\frac{\sqrt{2}N_{\infty}!}{\sqrt{(2N_\infty)!}}\left[\prod_{j=1}^m\frac{\sqrt{\lambda_j^2+1/4}}{4\lambda_j}\right]
+\sqrt{\frac{\textrm{det}_m(G^+)}{\textrm{det}_m(G^-)}}
+\end{equation}
+%
+where 
+%
+\begin{equation}
+G^{\pm}_{jk}=\delta_{jk}\left(NK_{1/2}(\lambda_j)-\sum\limits_{l=1}^mK_1^+(\lambda_j,\lambda_l)\right)
++K_{1}^{\pm}(\lambda_j,\lambda_k),\quad\,j,k=1,\dots,m
+\end{equation}
+%
+and 
+%
+\begin{equation}
+K_1^\pm(\lambda,\mu)=K_1(\lambda-\mu)\pm K_1(\lambda+\mu)
+\end{equation}
+%
+and 
+%
+\begin{equation}
+K_\alpha(\lambda)\equiv\frac{2\alpha}{\lambda^2+\alpha^2}
+\end{equation}
+%
+We start focusing on $G^+$. The term $K_1^+(\lambda,\mu)$ diverges when 
+$|\lambda-\mu|=i$, which happens if $\lambda$ and $\mu$ are successive members 
+of the same string. 
+
+Let us first discuss the situation with two $2$-strings. 
+The matrix $G^+$ has the structure 
+%
+\begin{equation}
+\left(\begin{array}{cc}
+D_1-F^-_{12}-F^+_{12} & D_1\\
+D_1 & D_1+D_2
+\end{array}
+\right)
+\end{equation}
+% 
+where we defined $D_j\equiv LK_{1/2}(\lambda_j)$ and $F^{\pm}_{ij}\equiv K_1(\lambda_i\pm\lambda_j)$.
+Since $F^-_{12}\sim -1/\delta^2$, with $\delta$ the string deviation, one can consider the matrix 
+%
+\begin{equation}
+\left(\begin{array}{cc}
+-1/\delta^2 & 0\\
+0 & D_1+D_2
+\end{array}
+\right)
+\end{equation}
+% 
+For $G^-$ one can write
+%
+\begin{equation}
+\left(\begin{array}{cc}
+\tilde D_1-F^-_{12}-F^+_{12} & \tilde D_1-2F_{12}^+\\
+\tilde D_1 -2F_{12}^+ & \tilde D_1+\tilde D_2-4F_{12}^+
+\end{array}
+\right)
+\end{equation}
+% 
+where $\tilde D_j\equiv (L-1)K_{1/2}(\lambda_j)$
+which at the leading order in $1/\delta$ can be written as 
+%
+\begin{equation}
+\left(\begin{array}{cc}
+-1/\delta & 0\\
+0 & \tilde D_1+\tilde D_2-4F_{12}^+
+\end{array}
+\right)
+\end{equation}
+% 
+For a $3$-string by simple row and column manipulations we can reduce $G^+$ to 
+%
+\begin{equation}
+\left(\begin{array}{ccc}
+D_1-F_{12}^+-F_{12}^--F_{13}^--F_{13}^+ & D_1-F_{13}^--F_{13}^+ & D_1\\
+D_1-F_{13}^--F_{13}^+ & D_1+D_2-F_{23}^+-F_{23}^--F_{13}^--F_{13}^+ & D_1+D_2\\
+D_1 & D_1+D_2 & D_1+D_2+D_3
+\end{array}
+\right)
+\end{equation}
+% 
+The leading order of $\textrm{det}(G^+)$ is obtained from the reduced matrix 
+%
+\begin{equation}
+\left(\begin{array}{ccc}
+-1/\delta^2 & 0 & 0\\
+0 & -1/\delta^2 & 0 \\
+0 & 0 & D_1+D_2+D_3
+\end{array}
+\right)
+\end{equation}
+% 
+Similarly, for the matrix $G^-$ one has 
+%
+\begin{equation}
+\left(\begin{array}{ccc}
+\tilde D_1-F_{12}^+-F_{12}^--F_{13}^--F_{13}^+   &    \tilde D_1-2F_{12}^+-F_{13}^--F_{13}^+                                      &   \tilde D_1-2F_{12}^+-2F_{13}^+\\
+\tilde D_1-2F_{12}^+-F_{13}^--F_{13}^+           &    \tilde D_1+\tilde D_2-4F_{12}^+-F_{23}^+-F_{23}^--F_{13}^--F_{13}^+         &   \tilde D_1+\tilde D_2 -4F_{12}^+-2F_{23}^+-2F_{13}^+\\
+\tilde D_1 -2F_{12}^+ -2F_{13}^+                 &     \tilde D_1+\tilde D_2 -4F_{12}^+-2F_{13}^+-2F_{23}^+                       &   \tilde D_1+\tilde D_2+\tilde D_3 -4F_{12}^+-4F_{13}^+-4F_{23}^+
+\end{array}
+\right)
+\end{equation}
+% 
+while the leading order of $\textrm{det}G^-$ is obtained from the matrix 
+%
+\begin{equation}
+\left(\begin{array}{ccc}
+-1/\delta^2 & 0 & 0\\
+0 & -1/\delta^2 & 0 \\
+0 & 0 & \tilde D_1+\tilde D_2+\tilde D_3 -4(F_{12}^++F_{13}^++F_{23}^+)
+\end{array}
+\right)
+\end{equation}
+% 
+The generalizion to the $n$-string for $G^+$ should be  
+%
+\begin{equation}
+G^+_{an}=G_{na}^+=\left\{
+\begin{array}{cc}
+D_a-\sum\limits_{k=n+1}^M (F^+_{ka}+F^-_{ka}) & \textrm{for}\, a<n\\
+\sum\limits_{k=1}^n(D_k-\sum\limits_{l=n+1}^M(F^+_{kl}+F^-_{kl})) & \textrm{for}\, a=n\\
+-\sum\limits_{k=1}^n(F^+_{ka}+F^-_{ka}) & \textrm{for}\, a>n
+\end{array}
+\right.
+\end{equation}
+%
+%while for $G^-$ one obtains 
+%
+%\begin{equation}
+%G^-_{an}=G_{na}^-=\left\{
+%\begin{array}{cc}
+%\tilde D_a-F^+_{12}-\sum\limits_{k=n+1}^M (F^+_{ka}+F^-_{ka}) & \textrm{for}\, a=n=1\\
+%-4F_{12}^++\sum\limits_{k=1}^n(\tilde D_k-\sum\limits_{l=n+1}^M(F^+_{kl}+F^-_{kl})) & \textrm{for}\, a=n>1\\
+%\tilde D_a-2F^+_{12}-\sum\limits_{k=n+1}^M (F^+_{ka}+F^-_{ka}) & \textrm{for}\, 1=a<n\\
+%-\sum\limits_{k=1}^n(F^+_{ka}+F^-_{ka}) & \textrm{for}\, a>n
+%\end{array}
+%\right.
+%\end{equation}
+%
+For the generic case one has 
+that
+%
+\begin{equation}
+G^+_{n,\alpha,m,\beta}=\left\{\begin{array}{cc}
+2L\frac{d}{d\lambda_\alpha^n}\theta(\lambda_\alpha^n/n)
+-2\sum\limits_{(l,\gamma)\ne(n,\alpha)}\frac{d}{d\lambda_\alpha^n}(\Theta_{n,l}
+(\lambda_\alpha^n-\lambda_\gamma^l)+\Theta_{n,l}
+(\lambda_\alpha^n+\lambda_\gamma^l)) & \quad\textrm{if}\,(n,\alpha)= (m,\beta)\\
+2\frac{d}{d\lambda_\alpha^n}(\Theta_{n,m}
+(\lambda_\alpha^n-\lambda_\beta^m)+\Theta_{n,m}
+(\lambda_\alpha^n+\lambda_\beta^m)) & \quad\textrm{if}\,(n,\alpha)\ne(m,\beta)
+\end{array}\right.
+\end{equation}
+%
+where 
+%
+\begin{equation}
+\Theta_{nm}(x)\equiv\theta(x/(|n-m|))+2\theta(x/(|n-m|+2))+\cdots+
+2\theta(x/(n+m-2))+\theta(x/(n+m))
+\end{equation}
+%
+and $\theta(x)\equiv 2\arctan(x)$. For $G^-$ one obtains 
+%
+\begin{equation}
+G^-_{n,\alpha,m,\beta}=\left\{\begin{array}{cc}
+2(L-1)\frac{d}{d\lambda_\alpha^n}\theta(\lambda_\alpha^n/n)-4\sum\limits_{k=1}^{n-1}\frac{d}{d\lambda_\alpha^n}\theta(\lambda_\alpha^n/k)
+-2\sum\limits_{(l,\gamma)\ne(n,\alpha)}\frac{d}{d\lambda_\alpha^n}(\Theta_{n,l}
+(\lambda_\alpha^n-\lambda_\gamma^l)+\Theta_{n,l}
+(\lambda_\alpha^n+\lambda_\gamma^l)) & \quad\textrm{if}\,(n,\alpha)= (m,\beta)\\
+2\frac{d}{d\lambda_\alpha^n}(\Theta_{n,m}
+(\lambda_\alpha^n-\lambda_\beta^m)-\Theta_{n,m}
+(\lambda_\alpha^n+\lambda_\beta^m)) & \quad\textrm{if}\,(n,\alpha)\ne(m,\beta)
+\end{array}\right.
+\end{equation}
+%
+with
+%
+\begin{equation}
+\Theta_{nn}(x)\equiv2\theta(x/2)+2\theta(x/4)+\cdots+
+2\theta(x/(2n-2))+\theta(x/(2n))
+\end{equation}
+%
+Moreover for a $n$-string one has for odd $n$
+%
+\begin{equation}
+\prod\limits_{a=1}^n\frac{\sqrt{(\lambda_{\alpha}^{n,a})^2+1/4}}{4\lambda_{\alpha}^{n,a}}=
+\frac{1}{4^n}\left(\frac{\lambda_\alpha^n}{\sqrt{n^2+(\lambda_\alpha^n)^2}}
+\prod\limits_{k=0}^{\lfloor n/2\rfloor}\frac{(2k+1)^2+(\lambda^n_{\alpha})^2}{(2k)^2+
+(\lambda_\alpha^n)^2}\right)
+\end{equation}
+%
+while for even $n$ one has 
+%
+\begin{equation}
+\prod\limits_{a=1}^n\frac{\sqrt{(\lambda_{\alpha}^{n,a})^2+1/4}}{4\lambda_{\alpha}^{n,a}}=
+\frac{1}{4^n}\left(\frac{\sqrt{n^2+(\lambda_\alpha^n)^2}}{\lambda_\alpha^n}
+\prod\limits_{k=0}^{\lfloor n/2\rfloor-1}\frac{(2k)^2+(\lambda^n_{\alpha})^2}{(2k+1)^2+
+(\lambda_\alpha^n)^2}\right)
+\end{equation}
+%
+\subsection{Zero-momentum strings}
+
+Extra divergencies arise when there are strings with zero center. 
+We analyze first the case with one $1$-string and a $3$-string.
+It is very interesting to notice that one obtains 
+%
+% 
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

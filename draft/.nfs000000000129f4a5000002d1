@@ -1,0 +1,154 @@
+\documentclass[11pt]{iopart}
+\usepackage[english]{babel}
+\pdfoutput=1
+%\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{color}
+\usepackage{sidecap}
+\usepackage{bm}% bold math
+
+\usepackage[colorlinks,bookmarks=false,citecolor=blue,linkcolor=red,urlcolor=blue]{hyperref}
+
+%\usepackage{cite}
+
+%
+% WARNING !!!!
+% 
+% iopart.cls definition of \tableofcontents overwrites the
+% short title printed every page. 
+% The following redefinition of \tableofcontents fixes the
+% the problem. 
+
+\catcode`@=11 % If we need private TeX macros
+\renewcommand\tableofcontents{%
+  \section*{\contentsname}%
+  \@starttoc{toc}%
+}
+\catcode`@=12% '@' is no more a character
+\newcommand{\bra}[1]{\langle\left.{#1}\right|}
+\newcommand{\ket}[1]{\left|{#1}\right.\rangle}
+
+
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\u{\uparrow}
+\def\d{\downarrow}
+\def\nm{\newmoon}
+\def\fm{\fullmoon}
+\def\T{\rule{0pt}{.6cm}}
+\def\B{\rule[-.4cm]{0pt}{0pt}}
+
+\begin{document}
+
+\setlength{\parindent}{0pt}
+
+
+\title{Finite-size study of the Quench Action approach in integrable spin 
+chains}
+
+\author{Vincenzo Alba$^1$}
+\affiliation{International School for Advanced Studies (SISSA),
+Via Bonomea 265, 34136, Trieste, Italy,
+INFN, Sezione di Trieste}
+\author{Pasquale Calabrese}
+\affiliation{International School for Advanced Studies (SISSA),
+Via Bonomea 265, 34136, Trieste, Italy,
+INFN, Sezione di Trieste}
+
+
+\date{\today}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract} 
+
+
+fdasfa
+\end{abstract}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%% INTRODUCTION %%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\label{intro}
+
+%%%%%% NEEL OVERLAP
+\section{Overlap with the Neel state}
+
+Let us consider a generic $n$-string state
+%
+\begin{equation}
+\lambda_{n;\alpha}^{a}=\lambda_{n;\alpha}+\frac{i}{2}(n+1-2a)+i\delta_{n;\alpha}^{a}
+\quad\textrm{with}\, a=1,\dots, n.
+\end{equation}
+%
+We denote the generic parity invariant eigenstate as $|\{\pm\lambda_j\}_{j=1}^m,n_\infty\rangle$, 
+where $m$ is the number of rapidity pairs, $N_{\infty}$ is the number of infinite rapidities, 
+with $M=L/2=N_\infty+2m$, and $n_\infty\equiv N_\infty/L$ is the infinite rapidities density. 
+
+The overlap with the Neel state reads 
+%
+\begin{equation}
+\frac{\langle\Psi_0|\{\pm\lambda_j\}_{j=1}^m,n_\infty\rangle}{|||\{\lambda_j\}_{j=1}^m,n_\infty\rangle||}=
+\frac{\sqrt{2}N_{\infty}!}{\sqrt{(2N_\infty)!}}\left[\prod_{j=1}^m\frac{\sqrt{\lambda_j^2+1/4}}{4\lambda_j}\right]
+\sqrt{\frac{\textrm{det}_m(G^+)}{\textrm{det}_m(G^-)}}
+\end{equation}
+%
+where 
+%
+\begin{equation}
+G^{\pm}_{jk}=\delta_{jk}\left(NK_{1/2}(\lambda_j)-\sum\limits_{l=1}^mK_1^+(\lambda_j,\lambda_l)\right)
++K_{1}^{\pm}(\lambda_j,\lambda_k),\quad\,j,k=1,\dots,m
+\end{equation}
+%
+and 
+%
+\begin{equation}
+K_1^\pm(\lambda,\mu)=K_1(\lambda-\mu)\pm K_1(\lambda+\mu)
+\end{equation}
+%
+and 
+%
+\begin{equation}
+K_\alpha(\lambda)\equiv\frac{2\alpha}{\lambda^2+\alpha^2}
+\end{equation}
+%
+
+
+%##################################################################
+%\begin{figure}[t]
+%\begin{center}
+%\includegraphics[width=.6\textwidth]{fig02_cartoon}
+%\end{center}
+%\caption{ Allowed values for the Bethe momenta $k\equiv(\textrm{Re}(k), \textrm{Im}(k))$ in the
+%  complex plane, for the open-boundary XXZ chain. The dashed area represents the excluded regions
+%  The line $\textrm{Re}(k)=\pi$ is excluded.  Purely imaginary momenta with $\textrm{Im}(k)>0$ are
+%  allowed.  }
+%\label{fig_0}
+%\end{figure}
+%##################################################################
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%% REFERENCES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{thebibliography}{99}
+
+
+%\end{thebibliography}
+
+
+\end{document}
+
+
