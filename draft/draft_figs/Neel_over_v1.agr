@@ -63,7 +63,7 @@
 @timestamp rot 0
 @timestamp font 0
 @timestamp char size 1.000000
-@timestamp def "Fri Jul 17 15:05:50 2015"
+@timestamp def "Mon Jul 20 11:59:39 2015"
 @r0 off
 @link r0 to g0
 @r0 type polyi
@@ -183,7 +183,7 @@
 @    yaxis  bar color 1
 @    yaxis  bar linestyle 1
 @    yaxis  bar linewidth 1.0
-@    yaxis  label "\v{-.15}\+\+\xS\f{}\v{.15} \-\-\s\h{-.5}{\xl\f{}}\N|<{\xl\f{}}|Neel\N\f{}>|\S2"
+@    yaxis  label "\v{-.15}\+\+\xS\f{}\v{.15} \-\-\s\h{-.5}{\xl\f{}}\N|<{\xl\f{}}|N\N\f{}>|\S2"
 @    yaxis  label layout para
 @    yaxis  label place auto
 @    yaxis  label char size 1.720000

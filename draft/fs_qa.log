@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=latex 2015.1.29)  17 JUL 2015 16:54
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=latex 2015.1.29)  22 JUL 2015 14:59
 entering extended mode
  %&-line parsing enabled.
 **fs_qa.tex
@@ -209,7 +209,17 @@ Package hyperref Info: Link coloring ON on input line 3120.
 (/usr/share/texmf/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2007/02/07 v6.75r Hyperref driver for pdfTeX
 \Fld@listcount=\count101
-) (./fs_qa.aux)
+) (./fs_qa.aux
+
+LaTeX Warning: Label `fig4-neel-ener' multiply defined.
+
+
+LaTeX Warning: Label `table:RV:sumruleN12' multiply defined.
+
+
+LaTeX Warning: Label `table:RV:sumruleN12' multiply defined.
+
+)
 \openout1 = `fs_qa.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
@@ -226,8 +236,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
 LaTeX Font Info:    ... okay on input line 47.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
 LaTeX Font Info:    ... okay on input line 47.
-
-(/usr/share/texmf/tex/latex/ragged2e/ragged2e.sty
+ (/usr/share/texmf/tex/latex/ragged2e/ragged2e.sty
 Package: ragged2e 2003/03/25 v2.04 ragged2e Package (MS)
 
 (/usr/share/texmf/tex/latex/everysel/everysel.sty
@@ -294,65 +303,129 @@ LaTeX Font Warning: Font shape `U/wasy/b/n' in size <5> not available
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (10.58632pt too wide) detected at line 107
-$ [][]\OML/cmm/m/it/12 G[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 ^^N[] [] \OT1/cmr
-/m/n/12 + \OML/cmm/m/it/12 K[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^U[]; ^^U[]\OT
-1/cmr/m/n/12 )\OML/cmm/m/it/12 ;   j; k \OT1/cmr/m/n/12 = 1\OML/cmm/m/it/12 ; [
-] ; m[]$ []\OT1/cmr/m/n/12 (3)[]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+
+LaTeX Warning: Citation `bethe-1931' on page 3 undefined on input line 190.
+
+
+LaTeX Warning: Citation `taka-book' on page 3 undefined on input line 190.
+
+
+Underfull \hbox (badness 1297) in paragraph at lines 233--235
+[]\OT1/cmr/m/n/12 Each $\OML/cmm/m/it/12 M$\OT1/cmr/m/n/12 -particle eigenstate
+ can be characterized by its ``string content'' $\OMS/cmsy/m/n/12 S ^^Q
+ []
+
+[3]pdfTeX warning (ext4): destination with the same identifier (name{equation.1
+1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.244 \begin{equation}
+                      pdfTeX warning (ext4): destination with the same identifi
+er (name{equation.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.244 \begin{equation}
+                      pdfTeX warning (ext4): destination with the same identifi
+er (name{equation.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.244 \begin{equation}
+                      pdfTeX warning (ext4): destination with the same identifi
+er (name{equation.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.244 \begin{equation}
+                      
+Overfull \hbox (4.46135pt too wide) detected at line 283
+$ [][]\OML/cmm/m/it/12 G[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 ^^N[][]NK[]\OT1/c
+mr/m/n/12 (\OML/cmm/m/it/12 ^^U[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ [] \OML
+/cmm/m/it/12 K[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^U[]; ^^U[]\OT1/cmr/m/n/12 )
+[] + \OML/cmm/m/it/12 K[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^U[]; ^^U[]\OT1/cmr
+/m/n/12 )\OML/cmm/m/it/12 ;   j; k \OT1/cmr/m/n/12 = 1\OML/cmm/m/it/12 ; [] ; m
+[]$ []\OT1/cmr/m/n/12 (13)[]
+ []
+
+[4]
+Overfull \hbox (64.8554pt too wide) detected at line 333
+$ []| []\OML/cmm/m/it/12 G[] \OT1/cmr/m/n/12 = [] []$ [](16)[]
  []
 
 
-Overfull \hbox (58.98045pt too wide) detected at line 150
-$ []| []\OML/cmm/m/it/12 G[] \OT1/cmr/m/n/12 = [] []$ [](6)[]
+Overfull \hbox (186.09096pt too wide) detected at line 350
+$ []| []\OML/cmm/m/it/12 G[] \OT1/cmr/m/n/12 = [] []$ [](17)[]
  []
 
-
-Overfull \hbox (180.21602pt too wide) detected at line 166
-$ []| []\OML/cmm/m/it/12 G[] \OT1/cmr/m/n/12 = [] []$ [](7)[]
- []
-
-[2] <./draft_figs/L20_BT_check.pdf, id=40, 791.95876pt x 335.2525pt>
+<./draft_figs/L20_BT_check.pdf, id=72, 791.95876pt x 335.2525pt>
 File: ./draft_figs/L20_BT_check.pdf Graphic file (type pdf)
 
 <use ./draft_figs/L20_BT_check.pdf>
-<./draft_figs/Neel_over.pdf, id=41, 733.74126pt x 483.8075pt>
-File: ./draft_figs/Neel_over.pdf Graphic file (type pdf)
+<./draft_figs/Neel.pdf, id=73, 1265.72874pt x 532.99126pt>
+File: ./draft_figs/Neel.pdf Graphic file (type pdf)
 
-<use ./draft_figs/Neel_over.pdf>
-<./draft_figs/Dimer_over.pdf, id=42, 714.67pt x 478.78876pt>
-File: ./draft_figs/Dimer_over.pdf Graphic file (type pdf)
+<use ./draft_figs/Neel.pdf>
+<./draft_figs/Dimer.pdf, id=74, 1277.77374pt x 528.97626pt>
+File: ./draft_figs/Dimer.pdf Graphic file (type pdf)
 
-<use ./draft_figs/Dimer_over.pdf>
-<./draft_figs/Neel_over_ener.pdf, id=43, 789.95125pt x 436.63126pt>
+<use ./draft_figs/Dimer.pdf>
+<./draft_figs/Neel_over_ener.pdf, id=75, 789.95125pt x 436.63126pt>
 File: ./draft_figs/Neel_over_ener.pdf Graphic file (type pdf)
 
-<use ./draft_figs/Neel_over_ener.pdf> [3] [4 <./draft_figs/L20_BT_check.pdf> <.
-/draft_figs/Neel_over.pdf>] [5 <./draft_figs/Dimer_over.pdf> <./draft_figs/Neel
-_over_ener.pdf>] (./fs_qa.aux) ) 
+<use ./draft_figs/Neel_over_ener.pdf>
+<./draft_figs/QAMC_Obs_Neel.pdf, id=76, 793.96625pt x 337.26pt>
+File: ./draft_figs/QAMC_Obs_Neel.pdf Graphic file (type pdf)
+
+<use ./draft_figs/QAMC_Obs_Neel.pdf> [5]
+
+LaTeX Warning: Text page 6 contains only floats.
+
+[6 <./draft_figs/L20_BT_check.pdf> <./draft_figs/Neel.pdf>] [7 <./draft_figs/Di
+mer.pdf> <./draft_figs/Neel_over_ener.pdf>] [8 <./draft_figs/QAMC_Obs_Neel.pdf>
+]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9] [10]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+(./fs_qa.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4046 strings out of 256217
- 51328 string characters out of 1917095
- 121962 words of memory out of 1500000
- 7227 multiletter control sequences out of 10000+200000
+ 4113 strings out of 256217
+ 52072 string characters out of 1917095
+ 132427 words of memory out of 1500000
+ 7250 multiletter control sequences out of 10000+200000
  18182 words of font info for 69 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 25i,10n,25p,980b,356s stack positions out of 5000i,500n,6000p,200000b,15000s
-</usr/share/texmf/fonts/type1/bluesky/cm/cmbx10
-.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf/font
-s/type1/bluesky/cm/cmex10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi10.p
-fb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi12.pfb></usr/share/texmf/fonts/
-type1/bluesky/cm/cmmi6.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi7.pfb><
-/usr/share/texmf/fonts/type1/bluesky/cm/cmmi8.pfb></usr/share/texmf/fonts/type1
-/bluesky/cm/cmr10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb></usr/
-share/texmf/fonts/type1/bluesky/cm/cmr6.pfb></usr/share/texmf/fonts/type1/blues
-ky/cm/cmr7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr8.pfb></usr/share/te
-xmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/
-cmsy7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy8.pfb></usr/share/texmf/
-fonts/type1/bluesky/cm/cmti12.pfb>
-Output written on fs_qa.pdf (5 pages, 2460494 bytes).
+ 25i,12n,32p,998b,362s stack positions out of 5000i,500n,6000p,200000b,15000s
+</usr/share/texmf/fonts/type1/bluesky/cm/cmbx10.pfb></usr/share/texmf/fonts/t
+ype1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmex10.pfb>
+</usr/share/texmf/fonts/type1/bluesky/cm/cmmi10.pfb></usr/share/texmf/fonts/typ
+e1/bluesky/cm/cmmi12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi6.pfb></u
+sr/share/texmf/fonts/type1/bluesky/cm/cmmi7.pfb></usr/share/texmf/fonts/type1/b
+luesky/cm/cmmi8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr10.pfb></usr/sh
+are/texmf/fonts/type1/bluesky/cm/cmr12.pfb></usr/share/texmf/fonts/type1/bluesk
+y/cm/cmr6.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr7.pfb></usr/share/tex
+mf/fonts/type1/bluesky/cm/cmr8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cms
+y10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy7.pfb></usr/share/texmf/fo
+nts/type1/bluesky/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmti12.
+pfb></usr/share/texmf/fonts/type1/public/cmex/fmex8.pfb>
+Output written on fs_qa.pdf (11 pages, 2531458 bytes).
 PDF statistics:
- 147 PDF objects out of 1000 (max. 8388607)
- 22 named destinations out of 1000 (max. 131072)
- 37 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 245 PDF objects out of 1000 (max. 8388607)
+ 65 named destinations out of 1000 (max. 131072)
+ 42 words of extra memory for PDF output out of 10000 (max. 10000000)
 
