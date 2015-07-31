@@ -63,7 +63,7 @@
 @timestamp rot 0
 @timestamp font 0
 @timestamp char size 1.000000
-@timestamp def "Thu Jul 23 10:26:14 2015"
+@timestamp def "Mon Jul 27 10:18:14 2015"
 @with string
 @    string on
 @    string loctype view
@@ -335,22 +335,22 @@
 @    frame background color 0
 @    frame background pattern 0
 @    s0 hidden false
-@    s0 type xydy
-@    s0 symbol 1
-@    s0 symbol size 0.800000
-@    s0 symbol color 1
+@    s0 type xy
+@    s0 symbol 0
+@    s0 symbol size 1.000000
+@    s0 symbol color 2
 @    s0 symbol pattern 1
-@    s0 symbol fill color 0
-@    s0 symbol fill pattern 1
-@    s0 symbol linewidth 1.5
+@    s0 symbol fill color 2
+@    s0 symbol fill pattern 0
+@    s0 symbol linewidth 1.0
 @    s0 symbol linestyle 1
 @    s0 symbol char 65
 @    s0 symbol char font 0
 @    s0 symbol skip 0
 @    s0 line type 1
-@    s0 line linestyle 2
-@    s0 line linewidth 1.0
-@    s0 line color 1
+@    s0 line linestyle 5
+@    s0 line linewidth 2.0
+@    s0 line color 2
 @    s0 line pattern 1
 @    s0 baseline type 0
 @    s0 baseline off
@@ -372,34 +372,34 @@
 @    s0 avalue offset 0.000000 , 0.000000
 @    s0 errorbar on
 @    s0 errorbar place both
-@    s0 errorbar color 1
+@    s0 errorbar color 2
 @    s0 errorbar pattern 1
-@    s0 errorbar size 0.560000
-@    s0 errorbar linewidth 1.5
+@    s0 errorbar size 1.000000
+@    s0 errorbar linewidth 1.0
 @    s0 errorbar linestyle 1
-@    s0 errorbar riser linewidth 1.5
+@    s0 errorbar riser linewidth 1.0
 @    s0 errorbar riser linestyle 1
 @    s0 errorbar riser clip off
 @    s0 errorbar riser clip length 0.100000
-@    s0 comment "Cols 1:2:3"
+@    s0 comment "QAMC_Obs_Neel.agr"
 @    s0 legend  ""
 @    s1 hidden false
 @    s1 type xy
-@    s1 symbol 0
+@    s1 symbol 1
 @    s1 symbol size 1.000000
-@    s1 symbol color 2
+@    s1 symbol color 1
 @    s1 symbol pattern 1
-@    s1 symbol fill color 2
-@    s1 symbol fill pattern 0
-@    s1 symbol linewidth 1.0
+@    s1 symbol fill color 0
+@    s1 symbol fill pattern 1
+@    s1 symbol linewidth 1.5
 @    s1 symbol linestyle 1
 @    s1 symbol char 65
 @    s1 symbol char font 0
 @    s1 symbol skip 0
-@    s1 line type 1
-@    s1 line linestyle 5
-@    s1 line linewidth 2.0
-@    s1 line color 2
+@    s1 line type 0
+@    s1 line linestyle 1
+@    s1 line linewidth 1.0
+@    s1 line color 1
 @    s1 line pattern 1
 @    s1 baseline type 0
 @    s1 baseline off
@@ -421,7 +421,7 @@
 @    s1 avalue offset 0.000000 , 0.000000
 @    s1 errorbar on
 @    s1 errorbar place both
-@    s1 errorbar color 2
+@    s1 errorbar color 1
 @    s1 errorbar pattern 1
 @    s1 errorbar size 1.000000
 @    s1 errorbar linewidth 1.0
@@ -430,12 +430,12 @@
 @    s1 errorbar riser linestyle 1
 @    s1 errorbar riser clip off
 @    s1 errorbar riser clip length 0.100000
-@    s1 comment ""
+@    s1 comment "Editor"
 @    s1 legend  ""
 @    s2 hidden false
-@    s2 type xy
+@    s2 type xydy
 @    s2 symbol 1
-@    s2 symbol size 1.000000
+@    s2 symbol size 0.800000
 @    s2 symbol color 1
 @    s2 symbol pattern 1
 @    s2 symbol fill color 0
@@ -445,8 +445,8 @@
 @    s2 symbol char 65
 @    s2 symbol char font 0
 @    s2 symbol skip 0
-@    s2 line type 0
-@    s2 line linestyle 1
+@    s2 line type 1
+@    s2 line linestyle 2
 @    s2 line linewidth 1.0
 @    s2 line color 1
 @    s2 line pattern 1
@@ -472,14 +472,14 @@
 @    s2 errorbar place both
 @    s2 errorbar color 1
 @    s2 errorbar pattern 1
-@    s2 errorbar size 1.000000
-@    s2 errorbar linewidth 1.0
+@    s2 errorbar size 0.560000
+@    s2 errorbar linewidth 1.5
 @    s2 errorbar linestyle 1
-@    s2 errorbar riser linewidth 1.0
+@    s2 errorbar riser linewidth 1.5
 @    s2 errorbar riser linestyle 1
 @    s2 errorbar riser clip off
 @    s2 errorbar riser clip length 0.100000
-@    s2 comment "Editor"
+@    s2 comment "Cols 1:2:3"
 @    s2 legend  ""
 @g1 on
 @g1 hidden false
@@ -731,7 +731,7 @@
 @    s1 errorbar riser linestyle 1
 @    s1 errorbar riser clip off
 @    s1 errorbar riser clip length 0.100000
-@    s1 comment ""
+@    s1 comment "QAMC_Obs_Neel.agr"
 @    s1 legend  ""
 @g2 on
 @g2 hidden false
@@ -744,7 +744,7 @@
 @g2 fixedpoint format general general
 @g2 fixedpoint prec 6, 6
 @with g2
-@    world 0, 0.247, 0.13, 0.252999
+@    world 0, 0.246, 0.2, 0.252
 @    stack world 0, 0, 0, 0
 @    znorm 1
 @    view 0.759022, 0.407451, 0.977881, 0.850990
@@ -775,7 +775,7 @@
 @    xaxis  label color 1
 @    xaxis  label place normal
 @    xaxis  tick on
-@    xaxis  tick major 0.04
+@    xaxis  tick major 0.05
 @    xaxis  tick minor ticks 1
 @    xaxis  tick default 6
 @    xaxis  tick place rounded true
@@ -826,7 +826,7 @@
 @    yaxis  label color 1
 @    yaxis  label place normal
 @    yaxis  tick on
-@    yaxis  tick major 0.002
+@    yaxis  tick major 0.001
 @    yaxis  tick minor ticks 1
 @    yaxis  tick default 6
 @    yaxis  tick place rounded true
@@ -983,7 +983,7 @@
 @    s1 errorbar riser linestyle 1
 @    s1 errorbar riser clip off
 @    s1 errorbar riser clip length 0.100000
-@    s1 comment ""
+@    s1 comment "QAMC_Obs_Neel.agr"
 @    s1 legend  ""
 @g3 on
 @g3 hidden false
@@ -1189,13 +1189,6 @@
 @    s0 comment "Cols 1:12:13"
 @    s0 legend  ""
 @target G0.S0
-@type xydy
-0.03125 -0.51406967 0.00055887866
-0.041666667 -0.51657 0.00049840471
-0.0625 -0.51607052 0.00037305058
-0.125 -0.510999 0.00028
-&
-@target G0.S1
 @type xy
 0 -0.5
 0.002020202 -0.5
@@ -1298,12 +1291,22 @@
 0.1979798 -0.5
 0.2 -0.5
 &
-@target G0.S2
+@target G0.S1
 @type xy
 0 -1
 &
+@target G0.S2
+@type xydy
+0.015625 -0.5046 0.00687
+0.025 -0.5154 0.0014
+0.03125 -0.51406967 0.0010558879
+0.041666667 -0.51657 0.00061498405
+0.0625 -0.51607052 0.00037305058
+0.125 -0.510999 0.00028
+&
 @target G1.S0
 @type xydy
+0.015625 0.25377 0.00398
 0.03125 0.24715522 0.001642714
 0.041666667 0.24041684 0.0011911099
 0.0625 0.23121575 0.00074388887
@@ -1414,6 +1417,7 @@
 &
 @target G2.S0
 @type xydy
+0.015625 0.247 0.0035
 0.03125 0.25074561 0.0003000468
 0.041666667 0.25168341 0.00026026833
 0.0625 0.2517715 0.00021013224
@@ -1524,7 +1528,8 @@
 &
 @target G3.S0
 @type xydy
-0.03125 0.088616922 0.00060545081
+0.015625 0.096 0.009
+0.03125 0.088616922 0.00082054508
 0.041666667 0.087068336 0.00048833085
 0.0625 0.087706867 0.00037047509
 0.125 0.16807 0.0004
