@@ -653,9 +653,82 @@ The number of available parity-invariant quantum numbers ${\mathcal N}_n$ in the
 $n$-string sector is now given as 
 %
 \begin{equation}
-{\mathcal N}_n(L,{\mathcal S}_{PI})=\frac{L}{2}-\frac{1}{2}\sum_{m=1}^{M/2}t_{nm}s_m.
+{\mathcal N}_n(L,{\mathcal S}_{PI})=\left\lfloor\frac{L}{2}-\frac{1}{2}
+\sum_{m=1}^{M/2}t_{nm}s_m\right\rfloor.
 \end{equation}
 %
+Thus, the number of parity-invariant quantum number configurations ${\mathcal N}(L,{\mathcal 
+S}_{PI})$ compatible with string content ${\mathcal S}_{PI}$ is obtained by choosing in 
+all the possible ways the quantum numbers as  
+%
+\begin{equation}
+{\mathcal N}(L,{\mathcal S}_{PI})=\prod_{k=1}^{M/2} B\left({\mathcal N}_k,\left\lfloor\frac{s_k}{2}
+\right\rfloor\right).
+\end{equation}
+%
+We focus now to the situation with fixed number of particles $0\le\ell\le M/2$ and number 
+$1\le q\le M/2$ of independent strings. 
+
+The total number of eigenstates is given as 
+%
+\begin{equation}
+\label{eqq}
+{\mathcal N}''(L,\ell,q)=\sum\limits_{\{s_k\}\,s.t\, \sum k s_k=\ell, \sum s_k=q}{\mathcal N}(L,
+{\mathcal S}_{PI}).
+\end{equation}
+%
+where the sum is over all possible string contents $\{s_k\}$ compatible with the constraints 
+$\sum_k s_k=q$ and $\sum_k k s_k=\ell$. 
+
+The idea is now to derive a recursive relation for ${\mathcal N}''(L,\ell,q)$. 
+It is useful to consider the shifted string content ${\mathcal S}'_{PI}$ as  
+%
+\begin{equation}
+{\mathcal S}'_{PI}\equiv \{s_{m+1}\}\quad\textrm{with}\, s_m\in{\mathcal S}_{PI}.
+\end{equation}
+%
+Observing that 
+%
+\begin{equation}
+t_{ij}=t_{i-1,j-1}+2,
+\end{equation}
+%
+one can write for $n>1$ that 
+%
+\begin{equation}
+{\mathcal N}_n(L,{\mathcal S}_{PI})={\mathcal N}_{n-1}(L-2q,{\mathcal S}'_{PI}),
+\end{equation}
+%
+which implies that 
+%
+\begin{equation}
+Z(L,{\mathcal S})=B(Z_1(L,{\mathcal S}),\lfloor s_1/2\rfloor)Z(L-2q,{\mathcal S}')
+\end{equation}
+%
+One then has 
+%
+\begin{equation}
+Z(L,\ell,q)=\sum_{s=0}^{q-1}B\Big(\frac{L}{2}-q+\left\lfloor\frac{s}{2}\right\rfloor,
+\left\lfloor\frac{s}{2}\right\rfloor\Big)Z\left(L-2q,\ell-q,
+q-s\right).
+\end{equation}
+%
+The initial condition $Z(L,1,1)$ reads 
+%
+\begin{equation}
+Z(L,1,1)=\frac{L}{2}-1
+\end{equation}
+%
+
+
+
+
+
+
+
+
+
+
 
 
 \begin{table}[h]
