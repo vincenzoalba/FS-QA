@@ -49,7 +49,7 @@
 \setlength{\parindent}{0pt}
 
 
-\title{Monte Carlo Quench Action approach for integrable spin 
+\title{Finite-size study of the Quench Action approach in integrable spin 
 chains}
 
 \author{Vincenzo Alba$^1$, Pasquale Calabrese$^1$}
@@ -646,112 +646,91 @@ Summing over $\ell$ one obtains~\eref{neel-ov-count}.
 
 
 %%%%%%%%%%%%%
-\subsection{Eigenstates with nonzero N\'eel overlap: eigenstates counting and 
-string content}
+\subsection{Eigenstates with nonzero N\'eel overlap}
 
 Here we prove that the total number of eigenstates with N\'eel nozero overlap 
-$Z_{Neel}(L)$for a chain of length $L$ is given as 
+$Z_{N\'eel}(L)$for a chain of length $L$ is given as 
 %
-\begin{equation}
-\label{N-count}
-Z_{Neel}=2^{\frac{L}{2}-1}+\frac{1}{2}B\Big(\frac{L}{2},\frac{L}{4}\Big)+1. 
-\end{equation}
+%\begin{equation}
+%Z_{N\'eel}=2^{\frac{L}{2}-1}+\frac{1}{2}B\Big(\frac{L}{2},\frac{L}{4}\Big)+1
+%\end{equation}
 %
-For simplicity here we restrict ourselves to the situation with $L$ divisible by 
-four. The strategy to prove~\eref{N-count} is to count all the possible parity-invariant 
-BGT quantum numbers configurations. Let us consider the sector with fixed number of 
-particles $M$, and a generic string content ${\mathcal S}=\{s_1,s_2,\dots,s_{M}\}$. 
-Here $s_n$ is the number of $n$-strings, and one has the constraint $\sum_k ks_k=M$. 
 
-It is straightforward to check that total number of parity-invariant quantum number 
-pairs ${\mathcal N}_n(L,{\mathcal S})$ in the $n$-string sector is given as 
-%
-\begin{equation}
-\label{NnLS}
-{\mathcal N}_n(L,{\mathcal S})=\Big\lfloor\frac{L}{2}-\frac{1}{2}
-\sum_{m=1}^{M}t_{nm}s_m\Big\rfloor.
-\end{equation}
-%
-where $t_{nm}\equiv 2\textrm{Min}(n,m)-\delta_{n,m}$. The number of parity-invariant 
-quantum number configurations (i.e., eigenstates) ${\mathcal N}(L,{\mathcal S})$ 
-compatible with string content ${\mathcal S}$ is obtained by choosing in all the 
-possible ways the parity-invariant quantum number pairs independently in each 
-$n$-string sector, which implies that    
-%
-\begin{equation}
-\label{NLS}
-{\mathcal N}(L,{\mathcal S})=\prod_{m=1}^{M} B\left({\mathcal N}_m,\left\lfloor
-\frac{s_m}{2}\right\rfloor\right).
-\end{equation}
-%
-Here the product is because each string sector is treated independently, while the 
-factor $1/2$ in $s_m/2$ is because since all quantum numbers are organized in pairs, 
-only half of the quantum numbers have to be specified. Note that in each $n$-string 
-sector only one zero momentum (i.e., zero quantum number) string is allowed, due to 
-the Pauli principle. Moreover, $s_m$ is odd (even) only if the zero momentum string 
-is (not) present. The floor function $\lfloor\cdot\rfloor$ in~\eref{NLS} reflects 
-that the quantum number of zero-momentum strings is fixed. 
+Let us consider the string configurations as before in which all the particle are 
+distributed in at most $M/2$-strings, as ${\mathcal S}_{PI}=\{s_1,s_2,\dots,s_{M/2}\}$. 
+Now we have $\sum_k ks_k=M$. 
 
-We now consider the string configurations with particle number $0\le\ell\le M$ and 
-fixed number of strings $1\le q\le M/2$. Note that the maximul allowed string length 
-is $M/2$ beacause of parity invariance. Note also that in determining $q$ strings of 
-different length are treated equally. Clearly, one has that $\sum_m s_m=q$. 
-For a given fixed pair $\ell,q$ the total number of quantum number configurations 
-is given as 
+The number of available parity-invariant quantum numbers ${\mathcal N}_n$ in the 
+$n$-string sector is now given as 
 %
 \begin{equation}
-\label{NLlq}
-{\mathcal N}'(L,\ell,q)=\sum\limits_{\{\{s_m\}\,:\, \sum m s_m=\ell, \sum s_m=q\}}
-{\mathcal N}(L,{\mathcal S}),
+{\mathcal N}_n(L,{\mathcal S}_{PI})=\left\lfloor\frac{L}{2}-\frac{1}{2}
+\sum_{m=1}^{M/2}t_{nm}s_m\right\rfloor.
 \end{equation}
 %
-where the sum is over the content $\{s_m\}_{m=1}^M$ compatible with the constraints 
-$\sum_m s_m=q$ and $\sum_m m s_m=\ell$. The strategy is to write a recursive relation 
-for ${\mathcal N}'(L,\ell,q)$. To this purpose it is useful to consider the shifted 
-string content ${\mathcal S}'$ defined as  
+Thus, the number of parity-invariant quantum number configurations ${\mathcal N}(L,{\mathcal 
+S}_{PI})$ compatible with string content ${\mathcal S}_{PI}$ is obtained by choosing in 
+all the possible ways the quantum numbers as  
 %
 \begin{equation}
-{\mathcal S}'\equiv \{s_{m+1}\}\quad\textrm{with}\, s_m\in{\mathcal S}\,\forall m.
+{\mathcal N}(L,{\mathcal S}_{PI})=\prod_{k=1}^{M/2} B\left({\mathcal N}_k,\left\lfloor\frac{s_k}{2}
+\right\rfloor\right).
 \end{equation}
 %
-Using the definition of $t_{ij}$, it is straightforward to derive that  
+We focus now to the situation with fixed number of particles $0\le\ell\le M/2$ and number 
+$1\le q\le M/2$ of independent strings. 
+
+The total number of eigenstates is given as 
+%
+\begin{equation}
+\label{eqq}
+{\mathcal N}''(L,\ell,q)=\sum\limits_{\{s_k\}\,s.t\, \sum k s_k=\ell, \sum s_k=q}{\mathcal N}(L,
+{\mathcal S}_{PI}).
+\end{equation}
+%
+where the sum is over all possible string contents $\{s_k\}$ compatible with the constraints 
+$\sum_k s_k=q$ and $\sum_k k s_k=\ell$. 
+
+The idea is now to derive a recursive relation for ${\mathcal N}''(L,\ell,q)$. 
+It is useful to consider the shifted string content ${\mathcal S}'_{PI}$ as  
+%
+\begin{equation}
+{\mathcal S}'_{PI}\equiv \{s_{m+1}\}\quad\textrm{with}\, s_m\in{\mathcal S}_{PI}.
+\end{equation}
+%
+Observing that 
 %
 \begin{equation}
 t_{ij}=t_{i-1,j-1}+2,
 \end{equation}
 %
-which implies that ${\mathcal N}_n(L,{\mathcal S})$ (see~\eref{NnLS}) satisfies the 
-recursive equation 
+one can write for $n>1$ that 
 %
 \begin{equation}
-{\mathcal N}_n(L,{\mathcal S})={\mathcal N}_{n-1}(L-2q,{\mathcal S}'). 
+{\mathcal N}_n(L,{\mathcal S}_{PI})={\mathcal N}_{n-1}(L-2q,{\mathcal S}'_{PI}),
 \end{equation}
 %
-After substituting in~\eref{NLS} one obtains 
+which implies that 
 %
 \begin{equation}
-\label{NLSr}
-{\mathcal N}(L,{\mathcal S})=B\Big({\mathcal N}_1(L,{\mathcal S}),\Big\lfloor \frac{s_1}{2}
-\Big\rfloor\Big){\mathcal N}(L-2q,{\mathcal S}'). 
+Z(L,{\mathcal S})=B(Z_1(L,{\mathcal S}),\lfloor s_1/2\rfloor)Z(L-2q,{\mathcal S}')
 \end{equation}
 %
-Finally, after substituting~\eref{NLSr} in~\eref{NLlq}, one obtains a recursive relation 
-for ${\mathcal N}'(L,\ell,q)$ as 
+One then has 
 %
 \begin{equation}
-{\mathcal N}'(L,\ell,q)=\sum_{s=0}^{q-1}B\Big(\frac{L}{2}-q+\Big\lfloor\frac{s}{2}\Big\rfloor,
-\left\lfloor\frac{s}{2}\right\rfloor\Big){\mathcal N}'\left(L-2q,\ell-q,
-q-s\right), 
+Z(L,\ell,q)=\sum_{s=0}^{q-1}B\Big(\frac{L}{2}-q+\left\lfloor\frac{s}{2}\right\rfloor,
+\left\lfloor\frac{s}{2}\right\rfloor\Big)Z\left(L-2q,\ell-q,
+q-s\right).
 \end{equation}
 %
-with the constraint that when $\ell=q$ one has 
+The initial condition $Z(L,1,1)$ reads 
 %
 \begin{equation}
-{\mathcal N}'(L,q,q)=B\Big(\Big\lfloor\frac{L-q}{2}\Big\rfloor,\Big\lfloor\frac{q}{2} 
-\Big\rfloor\Big).
+Z(L,1,1)=\frac{L}{2}-1
 \end{equation}
 %
-This is obtained by observing that if $\ell=q$
+
 
 
 
