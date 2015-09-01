@@ -204,7 +204,6 @@ deviations, which typically vanish exponentially in the thermodynamic limit.
 Notice that pure real rapidities are strings of unit length ($1$-strings). 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Bethe-Takahashi equations.} 
 
 The string centers $\lambda_{n;\gamma}$ in~\eref{str_hyp} are obtained by solving the 
@@ -252,7 +251,7 @@ where $t_{m,n}\equiv 2\mbox{min}(n,m)-\delta_{m,n}$.
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% NEEL OVERLAP
 \section{Overlap with the Neel state}
 
 
@@ -298,7 +297,7 @@ K_\alpha(\lambda)\equiv\frac{8\alpha}{\lambda^2+4\alpha^2}
 \end{equation}
 %
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% REDUCED NEEL OVERLAP
 \subsection{Reduced Neel overlap}
 
 Here we consider the overlap formula for the Neel state~\eref{neel-ov} in the 
@@ -364,7 +363,7 @@ with ${\mathcal P}=+$ and ${\mathcal P}=-$ for even and odd strings, respectivel
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% REDUCED MG overlap 
 \section{Overlap with the Majumdar-Ghosh state}
 
 The overlap between the generic eigenstate of the $XXX$ chain and the Majumdar-Ghosh 
@@ -378,6 +377,12 @@ state is obtained fro the overlap with the Neel state as
 %
 The mutliplicative factor in~\eref{ov-MG}, using the string hypothesis for the generic 
 $n$-string is rewritten as 
+%
+%\begin{equation}
+%\prod\limits_{j=1}^M\frac{1}{\sqrt{2}}
+%\Big(1-\frac{\lambda_j-i}{\lambda_j+i}\Big)=2^n\lambda_{n;\gamma}^2(\lambda_{n;
+%\gamma}^2+n^2)\prod\limits_{k=0}^{n/2}\frac{1}{(\lambda_{n;\gamma}^2+(2k)^2)^2}
+%\end{equation}
 %
 \begin{equation}
 \prod\limits_{j=1}^M\frac{1}{\sqrt{2}}
@@ -453,6 +458,23 @@ n/2\rfloor}\frac{1}{[\lambda_{n;\gamma}^2+(2k+(1-(-1)^n)/2)^2]^2}
 %##################################################################
 
 
+%##################################################################
+%\begin{figure}[t]
+%\begin{center}
+%\includegraphics[width=.75\textwidth]{./draft_figs/Neel_over_ener}
+%\end{center}
+%\caption{ The overlap between the Neel state and the eigenstates of the 
+% $XXX$ chain as a function of the eigenstate energy. (a) The squared 
+% overlap $|\langle\{\lambda\}|Neel\rangle|^2$ plotted versus the 
+% eigenstates energy density $E/L$. The data are Bethe ansatz results 
+% for chains of length $L=22,26,32,36$ (different symbols). (b) Same as 
+% in (a) plotting on the $y$-axis the combination $-2\log(|\langle\{
+% \lambda\}|Neel\rangle|)/L$. 
+%}
+%\label{fig4-neel-ener}
+%\end{figure}
+%##################################################################
+
 
 %##################################################################
 \begin{figure}[t]
@@ -466,38 +488,17 @@ n/2\rfloor}\frac{1}{[\lambda_{n;\gamma}^2+(2k+(1-(-1)^n)/2)^2]^2}
  N\rangle|^2Q_2(\{\lambda\})/L=1/2$, with $|\{\lambda\}\rangle$ the 
  eigenstates of the $XXX$ chain, versus the inverse chain length $1/L$. 
  The symbols are Monte Carlo data obtained by sampling the eigenstates 
- of the $XXX$ chain. The dash-dotted line is the expected result. The 
- dashed line is a fit to the behavior $-1/2+A/L+B/L^2$, with $A,B$ 
- fitting parameters. (b) The energy fluctuations sum rule $\sigma^2(Q_2)/
- L\equiv(\langle N|Q_2^2|N\rangle-\langle N|Q_2|N\rangle^2)/L=1/4$. The 
- horizontal line is the expected result. (c)(d) Same as in (a)(b) for 
- the charge $Q_4$ and its fluctuations. 
+ of the $XXX$ chain. The dash-dotted line is the expected result. (b) 
+ The energy fluctuations sum rule $\sigma^2(Q_2)/L\equiv(\langle N|
+ Q_2^2|N\rangle-\langle N|Q_2|N\rangle^2)/L=1/4$. The horizontal line 
+ is the expected result. (c)(d) Same as in (a)(b) for the charge $Q_4$ 
+ and its fluctuations. 
 }
 \label{fig5-neel-sum-rules}
 \end{figure}
 %##################################################################
 
-
-
-%##################################################################
-\begin{figure}[t]
-\begin{center}
-\includegraphics[width=.8\textwidth]{./draft_figs/Neel_rho}
-\end{center}
-\caption{ The steady-state root densities $\rho_1(x)$ (panel (a)) and 
- $\rho_2(x)$ (panel (b)), plotted versus the root $x$. The histograms 
- are Monte Carlo data for the Heisenberg chain with $L=56$ sites and 
- $\sim 10^7$ Monte Carlo steps. The $y$-axis is divided by $10^6$ for 
- convenience. The continuous lines are the analytical Quench-Action 
- results in the thermodynamic limit. 
-}
-\label{fig6-neel-roots}
-\end{figure}
-%##################################################################
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%
 \subsection{Counting of eigenstates with non-zero Neel overlap}
 
 We numerically checked that the number of states with non-zero overlap 
@@ -505,7 +506,7 @@ with the Neel state is given as
 %
 \begin{equation}
 \label{Neel-count}
-Z_{Neel}=2^{\frac{L}{2}-1}+\frac{1}{2}B\left(\frac{L}{2},
+Z_N=2^{\frac{L}{2}-1}+\frac{1}{2}B\left(\frac{L}{2},
 \frac{L}{4}\right)+1,
 \end{equation}
 %
@@ -520,21 +521,133 @@ with non-zero overlap with the Neel state is
 %
 \begin{equation}
 \label{neel-ov-count}
-\widetilde g{Z}_{Neel}=\Big(\frac{L}{2},\frac{L}{4}\Big)
+Z'_{N}=B\left(\frac{L}{2},\frac{L}{4}\right)
 \end{equation}
 %
 Importantly, the fraction of eigenstates corresponding to non-zero momentum 
 strings is vanishing in the thermodynamic limit as 
 %
 \begin{equation}
-\frac{\widetilde Z_{Neel}}{Z_{Neel}}\propto\frac{4}{\sqrt{\pi L}}.
+\frac{Z_N'}{Z_N}\propto\frac{4}{\sqrt{\pi L}}.
 \end{equation}
 %
+%%%%% PROOF
+\subsection{Proof of~\eref{neel-ov-count}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Here we prove~\eref{neel-ov-count}. The proof follows very closely the one of the 
+completeness of the Bethe ansatz eigenstates {\bf cita qualcosa}. The proof is 
+based on the counting of all the possible parity-invariant quantum number configurations. 
+
+Given a generic $M$-particle eigenstate of the $XXX$ chain, due to parity invariance, 
+if one excludes the zero-momentum strings only the $n$-strings with length $n\le M/2$ 
+can contribute.
+
+Thus, we denote the string content ${\mathcal S_{PI}}$ of a generic parity-invariant 
+with no zero-momentum string eigenstate as ${\mathcal S}_{PI}\equiv\{s_1,\dots,s_{M/2}\}$.
+Clearly one has the constraint $\sum_k ks_k=M/2$. We also restrict ourselves for simplicity 
+to $L$ divisible by four. 
+
+The number of available parity-invariant quantum numbers ${\mathcal N}_n$ in the $n$-string 
+sector is given as  
+%
+\begin{equation}
+{\mathcal N}_n(L,{\mathcal S}_{PI})=\frac{L}{2}-\sum_{m=1}^{M/2}t_{nm}s_m.
+\end{equation}
+%
+Thus, the number of parity-invariant quantum number configurations ${\mathcal N}(L,{\mathcal 
+S}_{PI})$ compatible with string content ${\mathcal S}_{PI}$ is obtained by choosing in 
+all the possible ways the quantum numbers as  
+%
+\begin{equation}
+{\mathcal N}(L,{\mathcal S}_{PI})=\prod_{k=1}^{M/2} B({\mathcal N}_k,s_k).
+\end{equation}
+%
+It is useful to focus on the situation with fixed number of particles $0\le\ell\le M/2$ 
+and number $1\le q\le M/2$ of independent strings. The total number of eigenstates 
+${\mathcal N}''(L,\ell,q)$ is obtained as  
+%
+\begin{equation}
+\label{eq}
+{\mathcal N}''(L,\ell,q)=\sum\limits_{\{s_k\}\,s.t\, \sum k s_k=\ell, \sum s_k=q}{\mathcal N}(L,
+{\mathcal S}_{PI}).
+\end{equation}
+%
+where the sum is over all possible string contents $\{s_k\}$ compatible with the constraints 
+$\sum_k s_k=q$ and $\sum_k k s_k=\ell$. 
+
+The idea is now to derive a recursive relation for ${\mathcal N}''(L,\ell,q)$. 
+It is useful to consider the shifted string content ${\mathcal S}'_{PI}$ as  
+%
+\begin{equation}
+{\mathcal S}'_{PI}\equiv \{s_{m+1}\}\quad\textrm{with}\, s_m\in{\mathcal S}_{PI}.
+\end{equation}
+%
+Observing that 
+%
+\begin{equation}
+t_{ij}=t_{i-1,j-1}+2,
+\end{equation}
+%
+one can write for $n>1$ that 
+%
+%\begin{eqnarray}
+%{\mathcal N}_n(L,{\mathcal S}_{PI})=\Big\lceil\frac{L}{2}-\frac{1}{2}\Big\rceil-t_{n,1}s_1-
+%\sum\limits_{m>1}t_{nm}s_m=\\
+%\Big\lceil\frac{L}{2}-\frac{1}{2}\Big\rceil-2s_1-
+%\sum\limits_{m>1}(t_{n-1,m-1}+2)s_m=\\
+%\Big\lceil\frac{L}{2}-\frac{1}{2}\Big\rceil-2q-
+%\sum\limits_{m}t_{n-1,m}s'_m.
+%\end{eqnarray}
+%
+%This means
+%
+\begin{equation}
+{\mathcal N}_n(L,{\mathcal S}_{PI})={\mathcal N}_{n-1}(L-4q,{\mathcal S}'_{PI}),
+\end{equation}
+%
+which implies
+%
+\begin{equation}
+Z(L,{\mathcal S})=B(Z_1(L,{\mathcal S}),s_1)Z(L-4q,{\mathcal S}').
+\end{equation}
+%
+Substituting in~\eref{eq} one obtains
+%
+\begin{equation}
+Z(L,\ell,q)=\sum_{s=0}^{q-1}B\Big(\Big\lceil\frac{L}{2}-\frac{1}{2}\Big
+\rceil-2q+s,s\Big)Z(L-4q,\ell-q,q-s),
+\end{equation}
+%
+i.e.,
+%
+\begin{equation}
+Z(L,\ell,q)=\sum_{s=0}^{q-1}B\Big(\frac{L}{2}-2q+s,s\Big)Z(L-4q,\ell-q,q-s).
+\end{equation}
+%
+The initial condition $Z(L,1,1)$ reads 
+%
+\begin{equation}
+Z(L,1,1)=\frac{L}{2}-1
+\end{equation}
+%
+One can show that this leads to 
+%
+\begin{equation}
+Z(L,\ell,q)=\frac{L/2-2\ell+1}{L/2-\ell+1}B(L/2-\ell+1,q)B(\ell-1,q-1).
+\end{equation}
+%
+By summing over $q=1,\dots,\ell$ one obtains 
+%
+\begin{equation}
+\sum\limits_{q=1}^\ell Z(L,\ell,q)=B(L/2,\ell)-B(L/2,\ell-1).
+\end{equation}
+%
+Summing over $\ell$ one obtains~\eref{neel-ov-count}.
+
+
+%%%%%%%%%%%%%
 \subsection{Eigenstates with nonzero N\'eel overlap: eigenstates counting and 
 string content}
-\label{app-1}
 
 Here we prove that the total number of eigenstates with N\'eel nozero overlap 
 $Z_{Neel}(L)$for a chain of length $L$ is given as 
@@ -598,7 +711,7 @@ for ${\mathcal N}'(L,\ell,q)$. To this purpose it is useful to consider the shif
 string content ${\mathcal S}'$ defined as  
 %
 \begin{equation}
-{\mathcal S}'\equiv \{s_{m+1}\}\quad\textrm{with}\, s_m\in{\mathcal S},\,\forall m.
+{\mathcal S}'\equiv \{s_{m+1}\}\quad\textrm{with}\, s_m\in{\mathcal S}\,\forall m.
 \end{equation}
 %
 Using the definition of $t_{ij}$, it is straightforward to derive that  
@@ -652,110 +765,24 @@ B\Big(\frac{\ell}{2},\frac{q}{2}\Big),
 satisfies~\eref{NpLlq}. For odd $q$ the solution of~\eref{NpLlq} is 
 %
 \begin{equation}
-{\mathcal N}'(L,\ell,q)=\frac{\ell-q+1}{\ell}B\Big(\frac{L-\ell}{2},\frac{q-1}{2}
-\Big)B\Big(\frac{\ell}{2},\frac{q-1}{2}\Big).
+{\mathcal N}'(L,\ell,q)=\frac{\ell-q+1}{\ell}B\Big(\frac{L-\ell}{2},\Big\lfloor
+\frac{q}{2}\Big\rfloor\Big)B\Big(\frac{\ell}{2},\frac{q-1}{2}\Big).
 \end{equation}
 %
-The number of eigenstates in the sector with $\ell$ particles with nonzero 
-N\'eel overlap $Z'_{Neel}(L,\ell)$ are obtained by summing over all possible values 
-of $q$ as 
+The number of $\ell$-eigenstates with nonzero N\'eel overlap $Z_{Neel}(L,\ell)$ are 
+obtained by summing over all possible values of $q$ as 
 %
 \begin{equation}
-\label{sum1}
-Z'_{Neel}(L,\ell)=\sum\limits_{q=1}^\ell {\mathcal N}'(L,\ell,q).
+Z_{Neel}(L)=\sum\limits_{q=1}^\ell {\mathcal N}'(L,\)
 \end{equation}
 %
-It is convenient to split the summation in~\eref{sum1} considering odd values of $q$ 
-and even $q$ separately. For odd $q$ one obtains 
-%
-\begin{equation}
-\sum\limits_{k=0}^{\ell/2-1} {\mathcal N}'(L,\ell,2k+1)=B\Big(\frac{L}{2}-1,
-\frac{\ell}{2}-1\Big),
-\end{equation}
-%
-while for even $q$ one has 
-%
-\begin{equation}
-\sum\limits_{k=0}^{\ell/2} {\mathcal N}'(L,\ell,2k)=B\Big(\frac{L}{2}-1,
-\frac{\ell}{2}\Big). 
-\end{equation}
-%
-Putting everything together one obtains 
-%
-\begin{equation}
-\label{N-count-p}
-Z'_{Neel}(L,\ell)=B\Big(\frac{L}{2}-1,
-\frac{\ell}{2}-1\Big)+B\Big(\frac{L}{2}-1,
-\frac{\ell}{2}\Big). 
-\end{equation}
-%
-The total number of eigenstates with nonzero N\'eel overlap $Z_{Neel}(L)$ 
-(cf.~\eref{N-count}) is obtained from~\eref{N-count-p} by summing over 
-the allowed values of $\ell=2k$ with $k=0,1,\dots,\ell/2$. 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Excluding the zero-momentum strings}
-\label{app-2}
 
-Here we demonstrate that the total number of eigenstates with nonzero N\'eel overlap, 
-which do not contain zero-momentum strings, $\widetilde Z_{Neel}(L)$ is given as 
-%
-\begin{equation}
-\widetilde Z_{Neel}(L)=B\Big(\frac{L}{2},\frac{L}{4}\Big). 
-\end{equation}
-%
-Given a generic $M$-particle eigenstate of the $XXX$ chain, due to parity invariance, 
-if one excludes the zero-momentum strings only $n$-strings with length $n\le M/2$ 
-are allowed. Similarly, the string content is of the form $\widetilde{\mathcal S}
-\equiv\{\tilde s_1,\dots,\tilde s_{M/2}\}$, i.e., $\tilde s_m=0$ $\forall m>M/2$.
-Note that due to parity invariance and to the exclusion of the zero-momentum strings 
-one has that $\tilde s_m$ is always an even integer. Clearly one has $\sum_{m=1}^{M/2}
-m \tilde s_m=M$. 
 
-The total number of parity-invariant quantum numbers $\widetilde{\mathcal N}_n$ in the $n$-string 
-sector is given as  
-%
-\begin{equation}
-\widetilde{\mathcal N}_n(L,\widetilde{\mathcal S})=\frac{L}{2}-\frac{1}{2}
-\sum_{m=1}^{M/2}t_{nm}\tilde s_m.
-\end{equation}
-%
-The proof now proceeds as in~\ref{app-1}. One can define the total number of eigenstates 
-with nonzero N\'eel overla in the sector with $\ell$ particles and $q$ different strings as 
-$\widetilde{\mathcal N}'(L,\ell,q)$. Note that due to parity invariance and the exclusion of 
-zero-momentum strings, $q$ must be even. It is straigtforward to show that $\widetilde
-{\mathcal N}'(L,\ell,q)$ obeys the recursive relation
-%
-\begin{equation}
-\label{NpLlq-1}
-\widetilde{\mathcal N}'(L,\ell,q)=\sum_{s=0}^{q/2-1}B\Big(\frac{L}{2}-q+s,s\Big)\widetilde
-{\mathcal N}'\Big(L-2q,\frac{\ell-q}{2},\frac{q}{2}-s\Big),
-\end{equation}
-% 
-with the constraint
-%
-\begin{equation}
-\widetilde{\mathcal N}'(L,1,1)=\frac{L}{2}-1. 
-\end{equation}
-%
-It is straightforward to check that the solution of~\eref{NpLlq-1} is given as 
-%
-\begin{equation}
-\widetilde{\mathcal N}'(L,\ell,q)=\frac{L-2\ell+2}{L-\ell+2}B\Big(\frac{L-\ell}{2}+1,q\Big)
-B\Big(\frac{\ell}{2}-1,\frac{q}{2}-1\Big).
-\end{equation}
-%
-After summing over the allowed values of $q=2k$ with $k=1,2,\dots,\ell/2$ one obtains 
-the total number of eigenstaets with nonzero N\'eel overlap at fixed number of 
-particles $\ell$ $\widetilde Z_{Neel}'(L,\ell)$ as 
-%
-\begin{equation}
-\widetilde Z_{Neel}'(L,\ell)=B\Big(\frac{L}{2},\frac{\ell}{2}\Big)-
-B\Big(\frac{L}{2},\frac{\ell}{2}-1\Big).
-\end{equation}
-%
-Summing over $\ell$ one obtains~\eref{neel-ov-count}.
+
+
+
 
 \begin{table}[h]
 \scriptsize

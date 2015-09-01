@@ -204,7 +204,6 @@ deviations, which typically vanish exponentially in the thermodynamic limit.
 Notice that pure real rapidities are strings of unit length ($1$-strings). 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Bethe-Takahashi equations.} 
 
 The string centers $\lambda_{n;\gamma}$ in~\eref{str_hyp} are obtained by solving the 
@@ -252,7 +251,7 @@ where $t_{m,n}\equiv 2\mbox{min}(n,m)-\delta_{m,n}$.
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% NEEL OVERLAP
 \section{Overlap with the Neel state}
 
 
@@ -298,7 +297,7 @@ K_\alpha(\lambda)\equiv\frac{8\alpha}{\lambda^2+4\alpha^2}
 \end{equation}
 %
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% REDUCED NEEL OVERLAP
 \subsection{Reduced Neel overlap}
 
 Here we consider the overlap formula for the Neel state~\eref{neel-ov} in the 
@@ -364,7 +363,7 @@ with ${\mathcal P}=+$ and ${\mathcal P}=-$ for even and odd strings, respectivel
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% REDUCED MG overlap 
 \section{Overlap with the Majumdar-Ghosh state}
 
 The overlap between the generic eigenstate of the $XXX$ chain and the Majumdar-Ghosh 
@@ -378,6 +377,12 @@ state is obtained fro the overlap with the Neel state as
 %
 The mutliplicative factor in~\eref{ov-MG}, using the string hypothesis for the generic 
 $n$-string is rewritten as 
+%
+%\begin{equation}
+%\prod\limits_{j=1}^M\frac{1}{\sqrt{2}}
+%\Big(1-\frac{\lambda_j-i}{\lambda_j+i}\Big)=2^n\lambda_{n;\gamma}^2(\lambda_{n;
+%\gamma}^2+n^2)\prod\limits_{k=0}^{n/2}\frac{1}{(\lambda_{n;\gamma}^2+(2k)^2)^2}
+%\end{equation}
 %
 \begin{equation}
 \prod\limits_{j=1}^M\frac{1}{\sqrt{2}}
@@ -453,6 +458,23 @@ n/2\rfloor}\frac{1}{[\lambda_{n;\gamma}^2+(2k+(1-(-1)^n)/2)^2]^2}
 %##################################################################
 
 
+%##################################################################
+%\begin{figure}[t]
+%\begin{center}
+%\includegraphics[width=.75\textwidth]{./draft_figs/Neel_over_ener}
+%\end{center}
+%\caption{ The overlap between the Neel state and the eigenstates of the 
+% $XXX$ chain as a function of the eigenstate energy. (a) The squared 
+% overlap $|\langle\{\lambda\}|Neel\rangle|^2$ plotted versus the 
+% eigenstates energy density $E/L$. The data are Bethe ansatz results 
+% for chains of length $L=22,26,32,36$ (different symbols). (b) Same as 
+% in (a) plotting on the $y$-axis the combination $-2\log(|\langle\{
+% \lambda\}|Neel\rangle|)/L$. 
+%}
+%\label{fig4-neel-ener}
+%\end{figure}
+%##################################################################
+
 
 %##################################################################
 \begin{figure}[t]
@@ -466,38 +488,17 @@ n/2\rfloor}\frac{1}{[\lambda_{n;\gamma}^2+(2k+(1-(-1)^n)/2)^2]^2}
  N\rangle|^2Q_2(\{\lambda\})/L=1/2$, with $|\{\lambda\}\rangle$ the 
  eigenstates of the $XXX$ chain, versus the inverse chain length $1/L$. 
  The symbols are Monte Carlo data obtained by sampling the eigenstates 
- of the $XXX$ chain. The dash-dotted line is the expected result. The 
- dashed line is a fit to the behavior $-1/2+A/L+B/L^2$, with $A,B$ 
- fitting parameters. (b) The energy fluctuations sum rule $\sigma^2(Q_2)/
- L\equiv(\langle N|Q_2^2|N\rangle-\langle N|Q_2|N\rangle^2)/L=1/4$. The 
- horizontal line is the expected result. (c)(d) Same as in (a)(b) for 
- the charge $Q_4$ and its fluctuations. 
+ of the $XXX$ chain. The dash-dotted line is the expected result. (b) 
+ The energy fluctuations sum rule $\sigma^2(Q_2)/L\equiv(\langle N|
+ Q_2^2|N\rangle-\langle N|Q_2|N\rangle^2)/L=1/4$. The horizontal line 
+ is the expected result. (c)(d) Same as in (a)(b) for the charge $Q_4$ 
+ and its fluctuations. 
 }
 \label{fig5-neel-sum-rules}
 \end{figure}
 %##################################################################
 
-
-
-%##################################################################
-\begin{figure}[t]
-\begin{center}
-\includegraphics[width=.8\textwidth]{./draft_figs/Neel_rho}
-\end{center}
-\caption{ The steady-state root densities $\rho_1(x)$ (panel (a)) and 
- $\rho_2(x)$ (panel (b)), plotted versus the root $x$. The histograms 
- are Monte Carlo data for the Heisenberg chain with $L=56$ sites and 
- $\sim 10^7$ Monte Carlo steps. The $y$-axis is divided by $10^6$ for 
- convenience. The continuous lines are the analytical Quench-Action 
- results in the thermodynamic limit. 
-}
-\label{fig6-neel-roots}
-\end{figure}
-%##################################################################
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%
 \subsection{Counting of eigenstates with non-zero Neel overlap}
 
 We numerically checked that the number of states with non-zero overlap 
@@ -520,7 +521,7 @@ with non-zero overlap with the Neel state is
 %
 \begin{equation}
 \label{neel-ov-count}
-\widetilde g{Z}_{Neel}=\Big(\frac{L}{2},\frac{L}{4}\Big)
+\widetilde g{Z}_{Neel}=B\(\frac{L}{2},\frac{L}{4}\Big)
 \end{equation}
 %
 Importantly, the fraction of eigenstates corresponding to non-zero momentum 
@@ -531,7 +532,7 @@ strings is vanishing in the thermodynamic limit as
 \end{equation}
 %
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%
 \subsection{Eigenstates with nonzero N\'eel overlap: eigenstates counting and 
 string content}
 \label{app-1}
@@ -694,7 +695,7 @@ The total number of eigenstates with nonzero N\'eel overlap $Z_{Neel}(L)$
 the allowed values of $\ell=2k$ with $k=0,1,\dots,\ell/2$. 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%
 \subsection{Excluding the zero-momentum strings}
 \label{app-2}
 
@@ -756,6 +757,9 @@ B\Big(\frac{L}{2},\frac{\ell}{2}-1\Big).
 \end{equation}
 %
 Summing over $\ell$ one obtains~\eref{neel-ov-count}.
+
+
+
 
 \begin{table}[h]
 \scriptsize
