@@ -721,6 +721,23 @@ charge $Q_4$.
 \section{The Quench-Action root distributions}
 \label{MCQA-root}
 
+The BGT root distributions $\rho_n(\lambda)$ identifying the Quench-Action saddle 
+point can be extracted from the Monte Carlo simulation as shown in~\cite{alba-2015}. 
+
+Figure~\ref{fig6-neel-roots} displays the first two root distributions 
+$\rho_1(\lambda)$ (panel (a)) and $\rho_2(\lambda)$ (panel (b)), plotted agains 
+the BGT root $\lambda$. The data are the histograms of the BGT roots sampled 
+in the Monte Carlo. The data are for a chain with $L=56$ sites and 
+$N_{mcs}\sim 10^7$ Monte Carlo steps. All the data are divided by a factor 
+$10^6$ for plotting convenience. The width of the histogram bins $\Delta\lambda$ 
+is $\Delta\lambda\approx0.02$ and $\Delta\lambda\approx0.001$ for $\rho_1(\lambda)$ 
+and $\rho_2(\lamnbda)$, respectively. 
+
+The continuous lines is the expected analytic result in the thermodynamic limit. 
+
+
+
+
 %##################################################################
 \begin{figure}[t]
 \begin{center}
@@ -736,30 +753,6 @@ charge $Q_4$.
 \label{fig6-neel-roots}
 \end{figure}
 %##################################################################
-
-The BGT root distributions $\rho_n(\lambda)$ identifying the Quench-Action saddle 
-point can be extracted from the Monte Carlo simulation as shown in~\cite{alba-2015}. 
-
-Figure~\ref{fig6-neel-roots} displays the first two root distributions 
-$\rho_1(\lambda)$ (panel (a)) and $\rho_2(\lambda)$ (panel (b)), plotted agains 
-the BGT root $\lambda$. The data are the histograms of the BGT roots sampled 
-in the Monte Carlo. The data are for a chain with $L=56$ sites and 
-$N_{mcs}\sim 10^7$ Monte Carlo steps. All the data are divided by a factor 
-$10^6$ for plotting convenience. The width of the histogram bins $\Delta\lambda$ 
-is $\Delta\lambda\approx0.02$ and $\Delta\lambda\approx0.001$ for $\rho_1(\lambda)$ 
-and $\rho_2(\lambda)$, respectively. 
-
-The histogram fluctuations are due to $N_{mcs}$ being finite, and are expected 
-to vanish in the limit $N_{mcs}\to\infty$. 
-
-The continuous lines is the expected analytic result in the thermodynamic limit. 
-
-Clearly, $\rho_1(\lambda)$ is in good agreement with the Monte Carlo data in the 
-whole range $-2\le\lambda\le2$ considered. 
-On the other hand, larger deviations from the theoretical result are present 
-for $\rho_2(\lambda)$. These deviations are larger on the tails of the 
-distribution. This is expected since large $\lambda$ correspond to large 
-quasimomenta, which are more sensitive to the finite size of the chain. 
 
 
 

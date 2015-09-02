@@ -457,6 +457,33 @@ strings is given as
 %
 The proof of\eref{ztilde} is reported in~\ref{app-2}. 
 
+The largest chain size considered is $L=36$. The data are plotted versus $1/L$. 
+
+Interestingly, both the sum rules (panels (a)(b)) are not saturated, as expected 
+since the eigenstates corresponding to zero-momentum strings are excluded in the 
+sum in the right-hand-side in~\eref{sum}. 
+
+Interestingly, both sum rules exhibit vanishing behavior upon increasing the 
+chain size. The dash-dotted lines in the Figures are fits to the behavior 
+$A/L^{1/2}+B/L$, with $A,B$ fitting parameters, and perfectly describe the 
+behavior of the data. 
+
+The vanishing behavior as $\propto 1/L^{1/2}$ of the sum rules reflects the vanishing 
+of the fraction of non-zero momentum string eigenstates in the thermodynamic limit ad 
+%
+\begin{equation}
+\frac{\widetilde Z_{Neel}}{Z_{Neel}}\propto\frac{4}{\sqrt{\pi L}}, 
+\end{equation}
+% 
+with $Z_{Neel}$ being the total number of eigenstates corresponding to parity 
+invariant BGT quantum numbers configurations. 
+
+
+
+
+
+
+
 %##################################################################
 \begin{figure}[t]
 \begin{center}
@@ -477,59 +504,6 @@ The proof of\eref{ztilde} is reported in~\ref{app-2}.
 \label{fig3-dimer-sr}
 \end{figure}
 %##################################################################
-
-
-The largest chain size considered is $L=36$. The data are plotted versus $1/L$. 
-
-Interestingly, both the sum rules (panels (a)(b)) are not saturated, as expected 
-since the eigenstates corresponding to zero-momentum strings are excluded in the 
-sum in the right-hand-side in~\eref{sum}. 
-
-Interestingly, both sum rules exhibit vanishing behavior upon increasing the 
-chain size. The dash-dotted lines in the Figures are fits to the behavior 
-$A/L^{1/2}+B/L$, with $A,B$ fitting parameters, and perfectly describe the 
-behavior of the data. 
-
-The vanishing behavior as $\propto 1/L^{1/2}$ of the sum rules reflects the vanishing 
-of the fraction of non-zero momentum string eigenstates in the thermodynamic limit ad 
-%
-\begin{equation}
-\label{beh}
-\frac{\widetilde Z_{Neel}}{Z_{Neel}}\propto\frac{4}{\sqrt{\pi L}}, 
-\end{equation}
-% 
-with $Z_{Neel}$ being the total number of eigenstates corresponding to parity 
-invariant BGT quantum numbers configurations. 
-
-One should observe that the asymptotic, i.e., at large $L$, behavior~\eref{beh} 
-is not generic, meaning that different initial states $|\Psi_0\rangle$ might 
-give different behaviors. 
-
-This is illustrated in Figure~\ref{fig3-dimer-sr}, focusing on the Majumdar-Ghosh 
-(MG) state. Panels (a) and (b) plot the sum rules with $\hat Q=\mathbb{I}$ and 
-$\hat Q={\mathcal H}$ (same as in Figure~\ref{fig2-neel-sr}). As for the N\'eel 
-state only eigenstates containing no zero-momentum strings are consdidered. 
-Note that their number $\widetilde Z_{MG}$ (see~\ref{app-2}) is now given as 
-%
-\begin{equation}
-\widetilde Z_{MG}=B\Big(\frac{L}{2},\frac{L}{4}\Big)-B\Big(\frac{L}{2},
-\frac{L}{4}-1\Big). 
-\end{equation}
-%
-Similar to Figure~\ref{fig2-neel-sr}, due to the exclusion of the zero-momentum 
-strings, the saturation rules exhibit vanishing behavior in the thermodynamic 
-limit. However, in contrast with the N\'eel case (see Figure~\ref{fig2-neel-sr}), 
-one has the behavior $Q_0\sim 1/L$, as confirmed by the fits (dash-dotted lines 
-in Figure~\ref{fig3-dimer-sr}). 
-
-Similar to the N\'eel case this reflects the same vanishing behavior of the 
-eigenstates containing no zero-momentum strings $\widetilde Z_{MG}/Z_{MG}$ as 
-%
-\begin{equation}
-\frac{\widetilde Z_{MG}}{Z_{MG}}=\frac{4}{4+L}. 
-\end{equation}
-%
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Validity of the string hypothesis for overlap calculations}
@@ -584,8 +558,6 @@ the validity of the string hypothesis.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Monte Carlo implementation of the Quench-Action approach}
-\label{mcqa-sec}
-
 
 For the finite-size Heisenberg spin chain the Quench-Action expectation 
 values can be obtained by sampling the eigenstates of the chain using 
@@ -630,29 +602,29 @@ probability
 2\Re({\mathcal E}'-{\mathcal E})\Big)\Big\}, 
 \end{equation}
 %
-where ${\mathcal E}'\equiv-\log\langle\lambda'|N\rangle$, similarly for 
-${\mathcal E}$, and $\Re$ denotes the real part. 
+where ${\mathcal E}'\equiv-\log\langle\lambda'|N\rangle$, and similarly for 
+${\mathcal E}$. 
 \end{enumerate}
 %
 
-Afte some necessary thermalization steps the sequence $1-4$ generates eigenstates 
-of the $XXX$ chain distributed according to the Quench-Action probability 
-distribution. 
-
-For a generic observable ${\mathcal O}$, its Quench-Action expectation value 
-$\langle{\mathcal O}\rangle_{QA}$ is obtained as the arithmetic average of the 
-expectation value over the eigenstates sampled in the Monte Carlo as 
-%
-\begin{equation}
-\langle{\mathcal O}\rangle_{QA}=\frac{1}{N_{mcs}}\sum\limits_{\lambda}
-\langle\lambda|{\mathcal O}|\lambda\rangle, 
-\end{equation}
-%
-with $N_{mcs}$ being the total number of Monte Carlo steps. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Monte Carlo Quench-Action approach: Numerical results}
 \label{MCQA-nr}
+
+
+The validity of the Monte Carlo approach for simulating the Quench-Action results 
+is demonstrated in Figure~\ref{fig5-neel-sum-rules}. The Figure focuses on the 
+N\'eel sum rules for the conserved charges $Q_2$ and $Q_4$. Specifically, 
+panel (a) shows the sum rule $\langle Q_2\rangle/L=1/2$ (energy conservation). 
+%
+\begin{equation}
+\langle N|\hat Q_n|N\rangle=\sum\limits_{\lambda}|\langle N|\lambda\rangle|^2
+Q_n
+\end{equation}
+%
+
+
 
 %##################################################################
 \begin{figure}[t]
@@ -673,53 +645,11 @@ with $N_{mcs}$ being the total number of Monte Carlo steps.
  horizontal line is the expected result. (c)(d) Same as in (a)(b) for 
  the charge $Q_4$ and its fluctuations. 
 }
-\label{fig5-neel-sr}
+\label{fig5-neel-sum-rules}
 \end{figure}
 %##################################################################
 
 
-In this section we numerically demonstrate that the only effect of neglecting 
-the zero-momentum strings are finite-size corrections. 
-
-The validity of the Monte Carlo approach for simulating the Quench-Action 
-results is demonstrated in Figure~\ref{fig5-neel-sr}. The Figure focuses on 
-the N\'eel sum rules for the conserved charges $Q_2$ and $Q_4$. Specifically, 
-panel (a) shows the sum rules for $\hat Q=\hat Q_2$, $\hat Q=\hat Q_4$, 
-and the corresponding fluctuations $\sigma^2(Q_n)\equiv \langle N|\hat Q_n^2|
-N\rangle-\langle N|\hat Q_n|N\rangle^2$. 
-%
-\begin{equation}
-\langle N|\hat Q_n|N\rangle=\sum\limits_{\lambda}|\langle N|\lambda\rangle|^2
-Q_n.
-\end{equation}
-%
-Note that the N\'eel sum rule for the identity $\mathbb{I}$ is trivially satisfied, 
-and it corresponds to the normalization of the Monte Carlo probability. 
-Figure~\ref{fig5-neel-sr} (a) plots the N\'eel sum rule for the energy density $Q_2/L$. 
-The circles are Monte Carlo data obtained using the procedure outlined in~\ref{mcqa-sec} 
-for several Heisenberg spin chains. The largest chain simulated is for $L=56$ sites. 
-The data correspond to a simulation with $\sim 10^7$ Monte Carlo step (mcs). 
-The expected result $\langle N|\hat Q_2|N\rangle/L=-1/2$ is shown as dash-dotted 
-line. 
-
-In stark contrast with Figure~\ref{fig2-neel-sr} and Figure~\ref{fig3-dimer-sr}, 
-while for small chains the sum rule is violated the data strongly suggest that 
-in the thermodynamic limit the sum rule saturates the expected theoretical 
-value. 
-
-Furthermore, the data suggest the behavior $\propto 1/L$, as confirmed by the fit 
-to $-1/2+A/L+b/L^2$ (dashed line in the Figure), with $A,B$ fitting parameters. 
-
-The same qualitative behavior is demonstrated in panel (b) for the energy 
-fluctuations. Interestingly, for $L=56$ the Monte Carlo result is compatible 
-within the error bar with the expected asymptotic one. 
-
-Finally, panels (c)(d) show the same results as for (a)(b) for the conserved 
-charge $Q_4$. 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{The Quench-Action root distributions}
-\label{MCQA-root}
 
 %##################################################################
 \begin{figure}[t]
@@ -736,30 +666,6 @@ charge $Q_4$.
 \label{fig6-neel-roots}
 \end{figure}
 %##################################################################
-
-The BGT root distributions $\rho_n(\lambda)$ identifying the Quench-Action saddle 
-point can be extracted from the Monte Carlo simulation as shown in~\cite{alba-2015}. 
-
-Figure~\ref{fig6-neel-roots} displays the first two root distributions 
-$\rho_1(\lambda)$ (panel (a)) and $\rho_2(\lambda)$ (panel (b)), plotted agains 
-the BGT root $\lambda$. The data are the histograms of the BGT roots sampled 
-in the Monte Carlo. The data are for a chain with $L=56$ sites and 
-$N_{mcs}\sim 10^7$ Monte Carlo steps. All the data are divided by a factor 
-$10^6$ for plotting convenience. The width of the histogram bins $\Delta\lambda$ 
-is $\Delta\lambda\approx0.02$ and $\Delta\lambda\approx0.001$ for $\rho_1(\lambda)$ 
-and $\rho_2(\lambda)$, respectively. 
-
-The histogram fluctuations are due to $N_{mcs}$ being finite, and are expected 
-to vanish in the limit $N_{mcs}\to\infty$. 
-
-The continuous lines is the expected analytic result in the thermodynamic limit. 
-
-Clearly, $\rho_1(\lambda)$ is in good agreement with the Monte Carlo data in the 
-whole range $-2\le\lambda\le2$ considered. 
-On the other hand, larger deviations from the theoretical result are present 
-for $\rho_2(\lambda)$. These deviations are larger on the tails of the 
-distribution. This is expected since large $\lambda$ correspond to large 
-quasimomenta, which are more sensitive to the finite size of the chain. 
 
 
 
@@ -1049,11 +955,12 @@ state is obtained from~\eref{neel-fi} replacing $\ell\to L/2$, to obtain
 \Big). 
 \end{equation}
 %
-Interestingly, using~\eref{p-inv-mg} and~\eref{mg-fi}, one obtains that the ratio 
-$\widetilde Z_{MG}/Z_{MG}$ is given as 
+Interestingly, using~\eref{p-inv-neel} and~\eref{mg-fi}, one obtains that in the 
+thermodynamic limit, at the  leading order in $1/L$ the ratio $\widetilde 
+Z_{MG}/Z_{MG}$ is given as 
 %
 \begin{equation}
-\frac{\widetilde Z_{MG}}{Z_{MG}}=\frac{4}{4+L}. 
+\frac{\widetilde Z_{MG}}{Z_{MG}}\propto\frac
 \end{equation}
 %
 
