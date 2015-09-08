@@ -786,13 +786,13 @@ charge $Q_4$.
  rapidities sampled in the Monte Carlo. The $x$-axis shows the $1$-string BGT 
  root $\lambda$. The data are for a chain with $L=56$ sites and $N_{mcs}\sim 
  10^7$ Monte Carlo steps. The data are divided by a factor $10^6$ for plotting 
- convenience. The width of the histogram bin is $\Delta\lambda\sim 0.07$. (b) 
- The same as in (a) for the $2$-string roots sampled in the Monte Carlo. (b) 
- The extracted $1$-string root distribution $\rho_1(\lambda)$ plotted versus 
- $\lambda$ for two chains with $L=48$ and $L=56$ (diamond and circles, respectively). 
- The full line is the Quench-Action analytic result in the thermodynamic limit. (d) 
- The same as in (c) for the $2$-string root density $\rho_2(\lambda)$. In both 
- (c)(d) the oscillations are finite-size effects. 
+ convenience.   
+
+ The histograms 
+ are Monte Carlo data for the Heisenberg chain with $L=56$ sites and 
+ $\sim 10^7$ Monte Carlo steps. The $y$-axis is divided by $10^6$ for 
+ convenience. The continuous lines are the analytical Quench-Action 
+ results in the thermodynamic limit. 
 }
 \label{fig6-neel-roots}
 \end{figure}

@@ -281,17 +281,15 @@ a set of rapidities $\{\lambda_\alpha\}$ is given as
 +2i}{y-\lambda_\alpha}.
 \end{equation}
 %
-Using the string hypothesis and~\eref{Q-def} and~\eref{tau}, one obtains tha for 
-a generic $n$-string with string center $\lambda$ the first few charges have the 
-simple expressions
+Using the string hypothesis and~\eref{Q-def} and~\eref{tau}, one obtains for 
+the first few charges the simple expressions
 %
-\begin{eqnarray}
-Q_2=-\frac{2n}{\lambda^2+n^2}\\
-Q_3=-\frac{4n\lambda}{(\lambda^2+n^2)^2}\\
-Q_4=\frac{2n(n^2-3\lambda^2)}{(n^2+\lambda^2)^3}\\
-Q_5=\frac{8n\lambda(n^2-\lambda^2)}{(n^2+\lambda^2)^4}\\
-Q_6=-\frac{2n(5\lambda^4-10n^2\lambda^2+n^4)}{(n^2+\lambda^2)^5}
-\end{eqnarray}
+\begin{align}
+Q_3=-\frac{4k\lambda}{(\lambda^2+k^2)^2}\\
+Q_4=\frac{2k(k^2-3\lambda^2)}{(k^2+\lambda^2)^3}\\
+Q_5=\frac{8k\lambda(k^2-\lambda^2)}{(k^2+\lambda^2)^4}\\
+Q_6=-\frac{2k(5\lambda^4-10k^2\lambda^2+k^4)}{(k^2+\lambda^2)^5}
+\end{align}
 %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -491,12 +489,7 @@ $\hat{Q}=\mathbb{I}$ and $\hat Q={\mathcal H}$, respectively.
 
 
 Figure~\ref{fig2-neel-sr} plots the numerical results obtained via a full 
-scanning of the Hilbert space of the Heisenberg chain. 
-
-Precisely, the numerical data are obtained by generating all the possible string 
-contents ${\mathcal S}$ compatible with the parity-invariance constraint
-
-Panel (a) and (b) in the 
+scanning of the Hilbert space of the Heisenberg chain. Panel (a) and (b) in the 
 Figure plots the sum rule~\eref{sum} for $\hat Q=\mathbb{I}$ and $\hat Q={\mathcal 
 H}$, respectively. The circles are obtained considering all the eigenstates of the 
 Heisenberg spin chain with $L$ sites, excluding eigenstates containing 
@@ -779,20 +772,14 @@ charge $Q_4$.
 %##################################################################
 \begin{figure}[t]
 \begin{center}
-\includegraphics[width=.95\textwidth]{./draft_figs/Neel_rho}
+\includegraphics[width=.8\textwidth]{./draft_figs/Neel_rho}
 \end{center}
-\caption{ The Quench-Action steady state root ddistributions $\rho_1(x)$ 
- and $\rho_2(x)$: Monte Carlos results. (a) The histograms of the $1$-string 
- rapidities sampled in the Monte Carlo. The $x$-axis shows the $1$-string BGT 
- root $\lambda$. The data are for a chain with $L=56$ sites and $N_{mcs}\sim 
- 10^7$ Monte Carlo steps. The data are divided by a factor $10^6$ for plotting 
- convenience. The width of the histogram bin is $\Delta\lambda\sim 0.07$. (b) 
- The same as in (a) for the $2$-string roots sampled in the Monte Carlo. (b) 
- The extracted $1$-string root distribution $\rho_1(\lambda)$ plotted versus 
- $\lambda$ for two chains with $L=48$ and $L=56$ (diamond and circles, respectively). 
- The full line is the Quench-Action analytic result in the thermodynamic limit. (d) 
- The same as in (c) for the $2$-string root density $\rho_2(\lambda)$. In both 
- (c)(d) the oscillations are finite-size effects. 
+\caption{ The steady-state root densities $\rho_1(x)$ (panel (a)) and 
+ $\rho_2(x)$ (panel (b)), plotted versus the root $x$. The histograms 
+ are Monte Carlo data for the Heisenberg chain with $L=56$ sites and 
+ $\sim 10^7$ Monte Carlo steps. The $y$-axis is divided by $10^6$ for 
+ convenience. The continuous lines are the analytical Quench-Action 
+ results in the thermodynamic limit. 
 }
 \label{fig6-neel-roots}
 \end{figure}
