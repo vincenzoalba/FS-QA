@@ -13,7 +13,6 @@
 \usepackage{sidecap}
 \usepackage{bm}% bold math
 \usepackage{tikz}
-%\usepackage[backend=bibtex]{biblatex}
 
 \usepackage[colorlinks,bookmarks=false,citecolor=blue,linkcolor=red,urlcolor=blue]{hyperref}
 
@@ -223,7 +222,7 @@ Notice that pure real rapidities are strings of unit length ($1$-strings).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Bethe-Gaudin-Takahashi (BGT) equations} 
+\subsection{Bethe-Takahashi equations} 
 
 The string centers $\lambda_{n;\gamma}$ in~\eref{str_hyp} are obtained by solving the 
 so-called Bethe-Takahashi equations
@@ -267,14 +266,6 @@ can be derived as
 \end{equation}
 %
 where $t_{m,n}\equiv 2\mbox{min}(n,m)-\delta_{m,n}$. 
-
-In the thermodynamic limit the BGT equations become a set of coupled integral 
-equations given as 
-%
-\begin{equation}
-
-\end{equation}
-%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The conserved charges}
@@ -526,16 +517,10 @@ state the N\'eel state the resulting saddle point root distributions
 $\rho_n^*(\lambda)$ can be obtained analytically. The first few root distributions 
 are given as 
 %
-\begin{eqnarray}
-\label{rho_sp}
-\fl\quad\rho^*_1(\lambda)=\frac{8(4+\lambda^2)}{\pi(19+3\lambda^2)(1+6\lambda^2+
-\lambda^4)}\\
-\fl\quad\rho_2^*(\lambda)=\frac{8\lambda^2(9+\lambda^2)(4+3\lambda^2)}{\pi(2+\lambda^2)
-(16+14\lambda^2+\lambda^4)(256+132\lambda^2+9\lambda^4)}\\
-\fl\quad\rho_3^*=\frac{8(1+\lambda^2)^2(5+\lambda^2)(16+\lambda^2)(21+\lambda^2)}
-{\pi(19+3\lambda^2)(9+624\lambda^2+262\lambda^4+32\lambda^6+\lambda^8)
-(509+5\lambda^2(26+\lambda^2))}.
-\end{eqnarray}
+\begin{align}
+\rho^*_1(\lambda)=\frac{32(1+\lambda^2)}{\pi(19+12\lambda^2)(1+24\lambda^2+16
+\lambda^4)}
+\end{align}
 % 
 
 

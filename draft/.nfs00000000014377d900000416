@@ -13,7 +13,6 @@
 \usepackage{sidecap}
 \usepackage{bm}% bold math
 \usepackage{tikz}
-%\usepackage[backend=bibtex]{biblatex}
 
 \usepackage[colorlinks,bookmarks=false,citecolor=blue,linkcolor=red,urlcolor=blue]{hyperref}
 
@@ -223,7 +222,7 @@ Notice that pure real rapidities are strings of unit length ($1$-strings).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Bethe-Gaudin-Takahashi (BGT) equations} 
+\subsection{Bethe-Takahashi equations} 
 
 The string centers $\lambda_{n;\gamma}$ in~\eref{str_hyp} are obtained by solving the 
 so-called Bethe-Takahashi equations
@@ -267,14 +266,6 @@ can be derived as
 \end{equation}
 %
 where $t_{m,n}\equiv 2\mbox{min}(n,m)-\delta_{m,n}$. 
-
-In the thermodynamic limit the BGT equations become a set of coupled integral 
-equations given as 
-%
-\begin{equation}
-
-\end{equation}
-%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The conserved charges}
@@ -481,10 +472,10 @@ a functional integral over the so-called root distributions $\pmb{\rho}\equiv
 %
 \begin{equation}
 \label{eig-sum}
-\sum\limits_{\alpha}\rightarrow\int{\mathcal D}\pmb{\rho}e^{S_{YY}(\pmb{\rho})}. 
+\sum\limits_{\alpha}\rightarrow\int{\mathcal D}\pmb{\rho}e^{L S_{YY}(\pmb{\rho})}. 
 \end{equation}
 %
-Here ${\mathcal D}\pmb{\rho}\equiv\prod_{n=1}^\infty{\mathcal D}\rho_n(\lambda)$, 
+Here ${\mathcal D}\pmb{\rho}\equiv\prod_{n=1}^\infty{\mathcal D}\rho_n(\lanbda)$, 
 $\rho_n(\lambda)$ denote the distribution of the $n$-strings BGT roots, and 
 $S_{YY}(\pmb{\rho})$ is the Yang-Yang entropy, which counts the number of 
 Bethe states leading to the same $\pmb{\rho}$ in the thermodynamic limit. 
@@ -497,8 +488,8 @@ Using~\eref{eig-sum} the diagonal ensemble~\eref{d-ensemble} becomes
 \label{qa-d-ensemble}
 \fl
 \quad\langle{\mathcal O}\rangle=\int{\mathcal D}\pmb{\rho}(\lambda)
-\exp\Big(2\Re\log\langle\Psi_0|\pmb{\rho}(\lambda)\rangle 
-+S_{YY}(\pmb{\rho})\Big)\langle\pmb{\rho}(\lambda)|{\mathcal O}|\pmb{\rho}
+\exp-L\Big(-\frac{2}{L}\Re\log\langle\Psi_0|\pmb{\rho}(\lambda)\rangle 
+-S_{YY}(\pmb{\rho})\Big)\langle\pmb{\rho}(\lambda)|{\mathcal O}|\pmb{\rho}
 (\lambda)\rangle
 \end{equation}
 %
@@ -517,27 +508,9 @@ One has then to minimize the functional ${\mathcal S}(\pmb{\rho})$ defined
 as 
 %
 \begin{equation}
-L{\mathcal S}(\pmb{\rho})\equiv 2\Re\log\langle\pmb{\rho}|\Psi_0
-\rangle+S_{YY}(\pmb{\rho}(\lambda)). 
+{\mathcal S}(\pmb{\rho})\equiv 
 \end{equation}
 % 
-under the constraint that the BGT equations hold. For the quench with initial 
-state the N\'eel state the resulting saddle point root distributions 
-$\rho_n^*(\lambda)$ can be obtained analytically. The first few root distributions 
-are given as 
-%
-\begin{eqnarray}
-\label{rho_sp}
-\fl\quad\rho^*_1(\lambda)=\frac{8(4+\lambda^2)}{\pi(19+3\lambda^2)(1+6\lambda^2+
-\lambda^4)}\\
-\fl\quad\rho_2^*(\lambda)=\frac{8\lambda^2(9+\lambda^2)(4+3\lambda^2)}{\pi(2+\lambda^2)
-(16+14\lambda^2+\lambda^4)(256+132\lambda^2+9\lambda^4)}\\
-\fl\quad\rho_3^*=\frac{8(1+\lambda^2)^2(5+\lambda^2)(16+\lambda^2)(21+\lambda^2)}
-{\pi(19+3\lambda^2)(9+624\lambda^2+262\lambda^4+32\lambda^6+\lambda^8)
-(509+5\lambda^2(26+\lambda^2))}.
-\end{eqnarray}
-% 
-
 
 
 

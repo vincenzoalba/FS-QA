@@ -13,7 +13,7 @@
 \usepackage{sidecap}
 \usepackage{bm}% bold math
 \usepackage{tikz}
-%\usepackage[backend=bibtex]{biblatex}
+\usepackage[backend=bibtex]{biblatex}
 
 \usepackage[colorlinks,bookmarks=false,citecolor=blue,linkcolor=red,urlcolor=blue]{hyperref}
 
@@ -223,7 +223,7 @@ Notice that pure real rapidities are strings of unit length ($1$-strings).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Bethe-Gaudin-Takahashi (BGT) equations} 
+\subsection{Bethe-Takahashi equations} 
 
 The string centers $\lambda_{n;\gamma}$ in~\eref{str_hyp} are obtained by solving the 
 so-called Bethe-Takahashi equations
@@ -267,14 +267,6 @@ can be derived as
 \end{equation}
 %
 where $t_{m,n}\equiv 2\mbox{min}(n,m)-\delta_{m,n}$. 
-
-In the thermodynamic limit the BGT equations become a set of coupled integral 
-equations given as 
-%
-\begin{equation}
-
-\end{equation}
-%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The conserved charges}
