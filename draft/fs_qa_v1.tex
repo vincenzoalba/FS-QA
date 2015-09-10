@@ -58,10 +58,10 @@
 \title{The Quench-Action method in integrable spin chains: A Monte Carlo 
 approach}
 
-\author{Vincenzo Alba$^1$, Pasquale Calabrese$^1$}
-\address{$^1$ International School for Advanced Studies (SISSA),
-Via Bonomea 265, 34136, Trieste, Italy,
-INFN, Sezione di Trieste}
+\author{Authors}
+%\address{$^1$ International School for Advanced Studies (SISSA),
+%Via Bonomea 265, 34136, Trieste, Italy,
+%INFN, Sezione di Trieste}
 
 
 \date{\today}
@@ -272,9 +272,20 @@ In the thermodynamic limit the BGT equations become a set of coupled integral
 equations given as 
 %
 \begin{equation}
-
+\label{bgt-th}
+a_n(\lambda)=\rho_n(\lambda)+\rho^h_n(\lambda)+\sum_m(T_{n,m}*\rho_m)
+(\lambda),
 \end{equation}
 %
+where 
+%
+\begin{equation}
+(T_{n,m}*\rho_m)(\lambda)\equiv\int_{-\infty}^{+\infty}T_{n,m}(\lambda-\lambda')
+\rho_{m}(\lambda'). 
+\end{equation}
+%
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The conserved charges}
@@ -539,6 +550,17 @@ are given as
 % 
 
 
+
+%##################################################################
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=.9\textwidth]{./draft_figs/Neel_overlaps}
+\end{center}
+\caption{ 
+}
+\label{fig0}
+\end{figure}
+%##################################################################
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -891,7 +913,8 @@ charge $Q_4$.
  $\lambda$ for two chains with $L=48$ and $L=56$ (diamond and circles, respectively). 
  The full line is the Quench-Action analytic result in the thermodynamic limit. (d) 
  The same as in (c) for the $2$-string root density $\rho_2(\lambda)$. In both 
- (c)(d) the oscillations are finite-size effects. 
+ (c)(d) the oscillations are finite-size effects, whereas the error bars 
+ show the statistical Monte Carlo error. 
 }
 \label{fig6-neel-roots}
 \end{figure}
