@@ -113,12 +113,20 @@ values are obtained using the so-called diagonal ensemble, which is defined as
 %
 
 
-%%%%%%%%%%%%%%%%%%%%%%% BETHE ANSATZ APPROACH %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{The Heisenberg spin chain}
-\label{xxx-chain}
+%%%%%%%%%%%%%%%%%%%%%%% BETHE ANSATZ FOR THE XXX CHAIN %%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Bethe ansatz solution of the Heisenberg ($XXX$) spin chain}
+\label{sec:1}
 
-Here we consdier the spin-$\frac{1}{2}$ isotropic Heisenberg chain ($XXX$ chain). 
-The $XXX$ chain with $L$ sites is defined by the Hamiltonian 
+Here we review some Bethe ansatz results for the spin-$\frac{1}{2}$ Heisenberg 
+($XXX$) chain. Specifically, in 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The spin-$\frac{1}{2}$ Heisenberg chain}
+\label{sec:1.1}
+
+The spin-$\frac{1}{2}$ isotropic Heisenberg chain ($XXX$ chain) with $L$ sites 
+is defined by the Hamiltonian 
 %
 \begin{equation}
 \label{xxx-ham}
@@ -135,106 +143,112 @@ commutes with~\eref{xxx-ham}, and it is here used to label its eigenstates.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Bethe equations and wavefunctions}
-\label{bethe_equations}
+\label{sec:1.2}
 
-The generic eigenstate of~\eref{xxx-ham} in the sector with $M$ particles can be written as 
+
+In the Bethe ansatz framework~\cite{bethe-1931,taka-book} the generic eigenstate 
+of~\eref{xxx-ham} (Bethe state) in the sector with $M$ particles can be written as 
 %
 \begin{equation}
-\label{ba_eig}
+\label{ba-eig}
 |\Psi_M\rangle=\sum\limits_{1\le x_1<x_2<\dots<x_M\le L}A_M(x_1,x_2,
 \dots,x_M)|x_1,x_2,\dots,x_M\rangle,
 \end{equation}
 %
-where the sum is over the positions $\{x_i\}$ of the particles, and $A_M(x_1,
-x_2,\dots,x_M)$ is the eigenstate amplitude corresponding to particles 
-at positions $x_1,x_2,\dots, x_M$. $A_M(x_1,x_2,\dots, x_M)$ is given as 
+where the sum is over the positions $\{x_i\}_{i=1}^M$ of the particles, and $A_M(x_1,
+x_2,\dots,x_M)$ is the eigenstate amplitude corresponding to the particles 
+being at positions $x_1,x_2,\dots, x_M$. Here $A_M(x_1,x_2,\dots, x_M)$ is 
+given as 
 %
 \begin{equation}
 \label{ba_amp}
-A_M(x_1,x_2,\dots,x_M)\equiv\sum\limits_{{\mathcal P}\in S_M}\exp\Big[i
-\sum\limits_{j=1}^Mk_{{\mathcal P}_j}x_j+i\sum\limits_{i<j}\theta_{{
-\mathcal P}_i{\mathcal P}_j}\Big].
+A_M(x_1,x_2,\dots,x_M)\equiv\sum\limits_{\sigma\in S_M}\exp\Big[i
+\sum\limits_{j=1}^Mk_{\sigma_j}x_j+i\sum\limits_{i<j}\theta_{\sigma_i,\sigma_j}
+\Big], 
 \end{equation}
 %
-Here the outermost sum is over the permutations $S_M$ 
-of the so-called quasi-momenta $\{k_1,k_2,\dots,k_M\}$. The two-particle 
-scattering phases $\theta_{m,n}$ are defined as 
+where the outermost summation is over the permutations $S_M$ of the so-called 
+quasi-momenta $\{k_\alpha\}_{\alpha=1}^M$. The two-particle scattering phases 
+$\theta_{\alpha,\beta}$ are defined as 
 %
 \begin{equation}
 \label{s_phases}
-\theta_{m,n}\equiv \frac{1}{2i}\log\Big[-\frac{e^{ik_m+ik_n}-2e^{ik_m}+1}
-{e^{ik_m+ik_n}-2e^{ik_n}+1}\Big].
+\theta_{\alpha,\beta}\equiv \frac{1}{2i}\log\Big[-\frac{e^{ik_\alpha+ik_\beta}-
+2e^{ik_\alpha}+1}{e^{ik_\alpha+ik_\beta}-2e^{ik_\beta}+1}\Big].
 \end{equation}
 %
-The energy associated to the eigenstate~\eref{ba_eig} is  
+The eigenenergy associated to the eigenstate~\eref{ba-eig} is  
 %
 \begin{equation}
 \label{ba_ener}
-E=\sum\limits_{\alpha=1}^M(\cos(k_\alpha)-1).
+E=\sum\limits_{\alpha=1}^M(\cos(k_\alpha)-1). 
 \end{equation}
 %
-The quasi-momenta $\{k_\alpha\}$ are obtained by solving the so-called 
-Bethe equations  
+The quasi-momenta $k_\alpha$ are obtained by solving the so-called Bethe 
+equations~\cite{bethe-1931}
 %
 \begin{equation}
-\label{ba_eq}
+\label{ba-eq}
 e^{ik_\alpha L}=\prod\limits^M_{\beta\ne\alpha}\Big[-\frac{1-2e^{
 ik_\alpha}-e^{ik_\alpha+ik_\beta}}{1-2e^{ik_\beta}-e^{ik_\alpha+
 ik_\beta}}\Big].
 \end{equation}
 %
-It is useful to  introduce the rapidities $\{\lambda_\alpha\}$ as 
+It is useful to  introduce the rapidities $\{\lambda_\alpha\}_{\alpha=1}^M$ as 
 %
 \begin{equation}
 \label{rap}
 k_\alpha=\pi-2\arctan(\lambda_\alpha)\quad\mbox{mod}\, 2\pi.
 \end{equation}
 %
-Taking the logarithm on both sides in~\eref{ba_eq}, and using~\eref{rap}, 
+Taking the logarithm on both sides in~\eref{ba-eq}, and using~\eref{rap}, 
 one obtains the Bethe equations in logarithmic form as 
 %
 \begin{equation}
-\label{ba_eq_log}
+\label{ba-eq-log}
 \arctan(\lambda_\alpha)=\frac{\pi}{L}J_\alpha+\frac{1}{L}\sum\limits_{
 \beta\ne\alpha}\arctan\Big(\frac{\lambda_\alpha-\lambda_\beta}{2}\Big),
 \end{equation}
 %
 where $-L/2<J_\alpha\le L/2$ are the so-called Bethe quantum numbers. The 
-$J_\alpha$ are half-integers and integers for $L-M$ even and odd. 
+$J_\alpha$ are half-integers and integers for $L-M$ even and odd, 
+respectively. 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{String hypothesis \& the Bethe-Gaudin-Takahashi (BGT) equations}
+\label{sec:1.3}
 
-These solutions of the Bethe equations~\eref{ba_eq} form particular ``string'' patterns 
-in the complex plane, in the limit of large chains $L\to\infty$(string hypothesis)~\cite{
-bethe-1931,taka-book}. Specifically, rapidities forming a ``string'' of length $1\le 
-n\le M$ (that we defined here as $n$-string) are parametrized as 
+In the thermodynamic limit $L\to\infty$ the solutions of the Bethe 
+equations~\eref{ba-eq} form particular ``string'' patterns in the complex plane, 
+(string hypothesis)~\cite{bethe-1931,taka-book}. Specifically, the rapidities 
+forming a ``string'' of length $1\le n\le M$ (that we defined here as 
+$n$-string) can be parametrized as 
 %
 \begin{equation}
-\label{str_hyp}
+\label{str-hyp}
 \lambda^{j}_{n;\gamma}=\lambda_{n;\gamma}-i(n-1-2j)+i\delta_{n;\gamma}^j,\qquad 
 j=0,1,\dots, n-1, 
 \end{equation}
 %
-where $\lambda_{n;\gamma}$ is the real part of the string (string center), 
-and $\gamma$ labels strings with different centers, while $j$ labels the different 
-components of the string. In~\eref{str_hyp} $\delta_{n;\gamma}^j$ are the string 
-deviations, which typically vanish exponentially in the thermodynamic limit. 
+with $\lambda_{n;\gamma}$ being the real part of the string (string center), 
+$\gamma$ labelling strings with different centers, and $j$ labelling the different 
+components of the string. In Eq.~\eref{str-hyp} $\delta_{n;\gamma}^j$ are the string 
+deviations, which typically, i.e., for most of the chain eigenstates, vanish 
+exponentially with $L$ in the thermodynamic limit. 
+Note that real rapidities correspond to strings of unit length ($1$-strings), i.e., 
+$n=1$ in Eq.~\eref{str-hyp}. 
 
-Notice that pure real rapidities are strings of unit length ($1$-strings). 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Bethe-Gaudin-Takahashi (BGT) equations} 
-
-The string centers $\lambda_{n;\gamma}$ in~\eref{str_hyp} are obtained by solving the 
-so-called Bethe-Takahashi equations
+The string centers $\lambda_{n;\gamma}$ are obtained by solving the so-called 
+Bethe-Gaudin-Takahashi equations
 %
 \begin{equation}
-\label{bt_eq}
+\label{bgt-eq}
 2L\theta_n(\lambda_{n;\gamma})=2\pi I_{n;\gamma}+\sum\limits_{(m,
-\beta)\ne(n,\gamma)}\Theta_{m,n}(\lambda_{n;\gamma}-\lambda_{m;\beta}), 
+\beta)\ne(n,\gamma)}\Theta_{m,n}(\lambda_{n;\gamma}-\lambda_{m;\beta}).  
 \end{equation}
 %
-where the generalized scattering phases $\Theta_{m,n}$ read 
+The generalized scattering phases $\Theta_{m,n}$ read 
 %
 \begin{eqnarray}
 \nonumber\fl\Theta_{m,n}(x)\equiv\left\{\begin{array}{cc}
@@ -246,18 +260,17 @@ where the generalized scattering phases $\Theta_{m,n}$ read
 \end{array}\right.
 \end{eqnarray}
 %
-and $\theta_\alpha(x)\equiv 2\arctan(x/\alpha)$. Here $I_{n;\gamma}$ are the 
+with $\theta_\alpha(x)\equiv 2\arctan(x/\alpha)$. Here $I_{n;\gamma}$ are the 
 Bethe-Takahashi quantum numbers associated with $\lambda_{n;\gamma}$. 
+The solutions of~\eref{bgt-eq}, and the Bethe states thereof, are naturally 
+classified according to their ``string content'' ${\mathcal S}\equiv\{s_n
+\}_{n=1}^M$, with $s_n$ the number of $n$-strings. Clearly, the constraint 
+$\sum_{n=1}^{M}n s_n=M$ has to be satisfied. It can be shown that 
+the BGT quantum numbers $I_{n;\gamma}$ associated with the $n$-strings are 
+integers and half-integers for $L-s_n$ odd and even, respectively. 
 
-Each $M$-particle eigenstate can be characterized by its ``string content'' ${
-\mathcal S}\equiv\{s_1,\dots,s_M\}$, with $s_n$ the number of $n$-strings. 
 
-It can be shown that $I_{n;\gamma}$  are integers or half-integers for $L-s_n$ 
-odd and even, respectively. 
-
-
-Clearly, the constraint $\sum_{\alpha=1}^{M}\alpha s_\alpha=M$ 
-has to be satisfied. The upper bound for the Bethe-Takahashi quantum numbers 
+The upper bound for the Bethe-Takahashi quantum numbers 
 can be derived as   
 %
 \begin{equation}
@@ -284,7 +297,24 @@ where
 \rho_{m}(\lambda'). 
 \end{equation}
 %
-
+The matrix $T_{n,m}(x)\equiv\Theta'(x)$ is given as 
+%
+\begin{eqnarray}
+\nonumber\fl T_{m,n}(x)\equiv\left\{\begin{array}{cc}
+a_{|n-m|}(x)+\!\!\!\!\!\sum
+\limits_{r=1}^{(n+m-|n-m|-1)/2}\!\!\!\!\!2a_{|n-m|+2r}(x)
++a_{n+m}(x) & \quad\mbox{if}
+\quad n\ne m\\\fl\sum\limits_{r=1}^{n-1}2a_{2r}(x)+
+a_{2n}(x) & \quad\mbox{if}\quad n=m
+\end{array}\right.
+\end{eqnarray}
+%
+with 
+%
+\begin{equation}
+a_n(x)\equiv\frac{1}{\pi}\frac{n}{x^2+n^2}. 
+\end{equation}
+%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -448,7 +478,30 @@ can be rewritten as
 %
 with ${\mathcal P}=+$ and ${\mathcal P}=-$ for even and odd strings, respectively. 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Thermodynamic limit}
 
+In the thermodynamic limit the expression for the overlap~\eref{neel-ov} becomes 
+%
+\begin{equation}
+\label{neel-ov-th}
+\fl\lim_{L\to\infty}\left[\frac{\langle N|\{\pm\lambda_j\}_{j=1}^m,n_\infty
+\rangle}{|||\{\lambda_j\}_{j=1}^m,n_\infty\rangle||}\right]=\frac{L}{2}\Big(
+n_\infty\log(2)+\sum_{n=1}^\infty\int_0^\infty d\lambda\rho_n(\lambda)[g_n(\lambda)
++2n\log(4)]\Big), 
+\end{equation}
+%
+with 
+%
+\begin{eqnarray}
+g_n(\lambda)=\sum_{l=1}^{n-1}\Big[f_{n-1-2l}(\lambda)-f_{n-2l}(\lambda)\Big],\\
+f_n(\lambda)=\log\Big(\lambda^2+\frac{n^2}{4}\Big),\\
+n_\infty=1-2\sum_{m=1}^\infty m\int_{-\infty}^\infty d\lambda\rho_m(\lambda). 
+\end{eqnarray}
+%
+Note that~\eref{neel-ov-th} is extensive, subextensive contributions 
+are neglected. In particular, Eq.~\eref{neel-ov-th} that the ratio of 
+determinants $\det_m(G^+)/\det_m(G^-)$ does not contribute. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Overlap with the Majumdar-Ghosh state}
@@ -570,7 +623,8 @@ are given as
  is $\sim 2/L$. The $y$-axis is rescaled by a factor $10^5$ for 
  convenience. Note the peaking of the histograms around 
  $-2\log|\langle\lambda|N\rangle|\sim 0.5$ in the thermodynamic 
- dfafaflimit {\bf really??}. 
+ limit {\bf really??}. The dotted vertical line is the expected 
+ Quench-Action result in the thermodynamic limit.  
 }
 \label{fig0:N-ov-overview}
 \end{figure}
@@ -1412,6 +1466,15 @@ P.~Calabrese and P.~Le Doussal, J.\ Stat.\ Mech.\ (2014) P05004.
 
 \bibitem{alba-2015}
 V.~Alba, arXiv:1507.06994.
+
+\bibitem{bethe-1931}
+H.~Bethe, Zur Theorie der Metalle. I. Eigenwerte und Eigenfunktionen 
+der linearen Atomkette, Z.\ Phys.\ {\bf 71}, 205 (1931).
+
+
+\bibitem{taka-book}
+M.~Takahashi, {\it Thermodynamics of one-dimensional solvable models}, 
+Cambridge University Press, Cambridge, 1999.
 
 \end{thebibliography}
 
