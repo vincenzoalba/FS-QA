@@ -118,7 +118,13 @@ values are obtained using the so-called diagonal ensemble, which is defined as
 \label{sec:1}
 
 Here we review some Bethe ansatz results for the spin-$\frac{1}{2}$ Heisenberg 
-($XXX$) chain. Specifically, in 
+($XXX$) chain. Specifically, in section~\ref{sec:1.1} we introduce the model. 
+Its eigenstates (Bethe states) and the Bethe equations are discussed in 
+section~\ref{sec:1.2}. Section~\ref{sec:1.3} focuses on the string hypothesis 
+and the so-called Bethe-Gaudin-Takahashi (BGT) equations. The form of the 
+BGT equations in the thermodynamic limit is discussed in section~\ref{sec:1.4}. 
+Finally, in section~\ref{sec:1.5} we provide some exact formulas for the 
+local conserved charges of the model. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -180,7 +186,7 @@ $\theta_{\alpha,\beta}$ are defined as
 The eigenenergy associated to the eigenstate~\eref{ba-eig} is  
 %
 \begin{equation}
-\label{ba_ener}
+\label{ba-ener}
 E=\sum\limits_{\alpha=1}^M(\cos(k_\alpha)-1). 
 \end{equation}
 %
@@ -213,6 +219,21 @@ one obtains the Bethe equations in logarithmic form as
 where $-L/2<J_\alpha\le L/2$ are the so-called Bethe quantum numbers. The 
 $J_\alpha$ are half-integers and integers for $L-M$ even and odd, 
 respectively. 
+
+Finally, one should remark that $M$-particle eigenstates corresponding to 
+{\it finite} rapidities are eigenstates with maximum allowed magnetization 
+(highest-weight eigenstates) $S_T^z=L/2-M=S_T$, with $S_T$ the total spin. 
+Due to the $SU(2)$ invariance of~\eref{xxx-ham}, all the states in the same 
+$S_T$ multiplet and different $-S_T\le S_T^z\le S_T$ are eigenstates of the 
+$XXX$ chain with the same energy eigenvalue. These eigenstates (descendants) 
+are obtained by multiple applications of the total-spin lowering operator 
+$S_T^-\equiv\sum_iS_i^-$ on the highest-weight eigenstates. In the Bethe ansatz 
+framework the rapidities of a generic $M$-particle descendant eigenstate with 
+$S_T^T=L/2-M'$, with $M'<M$, are obtained by supplementing the $M$ rapidities 
+of the highest-weight state with $M'-M$  infinite rapidities. We anticipate 
+that descendant eigenstates have non-zero overlap with the zero-momentum 
+N\'eel state (cf. section~\ref{sec:2}). 
+ 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{String hypothesis \& the Bethe-Gaudin-Takahashi (BGT) equations}
@@ -268,10 +289,7 @@ classified according to their ``string content'' ${\mathcal S}\equiv\{s_n
 $\sum_{n=1}^{M}n s_n=M$ has to be satisfied. It can be shown that 
 the BGT quantum numbers $I_{n;\gamma}$ associated with the $n$-strings are 
 integers and half-integers for $L-s_n$ odd and even, respectively. 
-
-
-The upper bound for the Bethe-Takahashi quantum numbers 
-can be derived as   
+An upper bound for the BGT quantum numbers can be derived as~\cite{taka-book} 
 %
 \begin{equation}
 |I_{n;\gamma}|\le I^{(MAX)}_{n}\equiv\frac{1}{2}(L-1-\sum
@@ -279,10 +297,26 @@ can be derived as
 \label{bt_qn_bound}
 \end{equation}
 %
-where $t_{m,n}\equiv 2\mbox{min}(n,m)-\delta_{m,n}$. 
+where $t_{m,n}\equiv 2\mbox{min}(n,m)-\delta_{m,n}$. Using the string hypothesis 
+Bethe states energy eigenvalue~\eref{ba-ener} becomes
+%
+\begin{equation}
+\label{ener-str}
+E=-\sum_{n,\gamma}\frac{2n}{\lambda_{n;\gamma}^2+n^2}. 
+\end{equation}
+%
 
-In the thermodynamic limit the BGT equations become a set of coupled integral 
-equations given as 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Thermodynamic limit}
+\label{sec:1.4}
+
+In the thermodynamic limit $L\to\infty$ at fixed finite particle density $M/L$ 
+the solutions of the BGT equations~\eref{bgt-eq} become dense. One then defines 
+the BGT root distributions for the $n$-strings as $\pmb{\rho}\equiv\{\rho_n(
+\lambda)\}_{n=1}^\infty$, with $\rho_n(\lambda)\equiv\lim_{L\to\infty}[
+\lambda_{n;\gamma+1}-\lambda_{n;\gamma}]^{-1}$. Thus the  BGT 
+equations~\eref{bgt-eq} become an infinite set of coupled non-linear integral 
+equations for the $\rho_n(\lambda)$ as 
 %
 \begin{equation}
 \label{bgt-th}
@@ -290,14 +324,21 @@ a_n(\lambda)=\rho_n(\lambda)+\rho^h_n(\lambda)+\sum_m(T_{n,m}*\rho_m)
 (\lambda),
 \end{equation}
 %
-where 
+where $\rho_n^{h}$ are the hole-distributions, and the functions $a_n(\lambda)$ 
+are defined as 
+%
+\begin{equation}
+a_n(x)\equiv\frac{1}{\pi}\frac{n}{x^2+n^2}. 
+\end{equation}
+%
+In~\eref{bgt-th} $T_{n,m}*\rho_m$ denotes the convolution 
 %
 \begin{equation}
 (T_{n,m}*\rho_m)(\lambda)\equiv\int_{-\infty}^{+\infty}T_{n,m}(\lambda-\lambda')
-\rho_{m}(\lambda'). 
+\rho_{m}(\lambda'),
 \end{equation}
 %
-The matrix $T_{n,m}(x)\equiv\Theta'(x)$ is given as 
+with the matrix $T_{n,m}(x)\equiv\Theta'(x)$ being dfined as 
 %
 \begin{eqnarray}
 \nonumber\fl T_{m,n}(x)\equiv\left\{\begin{array}{cc}
@@ -309,30 +350,32 @@ a_{2n}(x) & \quad\mbox{if}\quad n=m
 \end{array}\right.
 \end{eqnarray}
 %
-with 
-%
-\begin{equation}
-a_n(x)\equiv\frac{1}{\pi}\frac{n}{x^2+n^2}. 
-\end{equation}
-%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{The conserved charges}
+\subsection{The conserved charges}
+\label{sec:1.5}
 
-The $XXX$ chain exhibits an extensive number of local conserved charges $Q_n$. 
-These are defined as 
+The $XXX$ chain exhibits an extensive number of mutually commuting local conserved 
+charges $Q_n$, with $n\in\mathbb{N}$, i.e., 
+%
+\begin{equation}
+[Q_n,{\mathcal H}]=0\quad\forall n\quad\textrm{and}\quad [Q_n,Q_m]=0\quad\forall n,m.
+\end{equation}
+%
+The eigenvalues $q_n$ of the conserved charges over the Bethe eigenstates 
+(cf.~\eref{ba-eig}) are given as 
 %
 \begin{equation}
 \label{Q-def}
-\left.Q_{j+1}\equiv\frac{i}{(j-1)!}\frac{d^j}{dy^j}\log\tau
+\left.q_{n+1}\equiv\frac{i}{(n-1)!}\frac{d^n}{dy^n}\log\tau
 (y)\right|_{y=i},
 \end{equation}
 %
-where $y$ is a spectral parameter and $\tau(y)$ is the eigenvalue of the 
-so-called transfer matrix in the Algebraic Bethe Ansatz framework. The 
-analytic expression of $\tau(y)$ for a given eigenstate identified by 
-a set of rapidities $\{\lambda_\alpha\}$ is given as 
+where $y$ is a spectral parameter and $\tau(y)$ is the Bethe state eigenvalue of the 
+so-called transfer matrix in the Algebraic Bethe Ansatz framework~\cite{kor-book}. 
+The analytic expression for $\tau(y)$ in terms of the solutions 
+$\{\lambda_\alpha\}_{\alpha=1}^M$ of the Bethe equations~\eref{ba-eq} is given as 
 %
 \begin{equation}
 \label{tau}
@@ -341,100 +384,125 @@ a set of rapidities $\{\lambda_\alpha\}$ is given as
 +2i}{y-\lambda_\alpha}.
 \end{equation}
 %
-Using the string hypothesis and~\eref{Q-def} and~\eref{tau}, one obtains tha for 
-a generic $n$-string with string center $\lambda$ the first few charges have the 
-simple expressions
+Interestingly, from~\eref{Q-def} one has that the second term in~\eref{tau} does not 
+contribute to $q_n$, at least for $n\le L-2$. 
+For a generic Bethe state $q_n$ is obtained by summing independently the contributions 
+of the BGT roots as 
+%
+\begin{equation}
+\label{qngnk}
+q_n=\sum_{k,\gamma}g_{n,k}(\lambda_{k;\gamma}).
+\end{equation}
+%
+Using the string hypothesis~\eref{str-hyp}, and~\eref{Q-def},~\eref{tau}, one obtains  
+the the first few functions $g_{n,k}$ in terms of the solutions of the BGT equations as 
 %
 \begin{eqnarray}
-Q_2=-\frac{2n}{\lambda^2+n^2}\\
-Q_3=-\frac{4n\lambda}{(\lambda^2+n^2)^2}\\
-Q_4=\frac{2n(n^2-3\lambda^2)}{(n^2+\lambda^2)^3}\\
-Q_5=\frac{8n\lambda(n^2-\lambda^2)}{(n^2+\lambda^2)^4}\\
-Q_6=-\frac{2n(5\lambda^4-10n^2\lambda^2+n^4)}{(n^2+\lambda^2)^5}
+\label{gnk}
+g_{3,k}=-\frac{4k\lambda_{k;\gamma}}{(\lambda_{k;\gamma}^2+k^2)^2}, &\quad  
+g_{4,k}=\frac{2k(k^2-3\lambda_{k;\gamma}^2)}{(k^2+\lambda_{k;\gamma}^2)^3}\\\nonumber 
+g_{5,k}=\frac{8k\lambda_{k;\gamma}(k^2-\lambda_{k;\gamma}^2)}{(k^2+
+\lambda_{k;\gamma}^2)^4}, & \quad
+g_{6,k}=-\frac{2k(5\lambda_{k;\gamma}^4-10k^2\lambda_{k;\gamma}^2+k^4)}{(k^2+
+\lambda_{k;\gamma}^2)^5}. 
 \end{eqnarray}
 %
+Note that $q_2$ is the Bethe state energy eigenvalue and is given in~\eref{ener-str}. 
+It is also interesting to observe that $g_{n,k}$ (cf.~\eref{gnk}) is vanishing for 
+infinite BGT roots. This is expected to hold for the generic $g_{n,k}$, i.e., for any 
+$n$, and it is a consequence of the $SU(2)$ invariance of the conserved charges. Finally, 
+in the thermodynamic limit $L\to\infty$ from~\eref{qngnk} one has 
+%
+\begin{equation}
+q_n\to\sum_{k=1}^\infty\int_{-\infty}^{+\infty}d\lambda\rho_k(\lambda)g_{n,k}(\lambda), 
+\end{equation}
+%
+where the BGT root distributions $\rho_k(\lambda)$ are solutions of~\eref{bgt-th}. 
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{N\'eel expectation values}
-\label{Q-Neel}
+\section{Overlap between the Bethe states and some initial states} 
+\label{sec:2}
 
-The expectation values of the $XXX$ chain conserved charges over the N\'eel 
-state are given as 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Overlap with the Neel state}
-
-Here we focus on the overlap with the zero-momentum N\'eel state $|N\rangle$, 
+Here we detail the Bethe ansatz results for the overlap of the Bethe states (cf.~\eref{ba-eig}) 
+with the zero-momentum (one-site shift invariant) N\'eel state $|N\rangle$ and the 
+Majumdar-Ghosh (MG) $|MG\rangle$ state. We stard discussing the N\'eel state. This is 
 defined as 
 %
 \begin{equation}
 \label{neel}
-|N\rangle\equiv\frac{1}{\sqrt{2}}\Big(|\uparrow\downarrow\rangle^{\otimes L/2}
-+|\downarrow\uparrow\rangle^{\otimes L/2}\Big).
+|N\rangle\equiv\frac{1}{\sqrt{2}}\big(|N_1\rangle
++|N_2\rangle\big), 
 \end{equation}
 %
-Here we restrict to the parity-invariant eigenstates. These are the only 
-eigenstates with non-zero overlap with the Neel state. Parity-invariant 
-eigenstates contain only pairs of rapidities with opposite sign.  
+with $|N_1\rangle\equiv |\uparrow\downarrow\rangle^{\otimes L/2}$, and $|N_2\rangle\equiv 
+|\downarrow\uparrow\rangle^{\otimes L/2}$. Note that $|N_1\rangle=\hat T|N_2\rangle$, 
+with $\hat T$ the one-site shift operator. 
 
-We denote the generic parity invariant eigenstate as $|\{\pm\lambda_j\}_{j=1}^m,
-n_\infty\rangle$, where $m$ is the number of rapidity pairs, $N_{\infty}$ is the 
-number of infinite rapidities, with $M=L/2=N_\infty+2m$, and $n_\infty\equiv 
-N_\infty/L$ is the density of infinite rapidities. 
-
-The overlap with the Neel state $|N\rangle$ reads 
+Due to the zero-momentum constraint, only parity-invariant Bethe states can have non-zero 
+N\'eel overlap~\cite{brockmann-2014}. Parity-invariant Bethe states contain only pairs of 
+solutions of the Bethe equations~\eref{ba-eq} with opposite sign.  Here we denote the generic 
+parity-invariant rapidity configuration as $|\{\pm\tilde\lambda_\alpha\}_{\alpha=1}^m,n_\infty
+\rangle$, i.e., considering only positive rapidities. Here $m$ is the number of rapidity pairs. 
+Since the N\'eel state is not invariant under $SU(2)$ rotations, eigenstates with 
+infinite rapidities can have non-zero N\'eel overlaps.
+Here the number of infinite rapidities is denoted as $N_{\infty}$. Note that one has $M=L/2=
+N_\infty+2m$. We denote as $n_\infty\equiv N_\infty/L$ the density of infinite rapidities. 
+Finally, the overlap between the Bethe states and the Neel state $|N\rangle$ 
+reads~\cite{brockmann-2014,pozsgay-2014} 
 %
 \begin{equation}
 \label{neel-ov}
-\frac{\langle N|\{\pm\lambda_j\}_{j=1}^m,n_\infty\rangle}{|||\{\lambda_j\}_{j=1}^m,
+\frac{\langle N|\{\pm\tilde\lambda_j\}_{j=1}^m,n_\infty\rangle}{|||\{\tilde\lambda_j\}_{j=1}^m,
 n_\infty\rangle||}=\frac{\sqrt{2}N_{\infty}!}{\sqrt{(2N_\infty)!}}\left[\prod_{j=1}^m
-\frac{\sqrt{\lambda_j^2+1}}{4\lambda_j}\right]\sqrt{\frac{\textrm{det}_m(G^+)}{
-\textrm{det}_m(G^-)}}
+\frac{\sqrt{\tilde\lambda_j^2+1}}{4\tilde\lambda_j}\right]\sqrt{\frac{\textrm{det}_m(G^+)}{
+\textrm{det}_m(G^-)}}.
+\end{equation}
+%
+The matrix $G^\pm$ is  defined as  
+%
+\begin{equation}
+\label{G-pm}
+\fl\quad G^{\pm}_{jk}=\delta_{jk}\Big(LK_{1/2}(\tilde\lambda_j)-\sum\limits_{l=1}^mK_1^+(
+\tilde\lambda_j,\tilde\lambda_l)\Big)+K_{1}^{\pm}(\tilde\lambda_j,\tilde\lambda_k),
+\quad\,j,k=1,\dots,m, 
 \end{equation}
 %
 where 
 %
 \begin{equation}
-\label{G-pm}
-G^{\pm}_{jk}=\delta_{jk}\Big(NK_{1/2}(\lambda_j)-\sum\limits_{l=1}^mK_1^+(\lambda_j,
-\lambda_l)\Big)+K_{1}^{\pm}(\lambda_j,\lambda_k),\quad\,j,k=1,\dots,m
+\label{K}
+K_1^\pm(\lambda,\mu)=K_1(\lambda-\mu)\pm K_1(\lambda+\mu) \quad\textrm{with}\quad 
+K_\alpha(\lambda)\equiv\frac{8\alpha}{\lambda^2+4\alpha^2}. 
 \end{equation}
 %
-and 
-%
-\begin{equation}
-\label{K-1}
-K_1^\pm(\lambda,\mu)=K_1(\lambda-\mu)\pm K_1(\lambda+\mu)
-\end{equation}
-%
-and 
-%
-\begin{equation}
-\label{K-alpha}
-K_\alpha(\lambda)\equiv\frac{8\alpha}{\lambda^2+4\alpha^2}
-\end{equation}
-%
+Note that our definitions of $K_{\alpha}(\lambda)$ differs from the one in 
+Ref.~\cite{brockmann-2014}, due to a factor $2$ in the definition of the 
+rapidities (see also~\eref{str-hyp}). 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Reduced Neel overlap}
+\subsection{The string hypothesis: Reduced overlap formulas}
 
 Here we consider the overlap formula for the Neel state~\eref{neel-ov} in the 
-limit $L\to\infty$, assuming that the rapidities form perfect strings.  
+limit $L\to\infty$, assuming that the rapidities form perfect strings, i.e., 
+$\delta_{n;\gamma}^j=0$ in~\eref{str-hyp}.  
+Then it is possible to rewrite~\eref{neel-ov} in terms of the string centers 
+$\tilde\lambda_{n;\alpha}$ only. Here we restrict ourselves to rapidity 
+configurations with no zero-momentum strings. Our results are not valid for 
+zero-rapidity strings. 
 
-In the case of perfect strings the matrices $G^{\pm}_{jk}$ become ill-defined. 
-Precisely, $K_{1}^\pm(\lambda,\mu)$ diverges if $\lambda$ and $\mu$ are successive 
-members of the same string, i.e., $|\lambda-\mu|=2i$.  
-
-It is possible to rewrite~\eref{neel-ov} in terms of the string centers 
-$\lambda_{n;\alpha}$ only. Here we restrict ourselves to rapidity configurations 
-with no zero-momentum strings. Our results are not valid for zero-rapidity 
-strings. These would require the knowledge of the precise form of the string 
-deviations, i.e., the dependence of the string deviations on $L$, as it has 
-been pointed out in Ref.~\cite{calabrese-2014}. 
-
-It is convenient to split the indices $i,j$ of $G^\pm_{ij}$ as $i=(n,\alpha)$ 
-$j=(m,\beta)$, with $n,m$ being the length of the strings and $\alpha,\beta$ 
-labelling the string centers. 
+It is convenient to first split the indices $i,j$ of $G^\pm_{ij}$ as $i=(n,\gamma,i)$ 
+and $j=(m,\gamma',j)$, with $n,m$ being the length of the strings, $\gamma,\gamma'$ 
+labelling the corresponding string centers, and $i,j$ the components of the 
+two strings. 
+Using~\eref{G-pm} and~\eref{K}, one has that for two consecutive rapidities in the same 
+string, i.e., for $m=n,\gamma=\gamma',|i-j|=2$, the matrices $G^{\pm}_{jk}$ become 
+ill-defined in the thermodynamic limit. Precisely, since $K_{1}(\tilde\lambda_{n;\gamma}^i-
+\tilde\lambda_{n;\gamma}^{i+1})\sim 1/(\delta_{n;\gamma}^i-\delta_{n;\gamma}^{i+1})$, 
+$G_{ij}^\pm$ diverges in the thermodynamic limit. Importantly, as the same type of 
+divergence occur in both $G^+$ and $G^-$, their ratio (cf.~\eref{neel-ov}), and 
+the overlaps, are finite. 
 
 The result reads 
 %
@@ -466,6 +534,11 @@ For $G^-_{ij}$ one obtains
 \end{array}\right.
 \end{equation}
 %
+
+These would require the knowledge of the precise form of the string 
+deviations, i.e., the dependence of the string deviations on $L$, as it has 
+been pointed out in Ref.~\cite{calabrese-2014}. 
+
 Finally, the multiplicative prefactor in~\eref{neel-ov} for the generic $n$-string 
 can be rewritten as 
 %
@@ -773,57 +846,6 @@ eigenstates containing no zero-momentum strings $\widetilde Z_{MG}/Z_{MG}$ as
 \frac{\widetilde Z_{MG}}{Z_{MG}}=\frac{4}{4+L}. 
 \end{equation}
 %
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Validity of the string hypothesis for overlap calculations}
-\label{string-ov}
-
-Here we discuss the validity of the string hypothesis when calculating the 
-overlaps between the eigenstates of the $XXX$ chain and the N\'eel state. 
-Here we focus on the Heisenberg chain with $L=20$ sites. 
-Figure~\ref{fig1-BGT-check} plots the squared overlaps $|\langle\lambda|
-N\rangle|^2$ between the N\'eel state and the eigenstates of the chain. 
-The overlaps are plotted against the eigenstate energy density $E/L
-\in[-\log(2),0]$. The circles are exact diagonalization results for all 
-the chain eigenstates ($382$ eigenstates), whereas the crosses denote the 
-overlaps calculated using formula~\eref{neel-ov}, and the 
-Bethe-Gaudin-Takahashi equations. Note that only the eigenstates with 
-no zero-momentum strings are shown ($252$ eigenstates) in the Figure. 
-Panel (a) in the Figure is an overview of all the results. Panels (b)-(d) 
-correspond to zooming to the smaller overlap values $|\langle N|\lambda
-\rangle|\lesssim 0.02$, $|\langle N|\lambda\rangle|\lesssim 0.002$, and 
-$|\langle N|\lambda\rangle|\lesssim 10^{-5}$. 
-
-Clearly, the overlaps decay rapidly upon increasing the energy density. 
-This is expected since the $XXX$ Hamiltonian expectation value over 
-the N\'eel state is $\langle N|{H}|N\rangle=-1/2$. Importantly, the 
-agreement between the exact diagonalization results and the results 
-obtained using the BGT equations~\eref{ba_eq} is excellent, confirming 
-the validity of the string hypothesis. 
-
-
-%##################################################################
-\begin{figure}[t]
-\begin{center}
-\includegraphics[width=.9\textwidth]{./draft_figs/L20_BT_check}
-\end{center}
-\caption{ The squared overlap $|\langle N|\lambda\rangle|^2$ between the the 
- Neel state $|N\rangle$ and the eigenstates $|\lambda\rangle$ of the $XXX$ 
- chain with $L=20$ sites. Only non-zero overlaps are shown. In all the panels the 
- $x$-axis shows the eigenstate energy density $E/L$. The circles are the exact 
- diagonalization results for all the non-zero overlaps. The crosses are the Bethe 
- ansatz results obtained using the Bethe-Gaudin-Takahashi equations. The missing 
- crosses correspond to eigenstates containing zero-momentum strings. (a) Overview 
- of all the non-zero overlaps. (b)(c)(d) The same overlaps as in (a) zooming in 
- the regions $[0,0.2]$, $[0,0.020]$, and $[0,4\cdot 10^{-5}]$. The discrepancies 
- between the ED and the Bethe ansatz results are attributed to the string 
- deviations. 
-}
-\label{fig1-BGT-check}
-\end{figure}
-%##################################################################
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1342,6 +1364,26 @@ the overlap between the N\'eel state and the $S_z=0$ eigenstate in the sector wi
 maximal total spin $S=L/2$ (first column in Table~\ref{table:neel}), is given 
 analytically as $2/B(L,L/2)$, with $B(x,y)$ the Newton binomial. 
 
+Figure~\ref{fig1-BGT-check} plots the squared overlaps $|\langle\lambda|
+N\rangle|^2$ between the N\'eel state and the eigenstates of the chain. 
+The overlaps are plotted against the eigenstate energy density $E/L
+\in[-\log(2),0]$. The circles are exact diagonalization results for all 
+the chain eigenstates ($382$ eigenstates), whereas the crosses denote the 
+overlaps calculated using formula~\eref{neel-ov}, and the 
+Bethe-Gaudin-Takahashi equations. Note that only the eigenstates with 
+no zero-momentum strings are shown ($252$ eigenstates) in the Figure. 
+Panel (a) in the Figure is an overview of all the results. Panels (b)-(d) 
+correspond to zooming to the smaller overlap values $|\langle N|\lambda
+\rangle|\lesssim 0.02$, $|\langle N|\lambda\rangle|\lesssim 0.002$, and 
+$|\langle N|\lambda\rangle|\lesssim 10^{-5}$. 
+
+Clearly, the overlaps decay rapidly upon increasing the energy density. 
+This is expected since the $XXX$ Hamiltonian expectation value over 
+the N\'eel state is $\langle N|{H}|N\rangle=-1/2$. Importantly, the 
+agreement between the exact diagonalization results and the results 
+obtained using the BGT equations~\eref{ba_eq} is excellent, confirming 
+the validity of the string hypothesis. 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[h]
 \scriptsize
@@ -1405,6 +1447,26 @@ String content & $2I^+_n$ & $q$ & E & $|\langle\lambda|N\rangle|^2$ (exact) & $|
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+%##################################################################
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=.9\textwidth]{./draft_figs/L20_BT_check}
+\end{center}
+\caption{ The squared overlap $|\langle N|\lambda\rangle|^2$ between the the 
+ Neel state $|N\rangle$ and the eigenstates $|\lambda\rangle$ of the $XXX$ 
+ chain with $L=20$ sites. Only non-zero overlaps are shown. In all the panels the 
+ $x$-axis shows the eigenstate energy density $E/L$. The circles are the exact 
+ diagonalization results for all the non-zero overlaps. The crosses are the Bethe 
+ ansatz results obtained using the Bethe-Gaudin-Takahashi equations. The missing 
+ crosses correspond to eigenstates containing zero-momentum strings. (a) Overview 
+ of all the non-zero overlaps. (b)(c)(d) The same overlaps as in (a) zooming in 
+ the regions $[0,0.2]$, $[0,0.020]$, and $[0,4\cdot 10^{-5}]$. The discrepancies 
+ between the ED and the Bethe ansatz results are attributed to the string 
+ deviations. 
+}
+\label{fig1-BGT-check}
+\end{figure}
+%##################################################################
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Majumdar-Ghosh overlap}
@@ -1471,10 +1533,52 @@ V.~Alba, arXiv:1507.06994.
 H.~Bethe, Zur Theorie der Metalle. I. Eigenwerte und Eigenfunktionen 
 der linearen Atomkette, Z.\ Phys.\ {\bf 71}, 205 (1931).
 
-
 \bibitem{taka-book}
 M.~Takahashi, {\it Thermodynamics of one-dimensional solvable models}, 
 Cambridge University Press, Cambridge, 1999.
+
+\bibitem{kor-book}
+V.~E.~Korepin, N.~M.~Bogoliubov, and A.~G.~Izergin, \emph{Quantum
+Inverse Scattering Methods and Correlation Functions}, Cambridge
+University Press, Cambridge, 1997.
+
+\bibitem{brockmann-2014}
+M.~Brockmann, J.~De~Nardis, B.~Wouters, and J.-S.~Caux, J.\ Phys.\ A:\ 
+Math.\ Theor. {\bf 47}, 345003 (2014). 
+
+\bibitem{pozsgay-2014}
+B.~Pozsgay, J.\ Stat.\ Mech.\ (2014) P06011. 
+
+\bibitem{calabrese-2007}
+P.~Calabrese and J.-S.~Caux, Phys.\ Rev.\ Lett.\ {\bf 98}, 150403 (2007).
+
+\bibitem{calabrese-2007-a}
+P.~Calabrese and J.-S.~Caux, J.\ Stat.\ Mech.\ P08032 (2007).
+
+\bibitem{de-nardis-2014}
+J.~De Nardis, B.~Wouters, M.~Brockmann, and J.-S.~Caux, Phys.\ Rev.\ A {\bf 89}, 
+033601 (2014). 
+
+\bibitem{pozsgay-2014}
+B.~Pozsgay, M.~Mesty\'an, M.~A.~Werner, M.~Kormos, G.~Zar\'and, and G.~Tak\'acs,
+Phys.\ Rev.\ Lett.\ {\bf 113}, 117203 (2014). 
+
+\bibitem{wouters-2014}
+B.~Wouters, M.~Brockmann, J.~De~Nardis, D.~Fioretto, M.~Rigol, and J.-S.~Caux, 
+Phys.\ Rev.\ Lett.\ {\bf 113}, 117202 (2014). 
+
+\bibitem{mestyian-2015}
+M~Mesty\'an, B.~Pozsgay, G.~Tak\'acs, and M.~A.~Werner, J.\ Stat.\ Mech.\ (2015) 
+P04001.
+
+
+\bibitem{ilievski-2015a}
+E.~Ilieveski, J.~De~Nardis, B.~Wouters, J.-S.~Caux, F.~H.~Essler, and T.~Prosen, 
+arXiv:1507.02993. 
+
+\bibitem{brockmann-2014a}
+M.~Brockmann, B.~Wouters, D.~Fioretto, J.~De Nardis, R.~Vlijm, and J.-S.~Caux, 
+J.\ Stat.\ Mech.\ (2014) P12009. 
 
 \end{thebibliography}
 
