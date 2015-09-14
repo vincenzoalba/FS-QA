@@ -272,6 +272,7 @@ Bethe-Gaudin-Takahashi equations
 The generalized scattering phases $\Theta_{m,n}$ read 
 %
 \begin{eqnarray}
+\label{Theta}
 \nonumber\fl\Theta_{m,n}(x)\equiv\left\{\begin{array}{cc}
 \theta_{|n-m|}(x)+\!\!\!\!\!\sum
 \limits_{r=1}^{(n+m-|n-m|-1)/2}\!\!\!\!\!2\theta_{|n-m|+2r}(x)
@@ -489,13 +490,20 @@ limit $L\to\infty$, assuming that the rapidities form perfect strings, i.e.,
 $\delta_{n;\gamma}^j=0$ in~\eref{str-hyp}.  
 Then it is possible to rewrite~\eref{neel-ov} in terms of the string centers 
 $\tilde\lambda_{n;\alpha}$ only. Here we restrict ourselves to rapidity 
-configurations with no zero-momentum strings. Our results are not valid for 
-zero-rapidity strings. 
+configurations with no zero-momentum strings, i.e., with finite string 
+centers. Our results are not valid for zero-momentum strings. 
+
+First, we restrict ourselves to parity-invariant string configurations, 
+i.e., considering only strings having positve string centers. We denote the 
+generic parity-invariant string configuration as $\{\tilde\lambda_{n;
+\gamma}\}$, where $\gamma$ labels the different non-zero string centers, and 
+$n$ is the string length. 
 
 It is convenient to first split the indices $i,j$ of $G^\pm_{ij}$ as $i=(n,\gamma,i)$ 
 and $j=(m,\gamma',j)$, with $n,m$ being the length of the strings, $\gamma,\gamma'$ 
 labelling the corresponding string centers, and $i,j$ the components of the 
 two strings. 
+
 Using~\eref{G-pm} and~\eref{K}, one has that for two consecutive rapidities in the same 
 string, i.e., for $m=n,\gamma=\gamma',|i-j|=2$, the matrices $G^{\pm}_{jk}$ become 
 ill-defined in the thermodynamic limit. Precisely, since $K_{1}(\tilde\lambda_{n;\gamma}^i-
@@ -504,77 +512,93 @@ $G_{ij}^\pm$ diverges in the thermodynamic limit. Importantly, as the same type 
 divergence occur in both $G^+$ and $G^-$, their ratio (cf.~\eref{neel-ov}), and 
 the overlaps, are finite. 
 
-The result reads 
+The finite part of the overlaps~\eref{neel-ov} can be calculated using the same strategy 
+as in Ref.~\cite{calabrese-2007,calabrese-2007-a} (see also Ref.~\cite{brockmann-2014}). 
+The resulting matrix $G^+$ depends only on the ``string center'' indices $(n,\gamma)$ 
+and $(m,\gamma')$ and it is given as  
 %
 \begin{equation}
-\fl \frac{1}{2}G^+_{(n,\alpha)(m,\beta)}=\left\{\begin{array}{cc}
-L\theta_n'(\lambda_{n;\alpha}) -\sum\limits_{(\ell,\gamma)\ne(n,\alpha)}\Big[\Theta'_{n,\ell}
-(\lambda_{n;\alpha}-\lambda_{\ell;\gamma}) & \quad\textrm{if}\,(n,\alpha)=(m,\beta) \\
-+\Theta'_{n,\ell}(\lambda_{n;\alpha}+\lambda_{\ell;\gamma})\Big] & \\ \\
+\fl \frac{1}{2}G^+_{(n,\gamma)(m,\gamma')}=\left\{\begin{array}{cc}
+L\theta_n'(\tilde\lambda_{n;\gamma}) -\sum\limits_{(\ell,\alpha)\ne(n,\gamma)}\Big[\Theta'_{n,\ell}
+(\tilde\lambda_{n;\gamma}-\tilde\lambda_{\ell;\alpha}) & \quad\textrm{if}\,(n,\gamma)=(m,\gamma') \\
++\Theta'_{n,\ell}(\tilde\lambda_{n;\gamma}+\tilde\lambda_{\ell;\alpha})\Big] & \\ \\
 \Theta'_{n,m}
-(\lambda_{n;\alpha}-\lambda_{m;\beta})+\Theta'_{n,m}
-(\lambda_{n;\alpha}+\lambda_{m;\beta}) & \quad\textrm{if}\,(n,\alpha)\ne(m,\beta)
+(\tilde\lambda_{n;\gamma}-\tilde\lambda_{m;\gamma'})+\Theta'_{n,m}
+(\tilde\lambda_{n;\gamma}+\tilde\lambda_{m;\gamma'}) & \quad\textrm{if}\,(n,\gamma)\ne(m,\gamma')
 \end{array}\right.
 \end{equation}
 %
-Here $\theta_n'(x)\equiv d\theta_n(x)/dx=2n/(n^2+x^2)$ and $\Theta'(x)\equiv d\Theta(x)/dx$. 
-
-For $G^-_{ij}$ one obtains 
-
+Here $\theta_n'(x)\equiv d\theta_n(x)/dx=2n/(n^2+x^2)$ and $\Theta'(x)\equiv d\Theta(x)/dx$, 
+with $\Theta(x)$ as defined in~\eref{Theta}. 
+Similarly, for $G^-$ one obtains 
+%
 \begin{equation}
-\fl\frac{1}{2}G^-_{(n,\alpha)(m,\beta)}=\left\{\begin{array}{cc}
-\fl(L-1)\theta'_n(\lambda_{n;\alpha})-2\sum\limits_{k=1}^{n-1}\theta'_k(\lambda_{n;\alpha})
-& \textrm{if}\,(n,\alpha)= (m,\beta)\\
--\hspace{-.5cm}\sum\limits_{(\ell,\gamma)\ne(n,\alpha)}\Big[\Theta'_{n,\ell}
-(\lambda_{n;\alpha}-\lambda_{\ell;\gamma})+\Theta'_{n,\ell}
-(\lambda_{n;\alpha}+\lambda_{\ell;\gamma})\Big] \\\\
+\fl\frac{1}{2}G^-_{(n,\gamma)(m,\gamma')}=\left\{\begin{array}{cc}
+\fl(L-1)\theta'_n(\tilde\lambda_{n;\gamma})-2\sum\limits_{k=1}^{n-1}\theta'_k(
+\tilde\lambda_{n;\gamma})
+& \textrm{if}\,(n,\gamma)= (m,\gamma')\\
+-\hspace{-.5cm}\sum\limits_{(\ell,\alpha)\ne(n,\gamma)}\Big[\Theta'_{n,\ell}
+(\tilde\lambda_{n;\gamma}-\tilde\lambda_{\ell;\alpha})+\Theta'_{n,\ell}
+(\tilde\lambda_{n;\gamma}+\tilde\lambda_{\ell;\alpha})\Big] \\\\
 \Theta'_{n,m}
-(\lambda_{n;\alpha}-\lambda_{m;\beta})-\Theta'_{n,m}
-(\lambda_{n;\alpha}+\lambda_{m;\beta})) & \textrm{if}\,(n,\alpha)\ne(m,\beta)
+(\tilde\lambda_{n;\gamma}-\tilde\lambda_{m;\gamma'})-\Theta'_{n,m}
+(\tilde\lambda_{n;\gamma'}+\tilde\lambda_{m;\gamma'})) & \textrm{if}\,(n,\gamma)\ne(m,\gamma')
 \end{array}\right.
 \end{equation}
 %
+Note that in presence of zero-momentum strings, additional divergences as $1/(\delta_{n;
+\gamma}^{i}+\delta_{n;\gamma}^{i+1})$ appear due to the term $K_1(\lambda+\mu)$ 
+(cf.~\eref{K}). It turns out that the treatment of these diverges is a challenging 
+task because it requires the precise knowledge of the string deviations, meaning 
+their dependence on $L$, for each different type of string. Some results have been 
+provided for small strings in Ref.~\cite{calabrese-2014}. 
 
-These would require the knowledge of the precise form of the string 
-deviations, i.e., the dependence of the string deviations on $L$, as it has 
-been pointed out in Ref.~\cite{calabrese-2014}. 
-
-Finally, the multiplicative prefactor in~\eref{neel-ov} for the generic $n$-string 
-can be rewritten as 
+Finally, using the string hypothesis and the parity-invariance condition, the multiplicative 
+prefactor in~\eref{neel-ov} can be simplified. Here we focus on a generic eigenstate of 
+the $XXX$ identified by $m$ pairs of finite rapidities. 
+Note that due to parity invariance and the exclusion of zero-momentum strings, only 
+strings of length up to $m$ are allowed. The ``reduced'' string content 
+identifying the eigenstate is denoted as $\widetilde{\mathcal S}=\{\tilde s_1,\dots,\tilde s_{m}\}$, 
+with $\tilde s_n$ the number of parity-invariant pairs of $n$-strings. Using the string 
+hypothesis and~\eref{neel-ov}, one can write 
 %
 \begin{equation}
-\prod\limits_{a=1}^n\frac{\sqrt{(\lambda^a_{n;\alpha})^2+1}}{4\lambda^a_{n;\alpha}}=
-\frac{1}{4^n}\left(\frac{\sqrt{n^2+\lambda^2_{n;\alpha}}}{\lambda_{n;\alpha}}
-\prod\limits_{k=0}^{\lceil n/2\rceil-1}\frac{(2k)^2+\lambda^2_{n;\alpha}}{(2k+1)^2+
-\lambda^2_{n;\alpha}}\right)^{{\mathcal P}},
+\fl\quad\prod\limits_{j=1}^m\frac{\sqrt{\tilde\lambda_j^2+1}}{4\tilde\lambda_j}=
+\frac{1}{4^m}\prod\limits_{j=1}^m\prod\limits_{\ell=1}^{\tilde s_j}\left[\frac{\sqrt{j^2+
+\lambda^2_{j;\ell}}}{\lambda_{j;\ell}}
+\prod\limits_{k=0}^{\lceil j/2\rceil-1}\frac{(2k)^2+\lambda^2_{j;\ell}}{(2k+1)^2+
+\lambda^2_{j;\ell}}\right]^{(-1)^j}.
 \end{equation}
 %
-with ${\mathcal P}=+$ and ${\mathcal P}=-$ for even and odd strings, respectively. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Thermodynamic limit}
 
-In the thermodynamic limit the expression for the overlap~\eref{neel-ov} becomes 
+In the thermodynamic limit $L\to\infty$ the expression for the extensive part of the 
+overlap~\eref{neel-ov} can be written as~\cite{brockmann-2014} 
 %
 \begin{equation}
 \label{neel-ov-th}
-\fl\lim_{L\to\infty}\left[\frac{\langle N|\{\pm\lambda_j\}_{j=1}^m,n_\infty
+\fl-\lim_{L\to\infty}\log\left[\frac{\langle N|\{\pm\lambda_j\}_{j=1}^m,n_\infty
 \rangle}{|||\{\lambda_j\}_{j=1}^m,n_\infty\rangle||}\right]=\frac{L}{2}\Big(
-n_\infty\log(2)+\sum_{n=1}^\infty\int_0^\infty d\lambda\rho_n(\lambda)[g_n(\lambda)
+n_\infty\log2+\sum_{n=1}^\infty\int_0^\infty d\lambda\rho_n(\lambda)[g_n(\lambda)
 +2n\log(4)]\Big), 
 \end{equation}
 %
-with 
+where  
 %
-\begin{eqnarray}
-g_n(\lambda)=\sum_{l=1}^{n-1}\Big[f_{n-1-2l}(\lambda)-f_{n-2l}(\lambda)\Big],\\
-f_n(\lambda)=\log\Big(\lambda^2+\frac{n^2}{4}\Big),\\
+\begin{equation}
+\fl\quad g_n(\lambda)=\sum_{l=1}^{n-1}\Big[f_{n-1-2l}(\lambda)-f_{n-2l}(\lambda)\Big],\quad
+\textrm{with}\quad f_n(\lambda)=\log\Big(\lambda^2+\frac{n^2}{4}\Big),
+\end{equation}
+and
+\begin{equation}
 n_\infty=1-2\sum_{m=1}^\infty m\int_{-\infty}^\infty d\lambda\rho_m(\lambda). 
-\end{eqnarray}
+\end{equation}
 %
-Note that~\eref{neel-ov-th} is extensive, subextensive contributions 
-are neglected. In particular, Eq.~\eref{neel-ov-th} that the ratio of 
-determinants $\det_m(G^+)/\det_m(G^-)$ does not contribute. 
+Note that~\eref{neel-ov-th} is extensive. Specifically, in Eq.~\eref{neel-ov-th} 
+subleading (i.e., subextensive) contributions originating from the determinant
+ratio $\det_m(G^+)/\det_m(G^-)$ are neglected. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Overlap with the Majumdar-Ghosh state}
@@ -583,16 +607,19 @@ The Majumdar-Ghosh state $|MG\rangle$ is defined as
 %
 \begin{equation}
 |MG\rangle\equiv \Big(\frac{|\uparrow\downarrow\rangle-|\downarrow\uparrow\rangle}
-{\sqrt{2}}\Big)^{\otimes L/2}
+{\sqrt{2}}\Big)^{\otimes L/2}. 
 \end{equation}
 %
-The overlap between the generic eigenstate of the $XXX$ chain and the Majumdar-Ghosh 
-state is obtained fro the overlap with the Neel state as 
+The overlap between a generic eigenstate of the $XXX$ chain and the Majumdar-Ghosh 
+state can be obtained from the N\'eel state overlap in Eq.~\eref{neel-ov} 
+as~\cite{pozsgay-2014} 
 %
 \begin{equation}
 \label{mg-ov}
-\langle MG|\{\lambda_j\}_{j=1}^M\rangle=\prod\limits_{j=1}^M\frac{1}{\sqrt{2}}
-\Big(1-\frac{\lambda_j-i}{\lambda_j+i}\Big)\langle N|\{\lambda_j\}_{j=1}^M\rangle
+\langle MG|\{\pm\lambda_j\}_{j=1}^m\rangle=\prod\limits_{j=1}^m\frac{1}{2}
+\Big(1-\frac{\lambda_j-i}{\lambda_j+i}\Big)
+\Big(1+\frac{\lambda_j+i}{\lambda_j-i}\Big)
+\langle N|\{\pm\lambda_j\}_{j=1}^m\rangle
 \end{equation}
 %
 The mutliplicative factor in~\eref{ov-MG}, using the string hypothesis for the generic 
