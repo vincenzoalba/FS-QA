@@ -63,7 +63,7 @@
 @timestamp rot 0
 @timestamp font 0
 @timestamp char size 1.000000
-@timestamp def "Fri Sep  4 18:44:54 2015"
+@timestamp def "Fri Sep 18 18:18:50 2015"
 @with string
 @    string on
 @    string loctype view
@@ -272,7 +272,7 @@
 @    altyaxis  off
 @    legend on
 @    legend loctype view
-@    legend 0.604365541864, 0.949010477292
+@    legend 0.526367870289, 0.951338765708
 @    legend box color 1
 @    legend box pattern 1
 @    legend box linewidth 1.0
@@ -280,7 +280,7 @@
 @    legend box fill color 0
 @    legend box fill pattern 1
 @    legend font 4
-@    legend char size 1.150000
+@    legend char size 1.400000
 @    legend color 1
 @    legend length 4
 @    legend vgap 1
@@ -574,7 +574,7 @@
 @    yaxis  bar color 1
 @    yaxis  bar linestyle 1
 @    yaxis  bar linewidth 1.0
-@    yaxis  label "\xr\f{}\s2\N(\xl\f{})"
+@    yaxis  label "\xr\f{}\s2\N\S\+\+\+\h{-.5}\v{-.4}*\-\-\-\N\h{.1}(\xl\f{})"
 @    yaxis  label layout perp
 @    yaxis  label place spec
 @    yaxis  label place 0.020000, 0.109000
@@ -1128,7 +1128,7 @@
 @    yaxis  bar color 1
 @    yaxis  bar linestyle 1
 @    yaxis  bar linewidth 1.0
-@    yaxis  label "\xr\f{}\s1\N(\xl\f{})"
+@    yaxis  label "\xr\f{}\s1\N\S\+\+\+\h{-.5}\v{-.4}*\-\-\-\N(\xl\f{})"
 @    yaxis  label layout perp
 @    yaxis  label place spec
 @    yaxis  label place 0.000000, 0.106000

@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.1.29)  14 SEP 2015 19:10
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.1.29)  18 SEP 2015 18:19
 entering extended mode
  %&-line parsing enabled.
 **fs_qa_v1.tex
@@ -483,90 +483,88 @@ LaTeX Info: Redefining \pageref on input line 53.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for U+wasy on input line 108.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 107.
  (/usr/share/texmf/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 108.
+LaTeX Font Info:    Try loading font information for U+msa on input line 107.
 
 (/usr/share/texmf/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 108.
+LaTeX Font Info:    Try loading font information for U+msb on input line 107.
 
 (/usr/share/texmf/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2002/01/19 v2.2g AMS font definitions
 )
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <8> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 108.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 107.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <6> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 108.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 107.
 
 [2] [3] [4pdfTeX warning (ext4): destination with the same identifier (name{equ
 ation.12}) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.326 \end{equation}
+l.325 \end{equation}
                     ] [5pdfTeX warning (ext4): destination with the same identi
 fier (name{equation.17}) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.417 \begin{equation}
-                      ] [6]
-Overfull \hbox (6.09895pt too wide) detected at line 547
-$ []| []\OML/cmm/m/it/12 G[] \OT1/cmr/m/n/12 = [] []$ [](28)[]
+l.420 \end{eqnarray}
+                    ] [6]
+Overfull \hbox (6.09895pt too wide) detected at line 564
+$ [][]| []\OML/cmm/m/it/12 G[] \OT1/cmr/m/n/12 = [] []$ [](29)[]
  []
 
-
-Underfull \hbox (badness 2961) in paragraph at lines 556--565
+[7]
+Underfull \hbox (badness 2961) in paragraph at lines 573--582
 []\OT1/cmr/m/n/12 Finally, using the string hypothesis and the parity-invarianc
 e condition, the
  []
 
-[7]
-Overfull \hbox (0.32715pt too wide) detected at line 586
+
+Overfull \hbox (0.32715pt too wide) detected at line 640
 $ [][]|  \OMS/cmsy/m/n/12 ^^@ [] [] [] \OT1/cmr/m/n/12 = [][]\OML/cmm/m/it/12 n
 [] [] \OT1/cmr/m/n/12 2 + [] [][] \OML/cmm/m/it/12 d^^U^^Z[]\OT1/cmr/m/n/12 (\O
 ML/cmm/m/it/12 ^^U\OT1/cmr/m/n/12 )[\OML/cmm/m/it/12 g[]\OT1/cmr/m/n/12 (\OML/c
 mm/m/it/12 ^^U\OT1/cmr/m/n/12 ) + 2\OML/cmm/m/it/12 n []\OT1/cmr/m/n/12 (4)][]\
-OML/cmm/m/it/12 ; []$ []\OT1/cmr/m/n/12 (30)[]
+OML/cmm/m/it/12 ; []$ []\OT1/cmr/m/n/12 (34)[]
  []
 
-
-LaTeX Warning: Reference `ov-MG' on page 8 undefined on input line 625.
-
-[8] <./draft_figs/Neel_overlaps.pdf, id=181, 816.04875pt x 365.365pt>
+[8] [9] <./draft_figs/Neel_overlaps.pdf, id=197, 816.04875pt x 365.365pt>
 File: ./draft_figs/Neel_overlaps.pdf Graphic file (type pdf)
 
 <use ./draft_figs/Neel_overlaps.pdf>
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 728.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 745.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <5> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 728.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 745.
 
-<./draft_figs/Neel.pdf, id=182, 1265.72874pt x 530.98375pt>
+[10 <./draft_figs/Neel_overlaps.pdf>] [11]
+<./draft_figs/Neel.pdf, id=244, 1266.7325pt x 530.98375pt>
 File: ./draft_figs/Neel.pdf Graphic file (type pdf)
 
-<use ./draft_figs/Neel.pdf> [9]
-<./draft_figs/Dimer.pdf, id=199, 1278.7775pt x 531.9875pt>
+<use ./draft_figs/Neel.pdf> [12]
+
+LaTeX Warning: Reference `sum' on page 13 undefined on input line 927.
+
+[13 <./draft_figs/Neel.pdf>]
+<./draft_figs/Dimer.pdf, id=282, 1278.7775pt x 536.0025pt>
 File: ./draft_figs/Dimer.pdf Graphic file (type pdf)
 
-<use ./draft_figs/Dimer.pdf> [10 <./draft_figs/Neel_overlaps.pdf>] [11 <./draft
-_figs/Neel.pdf> <./draft_figs/Dimer.pdf>] [12]
-
-LaTeX Warning: Reference `bt_eq' on page 13 undefined on input line 914.
-
-<./draft_figs/QAMC_Obs_Neel.pdf, id=255, 791.95876pt x 328.22626pt>
+<use ./draft_figs/Dimer.pdf> [14 <./draft_figs/Dimer.pdf>] [15]
+<./draft_figs/QAMC_Obs_Neel.pdf, id=327, 791.95876pt x 328.22626pt>
 File: ./draft_figs/QAMC_Obs_Neel.pdf Graphic file (type pdf)
 
 <use ./draft_figs/QAMC_Obs_Neel.pdf>
-Underfull \hbox (badness 1796) in paragraph at lines 968--968
+Underfull \hbox (badness 1796) in paragraph at lines 1145--1145
 \OT1/cmr/m/n/10 rule $\OMS/cmsy/m/n/10 h\OML/cmm/m/it/10 N\OMS/cmsy/m/n/10 j\OM
 L/cmm/m/it/10 Q[]\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 N\OMS/cmsy/m/n/10 i\OML/cmm
 /m/it/10 =L \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 1\OML/cmm/m/i
@@ -574,39 +572,46 @@ t/10 =\OT1/cmr/m/n/10 2$, with $\OML/cmm/m/it/10 Q[]=L$ \OT1/cmr/m/n/10 the Ham
 iltonian density. We plot
  []
 
-[13] <./draft_figs/Neel_rho.pdf, id=272, 1279.78125pt x 570.13pt>
+[16] [17 <./draft_figs/QAMC_Obs_Neel.pdf>]
+<./draft_figs/Neel_rho.pdf, id=356, 1279.78125pt x 570.13pt>
 File: ./draft_figs/Neel_rho.pdf Graphic file (type pdf)
 
-<use ./draft_figs/Neel_rho.pdf> [14 <./draft_figs/QAMC_Obs_Neel.pdf>] [15 <./dr
-aft_figs/Neel_rho.pdf>] [16] [17] [18] [19]
+<use ./draft_figs/Neel_rho.pdf> [18 <./draft_figs/Neel_rho.pdf>] [19] [20]
+[21]
 
-LaTeX Warning: Reference `ba_eq' on page 20 undefined on input line 1411.
+LaTeX Warning: Reference `neel-ov-count' on page 22 undefined on input line 152
+6.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 1426
+[22]
+
+LaTeX Warning: Reference `ba_eq' on page 23 undefined on input line 1596.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 1611
 .
 (/usr/share/texmf/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1426.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1611.
 
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./draft_figs/L20_BT_check.pdf, id=378, 791.95876pt x 335.2525pt>
+<./draft_figs/L20_BT_check.pdf, id=448, 791.95876pt x 335.2525pt>
 File: ./draft_figs/L20_BT_check.pdf Graphic file (type pdf)
 
-<use ./draft_figs/L20_BT_check.pdf> [20 <./draft_figs/L20_BT_check.pdf>]
+<use ./draft_figs/L20_BT_check.pdf>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[21] [22pdfTeX warning (ext4): destination with the same identifier (name{cite.
+[23] [24pdfTeX warning (ext4): destination with the same identifier (name{cite.
 pozsgay-2014}) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.1613 \end{document}
-                     ] (./fs_qa_v1.aux)
+l.1794 \bibitem{mazza-2015}
+                           ] [25 <./draft_figs/L20_BT_check.pdf>] [26]
+(./fs_qa_v1.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -615,13 +620,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7723 strings out of 256216
- 114236 string characters out of 1917072
- 206699 words of memory out of 1500000
- 10617 multiletter control sequences out of 10000+200000
+ 7747 strings out of 256216
+ 114496 string characters out of 1917072
+ 210759 words of memory out of 1500000
+ 10629 multiletter control sequences out of 10000+200000
  18528 words of font info for 70 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 45i,13n,44p,1314b,589s stack positions out of 5000i,500n,6000p,200000b,15000s
+ 45i,13n,44p,1314b,592s stack positions out of 5000i,500n,6000p,200000b,15000s
 </usr/share/texmf/fonts/type1/bluesky/cm/cmbx10.pfb></usr/share/texmf/fonts/t
 ype1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmex10.pfb>
 </usr/share/texmf/fonts/type1/bluesky/cm/cmmi10.pfb></usr/share/texmf/fonts/typ
@@ -637,9 +642,9 @@ fb></usr/share/texmf/fonts/type1/bluesky/cm/cmti10.pfb></usr/share/texmf/fonts/
 type1/bluesky/cm/cmti12.pfb></usr/share/texmf/fonts/type1/public/cmex/fmex8.pfb
 ></usr/share/texmf/fonts/type1/bluesky/ams/msam10.pfb></usr/share/texmf/fonts/t
 ype1/bluesky/ams/msbm10.pfb>
-Output written on fs_qa_v1.pdf (22 pages, 2142359 bytes).
+Output written on fs_qa_v1.pdf (26 pages, 613928 bytes).
 PDF statistics:
- 507 PDF objects out of 1000 (max. 8388607)
- 144 named destinations out of 1000 (max. 131072)
+ 585 PDF objects out of 1000 (max. 8388607)
+ 156 named destinations out of 1000 (max. 131072)
  47 words of extra memory for PDF output out of 10000 (max. 10000000)
 

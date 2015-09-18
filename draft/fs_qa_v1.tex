@@ -55,8 +55,7 @@
 \setlength{\parindent}{0pt}
 
 
-\title{The Quench-Action method in integrable spin chains: A Monte Carlo 
-approach}
+\title{The quench action approach for integrable models: A Monte Carlo implementation}
 
 \author{Authors}
 %\address{$^1$ International School for Advanced Studies (SISSA),
@@ -137,7 +136,7 @@ is defined by the Hamiltonian
 \begin{equation}
 \label{xxx-ham}
 {\mathcal H}\equiv J\sum\limits_{i=1}^L\left[\frac{1}{2}(S_i^+S^-_{i+1} 
-+S_i^{-}S_{i+1}^+)+S_i^zS_{i+1}^z\right],  
++S_i^{-}S_{i+1}^+)+S_i^zS_{i+1}^z-\frac{1}{4}\right],  
 \end{equation}
 %
 where $S^{\pm}_i\equiv (\sigma_i^x\pm i\sigma_i^y)/2$ are spin operators acting on the 
@@ -295,7 +294,7 @@ An upper bound for the BGT quantum numbers can be derived as~\cite{taka-book}
 \begin{equation}
 |I_{n;\gamma}|\le I^{(MAX)}_{n}\equiv\frac{1}{2}(L-1-\sum
 \limits_{m=1}^Mt_{m,n}s_m),
-\label{bt_qn_bound}
+\label{bt-qn-bound}
 \end{equation}
 %
 where $t_{m,n}\equiv 2\mbox{min}(n,m)-\delta_{m,n}$. Using the string hypothesis 
@@ -351,7 +350,19 @@ a_{2n}(x) & \quad\mbox{if}\quad n=m
 \end{array}\right.
 \end{eqnarray}
 %
+For a generic smooth enough observable ${\mathcal O}$ in the thermodynamic 
+limtit its expectation value is expected to become a functional of the root 
+densities $\pmb{\rho}$ as $\langle\pmb{\rho}|{\mathcal O}|\pmb{\rho}\rangle$. 
 
+Moreover, for all the local observables considered in this work the contribution of the 
+different type of strings factorize and one can write 
+%
+\begin{equation}
+\langle\pmb{\rho}|{\mathcal O}|\pmb{\rho}\rangle=\sum_{n=1}^\infty
+\int_{-\infty}^{+\infty}d\lambda \rho_n(\lambda) {\mathcal O}_n(\lambda), 
+\end{equation}
+% 
+with ${\mathcal O}_n(\lambda)$ the ... .
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{The conserved charges}
@@ -415,6 +426,7 @@ $n$, and it is a consequence of the $SU(2)$ invariance of the conserved charges.
 in the thermodynamic limit $L\to\infty$ from~\eref{qngnk} one has 
 %
 \begin{equation}
+\label{q0-th}
 q_n\to\sum_{k=1}^\infty\int_{-\infty}^{+\infty}d\lambda\rho_k(\lambda)g_{n,k}(\lambda), 
 \end{equation}
 %
@@ -425,6 +437,9 @@ where the BGT root distributions $\rho_k(\lambda)$ are solutions of~\eref{bgt-th
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Overlap between the Bethe states and some initial states} 
 \label{sec:2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{N\'eel state overlap}
 
 Here we detail the Bethe ansatz results for the overlap of the Bethe states (cf.~\eref{ba-eig}) 
 with the zero-momentum (one-site shift invariant) N\'eel state $|N\rangle$ and the 
@@ -483,7 +498,7 @@ Ref.~\cite{brockmann-2014}, due to a factor $2$ in the definition of the
 rapidities (see also~\eref{str-hyp}). 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{The string hypothesis: Reduced overlap formulas}
+\subsection{The string hypothesis: Reduced N\'eel overlap formulas}
 
 Here we consider the overlap formula for the Neel state~\eref{neel-ov} in the 
 limit $L\to\infty$, assuming that the rapidities form perfect strings, i.e., 
@@ -518,6 +533,7 @@ The resulting matrix $G^+$ depends only on the ``string center'' indices $(n,\ga
 and $(m,\gamma')$ and it is given as  
 %
 \begin{equation}
+\label{red-G+}
 \fl \frac{1}{2}G^+_{(n,\gamma)(m,\gamma')}=\left\{\begin{array}{cc}
 L\theta_n'(\tilde\lambda_{n;\gamma}) -\sum\limits_{(\ell,\alpha)\ne(n,\gamma)}\Big[\Theta'_{n,\ell}
 (\tilde\lambda_{n;\gamma}-\tilde\lambda_{\ell;\alpha}) & \quad\textrm{if}\,(n,\gamma)=(m,\gamma') \\
@@ -533,6 +549,7 @@ with $\Theta(x)$ as defined in~\eref{Theta}.
 Similarly, for $G^-$ one obtains 
 %
 \begin{equation}
+\label{red-G-}
 \fl\frac{1}{2}G^-_{(n,\gamma)(m,\gamma')}=\left\{\begin{array}{cc}
 \fl(L-1)\theta'_n(\tilde\lambda_{n;\gamma})-2\sum\limits_{k=1}^{n-1}\theta'_k(
 \tilde\lambda_{n;\gamma})
@@ -563,6 +580,7 @@ with $\tilde s_n$ the number of parity-invariant pairs of $n$-strings. Using the
 hypothesis and~\eref{neel-ov}, one can write 
 %
 \begin{equation}
+\label{neel-k}
 \fl\quad\prod\limits_{j=1}^m\frac{\sqrt{\tilde\lambda_j^2+1}}{4\tilde\lambda_j}=
 \frac{1}{4^m}\prod\limits_{j=1}^m\prod\limits_{\ell=1}^{\tilde s_j}\left[\frac{\sqrt{j^2+
 \lambda^2_{j;\ell}}}{\lambda_{j;\ell}}
@@ -572,36 +590,7 @@ hypothesis and~\eref{neel-ov}, one can write
 %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Thermodynamic limit}
-
-In the thermodynamic limit $L\to\infty$ the expression for the extensive part of the 
-overlap~\eref{neel-ov} can be written as~\cite{brockmann-2014} 
-%
-\begin{equation}
-\label{neel-ov-th}
-\fl-\lim_{L\to\infty}\log\left[\frac{\langle N|\{\pm\lambda_j\}_{j=1}^m,n_\infty
-\rangle}{|||\{\lambda_j\}_{j=1}^m,n_\infty\rangle||}\right]=\frac{L}{2}\Big(
-n_\infty\log2+\sum_{n=1}^\infty\int_0^\infty d\lambda\rho_n(\lambda)[g_n(\lambda)
-+2n\log(4)]\Big), 
-\end{equation}
-%
-where  
-%
-\begin{equation}
-\fl\quad g_n(\lambda)=\sum_{l=1}^{n-1}\Big[f_{n-1-2l}(\lambda)-f_{n-2l}(\lambda)\Big],\quad
-\textrm{with}\quad f_n(\lambda)=\log\Big(\lambda^2+\frac{n^2}{4}\Big),
-\end{equation}
-and
-\begin{equation}
-n_\infty=1-2\sum_{m=1}^\infty m\int_{-\infty}^\infty d\lambda\rho_m(\lambda). 
-\end{equation}
-%
-Note that~\eref{neel-ov-th} is extensive. Specifically, in Eq.~\eref{neel-ov-th} 
-subleading (i.e., subextensive) contributions originating from the determinant
-ratio $\det_m(G^+)/\det_m(G^-)$ are neglected. 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Overlap with the Majumdar-Ghosh state}
+\subsection{Overlap with the Majumdar-Ghosh state}
 
 The Majumdar-Ghosh state $|MG\rangle$ is defined as 
 %
@@ -622,73 +611,98 @@ as~\cite{pozsgay-2014}
 \langle N|\{\pm\lambda_j\}_{j=1}^m\rangle
 \end{equation}
 %
-The mutliplicative factor in~\eref{ov-MG}, using the string hypothesis for the generic 
-$n$-string is rewritten as 
+The mutliplicative factor in~\eref{mg-ov}, using the string hypothesis is 
+rewritten as 
 %
-\begin{equation}
-\prod\limits_{j=1}^M\frac{1}{\sqrt{2}}
-\Big(1-\frac{\lambda_j-i}{\lambda_j+i}\Big)=2^n\prod\limits_{k=0}^{\lfloor 
-n/2\rfloor}\frac{1}{[\lambda_{n;\gamma}^2+(2k+(1-(-1)^n)/2)^2]^2}
-\end{equation}
+\begin{eqnarray}
+\label{mg-k}
+\fl\prod\limits_{j=1}^m\frac{1}{2}
+\Big(1-\frac{\lambda_j-i}{\lambda_j+i}\Big)
+\Big(1+\frac{\lambda_j+i}{\lambda_j-i}\Big)=\\\nonumber\qquad
+2^m\prod\limits_{j=1}^m\prod\limits_{\ell=1}^{\tilde s_j}
+\lambda_{j;\ell}^{1+(-1)^j}(\lambda^2_{j;\ell}+j^2)\prod\limits_{k=0}^{\lfloor 
+j/2\rfloor}\Big[\lambda_{j;\ell}^2+\Big(2k+\frac{1-(-1)^j}{2}\Big)^2\Big]^{-2}
+\end{eqnarray}
 %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Quench Action method}
-\label{quench-action}
+\subsection{The N\'eel overlap in the thermodynamic limit}
 
-For integrable models the Quench-Action approach allows to extract exactly both 
-the steady state after the quench and the relaxation dynamics to the steady state. 
+In the thermodynamic limit $L\to\infty$ the expression for the extensive part of the 
+overlap~\eref{neel-ov} can be written as~\cite{brockmann-2014} 
+%
+\begin{equation}
+\label{neel-ov-th}
+\fl-\lim_{L\to\infty}\log\left[\frac{\langle N|\{\pm\lambda_j\}_{j=1}^m,n_\infty
+\rangle}{|||\{\lambda_j\}_{j=1}^m,n_\infty\rangle||}\right]=\frac{L}{2}\Big(
+n_\infty\log2+\sum_{n=1}^\infty\int_0^\infty d\lambda\rho_n(\lambda)[g_n(\lambda)
++2n\log(4)]\Big), 
+\end{equation}
+%
+where  
+%
+\begin{equation}
+\fl\quad g_n(\lambda)=\sum_{l=1}^{n-1}\Big[f_{n-1-2l}(\lambda)-f_{n-2l}(\lambda)
+\Big],\quad\textrm{with}\quad f_n(\lambda)=\log\Big(\lambda^2+\frac{n^2}{4}\Big),
+\end{equation}
+and
+\begin{equation}
+n_\infty=1-2\sum_{m=1}^\infty m\int_{-\infty}^\infty d\lambda\rho_m(\lambda). 
+\end{equation}
+%
+Note that~\eref{neel-ov-th} is extensive. Specifically, in Eq.~\eref{neel-ov-th} 
+subleading (i.e., subextensive) contributions originating from the determinant
+ratio $\det_m(G^+)/\det_m(G^-)$ are neglected. Moreover, the term in~\eref{neel-ov-th} 
+acts as a driving term in the Quech Action formalism (cf. section~\ref{sec:4}).
 
-In the thermodynamic limit the sum over the model eigenstates is recast into 
-a functional integral over the so-called root distributions $\pmb{\rho}\equiv
-\{\rho_n(\lambda)\}_{n=1}^\infty$ as
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Quench Action treatment of the steady state}
+\label{sec:4}
+
+In the thermodynamic limit the sum over the model eigenstates in~\eref{d-ensemble} 
+can be recast into a functional integral over the BGT root distributions 
+$\pmb{\rho}\equiv\{\rho_n(\lambda)\}_{n=1}^\infty$ (cf. section~\ref{sec:1.4}) 
+as
 %
 \begin{equation}
 \label{eig-sum}
-\sum\limits_{\alpha}\rightarrow\int{\mathcal D}\pmb{\rho}e^{S_{YY}(\pmb{\rho})}. 
+\sum\limits_{\alpha}\rightarrow\int{\mathcal D}\pmb{\rho} e^{S_{YY}(\pmb{\rho})}. 
 \end{equation}
 %
 Here ${\mathcal D}\pmb{\rho}\equiv\prod_{n=1}^\infty{\mathcal D}\rho_n(\lambda)$, 
-$\rho_n(\lambda)$ denote the distribution of the $n$-strings BGT roots, and 
-$S_{YY}(\pmb{\rho})$ is the Yang-Yang entropy, which counts the number of 
-Bethe states leading to the same $\pmb{\rho}$ in the thermodynamic limit. 
-Formally, $\rho_n(\lambda)$  are defined as $\rho_n(\lambda)\equiv\lim_{L\to
-\infty}(\lambda_{n;\gamma+1}-\lambda_{n;\gamma})^{-1}$. 
-
-Using~\eref{eig-sum} the diagonal ensemble~\eref{d-ensemble} becomes 
+$\rho_n(\lambda)$, and $S_{YY}(\pmb{\rho})$ is the Yang-Yang entropy, which counts 
+the number of Bethe states leading to the same $\pmb{\rho}$ in the thermodynamic 
+limit. Using~\eref{eig-sum}, for a generic observable ${\mathcal O}$, its diagonal 
+ensemble expectation value~\eref{d-ensemble} becomes 
 %
 \begin{equation}
 \label{qa-d-ensemble}
-\fl
-\quad\langle{\mathcal O}\rangle=\int{\mathcal D}\pmb{\rho}(\lambda)
-\exp\Big(2\Re\log\langle\Psi_0|\pmb{\rho}(\lambda)\rangle 
-+S_{YY}(\pmb{\rho})\Big)\langle\pmb{\rho}(\lambda)|{\mathcal O}|\pmb{\rho}
-(\lambda)\rangle
+\quad\langle{\mathcal O}\rangle=\int{\mathcal D}\pmb{\rho}\exp\Big[2\Re\log\langle
+\Psi_0|\pmb{\rho}\rangle +S_{YY}(\pmb{\rho})\Big]\langle\pmb{\rho}|{\mathcal O}|
+\pmb{\rho}\rangle
 \end{equation}
 %
-Note that in~\eref{qa-d-ensemble} it is assumed that in the thermodynamic limit 
-the eigenstate expectation values $\langle\alpha|{\mathcal O}|\alpha\rangle$ 
-become smooth functionals  $\langle\pmb{\rho}(\lambda)|{\mathcal O}|\pmb{\rho}
-(\lambda)\rangle$ of the root distributions $\pmb{\rho}$. 
+Here it is assumed that in the thermodynamic limit the eigenstate expectation 
+values $\langle\alpha|{\mathcal O}|\alpha\rangle$ (cf.~\eref{d-ensemble}) 
+and the overlaps $\langle\Psi_0|\pmb{\rho}\rangle$ become smooth functionals 
+of the root distributions $\pmb{\rho}$. 
 
-Similarly, in~\eref{qa-d-ensemble} $\langle\Psi_0|\pmb{\rho}(\lambda)\rangle$ 
-denotes the Bethe states overlap density with the prequench state $\Psi_0$. 
 
-The strategy is to evaluate the functional integral in~\eref{qa-d-ensemble} 
-using the saddle point approximation. 
-
-One has then to minimize the functional ${\mathcal S}(\pmb{\rho})$ defined 
-as 
+The functional integral in~\eref{qa-d-ensemble} can be evaluated in the limit 
+$L\to\infty$ using the saddle point approximation. One has to minimize the 
+functional ${\mathcal F}(\pmb{\rho})$ defined as 
 %
 \begin{equation}
-L{\mathcal S}(\pmb{\rho})\equiv 2\Re\log\langle\pmb{\rho}|\Psi_0
-\rangle+S_{YY}(\pmb{\rho}(\lambda)). 
+L{\mathcal F}(\pmb{\rho})\equiv 2\Re\log\langle\pmb{\rho}|\Psi_0
+\rangle+S_{YY}(\pmb{\rho}(\lambda))  
 \end{equation}
 % 
-under the constraint that the BGT equations hold. For the quench with initial 
-state the N\'eel state the resulting saddle point root distributions 
-$\rho_n^*(\lambda)$ can be obtained analytically. The first few root distributions 
-are given as 
+with respect to $\pmb{\rho}$, under the constraint that the thermodynamic BGT 
+equations~\eref{bgt-th} hold. Remarkably, for the quench with initial 
+state the N\'eel state $|\Psi_0\rangle=|N\rangle$ the resulting saddle point root 
+distributions $\rho_n^*(\lambda)$ can be obtained analytically~\cite{brockmann-2014}. 
+The first few are given as 
 %
 \begin{eqnarray}
 \label{rho_sp}
@@ -702,6 +716,9 @@ are given as
 \end{eqnarray}
 % 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{N\'eel overlaps: Numerical results and overview}
+\label{sec:5}
 
 
 %##################################################################
@@ -726,14 +743,126 @@ are given as
  limit {\bf really??}. The dotted vertical line is the expected 
  Quench-Action result in the thermodynamic limit.  
 }
-\label{fig0:N-ov-overview}
+\label{fig0:neel-ov}
 \end{figure}
 %##################################################################
 
 
+In this section we present the generic features of the overlaps between the Bethe 
+states of the Heisenberg spin chain and the N\'eel state. We focus on finite chains 
+of length up to $L\lesssim 40$. We consider the full Hilbert space of the chain, 
+i.e., all the eigenstates. These are obtained from the Bethe ansatz approach. 
+We exclude all the eigenstates corrsponding to BGT roots containing zero-momentum 
+strings. The number of remaining eigenstates, that we denote as $\widetilde Z_{Neel}$ 
+is given as a function of the chain size in terms of simple combinatorial formualas 
+that we provide. 
+
+Interestingly, we demonstrate that for each finite chain the fraction of the 
+eigenstates with no zero-momentum strings is vanishing in the thermodynamic limit. 
+
+We restrict ourselves to eigenstates corresponding to BGT roots with no 
+zero-momentum strings. As expected the N\'eel overlaps decay exponentially with 
+the chain size in the thermodynamic limit. 
+
+Moreover, all the overlaps exhibit a vanishing behavior as a function of the eigenstate 
+energy density, signalling that most of the N\'eel overlap is concentrated at low 
+energies. 
+
+We observe that the vast majority of eigenstates have negligible N\'eel overlap, 
+as expected. 
+
+We show that only a small fraction of the eigenstates are relevant in the 
+thermodynamic limit. 
+
+These are the Bethe states that are relevant in the quench action approach. 
+
+Finally, we focus on several overlap sum rules. As a consequence of the fact that we 
+neglect the zero-momentum strings, we observe a striking violation of the sum rules 
+for any finite chain. Specifically, all the sum rules exhibit vanishing behavior 
+as $1/\sqrt{L}$ upon increasing the chain size, reflecting the vanishing of the 
+fraction of the eigenstates with no zero-momentum strings. 
+
+Similarly, for the Majumdar-Ghosh state the sum rules vanish as $1/L$, again, 
+reflecting the vanishing behaivor of the fraction of eigenstates with no 
+zero-momentum strings. 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Overlap sum rules: the role of the zero-momentum strings}
-\label{ov-sum-rules}
+\subsection{N\'eel overlaps from the  full scanning of the Hilbert space}
+\label{sec:5.1}
+
+Here we present numerical results for the overlaps between the eigenstates of the 
+Heisenberg spin chain and the N\'eel state. The data correspond to the full set 
+of eigenstates with no zero-momentum strings and chain lengths $L\le 38$. Their 
+number $\widetilde Z_{Neel}$ is given as (see~\ref{app-2} for the proof) 
+%
+\begin{equation}
+\label{ztilde}
+\widetilde Z_{Neel}=B\Big(\frac{L}{2},\frac{L}{4}\Big).
+\end{equation}
+%
+For $L=38$ from~\eref{ztilde} one has $\widetilde Z_{Neel}\sim 10^5$ eigenstates. 
+Note that the total number of partiy-invariant eigenstates $Z_{Neel}$, which 
+in principle give non-zero N\'eel overlap, is given as 
+%
+\begin{equation}
+\label{zneel1}
+Z_{Neel}=2^{\frac{L}{2}-1}+\frac{1}{2}B\Big(\frac{L}{2},\frac{L}{4}\Big)+1.
+\end{equation}
+%
+The proof of~\eref{zneel1} is reported in~\ref{app-1}. 
+
+We should stress that $Z_{Neel}$ provides only an upper bound for the number of 
+eigenstates with non-zero N\'eel overlap (cf. for instance Table~\ref{table:neel}). 
+This is due to the fact that parity-invariant eigenstates with a single even-length 
+string with zero-momentum, which are counted in $Z_{Neel}$, have vanishing N\'eel 
+overlap. This is due to the fact that in~\eref{neel-ov} the ratio of determinants 
+is finite, whereas the prefactor (cf.~\eref{neel-k}) vanishes if a single even-length 
+string with zero momentum is present. 
+
+{\bf Clarify what is the number/fraction of the even-length zero-momentum strings}
+
+The results are obtained by generating all the parity-invariant BGT quantum numbers 
+and using them to solve the BGT equations~\eref{bgt-eq}, obtaining the rapidities of 
+the parity-invariant eigenstates of the $XXX$ chain. The overlaps with the N\'eel 
+states are calculated numerically using~\eref{neel-ov}. 
+
+Figure~\ref{fig0:neel-ov} plots the squared overlaps $|\langle\lambda|N\rangle|^2$ 
+between the eigenstates $|\lambda\rangle$ of the $XXX$ chain and the N\'eel state 
+$|N\rangle$ for chains with $L=26,32,36,38$. Figure~\ref{fig0:neel-ov} (a) shows the 
+squared overlaps versus the eigenstate energy density $E/L$. Clearly, the overlaps 
+decay exponentially as a function of $L$, as expected. Moreover, for each $L$ 
+we observe a rapid decay as a function of the eigenstate energy density. 
+This decay is exponential, as shown in the inset of Figure~\ref{fig0:neel-ov} (a). 
+
+Complementary information is shown in Figure~\ref{fig0:neel-ov} (b) plotting the 
+the histograms of $-2\log|\langle\lambda|N\rangle|/L$ (overlap distribution 
+function). Notice that $2\log|\langle\lambda|N\rangle|/L$ is the driving 
+term in the Quench Action approach. The factor $1/L$ in the definition takes 
+into account that all the overlaps vanish exponentially in the thermodynamic 
+limit, or at least the overlaps that are relevant for the quench action. 
+Notice that larger values of $-2\log|\langle\lambda|N\rangle|/L$, correspond 
+to faster decaying, i.e., asymptotically for large $L$, smaller overlaps. 
+
+Figure~\ref{fig0:neel-ov} (b) demonstrates that the vast majority of the eigenstates 
+have small N\'eel overlap. Specifically, a peak at $\sim 0.5$ is visible in the 
+Figure, and a rapid decay at smaller values of ... .
+
+The vertical dotted line in the Figure shows the expected result for 
+$-2\log|\langle\lambda|N\rangle|/L$ in the thermodynamic limit as obtained from 
+the quench action. 
+
+This is obtained by usigng~\eref{neel-ov-th} and the saddle point root distributions 
+$\rho_n^*$ (cf.~\eref{rho_sp} for the results up to $n=3$). Note that its position 
+does not coincide with the peak of the overlap distribution function, as expected. 
+This is reflecting the competition between the driving term and the entropy 
+term in the quench action. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{N\'eel overlap sum rules}
+\label{sec:5.2}
+
 
 %##################################################################
 \begin{figure}[t]
@@ -753,53 +882,72 @@ are given as
  \lambda|N\rangle|^2e(\lambda)=1/2$, with $e(\lambda)$  the 
  eigenstates energy density. 
 }
-\label{fig2-neel-sr}
+\label{fig1:neel-sr}
 \end{figure}
 %##################################################################
 
-In this section we investigate the role of the zero-momentum strings. We focus on 
-conserved quantities sum rules. Specifically, given a generic conserved quantity 
-(charge) $\hat Q$ we consider the trivial identity  
+Here we investigate the effect of the Hilbert space truncation removed the 
+zero-momentum strings on the N\'eel sum rules. 
+We focus on the ``trivial'' sum rule, i.e., the normalization of the initial 
+state 
 %
 \begin{equation}
-\label{sum}
-Q_0\equiv\langle\Psi_0|\hat Q|\Psi_0\rangle=\sum\limits_{\lambda}|\langle\lambda|
-\Psi_0\rangle|^2Q_\lambda, 
+\label{sr-trivial}
+\langle N|N\rangle=\sum\limits_{\lambda}|\langle\lambda|N\rangle|^2=1, 
 \end{equation}
 %
-where $Q_0$ is the charge expectation values over the initial state $|\Psi_0
-\rangle$, $|\lambda\rangle$ denotes the generic eigenstate of the $XXX$ chain, 
-and $Q_\lambda$ is the charge eigenvalue over the eigenstate. 
-
-Here we restrict ourselves to the cases with $\hat Q=\mathbb{I}$ and $\hat 
-Q={\mathcal H}$, considering both the case with $|\Psi\rangle=|N\rangle$ and 
-$|\Psi_0\rangle=|MG\rangle$. 
-
-For the N\'eel state, for any finite $L$ Eq.~\eref{sum} gives $Q_0=1,-1/2$ for 
-$\hat{Q}=\mathbb{I}$ and $\hat Q={\mathcal H}$, respectively. 
-
-
-Figure~\ref{fig2-neel-sr} plots the numerical results obtained via a full 
-scanning of the Hilbert space of the Heisenberg chain. 
-
-Precisely, the numerical data are obtained by generating all the possible string 
-contents ${\mathcal S}$ compatible with the parity-invariance constraint
-
-Panel (a) and (b) in the 
-Figure plots the sum rule~\eref{sum} for $\hat Q=\mathbb{I}$ and $\hat Q={\mathcal 
-H}$, respectively. The circles are obtained considering all the eigenstates of the 
-Heisenberg spin chain with $L$ sites, excluding eigenstates containing 
-zero-momentum strings. 
-
-The total number of eigenstates $\widetilde Z_{Neel}$ containing no zero-momentum 
-strings is given as 
+and the local conserved charges sum rules 
 %
 \begin{equation}
-\label{ztilde}
-\widetilde Z_{Neel}=B\Big(\frac{L}{2},\frac{L}{4}\Big).
+\label{sr-charge}
+Q_n^{(0)}=\langle N|Q_n|N\rangle=\sum\limits_{\lambda}|\langle\lambda|N\rangle|^2
+q_{n}(\lambda)\quad\textrm{with}\quad n\in\mathbb{N}, 
 \end{equation}
 %
-The proof of\eref{ztilde} is reported in~\ref{app-2}. 
+where $Q_n$ are the conserved charges of the $XXX$ chain (cf. 
+subsection~\ref{sec:1.5}) and $q_n(\lambda)$ are the charges eigenvalues over 
+the generic Bethe state $|\lambda\rangle$ (cf.~\eref{qngnk} and~\eref{gnk}). 
+
+In~\eref{sr-charge} $Q_n^{(0)}$ is the charge expectation value over the initial 
+state, i.e., the N\'eel state. These can be calculated as done in 
+Ref.~\cite{fagotti-2013}. 
+
+Note that due to the locality of $Q_n$, the translational invariance of the initial 
+state, and the periodic boundary conditions, the charge density $Q_n^{(0)}/L$ does 
+not depend on the chain size. For the N\'eel state, in the thermodynamic limit 
+$Q_n^{(0)}$ is obtained using~\eref{q0-th} and the quench action root distributions 
+$\pmb{\rho}^*$ (cf.~\eref{rho_sp}). 
+
+The truncation of the chain Hilbert space removing the zero-momentum strings has 
+dramatic effects on the sum rules~\eref{sr-trivial} and~\eref{sr-charge}. 
+
+This is illustrated in Figure~\ref{fig1:neel-sr} (a) focusing on the ``trivial'' 
+sum rule~\eref{sr-trivial} and in Figure~\ref{fig1:neel-sr} (b) for~\eref{sr-charge} 
+with $n=2$, i.e., the energy sum rule. 
+For the N\'eel state, for any finite $L$ Eq.~\eref{sum} gives $Q^{(0)}_2/L=-1/2$. 
+
+The circles in Figure~\ref{fig1:neel-sr} are the numerical results for the sum rules 
+obtained via a full scanning of the Hilbert space of the Heisenberg chain, excluding 
+the zero momentum strings. The data are plotted against the inverse chain length $1/L$, 
+for $L\le 38$. The expected results including all the eigenstates are shown as 
+horizonthal dotted lines in the Figure. 
+
+Clearly, both the sum rules are violated, due to the exclusion of the to zero-momentum 
+strings. Moreover, in both panesl the data suggest a vanishing behavior upon increasing 
+the chain size. In particular, the dash-dotted lines in the Figures are fits to  
+$A/L^{1/2}+B/L$, with $A,B$ fitting parameters, which perfectly describes the behavior 
+of the data. 
+
+The vanishing behavior as $\propto 1/L^{1/2}$ is reflecting the vanishing 
+of the fraction of non-zero momentum string eigenstates in the thermodynamic limit.  
+Precisely, from~\eref{zneel1} and~\eref{ztilde} one obtains 
+%
+\begin{equation}
+\label{beh}
+\frac{\widetilde Z_{Neel}}{Z_{Neel}}\propto\frac{4}{\sqrt{\pi L}}. 
+\end{equation}
+% 
+in the thermodynamic limit. 
 
 %##################################################################
 \begin{figure}[t]
@@ -818,53 +966,32 @@ The proof of\eref{ztilde} is reported in~\ref{app-2}.
  rule $\sum_{\lambda}|\langle\lambda|MG\rangle|^2e(\lambda)=
  2/3$, with $e(\lambda)\equiv E/L$  the eigenstates energy density. 
 }
-\label{fig3-dimer-sr}
+\label{fig2:dimer-sr}
 \end{figure}
 %##################################################################
 
 
-The largest chain size considered is $L=36$. The data are plotted versus $1/L$. 
 
-Interestingly, both the sum rules (panels (a)(b)) are not saturated, as expected 
-since the eigenstates corresponding to zero-momentum strings are excluded in the 
-sum in the right-hand-side in~\eref{sum}. 
 
-Interestingly, both sum rules exhibit vanishing behavior upon increasing the 
-chain size. The dash-dotted lines in the Figures are fits to the behavior 
-$A/L^{1/2}+B/L$, with $A,B$ fitting parameters, and perfectly describe the 
-behavior of the data. 
-
-The vanishing behavior as $\propto 1/L^{1/2}$ of the sum rules reflects the vanishing 
-of the fraction of non-zero momentum string eigenstates in the thermodynamic limit ad 
-%
-\begin{equation}
-\label{beh}
-\frac{\widetilde Z_{Neel}}{Z_{Neel}}\propto\frac{4}{\sqrt{\pi L}}, 
-\end{equation}
-% 
-with $Z_{Neel}$ being the total number of eigenstates corresponding to parity 
-invariant BGT quantum numbers configurations. 
-
-One should observe that the asymptotic, i.e., at large $L$, behavior~\eref{beh} 
-is not generic, meaning that different initial states $|\Psi_0\rangle$ might 
-give different behaviors. 
-
-This is illustrated in Figure~\ref{fig3-dimer-sr}, focusing on the Majumdar-Ghosh 
-(MG) state. Panels (a) and (b) plot the sum rules with $\hat Q=\mathbb{I}$ and 
-$\hat Q={\mathcal H}$ (same as in Figure~\ref{fig2-neel-sr}). As for the N\'eel 
-state only eigenstates containing no zero-momentum strings are consdidered. 
-Note that their number $\widetilde Z_{MG}$ (see~\ref{app-2}) is now given as 
+The asymptotic, i.e., at large $L$, behavior as $1/\sqrt{L}$ is not generic, 
+meaning that it depends on the initial state $|\Psi_0\rangle$. 
+This is illustrated in Figure~\ref{fig2:dimer-sr}, focusing on the Majumdar-Ghosh 
+(MG) state. Panels (a) and (b) plot are the same as in Figure~\ref{fig1:neel-sr}. 
+The expected value for the energy density sum rule is $Q_2^{(0)}=-2/3$ (horizonthal dotted 
+line in Figure~\ref{fig2:dimer-sr}). 
+As for the N\'eel state only parity-invariant eigenstates containing no zero-momentum 
+strings are consdidered. Note that their number $\widetilde Z_{MG}$ (cf.~\eref{mg-fi}) 
+is now given as 
 %
 \begin{equation}
 \widetilde Z_{MG}=B\Big(\frac{L}{2},\frac{L}{4}\Big)-B\Big(\frac{L}{2},
 \frac{L}{4}-1\Big). 
 \end{equation}
 %
-Similar to Figure~\ref{fig2-neel-sr}, due to the exclusion of the zero-momentum 
+Similar to Figure~\ref{fig1:neel-sr}, due to the exclusion of the zero-momentum 
 strings, the saturation rules exhibit vanishing behavior in the thermodynamic 
-limit. However, in contrast with the N\'eel case (see Figure~\ref{fig2-neel-sr}), 
-one has the behavior $Q_0\sim 1/L$, as confirmed by the fits (dash-dotted lines 
-in Figure~\ref{fig3-dimer-sr}). 
+limit. However, in contrast with the N\'eel case, one has the behavior $\sim 1/L$, 
+as confirmed by the fits (dash-dotted lines in Figure~\ref{fig2:dimer-sr}). 
 
 Similar to the N\'eel case this reflects the same vanishing behavior of the 
 eigenstates containing no zero-momentum strings $\widetilde Z_{MG}/Z_{MG}$ as 
@@ -873,49 +1000,93 @@ eigenstates containing no zero-momentum strings $\widetilde Z_{MG}/Z_{MG}$ as
 \frac{\widetilde Z_{MG}}{Z_{MG}}=\frac{4}{4+L}. 
 \end{equation}
 %
+where $Z_{MG}$ is the total number of parity-invariant eigenstates having non-zero 
+overlap with the Majumdar-Ghosh state. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Monte Carlo implementation of the Quench-Action approach}
-\label{mcqa-sec}
+\section{Monte Carlo implementation of the quench action approach}
+\label{sec6:mcqa}
+
+In this section follwing Ref.~\cite{alba-2015} we present the implementation of 
+the quench action approach, focusing on the $XXX$ chain. The key idea is to sample 
+the eigenstates of the finite-size $XXX$ 
+chain with the quench action probability distribution given in~\eref{qa-d-ensemble}. 
+Importantly, we restrict ourselves to the set of eigenstates of the $XXX$ chain 
+with no zero-momentum strings. In subsection~\ref{sec:6.1} we introduce the Monte 
+Carlo algorithm. Using the Monte Carlo algorithm in subsection~\ref{sec:6.2} we 
+numerically demonstrates that the N\'eel sum rules~\eref{sr-charge} are recovered 
+in the thermodynamic limit. The Hilbert space truncation is reflected in 
+$\propto 1/L$ scaling corrections to the sum rules. Physically, this implies that 
+despite the Hilbert space cut, the remaining eigenstates contain enough information 
+to reproduce the correct physical behavior in the thermodynamic limit. 
+
+In the Bethe ansatz framework this means that the eigenstates sampled by the Monte 
+Carlo method approach the quench action representative state in the thermodynamic 
+limit. This is explicitly demonstrated here by numerically calculating the 
+quench action root distributions $\pmb{\rho}^*$, which are found in remarkable 
+agreement with the analytical results. 
 
 
-For the finite-size Heisenberg spin chain the Quench-Action expectation 
-values can be obtained by sampling the eigenstates of the chain using 
-Monte Carlo. One starts with an eigenstate of the $XXX$ chain with 
-$N_{\infty}$ infinite rapidities and $M\equiv L/2-N_\infty$ finite ones. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Quench Action Monte Carlo algorithm}
+\label{sec:6.1}
+
+
+The Monte Carlo procedure starts with a randomly selected parity-invariant 
+eigenstate (Bethe state) of the $XXX$ chain in the sector with zero magnetization, 
+i.e., $M=L/2$ particles. 
+
+Due to the fact that the N\'eel state is not invariant under $SU(2)$ rotations, 
+to characterize the Bethe states one has to specify the number of infinite rapidities. 
+Let us define the number of infinite rapidities $N_{\infty}$. Clearly, one has that 
+the number of particles with finite rapidities $M'$ as $M'=L/2-N_\infty$. 
 The state is identified by a parity-invariant Bethe quantum number 
-configuration ${\mathcal C}$ and by the corresponding parity-invariant 
-rapidities $\{\lambda\}$ as $|\lambda\rangle$. The string content 
-associated with the finite rapidities is denoted as ${\mathcal S}$. The Monte 
-Carlo procedure consists of four steps as follows: 
+configuration ${\mathcal C}$. Due to the parity-invariance and the fact that zero-momentum 
+strings are excluded, the state is characterized by the number $m'$ of parity-invariant 
+rapidity pairs $\{\pm\lambda_j\}_{j=1}^{m'}$. The string content 
+associated with the finite rapidity pairs is denoted as $\widetilde{\mathcal S}=
+\{\tilde s_1,\dots,\tilde s_{m'}\}$. The Monte Carlo procedure generates a new 
+parity-invariant eigenstate of the $XXX$ chain, and it consists of four steps as 
+follows: 
 %
 \begin{enumerate}
-\item[\circled{1}] Choose a new number of finite rapidities $M'$ with 
-probability
+\item[\circled{1}] Choose a new number of finite rapidities $M_{new}'$ and a 
+parity-invariant rapidity pairs $m_{new}'\equiv M_{new}'/2$ with 
+probability ${\mathcal P}(M'_{new})$ as 
 %
 \begin{equation}
 \label{PM}
-{\mathcal P}(M')=\frac{\widetilde Z'_{Neel}(L,M')}{\widetilde{Z}_{Neel}(L)}. 
+{\mathcal P}(M'_{new})=\frac{\widetilde Z'_{Neel}(L,M'_{new})}
+{\widetilde{Z}_{Neel}(L)}, 
 \end{equation}
 %
-\item[\circled{2}] Choose a new a new string content ${\mathcal S}'\equiv
-\{s_1',\dots,s_{M'}'\}$ with probability ${\mathcal P}'(M',{\mathcal S}')$
+where $\widetilde Z_{Neel}(L)$ is the total number of parity-invariant eigenstates 
+with no zero-momentum strings (cf.~\eref{ztilde}), and $\widetilde Z'_{Neel}$ is the 
+number of parity invariant eigenstates with no zero-momentum strings in the 
+sector with $M'_{new}$ particles with finite rapidities (cf.~\eref{neel-fi}). 
+\item[\circled{2}] Choose a new a new string content $\widetilde{\mathcal S}'\equiv
+\{\tilde s_1',\dots,\tilde s_{m'_{new}}\}$ with probability ${\mathcal P}'(M'_{new},
+\widetilde{\mathcal S}')$
 %
 \begin{equation}
 \label{PS}
-{\mathcal P}'(M',{\mathcal S}')=\frac{1}{\widetilde Z'_{Neel}(L,M')}
-\prod_{n=1}^{M'}B\Big(\frac{L}{2}-\frac{1}{2}\sum\limits_{m=1}^{M'}t_{nm}
-s'_m,s'_n\Big).
+{\mathcal P}'(M'_{new},\widetilde{\mathcal S}')=\frac{1}{\widetilde Z'_{Neel}
+(L,M'_{new})}\prod_{n=1}^{m'_{new}}B\Big(\frac{L}{2}-\sum\limits_{l=1}^{
+m'_{new}}t_{nl}\tilde s'_l,\tilde s'_n\Big), 
 \end{equation}
 %
+where the matrix $t_{nl}$ is defined in~\eref{bt-qn-bound}.
 \item[\circled{3}] Generate a new parity-invariant quantum number configuration 
-${\mathcal C}'$ compatible with the ${\mathcal  S}'$ obtained in step $\circled{2}$. 
-Solve the corresponding BGT equations~\eref{bt_eq}, finding a new eigenstate 
-$|\lambda'\rangle$. 
-\item[\circled{4}] Calculate the overlap $\langle\lambda'|N\rangle$ between the 
-new eigenstate and the N\'eel state and accept the eigenstate with the Metropolis 
-probability 
+${\mathcal C}'$ compatible with the $\widetilde {\mathcal  S}'$ obtained in step 
+$\circled{2}$. Solve the corresponding BGT equations~\eref{bgt-eq}, finding the 
+rapidities $\{\pm\lambda'_j\}_{j=1}^{m'_{new}}$ of the new parity-invariant 
+eigenstate. 
+\item[\circled{4}] Calculate the overlap $\langle\{\lambda'_j\}_{j=1}^{m'_{new}}
+|N\rangle$ between the new eigenstate and the N\'eel state 
+using~\eref{neel-ov}~\eref{red-G+}~\eref{red-G-} and~\eref{neel-k}. Accept the 
+new eigenstate with the quench action Metropolis probability 
 %
 \begin{equation}
 \label{metropolis}
@@ -923,29 +1094,35 @@ probability
 2\Re({\mathcal E}'-{\mathcal E})\Big)\Big\}, 
 \end{equation}
 %
-where ${\mathcal E}'\equiv-\log\langle\lambda'|N\rangle$, similarly for 
-${\mathcal E}$, and $\Re$ denotes the real part. 
+where ${\mathcal E}'\equiv-\log\langle\{\lambda'_j\}_{j=1}^{m'_{new}}
+|N\rangle$, ${\mathcal E}\equiv-\log\langle\{\lambda_j\}_{j=1}^{m'_{new}}
+|N\rangle$, and $\Re$ denoting the real part. 
 \end{enumerate}
 %
-
-Afte some necessary thermalization steps the sequence $1-4$ generates eigenstates 
-of the $XXX$ chain distributed according to the Quench-Action probability 
+Note that while the steps $1$-$3$ generate the correct eigenstate energy density 
+distribution, $4$ weigh the different eigenstates with the quench action probability 
 distribution. 
 
-For a generic observable ${\mathcal O}$, its Quench-Action expectation value 
-$\langle{\mathcal O}\rangle_{QA}$ is obtained as the arithmetic average of the 
-expectation value over the eigenstates sampled in the Monte Carlo as 
+For a generic observable ${\mathcal O}$, the long-time quench action value $\langle{
+\mathcal O}\rangle$ is obtained as the arithmetic average of the expectation value 
+over the eigenstates $|\lambda\rangle$ sampled by the Monte Carlo as 
 %
 \begin{equation}
-\langle{\mathcal O}\rangle_{QA}=\frac{1}{N_{mcs}}\sum\limits_{\lambda}
-\langle\lambda|{\mathcal O}|\lambda\rangle, 
+\label{qamc-obs}
+\langle{\mathcal O}\rangle=\frac{1}{N_{mcs}}\sum\limits_{\lambda}\langle\lambda|
+{\mathcal O}|\lambda\rangle, 
 \end{equation}
 %
-with $N_{mcs}$ being the total number of Monte Carlo steps. 
+with $N_{mcs}$ being the total number of Monte Carlo steps. Note that, as usual in 
+Monte Carlo, some initial steps have to be neglected to ensure thermalization. 
+Note that~\eref{qamc-obs} applies to any observable ${\mathcal O}$ for which the 
+the Bethe state expectation value $\langle\lambda|{\mathcal O}|\lambda\rangle$ 
+(form factor) is known. 
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Monte Carlo Quench-Action approach: Numerical results}
-\label{MCQA-nr}
+\subsection{The N\'eel sum rules: Monte Carlo results}
+\label{sec:6.2}
 
 %##################################################################
 \begin{figure}[t]
@@ -966,53 +1143,70 @@ with $N_{mcs}$ being the total number of Monte Carlo steps.
  horizontal line is the expected result. (c)(d) Same as in (a)(b) for 
  the charge $Q_4$ and its fluctuations. 
 }
-\label{fig5-neel-sr}
+\label{fig3:neel-qamc-sr}
 \end{figure}
 %##################################################################
 
 
-In this section we numerically demonstrate that the only effect of neglecting 
-the zero-momentum strings are finite-size corrections. 
-
 The validity of the Monte Carlo approach for simulating the Quench-Action 
-results is demonstrated in Figure~\ref{fig5-neel-sr}. The Figure focuses on 
-the N\'eel sum rules for the conserved charges $Q_2$ and $Q_4$. Specifically, 
-panel (a) shows the sum rules for $\hat Q=\hat Q_2$, $\hat Q=\hat Q_4$, 
-and the corresponding fluctuations $\sigma^2(Q_n)\equiv \langle N|\hat Q_n^2|
-N\rangle-\langle N|\hat Q_n|N\rangle^2$. 
+results is demonstrated in Figure~\ref{fig3:neel-qamc-sr}. The Figure focuses on 
+the N\'eel sum rules for the conserved charges densities $Q_2/L$ and $Q_4/L$ 
+(cf. subsection~\ref{sec:1.5} and~\eref{sr-charge}) and their fluctuations 
+$\sigma(Q_n)$, which are defined as 
 %
 \begin{equation}
-\langle N|\hat Q_n|N\rangle=\sum\limits_{\lambda}|\langle N|\lambda\rangle|^2
-Q_n.
+\fl\quad\sigma^2(Q_n)\equiv\langle N|Q^2_n|N\rangle-\langle N|Q_n|N\rangle^2=
+\sum\limits_{\lambda}|\langle N|\lambda\rangle|^2q^2_n(\lambda)-\Big(\sum_\lambda|
+\langle N|\lambda\rangle|^2q_n(\lambda)\Big)^2.
 \end{equation}
 %
-Note that the N\'eel sum rule for the identity $\mathbb{I}$ is trivially satisfied, 
-and it corresponds to the normalization of the Monte Carlo probability. 
-Figure~\ref{fig5-neel-sr} (a) plots the N\'eel sum rule for the energy density $Q_2/L$. 
-The circles are Monte Carlo data obtained using the procedure outlined in~\ref{mcqa-sec} 
-for several Heisenberg spin chains. The largest chain simulated is for $L=56$ sites. 
-The data correspond to a simulation with $\sim 10^7$ Monte Carlo step (mcs). 
-The expected result $\langle N|\hat Q_2|N\rangle/L=-1/2$ is shown as dash-dotted 
-line. 
+Panel (a) and (b) in Figure~\ref{fig3:neel-qamc-sr} show the sum rules for 
+the energy density $Q_2/L$, and its density of fluctutations $\sigma^2(Q_2)/L$. 
+It is straightforward to derive the N\'eel expectation value of the energy 
+density fluctuations as $\sigma(Q_2)/L=1/4$ (dash-dotted line in 
+Figure~\ref{fig3:neel-qamc-sr} (b)). 
 
-In stark contrast with Figure~\ref{fig2-neel-sr} and Figure~\ref{fig3-dimer-sr}, 
-while for small chains the sum rule is violated the data strongly suggest that 
-in the thermodynamic limit the sum rule saturates the expected theoretical 
-value. 
+%Note that the N\'eel sum rule for the identity $\mathbb{I}$ is trivially satisfied, 
+%and it corresponds to the normalization of the Monte Carlo probability. 
+%Figure~\ref{fig5-neel-sr} (a) plots the N\'eel sum rule for the energy density $Q_2/L$. 
+The circles in the Figure are Monte Carlo data obtained using the procedure outlined 
+in~\ref{sec:6.1} for the Heisenberg spin chain with $L\le 56$ sites.  
+The data correspond to Monte Carlo simulations with $N_{mcs}\sim 10^7$ Monte Carlo 
+steps (mcs). For the largest chain size $L=56$ we used $N_{mcs}\sim ...$. The data 
+are plotted versus inverse chain length $1/L$. 
+%The expected result $\langle N|\hat Q_2|N\rangle/L=-1/2$ is shown as dash-dotted 
+%line. 
 
-Furthermore, the data suggest the behavior $\propto 1/L$, as confirmed by the fit 
-to $-1/2+A/L+b/L^2$ (dashed line in the Figure), with $A,B$ fitting parameters. 
+Interestingly, the Monte Carlo data strongly suggest that in the thermodynamic limit 
+the sum rule saturates are restored, while violations are present for finite chains. 
+This numerically demonstrates that the truncation of the Hilbert space, i.e., 
+removing the zero-momentum strings, gives rise to scaling corrections, while the 
+thermodynamic limit behavior is correctly reproduced. 
+Furthermore, the data in panel (a) suggest the behavior $\propto 1/L$ for the scaling 
+corrections, as confirmed by the fit to $-1/2+A/L+b/L^2$ (dashed line in the Figure), 
+with $A,B$ fitting parameters. 
 
-The same qualitative behavior is demonstrated in panel (b) for the energy 
-fluctuations. Interestingly, for $L=56$ the Monte Carlo result is compatible 
-within the error bar with the expected asymptotic one. 
+The same behavior should be expected for the energy fluctuations $\sigma^2(Q_2)$, 
+although this is difficult to extract numerically due to the large Monte Carlo 
+error bar. 
 
-Finally, panels (c)(d) show the same results as for (a)(b) for the conserved 
-charge $Q_4$. 
+
+Finally, panels (c) and (d) in Figure~\ref{fig3:neel-qamc-sr} are the same as 
+(a)(b), but for the charge $Q_4$. While for $Q_4/L$ the Monte Carlo result 
+for $L=48$ is already compatible with the expected result $Q_4/L=1/4$ in the 
+thermodynamic limit, the scaling corrections of the fluctuations $\sigma^2(Q_4)$ 
+are larger, and the Monte Carlo data show significant deviations from the 
+thermodynamic limit up to $L=56$. 
+
+This is explained that the support of $Q_4$, i.e., the number of sites where 
+the operator acts non trivially is larger than for $Q_2$ (see~\cite{grabowski-1995} 
+for the precise expression), and it is natural 
+to assume that scaling corrections increase upon increasing the support of the 
+operator considered. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{The Quench-Action root distributions}
-\label{MCQA-root}
+\subsection{The quench action root distributions}
+\label{sec:6.3}
 
 %##################################################################
 \begin{figure}[t]
@@ -1033,15 +1227,40 @@ charge $Q_4$.
  (c)(d) the oscillations are finite-size effects, whereas the error bars 
  show the statistical Monte Carlo error. 
 }
-\label{fig6-neel-roots}
+\label{fig4:neel-rho}
 \end{figure}
 %##################################################################
 
-The BGT root distributions $\rho_n(\lambda)$ identifying the Quench-Action saddle 
-point can be extracted from the Monte Carlo simulation as shown in~\cite{alba-2015}. 
+The BGT root distributions corresponding to the quench action steady state 
+(cf.~\eref{rho_sp}) $\pmb{\rho}=\{\rho_n(\lambda)\}_{n=1}^{\infty}$ can be extracted 
+from the Monte Carlo simulation.  This has been shown in Ref.~\cite{alba-2015} for 
+the GGE representative state. 
 
-Figure~\ref{fig6-neel-roots} displays the first two root distributions 
-$\rho_1(\lambda)$ (panel (a)) and $\rho_2(\lambda)$ (panel (b)), plotted agains 
+The underlying idea is that for the local observables considered in this 
+work the eigenstate expectation value $\langle\lambda|{\mathcal O}|\lambda\rangle$
+entering in~\eref{qamc-obs} becomes
+%
+\begin{equation}
+\langle\lambda|{\mathcal O}|\lambda\rangle=\sum\limits_{n,\gamma}{\mathcal O}
+(\lambda_{n;\gamma}), 
+\end{equation}
+%
+with the set of solutions of the BGT equations $\{\lambda_{n;\gamma}\}$ identifying 
+the Bethe state $|\lambda\rangle$. 
+By comparing~\eref{qamc-obs} and ... one obtains
+%
+\begin{equation}
+\frac{1}{N_{mcs}}\sum\limits_{\{\lambda_{n;\gamma}\}}{\mathcal O}_n(\lambda_{n;\gamma})
+\to\int_{-\infty}^{+\infty}d\lambda\rho_{n}(\lambda){\mathcal O}_n(\lambda). 
+\end{equation}
+%
+This suggests that for any $n$ the histograms of the BGT roots corresponding to the 
+$n$-strings sampled in the Monte Carlo should converge in the thermdynamic limit to 
+the root distribution $\rho_n$. 
+
+This is demonstrated numerically in Figure~\ref{fig4:neel-rho} for the first two root 
+distributions $\rho^*_1(\lambda)$ (panel (a)(b)) and $\rho^*_2(\lambda)$ (panel 
+(c)(d)), plotted agains 
 the BGT root $\lambda$. The data are the histograms of the BGT roots sampled 
 in the Monte Carlo. The data are for a chain with $L=56$ sites and 
 $N_{mcs}\sim 10^7$ Monte Carlo steps. All the data are divided by a factor 
@@ -1062,40 +1281,6 @@ distribution. This is expected since large $\lambda$ correspond to large
 quasimomenta, which are more sensitive to the finite size of the chain. 
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Counting of eigenstates with non-zero Neel overlap}
-
-We numerically checked that the number of states with non-zero overlap 
-with the Neel state is given as 
-%
-\begin{equation}
-\label{Neel-count}
-Z_{Neel}=2^{\frac{L}{2}-1}+\frac{1}{2}B\left(\frac{L}{2},
-\frac{L}{4}\right)+1,
-\end{equation}
-%
-with $B(x,y)$ denoting the binomial coefficient. The contribution $1$ 
-accounts for the ferromagnetic state. Here 
-we assumed that $L$ is divisible by four. Here $Z_N$ is be obtained 
-as the total number of parity-invariant Bethe-Gaudin-Takahashi quantum 
-numbers. 
-
-After excluding the zero-momentum strings the total number of states 
-with non-zero overlap with the Neel state is 
-%
-\begin{equation}
-\label{neel-ov-count}
-\widetilde {Z}_{Neel}=\Big(\frac{L}{2},\frac{L}{4}\Big)
-\end{equation}
-%
-Importantly, the fraction of eigenstates corresponding to non-zero momentum 
-strings is vanishing in the thermodynamic limit as 
-%
-\begin{equation}
-\frac{\widetilde Z_{Neel}}{Z_{Neel}}\propto\frac{4}{\sqrt{\pi L}}.
-\end{equation}
-%
 
 \appendix
 
@@ -1598,7 +1783,6 @@ Phys.\ Rev.\ Lett.\ {\bf 113}, 117202 (2014).
 M~Mesty\'an, B.~Pozsgay, G.~Tak\'acs, and M.~A.~Werner, J.\ Stat.\ Mech.\ (2015) 
 P04001.
 
-
 \bibitem{ilievski-2015a}
 E.~Ilieveski, J.~De~Nardis, B.~Wouters, J.-S.~Caux, F.~H.~Essler, and T.~Prosen, 
 arXiv:1507.02993. 
@@ -1606,6 +1790,18 @@ arXiv:1507.02993.
 \bibitem{brockmann-2014a}
 M.~Brockmann, B.~Wouters, D.~Fioretto, J.~De Nardis, R.~Vlijm, and J.-S.~Caux, 
 J.\ Stat.\ Mech.\ (2014) P12009. 
+
+\bibitem{mazza-2015}
+P.~P.~Mazza, J.-M.~St\'ephan, E.~Canovi, V.~Alba, M.~Brockmann, and M.~Haque, 
+arXiv:1509.04666.
+
+\bibitem{fagotti-2013}
+M.~Fagotti and F.~H.~Essler, J.\ Stat.\ Mech.\ (2013) P07012. 
+
+\bibitem{grabowski-1995}
+M.~P.~Grabowski and P.~Mathieu, Ann.\ Phys.\ N.Y. {\bf 243},
+299 (1995).
+
 
 \end{thebibliography}
 
