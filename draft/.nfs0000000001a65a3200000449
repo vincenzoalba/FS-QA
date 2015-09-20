@@ -111,17 +111,6 @@ values are obtained using the so-called diagonal ensemble, which is defined as
 \end{equation}
 %
 
-It is useful to rewrite~\eref{d-ensemble} as 
-%
-\begin{equation}
-\label{qa-prob}
-\langle{\mathcal O}\rangle=\sum\limits_{\alpha}\rho^{DE}(\alpha)
-\langle\alpha|{\mathcal O}|\alpha\rangle,\quad\textrm{with}\quad 
-\rho^{DE}(\alpha)=\exp(-2\Re{\mathcal E}(\alpha)).
-\end{equation}
-%
-Here $\rho^{DE}(\alpha)$ is a diagonal ensemble density matrix, and ${\mathcal E}(\alpha)
-\equiv-\log\langle\alpha|\Psi_0\rangle$, with $\Re$ denoting the real part. 
 
 %%%%%%%%%%%%%%%%%%%%%%% BETHE ANSATZ FOR THE XXX CHAIN %%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Bethe ansatz solution of the Heisenberg ($XXX$) spin chain}
@@ -1311,65 +1300,8 @@ to extract $\rho_3(\lambda)$
 \section{Conclusions}
 \label{conclusions}
 
-We presented a Monte Carlo implementation of the quench action method for integrable 
-spin chains. We focused on the spin-$1/2$ isotropic Heisenberg spin chain ($XXX$ chain) 
-and the quench from the zero-momentum N\'eel state. 
-The approach extends the Monte Carlo approach developed in Ref.~\cite{alba-2015} to 
-simulate the Generalized Gibbs Ensemble in integrable models. The key idea of the 
-approach is the Monte Carlo sampling of the model Hilbert space with the quench 
-action, equivalently the Diagonal Ensemble, probability distribution given 
-in~\eref{qa-prob}. 
-
-The approach is based on the knowledge of the 
-overlaps between the pre-quench N\'eel state $|N\rangle$ and the eigenstates 
-of the model that have been obtained recently~\cite{pozsgay-2014,brockmann-2014,
-brockmann-2014a,brockmann-2014b,brockmann-2014c,piroli-2014}. 
-
-Besides the overlaps the method is based on the knowledge of the Hilbert space 
-structure provided by the Bethe ansatz formalism and on the Bethe-Gaudin-Takahashi 
-(BGT) equations. The approach is devised for finite-size systems. Thermodynamic 
-quantities can be extracted using finite-size scaling. 
-
-We first focused on the importance of the so-called zero-momentum strings. 
-These corresponds to components of the Bethe wavefunctions corresponding to 
-bound states of many down spins (strings in the Bethe ansatz language) with 
-zero center of mass momentum. These are usually neglected in the quench action 
-approach~\cite{brockmann-2014}. The reason is that zero momentum strings 
-leads to singularities in the overlap formulas, which make extracting the 
-thermodynamic limit tricky. Moreover, it is argued that zero-momentum 
-strings give rise only to scaling corrections to the quench action results, 
-which are unimportant in the thermodynamic limit. 
-
-Importantly, one should observe that for a finite chain the vast majority of 
-eigenstates contain zero-momentum strings. More precisely, for the quench from 
-the N\'eel state the fraction of eigenstates with no zero-momentum strings 
-vanish as $\propto L^{-1/2}$. 
-
-Moreover, the only eigenstates having non zero N\'eel overlaps (and non zero 
-overlap with the Majumdhar-Ghosh state) are the so-called parity invariant 
-eigenstates. The total number of parity-invariant eigenstates of the Heisenberg 
-spin chain is given in terms of the chain length by a simple combinatorial 
-formula that we provide. We provide similar combinatorial formulas for the 
-total number of parity-invariant eigenstates at fixed number of down spins 
-and fixed string content, i.e., the number of many-spin bound states present in 
-each eigenstates. 
-
-In order to understand the importance of the zero-momentum strings we calculated 
-the overlap distribution function including all the eigenstates of the chain for 
-chains up to $L=38$ sites. We excluded the zero-momentum strings. 
-
-We focused on some exact sum rules for the local integrals of motion of the 
-$XXX$ chain. Strikingly, the exclusion of the zero momentum strings gives rise 
-to violations of the sum rules. Precisely, we numerically observe that the 
-sum rules exhibit the vanishing behavior $\propto L^{-\frac{1}{2}}$, which 
-reflects the vanishing of the fraction of eigenstates with no zero-momentum 
-strings. 
-
-The behavior $\propto L^{-\frac{1}{2}}$ is not generic, but it depends on the 
-pre-quench initial state. We demonstrated that by considering the quench from 
-the Majumdar-Ghosh state. We observed that the sum rule vanish as $1/L$, again 
-reflecting the vanishing as $1/L$ of the fraction of eigenstates with no 
-zero-momentum strings. 
+Following Ref.~\onlinecite{alba-2015} We presented a Monte Carlo implementation of the quench action method for integrable 
+spin chains. We focused on the spin-$1/2$ isotropic Heisenberg spin chain ($XXX$ chain). 
 
 
 
@@ -1827,77 +1759,6 @@ String content & $2I^+_n$ & $q$ & E & $|\langle\lambda|MG\rangle|^2$ (exact) & $
 %%%%%%%%%%%%%%%%%%%%%% REFERENCES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{thebibliography}{99}
 
-\bibitem{bloch-2008}
-I.~Bloch, J.~Dalibard, and W.~Zwerger, Rev.\ Mod.\ Phys.\ {\bf 80},
-885 (2008).
-
-\bibitem{greiner-2002}
-M.~Greiner, O.~Mandel, T. H\"ansch, and I.~Bloch, Nature (London)
-{\bf 419}, 51 (2002).
-
-\bibitem{kinoshita-2006}
-T.~Kinoshita, T.~Wenger, and D.~S.~Weiss, Nature (London) {\bf 440},
-900 (2008).
-
-\bibitem{hofferberth-2007}
-S.~Hofferberth, I.~Lesanovsky, B.~Fischer, T.~Schumm, and J.~Schiedmayer,
-Nature (London) {\bf 449}, 324 (2007).
-
-\bibitem{trotzky-2012}
-S.~Trotzky, Y.-A.~Chen, A.~Flesch, I.~P.~McCulloch, U.~Schollw\"ock,
-J.~Eisert, and I.~Bloch, Nature Phys.\ {\bf 8}, 325 (2012).
-
-\bibitem{gring-2012}
-M.~Gring, M.~Kuhnert, T.~Langen, T.~Kitagawa, B.~Rauer, M.~Schreitl,
-I.~Mazets, D.~A.~Smith, E.~Demler, and J.~Schmiedmayer, Science {\bf 337},
-6100 (2012).
-
-\bibitem{cheneau-2012}
-M.~Cheneau, P.~Barmettler, D.~Poletti, M.~Endres, P.~Schaua, T.~Fukuhara,
-C.~Gross, I.~Bloch, C.~Kollath, and S.~Kuhr, Nature (London) {\bf 481},
-484 (2012).
-
-\bibitem{schneider-2012}
-U.~Schneider, L.~Hackeruller, J.~P.~Ronzheimer, S.~Will, S.~Braun, T.~Best,
-I.~Bloch, E.~Demler, S.~Mandt, D.~Rasch, and A.~Rosch, Nature\ Phys.\
-{\bf 8}, 213 (2012).
-
-\bibitem{kunhert-2013}
-M.~Kuhnert, R.~Geiger, T.~Langen, M.~Gring, B.~Rauer,
-T.~Kitagawa, E.~Demler, D.~Adu Smith, and J.~Schmiedmayer, Phys.\ Rev.\
-Lett.\ {\bf 110}, 090405 (2013).
-
-\bibitem{langen-2013}
-T.~Langen, R.~Geiger, M.~Kuhnert, B.~Rauer, and J.~Schmiedmayer,
-Nature\ Phys.\ {\bf 9}, 640 (2013).
-
-\bibitem{meinert-2013}
-F.~Meinert, M.~J.~Mark, E.~Kirilov, K.~Lauber, P.~Weinmann,
-A.~J.~Daley, and H.-C.~Nagerl, Phys.\ Rev.\ Lett.\ {\bf 111},
-053003 (2013).
-
-\bibitem{fukuhara-2013}
-T.~Fukuhara, A.~Kantian, M.~Endres, M.~Cheneau, P.~Schaua, S.~Hild, C.~Gross,
-U.~Schollw\"ock, T.~Giamarchi, I.~Bloch, and S.~Kuhr, Nature\ Phys.\ {\bf 9},
-235 (2013).
-
-\bibitem{ronzheimer-2013}
-J.~P.~Ronzheimer, M.~Schreiber, S.~Braun, S.~S.~Hodgman, S.~Langer, I.~P.~McCulloch,
-F. Heidrich-Meisner, I.~Bloch, and U.~Schneider, Phys.\ Rev.\ Lett.\ {\bf 110},
-205301 (2013).
-
-\bibitem{braun-2014}
-S.~Braun, M.~Friesdorf, S.~Hodgman, M.~Schreiber, J.~Ronzheimer, A.~Riera, M.~del Rey,
-I.~Bloch, J.~Eisert, and U.~Schneider, PNAS {\bf 112}, 3641 (2015).
-
-\bibitem{langen-2015}
-T.~Langen, S.~Erne, R.~Geiger, B.~Rauer, T.~Schweigier, M.~Kuhnert, W.~Rohringer,
-I.~E.~Mazets, T.~Gasenzer, J.~Schmiedmayer, Science {\bf 348}, 6231 (2015).
-
-\bibitem{polkovnikov-2011}
-A.~Polkovnikov, K.~Sengupta, A~Silva, and M.~Vengalattore, Rev.\ Mod.\ Phys.\
-{\bf 83}, 863 (2011).
-
 \bibitem{calabrese-2014}
 P.~Calabrese and P.~Le Doussal, J.\ Stat.\ Mech.\ (2014) P05004. 
 
@@ -1920,13 +1781,6 @@ University Press, Cambridge, 1997.
 \bibitem{brockmann-2014}
 M.~Brockmann, J.~De~Nardis, B.~Wouters, and J.-S.~Caux, J.\ Phys.\ A:\ 
 Math.\ Theor. {\bf 47}, 345003 (2014). 
-
-\bibitem{brockmann-2014c}
-M.~Brockmann, J.~De~Nardis, B.~Wouters, and J.-S.~Caux, J.\ Phys.\ A:\ 
-Math.\ Theor. {\bf 47}, 145003 (2014). 
-
-\bibitem{brockmann-2014b}
-M.~Brockmann, J.\ Stat.\ Mech.\ (2014) P05006. 
 
 \bibitem{pozsgay-2014}
 B.~Pozsgay, J.\ Stat.\ Mech.\ (2014) P06011. 
@@ -1977,9 +1831,6 @@ M.~H.~Quenouille, Ann.\ Math.\ Statist.\ {\bf 20}, 355 (1949).
 
 \bibitem{wolff-2004} 
 U.~Wolff, Comput.\ Phys.\ Comm.\ {\bf 156}, 143 (2004). 
-
-\bibitem{piroli-2014}
-L.~Piroli and P.~Calabrese, J.\ Phys.\ A {\bf 47}, 385003 (2014). 
 
 \end{thebibliography}
 
