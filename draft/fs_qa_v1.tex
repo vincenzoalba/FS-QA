@@ -859,14 +859,27 @@ Figure~\ref{fig0:neel-ov} (b) demonstrates that the vast majority of the eigenst
 have small N\'eel overlap. Specifically, a peak at $\sim 0.5$ is visible in the 
 Figure, and a rapid decay at smaller values of ... .
 
+Interestingly, the data suggest the behavior
+%
+\begin{equation}
+|\langle\lambda|N\rangle|^2\propto\exp(-\kappa L),
+\end{equation}
+%
+with $0.18\lesssim\kappa\lesssim0.7$. The vertical dash-dotted line in 
+Figure~\ref{fig0:neel-ov} is the overlap between the ground state of the 
+$XXX$ chain and the N\'eel state. This is obtained using the ground state 
+root distribution $\rho_1(\lambda)\propto1/\cosh(\pi\lambda)$  
+and~\eref{neel-ov-th}. The dashed line denotes the N\'eel overlap 
+$\sim 2/B(L,L/2)$ with the $S_z=0$ component of the ferromagnetic state. 
+
 The vertical dotted line in the Figure shows the expected result for 
-$-2\log|\langle\lambda|N\rangle|/L$ in the thermodynamic limit as obtained from 
-the quench action. 
+$-2\log|\langle\lambda|N\rangle|/L$ in the thermodynamic limit as 
+obtained from the quench action. 
 
 This is obtained by usigng~\eref{neel-ov-th} and the saddle point root distributions 
-$\rho_n^*$ (cf.~\eref{rho1-sp}-\eref{rho3-sp} for the results up to $n=3$). Note that its position 
-does not coincide with the peak of the overlap distribution function, as expected. 
-This is reflecting the competition between the driving term and the entropy 
+$\rho_n^*$ (cf.~\eref{rho1-sp}-\eref{rho3-sp} for the results up to $n=3$). Note that 
+its position does not coincide with the peak of the overlap distribution function, as 
+expected. This is reflecting the competition between the driving term and the entropy 
 term in the quench action. 
 
 
@@ -1371,6 +1384,33 @@ the Majumdar-Ghosh state. We observed that the sum rule vanish as $1/L$, again
 reflecting the vanishing as $1/L$ of the fraction of eigenstates with no 
 zero-momentum strings. 
 
+We observed that the vast majority of the eigenstates have neglegible overlap 
+with the N\'eel state. This implies that the eigenstates relevant for the 
+quench action are a small fraction of the total number of eingestates having 
+in principle non-zero N\'eel overlap. 
+
+Next we presented a Monte Carlo implementation of the quench action method. 
+This is obtained by resampling with the quench action probability measure 
+the Hilbert space of the $XXX$ chain, restricted to the sector of the  Hilbert 
+space with no zero-momentum strings. 
+
+This is obtained using a standard Metropolis algorithm. Importantly, we 
+numerically demonstrated that the only consequence of the Hilbert space 
+restriction to strings with finite momentum are scaling corrections $1/L$ 
+to physical observables. 
+
+Specifically, we focused on the sum rules for the local conserved quantities 
+of the $XXX$ chain. We numerically observed that, although for finite chains 
+violations of the sum rules are present, these violations decay upon increasing 
+the chain size, and the sum rules are restored in the thermodynamic limit. 
+
+Finally, we extracted from the Monte Carlo the BGT root distributions characterizing 
+the quench action saddle point. These are obtained from the BGT roots identifying 
+the $XXX$ chain eigenstates sampled in the Monte Carlo. We observed that, although 
+the finite size gives rise to oscillating scaling corrections, already for 
+relatively small chains with $L=56$ sites, the first BGT root distribution 
+$\rho^*_1(\lambda)$ is in impressive agreement with the analytic result in 
+the thermodynamic limit. 
 
 
 

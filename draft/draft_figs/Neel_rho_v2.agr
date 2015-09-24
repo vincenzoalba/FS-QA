@@ -63,7 +63,7 @@
 @timestamp rot 0
 @timestamp font 0
 @timestamp char size 1.000000
-@timestamp def "Fri Sep 18 18:18:50 2015"
+@timestamp def "Thu Sep 24 11:13:15 2015"
 @with string
 @    string on
 @    string loctype view
@@ -72,7 +72,7 @@
 @    string rot 0
 @    string font 4
 @    string just 0
-@    string char size 1.530000
+@    string char size 1.700000
 @    string def "(a)"
 @with string
 @    string on
@@ -82,7 +82,7 @@
 @    string rot 0
 @    string font 4
 @    string just 0
-@    string char size 1.530000
+@    string char size 1.700000
 @    string def "(c)"
 @with string
 @    string on
@@ -92,7 +92,7 @@
 @    string rot 0
 @    string font 4
 @    string just 0
-@    string char size 1.530000
+@    string char size 1.700000
 @    string def "(b)"
 @with string
 @    string on
@@ -102,7 +102,7 @@
 @    string rot 0
 @    string font 4
 @    string just 0
-@    string char size 1.530000
+@    string char size 1.700000
 @    string def "(d)"
 @r0 off
 @link r0 to g1
@@ -211,7 +211,7 @@
 @    xaxis  ticklabel start 0.000000
 @    xaxis  ticklabel stop type auto
 @    xaxis  ticklabel stop 0.000000
-@    xaxis  ticklabel char size 1.200000
+@    xaxis  ticklabel char size 1.600000
 @    xaxis  ticklabel font 4
 @    xaxis  ticklabel color 1
 @    xaxis  tick place both
@@ -227,7 +227,7 @@
 @    yaxis  label layout para
 @    yaxis  label place spec
 @    yaxis  label place 0.000000, 0.106000
-@    yaxis  label char size 1.550000
+@    yaxis  label char size 1.800000
 @    yaxis  label font 4
 @    yaxis  label color 1
 @    yaxis  label place normal
@@ -263,7 +263,7 @@
 @    yaxis  ticklabel start 0.000000
 @    yaxis  ticklabel stop type auto
 @    yaxis  ticklabel stop 0.000000
-@    yaxis  ticklabel char size 1.200000
+@    yaxis  ticklabel char size 1.600000
 @    yaxis  ticklabel font 4
 @    yaxis  ticklabel color 1
 @    yaxis  tick place both
@@ -526,7 +526,7 @@
 @    xaxis  label "root \xl"
 @    xaxis  label layout para
 @    xaxis  label place auto
-@    xaxis  label char size 1.550000
+@    xaxis  label char size 1.800000
 @    xaxis  label font 4
 @    xaxis  label color 1
 @    xaxis  label place normal
@@ -562,7 +562,7 @@
 @    xaxis  ticklabel start 0.000000
 @    xaxis  ticklabel stop type auto
 @    xaxis  ticklabel stop 0.000000
-@    xaxis  ticklabel char size 1.200000
+@    xaxis  ticklabel char size 1.600000
 @    xaxis  ticklabel font 4
 @    xaxis  ticklabel color 1
 @    xaxis  tick place both
@@ -577,8 +577,8 @@
 @    yaxis  label "\xr\f{}\s2\N\S\+\+\+\h{-.5}\v{-.4}*\-\-\-\N\h{.1}(\xl\f{})"
 @    yaxis  label layout perp
 @    yaxis  label place spec
-@    yaxis  label place 0.020000, 0.109000
-@    yaxis  label char size 1.550000
+@    yaxis  label place 0.040000, 0.120000
+@    yaxis  label char size 1.800000
 @    yaxis  label font 4
 @    yaxis  label color 1
 @    yaxis  label place normal
@@ -614,7 +614,7 @@
 @    yaxis  ticklabel start 0.000000
 @    yaxis  ticklabel stop type auto
 @    yaxis  ticklabel stop 0.000000
-@    yaxis  ticklabel char size 1.200000
+@    yaxis  ticklabel char size 1.600000
 @    yaxis  ticklabel font 4
 @    yaxis  ticklabel color 1
 @    yaxis  tick place both
@@ -1116,7 +1116,7 @@
 @    xaxis  ticklabel start 0.000000
 @    xaxis  ticklabel stop type auto
 @    xaxis  ticklabel stop 0.000000
-@    xaxis  ticklabel char size 1.200000
+@    xaxis  ticklabel char size 1.600000
 @    xaxis  ticklabel font 4
 @    xaxis  ticklabel color 1
 @    xaxis  tick place both
@@ -1131,8 +1131,8 @@
 @    yaxis  label "\xr\f{}\s1\N\S\+\+\+\h{-.5}\v{-.4}*\-\-\-\N(\xl\f{})"
 @    yaxis  label layout perp
 @    yaxis  label place spec
-@    yaxis  label place 0.000000, 0.106000
-@    yaxis  label char size 1.550000
+@    yaxis  label place -0.020000, 0.120000
+@    yaxis  label char size 1.800000
 @    yaxis  label font 4
 @    yaxis  label color 1
 @    yaxis  label place normal
@@ -1168,7 +1168,7 @@
 @    yaxis  ticklabel start 0.000000
 @    yaxis  ticklabel stop type auto
 @    yaxis  ticklabel stop 0.000000
-@    yaxis  ticklabel char size 1.200000
+@    yaxis  ticklabel char size 1.600000
 @    yaxis  ticklabel font 4
 @    yaxis  ticklabel color 1
 @    yaxis  tick place both
@@ -1480,7 +1480,7 @@
 @    xaxis  label "root \xl"
 @    xaxis  label layout para
 @    xaxis  label place auto
-@    xaxis  label char size 1.550000
+@    xaxis  label char size 1.800000
 @    xaxis  label font 4
 @    xaxis  label color 1
 @    xaxis  label place normal
@@ -1516,7 +1516,7 @@
 @    xaxis  ticklabel start 0.000000
 @    xaxis  ticklabel stop type auto
 @    xaxis  ticklabel stop 0.000000
-@    xaxis  ticklabel char size 1.200000
+@    xaxis  ticklabel char size 1.600000
 @    xaxis  ticklabel font 4
 @    xaxis  ticklabel color 1
 @    xaxis  tick place both
@@ -1532,7 +1532,7 @@
 @    yaxis  label layout para
 @    yaxis  label place spec
 @    yaxis  label place 0.000000, 0.109000
-@    yaxis  label char size 1.550000
+@    yaxis  label char size 1.800000
 @    yaxis  label font 4
 @    yaxis  label color 1
 @    yaxis  label place normal
@@ -1568,7 +1568,7 @@
 @    yaxis  ticklabel start 0.000000
 @    yaxis  ticklabel stop type auto
 @    yaxis  ticklabel stop 0.000000
-@    yaxis  ticklabel char size 1.200000
+@    yaxis  ticklabel char size 1.600000
 @    yaxis  ticklabel font 4
 @    yaxis  ticklabel color 1
 @    yaxis  tick place both

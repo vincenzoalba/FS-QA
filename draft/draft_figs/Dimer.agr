@@ -63,7 +63,7 @@
 @timestamp rot 0
 @timestamp font 0
 @timestamp char size 1.000000
-@timestamp def "Thu Sep 17 12:11:07 2015"
+@timestamp def "Mon Sep 21 17:11:02 2015"
 @with string
 @    string on
 @    string loctype view
@@ -559,7 +559,7 @@
 @    yaxis  bar color 1
 @    yaxis  bar linestyle 1
 @    yaxis  bar linewidth 1.5
-@    yaxis  label "\v{-.15}\+\+\xS\f{}\v{.15} \-\-\s\h{-.5}\xl\f{}\N|\x\ca\C\f{}\xl\f{}|MG\N\f{}\x\cq\C\f{}|\S2\Nq\s2\N(\xl\f{})/L"
+@    yaxis  label "\v{-.15}\+\+\xS\f{}\v{.15} \-\-\s\h{-.5}\xl\f{}\N|\x\ca\C\f{}\xl\f{}|MG\N\f{}\x\cq\C\f{}|\S2\NQ\s2\N(\xl\f{})/L"
 @    yaxis  label layout para
 @    yaxis  label place auto
 @    yaxis  label char size 2.100000
@@ -567,7 +567,7 @@
 @    yaxis  label color 1
 @    yaxis  label place normal
 @    yaxis  tick on
-@    yaxis  tick major 0.1
+@    yaxis  tick major 0.2
 @    yaxis  tick minor ticks 1
 @    yaxis  tick default 6
 @    yaxis  tick place rounded true
