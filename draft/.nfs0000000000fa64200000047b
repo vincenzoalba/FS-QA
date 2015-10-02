@@ -303,9 +303,8 @@ Moreover, an upper bound for $I_{n;\gamma}$ can be derived as~\cite{taka-book}
 \label{bt-qn-bound}
 \end{equation}
 %
-where $t_{m,n}\equiv 2\mbox{min}(n,m)-\delta_{m,n}$. Using the string 
-hypothesis~\eref{str-hyp} the Bethe states energy eigenvalue~\eref{ba-ener} 
-becomes
+where $t_{m,n}\equiv 2\mbox{min}(n,m)-\delta_{m,n}$. Using the string hypothesis 
+Bethe states energy eigenvalue~\eref{ba-ener} becomes
 %
 \begin{equation}
 \label{ener-str}
@@ -314,14 +313,14 @@ E=-\sum_{n,\gamma}\frac{2n}{\lambda_{n;\gamma}^2+n^2}.
 %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{The thermodynamic limit}
+\subsection{Thermodynamic limit}
 \label{sec:1.4}
 
 In the thermodynamic limit $L\to\infty$ at fixed finite particle density $M/L$ 
-the roots of the BGT equations~\eref{bgt-eq} become dense. One then defines 
+the solutions of the BGT equations~\eref{bgt-eq} become dense. One then defines 
 the BGT root distributions for the $n$-strings as $\pmb{\rho}\equiv\{\rho_n(
 \lambda)\}_{n=1}^\infty$, with $\rho_n(\lambda)\equiv\lim_{L\to\infty}[
-\lambda_{n;\gamma+1}-\lambda_{n;\gamma}]^{-1}$. Consequently, the  BGT 
+\lambda_{n;\gamma+1}-\lambda_{n;\gamma}]^{-1}$. As a consequence, the  BGT 
 equations~\eref{bgt-eq} become an infinite set of coupled non-linear integral 
 equations for the $\rho_n(\lambda)$ as 
 %

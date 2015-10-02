@@ -24,9 +24,9 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}The spin-${\begingroup 1\endgroup \over 2}$ Heisenberg chain}{2}{subsection.2.1}}
 \newlabel{sec:1.1}{{2.1}{2}{The spin-$\frac {1}{2}$ Heisenberg chain\relax }{subsection.2.1}{}}
 \newlabel{xxx-ham}{{3}{2}{The spin-$\frac {1}{2}$ Heisenberg chain\relax }{equation.3}{}}
-\citation{bethe-1931,taka-book}
 \citation{bethe-1931}
 \citation{taka-book}
+\citation{bethe-1931}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Bethe equations and wavefunctions}{3}{subsection.2.2}}
 \newlabel{sec:1.2}{{2.2}{3}{Bethe equations and wavefunctions\relax }{subsection.2.2}{}}
 \newlabel{ba-eig}{{4}{3}{Bethe equations and wavefunctions\relax }{equation.4}{}}
@@ -36,7 +36,7 @@
 \newlabel{ba-eq}{{8}{3}{Bethe equations and wavefunctions\relax }{equation.8}{}}
 \newlabel{rap}{{9}{3}{Bethe equations and wavefunctions\relax }{equation.9}{}}
 \newlabel{ba-eq-log}{{10}{3}{Bethe equations and wavefunctions\relax }{equation.10}{}}
-\citation{bethe-1931,taka-book}
+\citation{bethe-1931}
 \citation{taka-book}
 \citation{taka-book}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}String hypothesis \& the Bethe-Gaudin-Takahashi (BGT) equations}{4}{subsection.2.3}}
@@ -46,17 +46,17 @@
 \newlabel{Theta}{{13}{4}{String hypothesis \& the Bethe-Gaudin-Takahashi (BGT) equations\relax }{equation.13}{}}
 \newlabel{bt-qn-bound}{{13}{4}{String hypothesis \& the Bethe-Gaudin-Takahashi (BGT) equations\relax }{equation.13}{}}
 \newlabel{ener-str}{{14}{4}{String hypothesis \& the Bethe-Gaudin-Takahashi (BGT) equations\relax }{equation.14}{}}
-\citation{grabowski-1995}
 \citation{kor-book}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}The thermodynamic limit}{5}{subsection.2.4}}
-\newlabel{sec:1.4}{{2.4}{5}{The thermodynamic limit\relax }{subsection.2.4}{}}
-\newlabel{bgt-th}{{15}{5}{The thermodynamic limit\relax }{equation.15}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Thermodynamic limit}{5}{subsection.2.4}}
+\newlabel{sec:1.4}{{2.4}{5}{Thermodynamic limit\relax }{subsection.2.4}{}}
+\newlabel{bgt-th}{{15}{5}{Thermodynamic limit\relax }{equation.15}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.5}The conserved charges}{5}{subsection.2.5}}
 \newlabel{sec:1.5}{{2.5}{5}{The conserved charges\relax }{subsection.2.5}{}}
 \newlabel{Q-def}{{20}{5}{The conserved charges\relax }{equation.20}{}}
 \newlabel{tau}{{21}{5}{The conserved charges\relax }{equation.21}{}}
-\citation{brockmann-2014,wouters-2014}
-\citation{brockmann-2014,pozsgay-2014}
+\citation{brockmann-2014}
+\citation{brockmann-2014}
+\citation{pozsgay-2014}
 \newlabel{qngnk}{{22}{6}{The conserved charges\relax }{equation.22}{}}
 \newlabel{gnk}{{23}{6}{The conserved charges\relax }{equation.23}{}}
 \newlabel{q0-th}{{24}{6}{The conserved charges\relax }{equation.24}{}}
@@ -66,7 +66,8 @@
 \newlabel{sec:2.1}{{3.1}{6}{N\'eel state overlap\relax }{subsection.3.1}{}}
 \newlabel{neel}{{25}{6}{N\'eel state overlap\relax }{equation.25}{}}
 \citation{brockmann-2014}
-\citation{calabrese-2007,calabrese-2007-a}
+\citation{calabrese-2007}
+\citation{calabrese-2007-a}
 \citation{brockmann-2014}
 \newlabel{neel-ov}{{26}{7}{N\'eel state overlap\relax }{equation.26}{}}
 \newlabel{G-pm}{{27}{7}{N\'eel state overlap\relax }{equation.27}{}}
@@ -92,7 +93,6 @@
 \newlabel{sec:4}{{4}{9}{Quench Action treatment of the steady state\relax }{section.4}{}}
 \newlabel{eig-sum}{{38}{9}{Quench Action treatment of the steady state\relax }{equation.38}{}}
 \newlabel{qa-d-ensemble}{{39}{9}{Quench Action treatment of the steady state\relax }{equation.39}{}}
-\newlabel{qa-term}{{40}{9}{Quench Action treatment of the steady state\relax }{equation.40}{}}
 \newlabel{obs-th}{{41}{9}{Quench Action treatment of the steady state\relax }{equation.41}{}}
 \citation{brockmann-2014}
 \newlabel{rho1-sp}{{42}{10}{Quench Action treatment of the steady state\relax }{equation.42}{}}
@@ -103,7 +103,6 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1}N\'eel overlap distribution function: Overview}{10}{subsection.5.1}}
 \newlabel{sec:5.1}{{5.1}{10}{N\'eel overlap distribution function: Overview\relax }{subsection.5.1}{}}
 \newlabel{zneel1}{{45}{10}{N\'eel overlap distribution function: Overview\relax }{equation.45}{}}
-\citation{taka-book}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces  N\'eel overlaps with the eigenstates of the Heisenberg spin chain: Numerical results obtained from the full scanning of the chain Hilbert space. Eigenstates corresponding to zero-momentum strings are escluded. (a) Squared overlaps $|\delimiter "426830A \lambda |N\delimiter "526930B |^2$ plotted as function of the eigenstates energy density $E/L$. Here $|\lambda \delimiter "526930B $ denotes the generic eigenstate. The data are for chains with length $26 \le L\le 38$. The inset is to highlight the exponential decay as a function of $E/L$. Note the logarithmic scale on the $y$ axis. (b) Overlap distribution function: Histograms of $-2\mathop {\mathgroup \symoperators log}\nolimits \delimiter "426830A \lambda |N\delimiter "526930B /L$. The $y$-axis is rescaled by a factor $10^5$ for convenience. The dash-dotted and dashed vertical lines are the N\'eel overlaps with the $XXX$ chain ground state and the ferromagnetic state, respectively. The dotted line (see the arrow) is the result obtained using the quench action approach. }}{11}{figure.1}}
 \newlabel{fig0:neel-ov}{{1}{11}{ N\'eel overlaps with the eigenstates of the Heisenberg spin chain: Numerical results obtained from the full scanning of the chain Hilbert space. Eigenstates corresponding to zero-momentum strings are escluded. (a) Squared overlaps $|\langle \lambda |N\rangle |^2$ plotted as function of the eigenstates energy density $E/L$. Here $|\lambda \rangle $ denotes the generic eigenstate. The data are for chains with length $26 \le L\le 38$. The inset is to highlight the exponential decay as a function of $E/L$. Note the logarithmic scale on the $y$ axis. (b) Overlap distribution function: Histograms of $-2\log \langle \lambda |N\rangle /L$. The $y$-axis is rescaled by a factor $10^5$ for convenience. The dash-dotted and dashed vertical lines are the N\'eel overlaps with the $XXX$ chain ground state and the ferromagnetic state, respectively. The dotted line (see the arrow) is the result obtained using the quench action approach. \relax }{figure.1}{}}
 \newlabel{ztilde}{{46}{11}{N\'eel overlap distribution function: Overview\relax }{equation.46}{}}
@@ -115,11 +114,11 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Overlap sum rules for the N\'eel state $|N\delimiter "526930B $: The role of the zero-momentum strings. (a) The overlap sum rule $\sum _{\lambda }| \delimiter "426830A \lambda |N\delimiter "526930B |^2=1$. Here $|\lambda \delimiter "526930B $ are the eigenstates of the $XXX$ chain. The $x$-axis shows the inverse chain length $1/L$. The circles are Bethe ansatz results for chains up to $L=38$. The data are obtained by a full scanning of the chain Hilbert space. Eigenstates corresponding to zero-momentum strings are excluded. The dotted line is the expected result at any $L$. The data are compatible with a vanishing behavior in the thermodynamic limit. The dash-dotted line is a fit to $A/L^{1/2}+B/L$, with $A,B$ fitting parameters. Inset: The same data as in the main Figure now plotted versus $1/L^{1/2}$. (b) The same as in (a) for the energy sum rule $\sum _{\lambda }|\delimiter "426830A \lambda |N\delimiter "526930B |^2Q_2(\lambda )=Q_2^{(0)}$, with $Q_2(\lambda )$ the energy of the eigenstate $|\lambda \delimiter "526930B $ and $Q_2^{(0)}/L=-1/2$ the N\'eel state energy density (dotted line in the Figure). }}{13}{figure.2}}
 \newlabel{fig1:neel-sr}{{2}{13}{Overlap sum rules for the N\'eel state $|N\rangle $: The role of the zero-momentum strings. (a) The overlap sum rule $\sum _{\lambda }| \langle \lambda |N\rangle |^2=1$. Here $|\lambda \rangle $ are the eigenstates of the $XXX$ chain. The $x$-axis shows the inverse chain length $1/L$. The circles are Bethe ansatz results for chains up to $L=38$. The data are obtained by a full scanning of the chain Hilbert space. Eigenstates corresponding to zero-momentum strings are excluded. The dotted line is the expected result at any $L$. The data are compatible with a vanishing behavior in the thermodynamic limit. The dash-dotted line is a fit to $A/L^{1/2}+B/L$, with $A,B$ fitting parameters. Inset: The same data as in the main Figure now plotted versus $1/L^{1/2}$. (b) The same as in (a) for the energy sum rule $\sum _{\lambda }|\langle \lambda |N\rangle |^2Q_2(\lambda )=Q_2^{(0)}$, with $Q_2(\lambda )$ the energy of the eigenstate $|\lambda \rangle $ and $Q_2^{(0)}/L=-1/2$ the N\'eel state energy density (dotted line in the Figure). \relax }{figure.2}{}}
 \newlabel{beh}{{49}{13}{N\'eel overlap sum rules\relax }{equation.49}{}}
+\newlabel{mg1}{{50}{13}{N\'eel overlap sum rules\relax }{equation.50}{}}
+\citation{alba-2015}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Overlap sum rules for the Majumdar-Ghosh state $|MG\delimiter "526930B $: The role of the zero-momentum strings. (a) The sum rule $\sum _{\lambda }| \delimiter "426830A \lambda |MG\delimiter "526930B |^2=1$, with $|\lambda \delimiter "526930B $ the eigenstates of the $XXX$ chain. The $x$-axis plots the inverse chain length $1/L$. The circles are Bethe ansatz results for chains up to $L=32$. The results are obtained by a full scanning of the chain Hilbert space. Eigenstates corresponding to zero-momentum strings are excluded. The dash-dotted line is a fit to $A/L+B/L^2$, with $A,B$ fitting parameters. (b) The same as in (a) for the energy sum rule $\sum _{\lambda }|\delimiter "426830A \lambda |MG\delimiter "526930B |^2Q_2(\lambda )=Q_2^{(0)}$, with $Q_2(\lambda )$ the energy of $|\lambda \delimiter "526930B $ and $Q_2^{(0)}/L=-2/3$ the Majumdar-Ghosh energy density (dotted line in the Figure). }}{14}{figure.3}}
 \newlabel{fig2:dimer-sr}{{3}{14}{Overlap sum rules for the Majumdar-Ghosh state $|MG\rangle $: The role of the zero-momentum strings. (a) The sum rule $\sum _{\lambda }| \langle \lambda |MG\rangle |^2=1$, with $|\lambda \rangle $ the eigenstates of the $XXX$ chain. The $x$-axis plots the inverse chain length $1/L$. The circles are Bethe ansatz results for chains up to $L=32$. The results are obtained by a full scanning of the chain Hilbert space. Eigenstates corresponding to zero-momentum strings are excluded. The dash-dotted line is a fit to $A/L+B/L^2$, with $A,B$ fitting parameters. (b) The same as in (a) for the energy sum rule $\sum _{\lambda }|\langle \lambda |MG\rangle |^2Q_2(\lambda )=Q_2^{(0)}$, with $Q_2(\lambda )$ the energy of $|\lambda \rangle $ and $Q_2^{(0)}/L=-2/3$ the Majumdar-Ghosh energy density (dotted line in the Figure). \relax }{figure.3}{}}
-\newlabel{mg1}{{50}{14}{N\'eel overlap sum rules\relax }{equation.50}{}}
 \newlabel{mg2}{{51}{14}{N\'eel overlap sum rules\relax }{equation.51}{}}
-\citation{alba-2015}
 \@writefile{toc}{\contentsline {section}{\numberline {6}Monte Carlo implementation of the quench action approach}{15}{section.6}}
 \newlabel{sec6:mcqa}{{6}{15}{Monte Carlo implementation of the quench action approach\relax }{section.6}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.1}The quench action Monte Carlo algorithm}{15}{subsection.6.1}}
@@ -139,16 +138,23 @@
 \newlabel{fig4:neel-rho}{{5}{18}{ The quench action root distributions $\rho ^*_1(\lambda )$ and $\rho ^*_2(\lambda )$ for the $1$-strings and $2$-strings, respectively: Monte Carlos results. (a) The histograms of the $1$-string Bethe-Gaudin-Takahashi (BGT) roots $\lambda $ sampled in the Monte Carlo. The data are for a chain with $L=56$ sites and a Monte Carlo history with $N_{mcs}\sim 10^7$ Monte Carlo steps. The $y$-axis is divided by a factor $10^6$ for convenience. The width of the histogram bin is $\Delta \lambda \sim 0.07$. (c) The same as in (a) for the $2$-string roots. (b) The $1$-string root distribution $\rho ^*_1(\lambda )$ plotted versus $\lambda $ for two chains with $L=48$ and $L=56$ (diamond and circles, respectively). The full line is the quench action analytic result in the thermodynamic limit. (d) The same as in (b) for the $2$-string root distribution $\rho ^*_2(\lambda )$. In both (b) and (d) the oscillations are finite-size effects, whereas the error bars are the statistical Monte Carlo errors. \relax }{figure.5}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Extracting the quench action root distributions}{18}{subsection.6.3}}
 \newlabel{sec:6.3}{{6.3}{18}{Extracting the quench action root distributions\relax }{subsection.6.3}{}}
-\citation{quenouille-1949,wolff-2004}
+\citation{quenouille-1949}
+\citation{wolff-2004}
 \citation{alba-2015}
-\citation{pozsgay-2014,brockmann-2014,brockmann-2014a,brockmann-2014b,brockmann-2014c,piroli-2014}
+\citation{pozsgay-2014}
+\citation{brockmann-2014}
+\citation{brockmann-2014a}
+\citation{brockmann-2014b}
+\citation{brockmann-2014c}
+\citation{piroli-2014}
+\citation{brockmann-2014}
 \citation{brockmann-2014}
 \@writefile{toc}{\contentsline {section}{\numberline {7}Conclusions}{19}{section.7}}
 \newlabel{conclusions}{{7}{19}{Conclusions\relax }{section.7}{}}
 \citation{alba-2015}
 \citation{faddeev-1996}
-\@writefile{toc}{\contentsline {section}{\numberline {Appendix A}Counting and string content of the eigenstates with nonzero N\'eel and Majumdar-Ghosh overlap}{21}{appendix.A}}
-\newlabel{app-1}{{Appendix A}{21}{Counting and string content of the eigenstates with nonzero N\'eel and Majumdar-Ghosh overlap\relax }{appendix.A}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {Appendix A}Counting and string content of the eigenstates with nonzero overlap}{20}{appendix.A}}
+\newlabel{app-1}{{Appendix A}{20}{Counting and string content of the eigenstates with nonzero overlap\relax }{appendix.A}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {Appendix A.1}Allowing the zero-momentum strings}{21}{subsection.A.1}}
 \newlabel{app-1.1}{{Appendix A.1}{21}{Allowing the zero-momentum strings\relax }{subsection.A.1}{}}
 \newlabel{N-count}{{A.1}{21}{Allowing the zero-momentum strings\relax }{equation.A.1}{}}
@@ -165,7 +171,6 @@
 \newlabel{p-inv-mg}{{A.17}{23}{Allowing the zero-momentum strings\relax }{equation.A.17}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {Appendix A.2}Excluding the zero-momentum strings}{23}{subsection.A.2}}
 \newlabel{app-1.2}{{Appendix A.2}{23}{Excluding the zero-momentum strings\relax }{subsection.A.2}{}}
-\newlabel{result}{{A.18}{23}{Excluding the zero-momentum strings\relax }{equation.A.18}{}}
 \newlabel{NpLlq-1}{{A.20}{23}{Excluding the zero-momentum strings\relax }{equation.A.20}{}}
 \newlabel{neel-fi}{{A.23}{24}{Excluding the zero-momentum strings\relax }{equation.A.23}{}}
 \newlabel{mg-fi}{{A.24}{24}{Excluding the zero-momentum strings\relax }{equation.A.24}{}}
@@ -173,17 +178,17 @@
 \newlabel{app-L12}{{Appendix B}{24}{Exact N\'eel and Majumdar-Ghosh overlaps for a small Heisenberg chain\relax }{appendix.B}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {Appendix B.1}N\'eel overlap}{24}{subsection.B.1}}
 \newlabel{app-neel}{{Appendix B.1}{24}{N\'eel overlap\relax }{subsection.B.1}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {B1}{\ignorespaces All Bethe states for $L=12$ having nonzero overlap with the zero-momentum N\'eel state. The first column shows the string content of the Bethe states, including the number of infinite rapidities. The second and third column show $2I_n$, with $I_n$ the BGT quantum numbers identifying the different states, and the number $q$ of independent strings. Due to the parity invariance, only positive quantum numbers are reported. In the second column only the positive BGT numbers are shown. The fourth column is the Bethe state eigenenergy. Finally, the last two columns show the exact overlap with the N\'eel state and the approximate result obatained using the BGT equations. In the last column Bethe states containing zero-momentum strings are excluded. Deviations from the exact result (digits with different colors) are attributed to the string hypothesis. }}{25}{table.B.1}}
-\newlabel{table:neel}{{B1}{25}{All Bethe states for $L=12$ having nonzero overlap with the zero-momentum N\'eel state. The first column shows the string content of the Bethe states, including the number of infinite rapidities. The second and third column show $2I_n$, with $I_n$ the BGT quantum numbers identifying the different states, and the number $q$ of independent strings. Due to the parity invariance, only positive quantum numbers are reported. In the second column only the positive BGT numbers are shown. The fourth column is the Bethe state eigenenergy. Finally, the last two columns show the exact overlap with the N\'eel state and the approximate result obatained using the BGT equations. In the last column Bethe states containing zero-momentum strings are excluded. Deviations from the exact result (digits with different colors) are attributed to the string hypothesis. \relax }{table.B.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B1}{\ignorespaces  The squared overlap $|\delimiter "426830A N|\lambda \delimiter "526930B |^2$ between the the Neel state $|N\delimiter "526930B $ and the eigenstates $|\lambda \delimiter "526930B $ of the $XXX$ chain with $L=20$ sites. Only non-zero overlaps are shown. In all the panels the $x$-axis shows the eigenstate energy density $E/L$. The circles are the exact diagonalization results for all the non-zero overlaps. The crosses are the Bethe ansatz results obtained using the Bethe-Gaudin-Takahashi equations. The missing crosses correspond to eigenstates containing zero-momentum strings. (a) Overview of all the non-zero overlaps. (b)(c)(d) The same overlaps as in (a) zooming in the regions $[0,0.2]$, $[0,0.020]$, and $[0,4\cdot 10^{-5}]$. The discrepancies between the ED and the Bethe ansatz results are attributed to the string deviations. }}{25}{figure.B.1}}
+\newlabel{fig1-BGT-check}{{B1}{25}{ The squared overlap $|\langle N|\lambda \rangle |^2$ between the the Neel state $|N\rangle $ and the eigenstates $|\lambda \rangle $ of the $XXX$ chain with $L=20$ sites. Only non-zero overlaps are shown. In all the panels the $x$-axis shows the eigenstate energy density $E/L$. The circles are the exact diagonalization results for all the non-zero overlaps. The crosses are the Bethe ansatz results obtained using the Bethe-Gaudin-Takahashi equations. The missing crosses correspond to eigenstates containing zero-momentum strings. (a) Overview of all the non-zero overlaps. (b)(c)(d) The same overlaps as in (a) zooming in the regions $[0,0.2]$, $[0,0.020]$, and $[0,4\cdot 10^{-5}]$. The discrepancies between the ED and the Bethe ansatz results are attributed to the string deviations. \relax }{figure.B.1}{}}
 \bibcite{bloch-2008}{1}
 \bibcite{greiner-2002}{2}
 \bibcite{kinoshita-2006}{3}
 \bibcite{hofferberth-2007}{4}
-\bibcite{trotzky-2012}{5}
-\@writefile{lof}{\contentsline {figure}{\numberline {B1}{\ignorespaces  The squared overlap $|\delimiter "426830A N|\lambda \delimiter "526930B |^2$ between the the Neel state $|N\delimiter "526930B $ and the eigenstates $|\lambda \delimiter "526930B $ of the $XXX$ chain with $L=20$ sites. Only non-zero overlaps are shown. In all the panels the $x$-axis shows the eigenstate energy density $E/L$. The circles are the exact diagonalization results for all the non-zero overlaps. The crosses are the Bethe ansatz results obtained using the Bethe-Gaudin-Takahashi equations. The missing crosses correspond to eigenstates containing zero-momentum strings. (a) Overview of all the non-zero overlaps. (b)(c)(d) The same overlaps as in (a) zooming in the regions $[0,0.2]$, $[0,0.020]$, and $[0,4\cdot 10^{-5}]$. The discrepancies between the ED and the Bethe ansatz results are attributed to the string deviations. }}{26}{figure.B.1}}
-\newlabel{fig1-BGT-check}{{B1}{26}{ The squared overlap $|\langle N|\lambda \rangle |^2$ between the the Neel state $|N\rangle $ and the eigenstates $|\lambda \rangle $ of the $XXX$ chain with $L=20$ sites. Only non-zero overlaps are shown. In all the panels the $x$-axis shows the eigenstate energy density $E/L$. The circles are the exact diagonalization results for all the non-zero overlaps. The crosses are the Bethe ansatz results obtained using the Bethe-Gaudin-Takahashi equations. The missing crosses correspond to eigenstates containing zero-momentum strings. (a) Overview of all the non-zero overlaps. (b)(c)(d) The same overlaps as in (a) zooming in the regions $[0,0.2]$, $[0,0.020]$, and $[0,4\cdot 10^{-5}]$. The discrepancies between the ED and the Bethe ansatz results are attributed to the string deviations. \relax }{figure.B.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {B1}{\ignorespaces All Bethe states for $L=12$ having nonzero overlap with the zero-momentum N\'eel state. The first column shows the string content of the Bethe states, including the number of infinite rapidities. The second and third column show $2I_n^+$, with $I_n^+$ the BGT quantum numbers identifying the different states, and the number $q$ of independent strings. In the second column only the positive BGT numbers are shown. The fourth column is the Bethe state eigenenergy. Finally, the last two columns show the exact overlap with the N\'eel state and the approximate result obatained using the BGT equations. In the last column Bethe states containing zero-momentum strings are excluded. Deviations from the exact result (digits with different colors) are attributed to the string hypothesis. }}{26}{table.B.1}}
+\newlabel{table:neel}{{B1}{26}{All Bethe states for $L=12$ having nonzero overlap with the zero-momentum N\'eel state. The first column shows the string content of the Bethe states, including the number of infinite rapidities. The second and third column show $2I_n^+$, with $I_n^+$ the BGT quantum numbers identifying the different states, and the number $q$ of independent strings. In the second column only the positive BGT numbers are shown. The fourth column is the Bethe state eigenenergy. Finally, the last two columns show the exact overlap with the N\'eel state and the approximate result obatained using the BGT equations. In the last column Bethe states containing zero-momentum strings are excluded. Deviations from the exact result (digits with different colors) are attributed to the string hypothesis. \relax }{table.B.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {Appendix B.2}Majumdar-Ghosh overlap}{26}{subsection.B.2}}
 \newlabel{app-mg}{{Appendix B.2}{26}{Majumdar-Ghosh overlap\relax }{subsection.B.2}{}}
+\bibcite{trotzky-2012}{5}
 \bibcite{gring-2012}{6}
 \bibcite{cheneau-2012}{7}
 \bibcite{schneider-2012}{8}
@@ -195,79 +200,36 @@
 \bibcite{braun-2014}{14}
 \bibcite{langen-2015}{15}
 \bibcite{polkovnikov-2011}{16}
-\bibcite{calabrese-2006}{17}
-\bibcite{rigol-2007}{18}
-\bibcite{calabrese-2007}{19}
-\bibcite{kollath-2007}{20}
-\bibcite{manmana-2007}{21}
-\@writefile{lot}{\contentsline {table}{\numberline {B2}{\ignorespaces All Bethe states for $L=12$ having nonzero overlap with the zero-momentum Majumdar-Ghosh (MG) state. The first column shows the string content of the Bethe states. The second and third column show $2I_n$, with $I_n$ the BGT quantum numbers identifying the different states, and the number $q$ of independent strings. Due to the parity invariance, we show only the positive quantum numbers. In the second column only the positive BGT numbers are shown. Note that, in contrast to Table~\ref  {table:neel} no states with infinite rapidities are present. The fourth column is the Bethe state eigenenergy. Finally, the last two columns show the exact overlap with the MG state and the approximate result obatained using the BGT equations. In the last column Bethe states containing zero-momentum strings are excluded. Deviations from the exact result (digits with different colors) are attributed to the string hypothesis. }}{27}{table.B.2}}
-\newlabel{table:mg}{{B2}{27}{All Bethe states for $L=12$ having nonzero overlap with the zero-momentum Majumdar-Ghosh (MG) state. The first column shows the string content of the Bethe states. The second and third column show $2I_n$, with $I_n$ the BGT quantum numbers identifying the different states, and the number $q$ of independent strings. Due to the parity invariance, we show only the positive quantum numbers. In the second column only the positive BGT numbers are shown. Note that, in contrast to Table~\ref {table:neel} no states with infinite rapidities are present. The fourth column is the Bethe state eigenenergy. Finally, the last two columns show the exact overlap with the MG state and the approximate result obatained using the BGT equations. In the last column Bethe states containing zero-momentum strings are excluded. Deviations from the exact result (digits with different colors) are attributed to the string hypothesis. \relax }{table.B.2}{}}
-\bibcite{rigol-2008}{22}
-\bibcite{cramer-2008}{23}
-\bibcite{barthel-2008}{24}
-\bibcite{kollar-2008}{25}
-\bibcite{moeckel-2008}{26}
-\bibcite{iucci-2009}{27}
-\bibcite{rossini-2009}{28}
-\bibcite{barmettler-2009}{29}
-\bibcite{biroli-2010}{30}
-\bibcite{rossini-2010}{31}
-\bibcite{fioretto-2010}{32}
-\bibcite{gogolin-2011}{33}
-\bibcite{banuls-2011}{34}
-\bibcite{calabrese-2011}{35}
-\bibcite{rigol-2011}{36}
-\bibcite{calabrese-2012}{37}
-\bibcite{caux-2012}{38}
-\bibcite{essler-2012}{39}
-\bibcite{cazalilla-2012}{40}
-\bibcite{mossel-2012a}{41}
-\bibcite{collura-2013}{42}
-\bibcite{mussardo-2013}{43}
-\bibcite{caux-2013}{44}
-\bibcite{fagotti-2013}{45}
-\bibcite{sotiriadis-2014}{46}
-\bibcite{fagotti-2014}{47}
-\bibcite{essler-2014}{48}
-\bibcite{goldstein-2014}{49}
-\bibcite{wright-2014}{50}
-\bibcite{pozsgay-2014}{51}
-\bibcite{mestyian-2015}{52}
-\bibcite{kcc14}{53}
-\bibcite{kcc14a}{54}
-\bibcite{mossel-2012}{55}
-\bibcite{pozsgay-2013}{56}
-\bibcite{calabrese-2014}{57}
-\bibcite{alba-2015}{58}
-\bibcite{calabrese-2007}{59}
-\bibcite{calabrese-2007-a}{60}
-\bibcite{de-nardis-2014}{61}
-\bibcite{pozsgay-2014}{62}
-\bibcite{wouters-2014}{63}
-\bibcite{brockmann-2014a}{64}
-\bibcite{mazza-2015}{65}
-\bibcite{fagotti-2013}{66}
-\bibcite{bethe-1931}{67}
-\bibcite{kor-book}{68}
-\bibcite{takahashi-1971}{69}
-\bibcite{taka-book}{70}
-\bibcite{gu-2005}{71}
-\bibcite{faddeev-1996}{72}
-\bibcite{yang-1969}{73}
-\bibcite{grabowski-1995}{74}
-\bibcite{prosen-2014}{75}
-\bibcite{pereira-2014}{76}
-\bibcite{ilievski-2015}{77}
-\bibcite{ilievski-2015a}{78}
-\bibcite{essler-2015}{79}
-\bibcite{cardy-2015}{80}
-\bibcite{landau-binder}{81}
-\bibcite{quenouille-1949}{82}
-\bibcite{wolff-2004}{83}
-\bibcite{brockmann-2014}{84}
-\bibcite{brockmann-2014c}{85}
-\bibcite{brockmann-2014b}{86}
-\bibcite{pozsgay-2014a}{87}
-\bibcite{piroli-2014}{88}
-\bibcite{alba-2015a}{89}
-\bibcite{ikeda-2013}{90}
+\bibcite{taka-book}{17}
+\bibcite{gu-2005}{18}
+\bibcite{grabowski-1995}{19}
+\bibcite{bethe-1931}{20}
+\@writefile{lot}{\contentsline {table}{\numberline {B2}{\ignorespaces All Bethe states for $L=12$ having nonzero overlap with the zero-momentum Majumdar-Ghosh (MG) state. The first column shows the string content of the Bethe states. The second and third column show $2I_n^+$, with $I_n^+$ the BGT quantum numbers identifying the different states, and the number $q$ of independent strings. In the second column only the positive BGT numbers are shown. Note that, in contrast to Table~\ref  {table:neel} no states with infinite rapidities are present. The fourth column is the Bethe state eigenenergy. Finally, the last two columns show the exact overlap with the MG state and the approximate result obatained using the BGT equations. In the last column Bethe states containing zero-momentum strings are excluded. Deviations from the exact result (digits with different colors) are attributed to the string hypothesis. }}{27}{table.B.2}}
+\newlabel{table:mg}{{B2}{27}{All Bethe states for $L=12$ having nonzero overlap with the zero-momentum Majumdar-Ghosh (MG) state. The first column shows the string content of the Bethe states. The second and third column show $2I_n^+$, with $I_n^+$ the BGT quantum numbers identifying the different states, and the number $q$ of independent strings. In the second column only the positive BGT numbers are shown. Note that, in contrast to Table~\ref {table:neel} no states with infinite rapidities are present. The fourth column is the Bethe state eigenenergy. Finally, the last two columns show the exact overlap with the MG state and the approximate result obatained using the BGT equations. In the last column Bethe states containing zero-momentum strings are excluded. Deviations from the exact result (digits with different colors) are attributed to the string hypothesis. \relax }{table.B.2}{}}
+\bibcite{mossel-2012}{21}
+\bibcite{pozsgay-2013}{22}
+\bibcite{kor-book}{23}
+\bibcite{landau-binder}{24}
+\bibcite{faddeev-1996}{25}
+\bibcite{yang-1969}{26}
+\bibcite{calabrese-2014}{27}
+\bibcite{alba-2015}{28}
+\bibcite{bethe-1931}{29}
+\bibcite{brockmann-2014}{30}
+\bibcite{brockmann-2014c}{31}
+\bibcite{brockmann-2014b}{32}
+\bibcite{pozsgay-2014}{33}
+\bibcite{calabrese-2007}{34}
+\bibcite{calabrese-2007-a}{35}
+\bibcite{de-nardis-2014}{36}
+\bibcite{pozsgay-2014}{37}
+\bibcite{wouters-2014}{38}
+\bibcite{mestyian-2015}{39}
+\bibcite{ilievski-2015a}{40}
+\bibcite{brockmann-2014a}{41}
+\bibcite{mazza-2015}{42}
+\bibcite{fagotti-2013}{43}
+\bibcite{grabowski-1995}{44}
+\bibcite{quenouille-1949}{45}
+\bibcite{wolff-2004}{46}
+\bibcite{piroli-2014}{47}
