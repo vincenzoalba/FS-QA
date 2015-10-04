@@ -123,28 +123,6 @@ It is useful to rewrite~\eref{d-ensemble} as
 Here $\rho^{DE}(\alpha)$ is a diagonal ensemble density matrix, and ${\mathcal E}(\alpha)
 \equiv-\log\langle\alpha|\Psi_0\rangle$, with $\Re$ denoting the real part. 
 
-The N\'eel state is defined as 
-%
-\begin{equation}
-\label{neel}
-|N\rangle\equiv\frac{1}{\sqrt{2}}\big(|N_1\rangle
-+|N_2\rangle\big), 
-\end{equation}
-%
-with $|N_1\rangle\equiv |\uparrow\downarrow\rangle^{\otimes L/2}$, and $|N_2\rangle\equiv 
-|\downarrow\uparrow\rangle^{\otimes L/2}$. Note that $|N_1\rangle=\hat T|N_2\rangle$, 
-with $\hat T$ the one-site shift operator. 
-
-
-The Majumdar-Ghosh state $|MG\rangle$ is defined as 
-%
-\begin{equation}
-\label{mg}
-|MG\rangle\equiv \Big(\frac{|\uparrow\downarrow\rangle-|\downarrow\uparrow\rangle}
-{\sqrt{2}}\Big)^{\otimes L/2}. 
-\end{equation}
-%
-
 %%%%%%%%%%%%%%%%%%%%%%% BETHE ANSATZ FOR THE XXX CHAIN %%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Bethe ansatz solution of the Heisenberg ($XXX$) spin chain}
 \label{sec:1}
@@ -450,7 +428,7 @@ g_{6,k}=-\frac{2k(5\lambda_{k;\gamma}^4-10k^2\lambda_{k;\gamma}^2+k^4)}{(k^2+
 \lambda_{k;\gamma}^2)^5}. 
 \end{eqnarray}
 %
-It is interesting to observe that $g_{n,k}$ is vanishing in the limit $\lambda_{k;\gamma}\to\infty$. 
+It is interesting to observe that $g_{n,k}$ is vanishing in the limit $\lambda_{k;\amma}\to\infty$. 
 This is expected to hold for the generic $n,k$, and it is a consequence of the $SU(2)$ invariance 
 of the conserved charges. Finally, in the thermodynamic limit $L\to\infty$ one can replace the 
 sum over $\gamma$ in~\eref{qngnk} with an integral to obtain  
@@ -470,23 +448,35 @@ equations~\eref{bgt-th}.
 \label{sec:2}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{N\'eel state overlaps}
+\subsection{N\'eel state overlap}
 \label{sec:2.1}
 
 Here we detail the Bethe ansatz results for the overlap of the Bethe states (cf.~\eref{ba-eig}) 
-with the zero-momentum (one-site shift invariant) N\'eel state $|N\rangle$ (cf.~\eref{neel}) 
-and the Majumdar-Ghosh (MG) $|MG\rangle$ state (cf.~\eref{mg}). We stard discussing the N\'eel 
-state. Due to the zero-momentum constraint, only parity-invariant Bethe states can have non-zero 
-N\'eel overlap~\cite{brockmann-2014,wouters-2014}. The corresponding solutions of the Bethe 
-equations~\eref{ba-eq} contain only pairs of rapidities with opposite sign.  Here we denote the 
-generic parity-invariant rapidity configuration as $|\{\pm\tilde\lambda_j\}_{j=1}^m,n_\infty
-\rangle$, i.e., considering only positive rapidities (as stressed by the tilde in $\tilde
-\lambda_j$). Here $m$ is the number of rapidity pairs. Since the N\'eel state is not invariant 
-under $SU(2)$ rotations, eigenstates with infinite rapidities can have non-zero N\'eel overlaps.
-We denote the number of infinite rapidities as $N_{\infty}$. Note that one has $M=L/2=
-N_\infty+2m$. The density of infinite rapidities is denoted as $n_\infty\equiv N_\infty/L$. 
-The overlap between the Bethe states and the Neel state $|N\rangle$ reads~\cite{brockmann-2014,
-pozsgay-2014} 
+with the zero-momentum (one-site shift invariant) N\'eel state $|N\rangle$ and the 
+Majumdar-Ghosh (MG) $|MG\rangle$ state. We stard discussing the N\'eel state. This is 
+defined as 
+%
+\begin{equation}
+\label{neel}
+|N\rangle\equiv\frac{1}{\sqrt{2}}\big(|N_1\rangle
++|N_2\rangle\big), 
+\end{equation}
+%
+with $|N_1\rangle\equiv |\uparrow\downarrow\rangle^{\otimes L/2}$, and $|N_2\rangle\equiv 
+|\downarrow\uparrow\rangle^{\otimes L/2}$. Note that $|N_1\rangle=\hat T|N_2\rangle$, 
+with $\hat T$ the one-site shift operator. 
+
+Due to the zero-momentum constraint, only parity-invariant Bethe states can have non-zero 
+N\'eel overlap~\cite{brockmann-2014,wouters-2014}. Parity-invariant Bethe states contain only pairs of 
+solutions of the Bethe equations~\eref{ba-eq} with opposite sign.  Here we denote the generic 
+parity-invariant rapidity configuration as $|\{\pm\tilde\lambda_\alpha\}_{\alpha=1}^m,n_\infty
+\rangle$, i.e., considering only positive rapidities. Here $m$ is the number of rapidity pairs. 
+Since the N\'eel state is not invariant under $SU(2)$ rotations, eigenstates with 
+infinite rapidities can have non-zero N\'eel overlaps.
+Here the number of infinite rapidities is denoted as $N_{\infty}$. Note that one has $M=L/2=
+N_\infty+2m$. We denote as $n_\infty\equiv N_\infty/L$ the density of infinite rapidities. 
+Finally, the overlap between the Bethe states and the Neel state $|N\rangle$ 
+reads~\cite{brockmann-2014,pozsgay-2014} 
 %
 \begin{equation}
 \label{neel-ov}
@@ -515,47 +505,47 @@ K_\alpha(\lambda)\equiv\frac{8\alpha}{\lambda^2+4\alpha^2}.
 %
 Note that our definitions of $K_{\alpha}(\lambda)$ differs from the one in 
 Ref.~\cite{brockmann-2014}, due to a factor $2$ in the definition of the 
-rapidities (cf.~\eref{str-hyp}). 
+rapidities (see also~\eref{str-hyp}). 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{The string hypothesis: Reduced formulas for the N\'eel overlaps}
+\subsection{The string hypothesis: Reduced N\'eel overlap formulas}
 \label{sec:2.2}
 
 Here we consider the overlap formula for the Neel state~\eref{neel-ov} in the 
 limit $L\to\infty$, assuming that the rapidities form perfect strings, i.e., 
-$\delta_{n;\gamma}^j=0$ in~\eref{str-hyp}. Then it is possible to 
-rewrite~\eref{neel-ov} in terms of the string centers $\tilde\lambda_{n;\alpha}$ 
-only. We restrict ourselves to parity-invariant rapidity configurations with no 
-zero-momentum strings, i.e., with finite string centers (cf.~\eref{str-hyp}). 
-We denote the generic parity-invariant string configuration as $\{\tilde
-\lambda_{n;\gamma}\}$, where $\gamma$ labels the different non-zero string 
-centers, and $n$ is the string length. Note that due to parity invariance and 
-the exclusion of zero-momentum strings, only strings of length up to $m$ are 
-allowed, with $m$ the number of parity-invariant rapidity pairs. The string 
-content (cf.~\ref{sec:1.3}) of parity-invariant Bethe states is denoted as 
-$\widetilde{\mathcal S}=\{\tilde s_1,\dots,\tilde s_{m}\}$, with $\tilde s_n$ 
-the number pairs of $n$-strings. 
+$\delta_{n;\gamma}^j=0$ in~\eref{str-hyp}.  
+Then it is possible to rewrite~\eref{neel-ov} in terms of the string centers 
+$\tilde\lambda_{n;\alpha}$ only. Here we restrict ourselves to rapidity 
+configurations with no zero-momentum strings, i.e., with finite string 
+centers. Our results are not valid for zero-momentum strings. 
 
-It is convenient to split the indices $i,j$ in $G^\pm_{ij}$ (cf.~\eref{G-pm}) as 
-$i=(n,\gamma,i)$ and $j=(m,\gamma',j)$, with $n,m$ being the length of the strings, 
-$\gamma,\gamma'$ labelling the corresponding string centers, and $i,j$ the components 
-of the two strings. Using~\eref{G-pm} and~\eref{K}, one has that for two consecutive 
-rapidities in the same string, i.e., for $m=n,\gamma=\gamma',|i-j|=2$, the matrices 
-$G^{\pm}_{jk}$ become ill-defined in the thermodynamic limit. Precisely, $K_{1}(\tilde
-\lambda_{n;\gamma}^i-\tilde\lambda_{n;\gamma}^{i+1})\sim 1/(\delta_{n;\gamma}^i-
-\delta_{n;\gamma}^{i+1})$, implying that $G_{ij}^\pm$ diverges in the thermodynamic 
-limit. However, as the same type of divergence occurs in both $G^+$ and $G^-$, their 
-ratio (cf.~\eref{neel-ov}) is finite. 
+First, we restrict ourselves to parity-invariant string configurations, 
+i.e., considering only strings having positve string centers. We denote the 
+generic parity-invariant string configuration as $\{\tilde\lambda_{n;
+\gamma}\}$, where $\gamma$ labels the different non-zero string centers, and 
+$n$ is the string length. 
 
-The finite part of the ratio $\det G^+/\det G^-$ can be extracted using the same 
-strategy as in Ref.~\cite{calabrese-2007,calabrese-2007-a} (see also Ref.~\cite{brockmann-2014}). 
-One obtains that $\det G^+/\det G^-\to \det\widetilde G^+/\det\widetilde G^-$. The reduced 
-matrix $\widetilde G^+$ depends only on the ``string center'' indices $(n,\gamma)$ 
+It is convenient to first split the indices $i,j$ of $G^\pm_{ij}$ as $i=(n,\gamma,i)$ 
+and $j=(m,\gamma',j)$, with $n,m$ being the length of the strings, $\gamma,\gamma'$ 
+labelling the corresponding string centers, and $i,j$ the components of the 
+two strings. 
+
+Using~\eref{G-pm} and~\eref{K}, one has that for two consecutive rapidities in the same 
+string, i.e., for $m=n,\gamma=\gamma',|i-j|=2$, the matrices $G^{\pm}_{jk}$ become 
+ill-defined in the thermodynamic limit. Precisely, since $K_{1}(\tilde\lambda_{n;\gamma}^i-
+\tilde\lambda_{n;\gamma}^{i+1})\sim 1/(\delta_{n;\gamma}^i-\delta_{n;\gamma}^{i+1})$, 
+$G_{ij}^\pm$ diverges in the thermodynamic limit. Importantly, as the same type of 
+divergence occur in both $G^+$ and $G^-$, their ratio (cf.~\eref{neel-ov}), and 
+the overlaps, are finite. 
+
+The finite part of the overlaps~\eref{neel-ov} can be calculated using the same strategy 
+as in Ref.~\cite{calabrese-2007,calabrese-2007-a} (see also Ref.~\cite{brockmann-2014}). 
+The resulting matrix $G^+$ depends only on the ``string center'' indices $(n,\gamma)$ 
 and $(m,\gamma')$ and it is given as  
 %
 \begin{equation}
 \label{red-G+}
-\fl \frac{1}{2}\widetilde G^+_{(n,\gamma)(m,\gamma')}=\left\{\begin{array}{cc}
+\fl \frac{1}{2}G^+_{(n,\gamma)(m,\gamma')}=\left\{\begin{array}{cc}
 L\theta_n'(\tilde\lambda_{n;\gamma}) -\sum\limits_{(\ell,\alpha)\ne(n,\gamma)}\Big[\Theta'_{n,\ell}
 (\tilde\lambda_{n;\gamma}-\tilde\lambda_{\ell;\alpha}) & \quad\textrm{if}\,(n,\gamma)=(m,\gamma') \\
 +\Theta'_{n,\ell}(\tilde\lambda_{n;\gamma}+\tilde\lambda_{\ell;\alpha})\Big] & \\ \\
@@ -567,11 +557,11 @@ L\theta_n'(\tilde\lambda_{n;\gamma}) -\sum\limits_{(\ell,\alpha)\ne(n,\gamma)}\B
 %
 Here $\theta_n'(x)\equiv d\theta_n(x)/dx=2n/(n^2+x^2)$ and $\Theta'(x)\equiv d\Theta(x)/dx$, 
 with $\Theta(x)$ as defined in~\eref{Theta}. 
-Similarly, for $\widetilde G^-$ one obtains 
+Similarly, for $G^-$ one obtains 
 %
 \begin{equation}
 \label{red-G-}
-\fl\frac{1}{2}\widetilde G^-_{(n,\gamma)(m,\gamma')}=\left\{\begin{array}{cc}
+\fl\frac{1}{2}G^-_{(n,\gamma)(m,\gamma')}=\left\{\begin{array}{cc}
 \fl(L-1)\theta'_n(\tilde\lambda_{n;\gamma})-2\sum\limits_{k=1}^{n-1}\theta'_k(
 \tilde\lambda_{n;\gamma})
 & \textrm{if}\,(n,\gamma)= (m,\gamma')\\
@@ -584,55 +574,67 @@ Similarly, for $\widetilde G^-$ one obtains
 \end{array}\right.
 \end{equation}
 %
-We should stress that in presence of zero-momentum strings, additional divergences as 
-$1/(\delta_{n;\gamma}^{i}+\delta_{n;\gamma}^{i+1})$ appear, due to the term $K_1(\lambda+\mu)$ 
-in~\eref{G-pm}. The treatment of these diverges is a challenging task because it requires, for each 
-different type of string, the precise knowledge of the string deviations, meaning their dependence 
-on $L$. Some results have been provided for small strings in Ref.~\cite{calabrese-2014}. 
-Finally, using the string hypothesis and the parity-invariance condition, the prefactor of the 
-determinant ratio in~\eref{neel-ov} becomes  
+Note that in presence of zero-momentum strings, additional divergences as $1/(\delta_{n;
+\gamma}^{i}+\delta_{n;\gamma}^{i+1})$ appear due to the term $K_1(\lambda+\mu)$ 
+(cf.~\eref{K}). It turns out that the treatment of these diverges is a challenging 
+task because it requires the precise knowledge of the string deviations, meaning 
+their dependence on $L$, for each different type of string. Some results have been 
+provided for small strings in Ref.~\cite{calabrese-2014}. 
+
+Finally, using the string hypothesis and the parity-invariance condition, the multiplicative 
+prefactor in~\eref{neel-ov} can be simplified. Here we focus on a generic eigenstate of 
+the $XXX$ identified by $m$ pairs of finite rapidities. 
+Note that due to parity invariance and the exclusion of zero-momentum strings, only 
+strings of length up to $m$ are allowed. The ``reduced'' string content 
+identifying the eigenstate is denoted as $\widetilde{\mathcal S}=\{\tilde s_1,\dots,\tilde s_{m}\}$, 
+with $\tilde s_n$ the number of parity-invariant pairs of $n$-strings. Using the string 
+hypothesis and~\eref{neel-ov}, one can write 
 %
 \begin{equation}
 \label{neel-k}
 \fl\quad\prod\limits_{j=1}^m\frac{\sqrt{\tilde\lambda_j^2+1}}{4\tilde\lambda_j}=
 \frac{1}{4^m}\prod\limits_{j=1}^m\prod\limits_{\ell=1}^{\tilde s_j}\left[\frac{\sqrt{j^2+
-\tilde\lambda^2_{j;\ell}}}{\tilde\lambda_{j;\ell}}
-\prod\limits_{k=0}^{\lceil j/2\rceil-1}\frac{(2k)^2+\tilde\lambda^2_{j;\ell}}{(2k+1)^2+
-\tilde\lambda^2_{j;\ell}}\right]^{(-1)^j}, 
+\lambda^2_{j;\ell}}}{\lambda_{j;\ell}}
+\prod\limits_{k=0}^{\lceil j/2\rceil-1}\frac{(2k)^2+\lambda^2_{j;\ell}}{(2k+1)^2+
+\lambda^2_{j;\ell}}\right]^{(-1)^j}.
 \end{equation}
 %
-where $\tilde s_j$ is the number of $j$-string pairs in the Bethe state. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Overlap with the Majumdar-Ghosh state}
 \label{sec:2.3}
 
-The overlap between a generic eigenstate of the $XXX$ chain $|\{\pm\tilde\lambda_j\}
-\rangle$ and the Majumdar-Ghosh state~\eref{mg} can be obtained from the N\'eel state 
-overlap~\eref{neel-ov} as~\cite{pozsgay-2014} 
+The Majumdar-Ghosh state $|MG\rangle$ is defined as 
+%
+\begin{equation}
+\label{mg}
+|MG\rangle\equiv \Big(\frac{|\uparrow\downarrow\rangle-|\downarrow\uparrow\rangle}
+{\sqrt{2}}\Big)^{\otimes L/2}. 
+\end{equation}
+%
+The overlap between a generic eigenstate of the $XXX$ chain and the Majumdar-Ghosh 
+state can be obtained from the N\'eel state overlap in Eq.~\eref{neel-ov} 
+as~\cite{pozsgay-2014} 
 %
 \begin{equation}
 \label{mg-ov}
-\langle MG|\{\pm\tilde\lambda_j\}_{j=1}^m\rangle=\prod\limits_{j=1}^m\frac{1}{2}
-\Big(1-\frac{\tilde\lambda_j-i}{\tilde\lambda_j+i}\Big)
-\Big(1+\frac{\tilde\lambda_j+i}{\tilde\lambda_j-i}\Big)
-\langle N|\{\pm\tilde\lambda_j\}_{j=1}^m\rangle
+\langle MG|\{\pm\lambda_j\}_{j=1}^m\rangle=\prod\limits_{j=1}^m\frac{1}{2}
+\Big(1-\frac{\lambda_j-i}{\lambda_j+i}\Big)
+\Big(1+\frac{\lambda_j+i}{\lambda_j-i}\Big)
+\langle N|\{\pm\lambda_j\}_{j=1}^m\rangle
 \end{equation}
 %
-Notice that the Bethe states having non-zero overlap with the Majumdar-Ghosh state 
-do not contain infinite rapidities ($N_\infty=0$), in contrast with the N\'eel case 
-(cf.~\eref{neel-ov}). Using the string hypothesis, the mutliplicative factor 
-in~\eref{mg-ov} is rewritten as 
+The mutliplicative factor in~\eref{mg-ov}, using the string hypothesis is 
+rewritten as 
 %
 \begin{eqnarray}
 \label{mg-k}
 \fl\prod\limits_{j=1}^m\frac{1}{2}
-\Big(1-\frac{\tilde\lambda_j-i}{\tilde\lambda_j+i}\Big)
-\Big(1+\frac{\tilde\lambda_j+i}{\tilde\lambda_j-i}\Big)=\\\nonumber\qquad
+\Big(1-\frac{\lambda_j-i}{\lambda_j+i}\Big)
+\Big(1+\frac{\lambda_j+i}{\lambda_j-i}\Big)=\\\nonumber\qquad
 2^m\prod\limits_{j=1}^m\prod\limits_{\ell=1}^{\tilde s_j}
-\tilde\lambda_{j;\ell}^{1+(-1)^j}(\tilde\lambda^2_{j;\ell}+j^2)\prod\limits_{k=0}^{
-\lfloor j/2\rfloor}\Big[\tilde\lambda_{j;\ell}^2+\Big(2k+\frac{1-(-1)^j}{2}\Big)^2
-\Big]^{-2}.
+\lambda_{j;\ell}^{1+(-1)^j}(\lambda^2_{j;\ell}+j^2)\prod\limits_{k=0}^{\lfloor 
+j/2\rfloor}\Big[\lambda_{j;\ell}^2+\Big(2k+\frac{1-(-1)^j}{2}\Big)^2\Big]^{-2}
 \end{eqnarray}
 %
 
@@ -640,13 +642,13 @@ in~\eref{mg-ov} is rewritten as
 \subsection{The N\'eel overlap in the thermodynamic limit}
 \label{sec:2.4}
 
-In the thermodynamic limit $L\to\infty$ the extensive part of the N\'eel 
+In the thermodynamic limit $L\to\infty$ the expression for the extensive part of the 
 overlap~\eref{neel-ov} can be written as~\cite{brockmann-2014} 
 %
 \begin{equation}
 \label{neel-ov-th}
-\fl-\lim_{L\to\infty}\log\left[\frac{\langle N|\{\pm\tilde\lambda_j\}_{j=1}^m,n_\infty
-\rangle}{|||\{\tilde\lambda_j\}_{j=1}^m,n_\infty\rangle||}\right]=\frac{L}{2}\Big(
+\fl-\lim_{L\to\infty}\log\left[\frac{\langle N|\{\pm\lambda_j\}_{j=1}^m,n_\infty
+\rangle}{|||\{\lambda_j\}_{j=1}^m,n_\infty\rangle||}\right]=\frac{L}{2}\Big(
 n_\infty\log2+\sum_{n=1}^\infty\int_0^\infty d\lambda\rho_n(\lambda)[g_n(\lambda)
 +2n\log(4)]\Big), 
 \end{equation}
@@ -662,19 +664,16 @@ and
 n_\infty=1-2\sum_{m=1}^\infty m\int_{-\infty}^\infty d\lambda\rho_m(\lambda). 
 \end{equation}
 %
-Note that~\eref{neel-ov-th} is extensive, due to the prefactor $L/2$. Also, 
-\eref{neel-ov-th} is obtained only from~\eref{neel-k}, while the subextensive 
-contributions originating from the determinant ratio $\det_m(G^+)/\det_m(G^-)$ 
-in~\eref{neel-ov} are neglected. We should mention that~\eref{neel-ov-th} 
-acts as a driving term in the quech action formalism (cf. section~\ref{sec:4}).
+Note that~\eref{neel-ov-th} is extensive. Specifically, in Eq.~\eref{neel-ov-th} 
+subleading (i.e., subextensive) contributions originating from the determinant
+ratio $\det_m(G^+)/\det_m(G^-)$ are neglected. Moreover, the term in~\eref{neel-ov-th} 
+acts as a driving term in the Quech Action formalism (cf. section~\ref{sec:4}).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Quench action treatment of the steady state}
+\section{Quench Action treatment of the steady state}
 \label{sec:4}
 
-The quench action formalism allows one to construct a saddle point approximation 
-for the diagonal ensemble~\eref{d-ensemble}. 
 In the thermodynamic limit the sum over the model eigenstates in~\eref{d-ensemble} 
 can be recast into a functional integral over the BGT root distributions 
 $\pmb{\rho}\equiv\{\rho_n(\lambda)\}_{n=1}^\infty$ (cf. section~\ref{sec:1.4}) 
