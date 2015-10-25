@@ -55,7 +55,7 @@
 \setlength{\parindent}{0pt}
 
 
-\title{The quench action approach for integrable models: A Monte Carlo study}
+\title{The quench action approach for integrable models: A Monte Carlo implementation}
 
 \author{Authors}
 %\address{$^1$ International School for Advanced Studies (SISSA),
@@ -82,21 +82,18 @@ fdasfa
 
 Understanding the out-of-equilibrium dynamics in {\it isolated} quantum 
 many-body systems is one of the most intriguing research topics in 
-contemporary physics, both theoretically~\cite{polkovnikov-2011} and 
-experimentally~\cite{bloch-2008,greiner-2002,kinoshita-2006,
-hofferberth-2007,trotzky-2012,gring-2012,cheneau-2012,
-schneider-2012,kunhert-2013,langen-2013,meinert-2013,fukuhara-2013,
-ronzheimer-2013,braun-2014,langen-2015}. The most popular out-of-equilibrium 
-protocol is that of the {\it quantum quench} in which a system is initially 
-prepared in an eigenstate $|\Psi_0\rangle$ of a many-body hamiltonian ${\mathcal H}_0$. 
-Then a global parameter is suddenly changed, and the system is let to evolve 
-unitarily under a new hamiltonian ${\mathcal H}$. There is now compelling 
-evidence that at long times after the quench an equilibrium steady state 
-arises (see for instance Ref.~\cite{kinoshita-2006}). 
+contemporary physics~\cite{polkovnikov-2011}, both theoretically and 
+experimentally. The most common out-of-equilibrium protocol is the {\it 
+quantum quench} in which a system is initially prepared in an eigenstate 
+$|\Psi_0\rangle$ of a many-body hamiltonian ${\mathcal H}_0$. Then a global 
+parameter of the hamiltonian is suddenly changed, and the system is let 
+to evolve unitarily under a new Hamiltonian ${\mathcal H}$. 
 
-In the thermodynamic limit, due to dephasing, it is natural to expect that the 
-for any local observable ${\mathcal O}$ its equilibrium value is given by the 
-so-called diagonal ensemble as 
+While there is now compelling evidence that at long times after the 
+quench a steady state arises, its nature is still highly debated. 
+In the thermodynamic limit it is natural to expect that the steady-state 
+value of any local observable ${\mathcal O}$ is given by the so-called 
+diagonal ensemble as 
 %
 \begin{equation}
 \label{d-ensemble}
@@ -105,7 +102,7 @@ so-called diagonal ensemble as
 \end{equation}
 %
 where the sum is over the eigenstates $|\lambda\rangle$ of the post-quench 
-hamiltonian ${\mathcal H}$. For generic, i.e., non-integrable, models 
+final hamiltonian ${\mathcal H}$. For generic, i.e., non-integrable, models 
 the Eigenstate Thermalization Hypothesis ensures that the ensemble~\eref{d-ensemble} 
 becomes equivalent to the Gibbs (thermal) ensemble, implying 
 %
@@ -149,36 +146,17 @@ using a saddle point argument. Specifically, one rewrites the diagonal ensemble
 average~\eref{d-ensemble} as 
 %
 \begin{equation}
-\label{de1}
 \langle{\mathcal O}\rangle_{DE}= \sum\limits_{\alpha}\rho^{DE}\langle\lambda|
-{\mathcal O}|\lambda\rangle,\quad\textrm{with}\quad\rho^{DE}=\exp(-2\Re{\mathcal 
-E}(\lambda)), 
+{\mathcal O}|\lambda\rangle,\quad\textrm{with}\quad\rho^{DE}=\exp(-2\Re{\mathcal E}
+(\lambda)), 
 \end{equation}
 %
-where ${\mathcal E}(\lambda)\equiv-\log\langle\lambda|\Psi_0\rangle$, and $\Re$ 
-denoting the real part. Formally,~\eref{de1} is equivalent to the standard Gibbs 
-ensemble after replacing ${\mathcal H}\to{\mathcal E}$. A crucial difference is 
-that while typical hamiltonians are local, ensuring the extensivity of the energy, 
-this is not guaranteed for ${\mathcal E}$. Remarkably, for some initial states 
-one has ${\mathcal E}\propto L$, with $L$ the system size, reflecting  a typical 
-vanishing of the overlaps as $\langle\Psi_0|\lambda\rangle\propto e^{-c L}$. 
-Similar to the standard Thermodynamic Bethe Ansatz (TBA)~\cite{taka-book}, the 
-extensivity of 
-${\mathcal E}$ suggests that in the thermodynamic limit~\eref{de1} is dominated 
-by a saddle point. Surprisingly, for some Bethe ansatz solvable models and some 
-simple initial states standard TBA techniques, 
-complemented with analytical knowledge of the overlaps $\langle\Psi_0|\lambda
-\rangle$, allow to determine {\it analytically} this saddle point, and for some  
-local observables, the diagonal ensemble expectation values~\eref{de1}, in the 
-thermodynamic limit. This has been done succesfully for instance in the Lieb-Liniger 
-model for the quench from the Bose-Einstein condensate~\cite{de-nardis-2014} 
-(BEC) and for the $XXZ$ spin chain for the quench from the N\'eel state~\cite{wouters-2014,
-brockmann-2014}. Interestingly, recently it has been suggested that the quench action 
-approach could allow to reconstruct the full relaxation dynamics to the steady 
-state~\cite{de-nardis-2015a,de-nardis-2015}. 
+where ${\mathcal E}(\alpha)\equiv-\log\langle\lambda|\Psi_0\rangle$, and $\Re$ denoting 
+the real part. 
 
-Here we provide a Monte Carlo implementation of the quench action approach in the 
-finite-size spin-$1/2$ Heisenberg chain ($XXX$ chain). combining Monte Carlo methods and Bethe ansatz techniques. 
+
+We show that it is possible to numerically simulate the Quench Action approach 
+combining Monte Carlo methods and Bethe ansatz techniques. 
 
 We focus on the situation in which the pre-quench initial state is the Neel 
 state or the Majumdar-Ghosh state. 
@@ -692,71 +670,6 @@ determinant ratio in~\eref{neel-ov} becomes
 \end{equation}
 %
 where $\tilde s_j$ is the number of $j$-string pairs in the Bethe state. 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{The low-density regime ({\bf PROBLEM !!!})}
-\label{sec:low-density}
-
-It is interesting to consider the situation with $M/L\to\infty$ (low-density limit). 
-We first consider the case with all the particles forming a single zero-momentum 
-string. Due to parity invariance only strings of even length are allowed. 
-We assume the string hypothesis~\eref{str-hyp}, restricting ourselves to zero-momentum 
-strings, i.e., 
-%
-\begin{equation}
-\lambda^{j}_{n}=-i(n-1-2j)+i\delta_{n}^j,
-\end{equation}
-%
-with $n$ the length of the string and $j$ labelling the different string components. 
-Due to parity invariance we restrict ourselves to half strings, i.e., $j=1,\dots,n/2$.
-We verified by explicit computation that for a single $m$ string one has (at leading order 
-in the string deviations) 
-%
-\begin{equation}
-\det(G^+)=-\frac{2^{n/2}}{\delta_n^{n/2}}L\prod_{j>k=1}^{n/2-1}(\delta_n^k-\delta_n^j)^{-1},
-\end{equation}
-%
-and 
-%
-\begin{equation}
-\det(G^-)=-\frac{2^{n/2}}{\delta_n^{n/2}}(L-1)\prod_{j>k=1}^{n/2-1}(\delta_n^k-\delta_n^j)^{-1}.
-\end{equation}
-%
-This implies that 
-%
-\begin{equation}
-\frac{\det_n(G^+)}{\det_n(G^-)}\to\frac{L}{L-1},\quad\forall n.
-\end{equation}
-%
-However, it is straightforward to check that  
-%
-\begin{equation}
-\prod_{j=1}^{n/2}\frac{\sqrt{\lambda_j^2+1}}{4\lambda_j}\propto\sqrt{\delta_n^{n/2}}.
-\end{equation}
-%
-{\bf The prefactor does not seem to be a simple function of $n$}.
-
-
-We conclude that Bethe states corresponding to a single string have zero N\'eel 
-overlap. 
-
-A problem arises if one considers the Majumdar-Ghosh state. The overlap is obtained 
-rescaling the N\'eel overlap (see below) with the prefactor
-%
-\begin{equation}
-\prod\limits_{j=1}^n\frac{1}{2}
-\Big(1-\frac{\lambda_j-i}{\lambda_j+i}\Big). 
-\end{equation}
-%
-Note that the product above is over all the string components. 
-For a single string one gets 
-%
-\begin{equation}
-\prod\limits_{j=1}^n\frac{1}{2}
-\Big(1-\frac{\lambda_j-i}{\lambda_j+i}\Big)\propto\frac{1}{\delta_n^{n/2}}.
-\end{equation}
-%
-Putting everything together one would get a diverging MG overlap which is clearly wrong. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Overlap with the Majumdar-Ghosh state}
@@ -2339,14 +2252,6 @@ V.~Alba, Phys.\ Rev.\ B {\bf 91}, 155123 (2015).
 
 \bibitem{ikeda-2013}
 T.~N.~Ikeda, Y.~Watanabe, and M.~Ueda, Phys.\ Rev.\ E {\bf 87}, 012125 (2013). 
-
-%%%QA FULL DYNAMICS
-\bibitem{de-nardis-2015}
-J.~De~Nardis, L.~Piroli, and J.-S.~Caux, arXiv:1505.03080. 
-
-\bibitem{de-nardis-2015a}
-J.~De~Nardis and J.-S.~Caux, J.\ Stat.\ Mech.\ (2014) P12012. 
-
 
 \end{thebibliography}
 
