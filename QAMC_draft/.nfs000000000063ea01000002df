@@ -1,0 +1,643 @@
+\documentclass[11pt]{iopart}
+\usepackage[english]{babel}
+\pdfoutput=1
+%\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{color}
+\usepackage{sidecap}
+\usepackage{bm}% bold math
+
+\usepackage[colorlinks,bookmarks=false,citecolor=blue,linkcolor=red,urlcolor=blue]{hyperref}
+
+%\usepackage{cite}
+
+%
+% WARNING !!!!
+% 
+% iopart.cls definition of \tableofcontents overwrites the
+% short title printed every page. 
+% The following redefinition of \tableofcontents fixes the
+% the problem. 
+
+\catcode`@=11 % If we need private TeX macros
+\renewcommand\tableofcontents{%
+  \section*{\contentsname}%
+  \@starttoc{toc}%
+}
+\catcode`@=12% '@' is no more a character
+\newcommand{\bra}[1]{\langle\left.{#1}\right|}
+\newcommand{\ket}[1]{\left|{#1}\right.\rangle}
+
+
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\u{\uparrow}
+\def\d{\downarrow}
+\def\nm{\newmoon}
+\def\fm{\fullmoon}
+\def\T{\rule{0pt}{.6cm}}
+\def\B{\rule[-.4cm]{0pt}{0pt}}
+
+\begin{document}
+
+\setlength{\parindent}{0pt}
+
+
+\title{Finite-size study of the Quench Action approach in integrable spin 
+chains}
+
+\author{Vincenzo Alba$^1$, Pasquale Calabrese$^1$}
+\address{$^1$ International School for Advanced Studies (SISSA),
+Via Bonomea 265, 34136, Trieste, Italy,
+INFN, Sezione di Trieste}
+
+
+\date{\today}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract} 
+
+
+fdasfa
+\end{abstract}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%% INTRODUCTION %%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\label{intro}
+
+%%%%%%%%%%%%%%%%%%%%%%% BETHE ANSATZ APPROACH %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Heisenberg spin chain}
+\label{xxx-chain}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Bethe equations and wavefunctions}
+\label{bethe_equations}
+
+The generic eigenstate of~\eref{xxx_ham} in the sector with $M$ particles 
+can be written as 
+%
+\begin{equation}
+\label{ba_eig}
+|\Psi_M\rangle=\sum\limits_{1\le x_1<x_2<\dots<x_M\le L}A_M(x_1,x_2,
+\dots,x_M)|x_1,x_2,\dots,x_M\rangle,
+\end{equation}
+%
+where the sum is over the positions $\{x_i\}$ of the particles, and $A_M(x_1,
+x_2,\dots,x_M)$ is the eigenstate amplitude corresponding to particles 
+at positions $x_1,x_2,\dots, x_M$. $A_M(x_1,x_2,\dots, x_M)$ is given as 
+%
+\begin{equation}
+\label{ba_amp}
+A_M(x_1,x_2,\dots,x_M)\equiv\sum\limits_{{\mathcal P}\in S_M}\exp\Big[i
+\sum\limits_{j=1}^Mk_{{\mathcal P}_j}x_j+i\sum\limits_{i<j}\theta_{{
+\mathcal P}_i{\mathcal P}_j}\Big].
+\end{equation}
+%
+Here the outermost sum is over the permutations $S_M$ 
+of the so-called quasi-momenta $\{k_1,k_2,\dots,k_M\}$. The two-particle 
+scattering phases $\theta_{m,n}$ are defined as 
+%
+\begin{equation}
+\label{s_phases}
+\theta_{m,n}\equiv \frac{1}{2i}\log\Big[-\frac{e^{ik_m+ik_n}-2e^{ik_m}+1}
+{e^{ik_m+ik_n}-2e^{ik_n}+1}\Big].
+\end{equation}
+%
+The energy associated to the eigenstate~\eref{ba_eig} is  
+%
+\begin{equation}
+\label{ba_ener}
+E=\sum\limits_{\alpha=1}^M(\cos(k_\alpha)-1).
+\end{equation}
+%
+The quasi-momenta $\{k_\alpha\}$ are obtained by solving the so-called 
+Bethe equations  
+%
+\begin{equation}
+\label{ba_eq}
+e^{ik_\alpha L}=\prod\limits^M_{\beta\ne\alpha}\Big[-\frac{1-2e^{
+ik_\alpha}-e^{ik_\alpha+ik_\beta}}{1-2e^{ik_\beta}-e^{ik_\alpha+
+ik_\beta}}\Big].
+\end{equation}
+%
+It is useful to  introduce the rapidities $\{\lambda_\alpha\}$ as 
+%
+\begin{equation}
+\label{rap}
+k_\alpha=\pi-2\arctan(\lambda_\alpha)\quad\mbox{mod}\, 2\pi.
+\end{equation}
+%
+Taking the logarithm on both sides in~\eref{ba_eq}, and using~\eref{rap}, 
+one obtains the Bethe equations in logarithmic form as 
+%
+\begin{equation}
+\label{ba_eq_log}
+\arctan(\lambda_\alpha)=\frac{\pi}{L}J_\alpha+\frac{1}{L}\sum\limits_{
+\beta\ne\alpha}\arctan\Big(\frac{\lambda_\alpha-\lambda_\beta}{2}\Big),
+\end{equation}
+%
+where $-L/2<J_\alpha\le L/2$ are the so-called Bethe quantum numbers. 
+Notice that $J_\alpha$ are half-integers and integers for $L-M$ 
+even and odd, respectively~\cite{taka-book}. Finally, the total 
+eigenstate quasi-momentum $K_T\equiv\sum_\alpha k_\alpha$ is obtained 
+from~\eref{ba_eq_log} and~\eref{rap} as 
+%
+\begin{eqnarray}
+\label{ktot}
+K_T=\pi M+\frac{2\pi}{L}\sum_\alpha J_\alpha
+\end{eqnarray}
+
+In principle any choice of $M$ distinct Bethe quantum numbers $\{J_1,J_2,
+\dots,J_M\}$ identifies a set of solutions $\{k_1,k_2,\dots,k_M\}$ 
+of~\eref{ba_eq_log} and, using~\eref{ba_eig}, an eigenstate of~\eref{xxx_ham}. 
+However, for {\it real} solutions of~\eref{ba_eq_log}, i.e. $\lambda_\alpha
+\in{\mathbb R}\,\forall\alpha$, a precise bound  for the Bethe numbers 
+can be obtained as~\cite{taka-book}
+%
+\begin{equation}
+\label{bn_bound}
+-J_\infty\le J_\alpha\le J_\infty\quad\mbox{with}\quad J_\infty\equiv
+\frac{L-1-M}{2}, 
+\end{equation}
+%
+where $J_\infty$ is formally the Bethe quantum number associated to an infinite 
+rapidity~\cite{taka-book}. 
+
+
+Complex solutions of the Bethe equations~\eref{ba_eq} form particular ``string'' 
+patterns in the complex plane, at least in the limit of large chains $L\to\infty$
+(string hypothesis)~\cite{bethe-1931,taka-book}. Specifically, rapidities 
+forming a ``string'' of length $1\le n\le M$ (that we defined here as $n$-string) 
+are parametrized as 
+%
+\begin{equation}
+\label{str_hyp}
+\lambda_\gamma^{(n,j)}=\lambda_\gamma^{(n)}-i(n-1-2j),\qquad j=0,1,\dots, n-1, 
+\end{equation}
+%
+where $\lambda_\gamma^{(n)}$ is the real part of the string (string center), 
+and $\gamma$ labels strings with different centers. In this language real 
+rapidities are strings of unit length ($1$-strings), i.e., with $n=1$. 
+It is natural to classify solutions $\Lambda\equiv\{\lambda_\alpha\}$ ($\alpha
+\in[1,M]$) of the Bethe equations~\eref{ba_eq} according to their string content 
+$\{N_\alpha\}$, where $N_\alpha$ denotes the number of $\alpha$-strings in 
+$\Lambda$. 
+
+\paragraph{Bethe-Takahashi equations.} The string centers $\lambda_\gamma^{(n)}$ 
+in~\eref{str_hyp} are obtained by solving the so-called Bethe-Takahashi 
+equations~\cite{taka-book}
+%
+\begin{equation}
+\label{bt_eq}
+2L\arctan(\lambda_\gamma^{(n)}/n)=2\pi I_{\gamma}^{(n)}+\sum\limits_{(m,
+\beta)\ne(n,\gamma)}\Theta_{m,n}(\lambda_\gamma^{(n)}-\lambda_\beta^{(m)}), 
+\end{equation}
+%
+where the generalized scattering phases $\Theta_{m,n}$ read 
+%
+\begin{eqnarray}
+\nonumber\fl\Theta_{m,n}(x)\equiv\left\{\begin{array}{cc}
+\vartheta\big(\frac{x}{|n-m|}\big)+\!\!\!\!\!\sum
+\limits_{r=1}^{(n+m-|n-m|-1)/2}\!\!\!\!\!2\vartheta\big(\frac{x}
+{|n-m|+2r}\big)+\vartheta\big(\frac{x}{n+m}\big) & \quad\mbox{if}
+\quad n\ne m\\\fl\sum\limits_{r=1}^{n-1}2\vartheta\big(\frac{x}{2r}\big)+
+\vartheta\big(\frac{x}{2n}\big) & \quad\mbox{if}\quad n=m
+\end{array}\right.
+\end{eqnarray}
+%
+and $\vartheta(x)\equiv 2\arctan(x)$. Here $I_{\gamma}^{(n)}$ are the 
+Bethe-Takahashi quantum numbers associated with $\lambda_\gamma^{(n)}$. 
+It can be shown that $I^{(n)}_{\gamma}$  are integers or half-integers for 
+$L-N_n$ odd and even, respectively. Clearly, the constraint $\sum_{\alpha=1}^{M}
+\alpha N_\alpha=M$ has to be satisfied. As for the Bethe quantum numbers 
+$J_\alpha$ (see~\eref{bn_bound}), an upper bound for the Bethe-Takahashi 
+quantum numbers can be derived as~\cite{taka-book}  
+%
+\begin{equation}
+|I_\gamma^{(n)}|\le I^{(n)}_{MAX}\equiv\frac{1}{2}(L-1-\sum
+\limits_{m=1}^Mt_{m,n}N_m),
+\label{bt_qn_bound}
+\end{equation}
+%
+where $t_{m,n}\equiv 2\mbox{min}(n,m)-\delta_{m,n}$. Notice that this implies 
+$I^{(n)}_{MAX}\le I^{(n')}_{MAX}$ if $n<n'$. 
+
+It is straightforward to generalize the notation~\eref{eig_not} to the 
+case of the Bethe-Takahashi quantum numbers. First, for real solutions  
+of the Bethe-Takahashi equations, i.e., $\lambda_\alpha\in {\mathbb 
+R},\, \forall \alpha$, one has $\{J_\alpha\}=\{I^{(1)}_\alpha\}$. 
+Moreover, given a generic solution of~\eref{bt_eq} with string content 
+$\{N_\alpha\}$, the corresponding Bethe-Takahashi numbers can be represented 
+
+
+%%%%%% NEEL OVERLAP
+\section{Overlap with the Neel state}
+
+Let us consider a generic $n$-string state
+%
+\begin{equation}
+\lambda_{n;\alpha}^{a}=\lambda_{n;\alpha}+\frac{i}{2}(n+1-2a)+i\delta_{n;\alpha}^{a}
+\quad\textrm{with}\, a=1,\dots, n.
+\end{equation}
+%
+We denote the generic parity invariant eigenstate as $|\{\pm\lambda_j\}_{j=1}^m,n_\infty\rangle$, 
+where $m$ is the number of rapidity pairs, $N_{\infty}$ is the number of infinite rapidities, 
+with $M=L/2=N_\infty+2m$, and $n_\infty\equiv N_\infty/L$ is the infinite rapidities density. 
+
+The overlap with the Neel state $|\Psi_0\rangle$ reads 
+%
+\begin{equation}
+\label{neel-ov}
+\frac{\langle\Psi_0|\{\pm\lambda_j\}_{j=1}^m,n_\infty\rangle}{|||\{\lambda_j\}_{j=1}^m,n_\infty\rangle||}=
+\frac{\sqrt{2}N_{\infty}!}{\sqrt{(2N_\infty)!}}\left[\prod_{j=1}^m\frac{\sqrt{\lambda_j^2+1/4}}{4\lambda_j}
+\right]\sqrt{\frac{\textrm{det}_m(G^+)}{\textrm{det}_m(G^-)}}
+\end{equation}
+%
+where 
+%
+\begin{equation}
+\label{G-pm}
+G^{\pm}_{jk}=\delta_{jk}\left(NK_{1/2}(\lambda_j)-\sum\limits_{l=1}^mK_1^+(\lambda_j,\lambda_l)\right)
++K_{1}^{\pm}(\lambda_j,\lambda_k),\quad\,j,k=1,\dots,m
+\end{equation}
+%
+and 
+%
+\begin{equation}
+\label{K-1}
+K_1^\pm(\lambda,\mu)=K_1(\lambda-\mu)\pm K_1(\lambda+\mu)
+\end{equation}
+%
+and 
+%
+\begin{equation}
+\label{K-alpha}
+K_\alpha(\lambda)\equiv\frac{2\alpha}{\lambda^2+\alpha^2}
+\end{equation}
+%
+
+%%%%%% REDUCED NEEL OVERLAP
+\subsection{Reduced Neel overlap}
+
+In the case of perfect strings the matrices $G^{\pm}_{jk}$ become ill-defined. Precisely, 
+$K_{1}^+(\lambda,\mu)$ diverges if $\lambda$ and $\mu$ are successive members of 
+the same string, i.e., $|\lambda-\mu|=i$.  
+
+It is possible to rewrite~\eref{neel-ov} in terms of the string centers $\lambda_{n;\alpha}$ only. 
+Here we restrict ourselves to rapidity configurations with no zero-momentum strings. 
+
+
+It is convenient to split the indices $i,j$ of $G^\pm_{ij}$ as $i=(n,\alpha)$ $j=(m,\beta)$, 
+with $n,m$ being the length of the strings and $\alpha,\beta$ labelling the string centers. 
+
+The result reads 
+%
+\begin{equation}
+\fl \frac{1}{2}G^+_{(n,\alpha)(m,\beta)}=\left\{\begin{array}{cc}
+L\theta_n'(\lambda_{n;\alpha})
+-\sum\limits_{(\ell,\gamma)\ne(n,\alpha)}(\Theta'_{n,\ell}
+(\lambda_{n;\alpha}-\lambda_{\ell;\gamma})+\Theta'_{n,\ell}
+(\lambda_{n;\alpha}+\lambda_{\ell;\gamma})) & \textrm{if}\,(n,\alpha)= (m,\beta)\\
+\Theta'_{n,m}
+(\lambda_{n;\alpha}-\lambda_{m;\beta})+\Theta'_{n,m}
+(\lambda_{n;\alpha}+\lambda_{m;\beta}) & \textrm{if}\,(n,\alpha)\ne(m,\beta)
+\end{array}\right.
+\end{equation}
+%
+Here $\theta_n'(x)\equiv d/dx\theta_n(x)$ and $\Theta'(x)\equiv d/dx\Theta(x)$. 
+
+For $G^-_{ij}$ one obtains 
+
+\begin{equation}
+\fl\frac{1}{2}G^-_{(n,\alpha)(m,\beta)}=\left\{\begin{array}{cc}
+(L-1)\theta'_n(\lambda_{n;\alpha})-2\sum\limits_{k=1}^{n-1}\theta'_k(\lambda_{n;\alpha})
+-\sum\limits_{(\ell,\gamma)\ne(n,\alpha)}(\Theta'_{n,\ell}
+(\lambda_{n;\alpha}-\lambda_{\ell;\gamma})+\Theta'_{n,l}
+(\lambda_{n;\alpha}+\lambda_{\ell;\gamma})) & \quad\textrm{if}\,(n,\alpha)= (m,\beta)\\
+\Theta'_{n,m}
+(\lambda_{n;\alpha}-\lambda_{m;\beta})-\Theta'_{n,m}
+(\lambda_{n;\alpha}+\lambda_{m;\beta})) & \quad\textrm{if}\,(n,\alpha)\ne(m,\beta)
+\end{array}\right.
+\end{equation}
+%
+Finally, the multiplicative prefactor in~\eref{neel-ov} for the generic $n$-string 
+can be rewritten as 
+%
+\begin{equation}
+\prod\limits_{a=1}^n\frac{\sqrt{(\lambda^a_{n;\alpha})^2+1/4}}{4\lambda^a_{n;\alpha}}=
+\frac{1}{4^n}\left(\frac{\sqrt{n^2+\lambda^2_{n;\alpha}}}{\lambda_{n;\alpha}}
+\prod\limits_{k=0}^{\lceil n/2\rceil-1}\frac{(2k)^2+\lambda^2_{n;\alpha}}{(2k+1)^2+
+\lambda^2_{n;\alpha}}\right)^{{\mathcal P}},
+\end{equation}
+%
+with ${\mathcal P}=+$ and ${\mathcal P}=-$ for even and odd strings, respectively. 
+
+
+%##################################################################
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=.9\textwidth]{./draft_figs/L20_BT_check}
+\end{center}
+\caption{ The squared overlap $|\langle\Psi_0|\{\lambda\}\rangle|^2$ between the the 
+ Neel state $|\Psi_0\rangle$ and the eigenstates $|\{\lambda\}\rangle$ of the $XXX$ 
+ chain with $L=22$ sites. Only non-zero overlaps are shown. In all the panels the 
+ $x$-axis shows the eigenstate energy density $E/L$. The circles are the exact 
+ diagonalization results for all the non-zero overlaps. The crosses are the Bethe 
+ ansatz results obtained using the Bethe-Gaudin-Takahashi equations. The missing 
+ crosses correspond to eigenstates containing zero-momentum strings. (a) Overview 
+ of all the non-zero overlaps. (b)(c)(d) The same overlaps as in (a) zooming in 
+ the regions $[0,0.2]$, $[0,0.020]$, and $[0,4\cdot 10^{-5}]$. The discrepancies 
+ between the ED and the Bethe ansatz results are attributed to the string deviations. 
+}
+\label{fig1-BGT-check}
+\end{figure}
+%##################################################################
+
+
+%##################################################################
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=.6\textwidth]{./draft_figs/Neel_over}
+\end{center}
+\caption{ The overlap sum rule $\sum_{\{\lambda\}}|\langle\{\lambda\}|\Psi_0\rangle|^2$, 
+ with $|\Psi_0\rangle$ the Neel state and $|\{\lambda\}\rangle$ the eigenstates  of the 
+ $XXX$ spin chain, plotted versus $1/L$, with $L$ the chain length. The circles are 
+ Bethe ansatz results for chains up to $L=36$. Only the eigenstates with no zero-momentum 
+ strings are considered in the sum. The dash-dotted line is a fit to $A/L^{1/2}+B/L$, with 
+ $A,B$ fitting parameters. Inset: The same data as in the main Figure plotted versus 
+ $1/L^{1/2}$.
+}
+\label{fig2-neel-sr}
+\end{figure}
+%##################################################################
+
+
+%##################################################################
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=.6\textwidth]{./draft_figs/Dimer_over}
+\end{center}
+\caption{ The overlap sum rule $\sum_{\{\lambda\}}|\langle\{\lambda\}|\Psi_0\rangle|^2$, 
+ with $|\Psi_0\rangle$ the Majumdar-Ghosh state and $|\{\lambda\}\rangle$ the eigenstates  
+ of the $XXX$ spin chain, plotted versus $1/L$, with $L$ the chain length. The circles are 
+ Bethe ansatz results for chains up to $L=32$. Only the eigenstates with no zero-momentum 
+ strings are considered in the sum. The dash-dotted line is a fit to $A/L^{1/2}+B/L$, with 
+ $A,B$ fitting parameters. Inset: The same data as in the main Figure plotted versus 
+ $1/L^{1/2}$.
+}
+\label{fig3-dimer-sr}
+\end{figure}
+%##################################################################
+
+
+%##################################################################
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=.75\textwidth]{./draft_figs/Neel_over_ener}
+\end{center}
+\caption{ The overlap between the Neel state and the eigenstates of the 
+ $XXX$ chain as a function of the eigenstate energy. (a) The squared 
+ overlap $|\langle\{\lambda\}|Neel\rangle|^2$ plotted versus the 
+ eigenstates energy density $E/L$. The data are Bethe ansatz results 
+ for chains of length $L=22,26,32,36$ (different symbols). (b) Same as 
+ in (a) plotting on the $y$-axis the combination $-2\log(|\langle\{
+ \lambda\}|Neel\rangle|)/L$. 
+}
+\label{fig4-neel-ener}
+\end{figure}
+%##################################################################
+
+
+
+\subsection{Counting of eigenstates with non-zero Neel overlap}
+
+Notice that the number of states, which have non-zero
+overlap with the Neel state, is in principle
+%
+\begin{equation}
+2^{\frac{L}{2}-1}+\frac{(1+(-1)^{\frac{L}{2}})}{4}C\left(\frac{L}{2},
+\frac{L}{4}\right)
+\end{equation}
+%
+
+The number of eigenstates excluding the zero-momentum strings is given by the 
+sequence A014495. It is given as a function of the chain length as
+%
+\begin{equation}
+C\left(\frac{L}{2},\left\lfloor\frac{L}{4}\right\rfloor\right)-1
+\end{equation}
+%
+with $C(x,y)$ denoting the binomial coefficient. 
+%
+
+We start with string content ${\mathcal S}\equiv\{s_1,\dots,s_{M/2}\}$ with the 
+constraint $\sum_k ks_k=M/2$. We also restrict ourselves for simplicity to $L$ divisible 
+by four. 
+Imposing the parity invariance constraint and that only non-zero momentum strings 
+are allowed one obtains the total number of quantum numbers in the $n$-string sector 
+as 
+%
+\begin{equation}
+Z_n(L,{\mathcal S})=\Big\lceil\frac{L}{2}-\frac{1}{2}\Big\rceil-2\sum_{m=1}^{M/2}t_{nm}s_m.
+\end{equation}
+%
+Thus, the number of configurations $Z(L,{\mathcal S})$ with string content ${\mathcal S}
+\equiv\{s_1,\dots,s_{M/2}\}$ is 
+%
+\begin{equation}
+Z(L,{\mathcal S})=\prod_{k=1}^{M/2} B(Z_k,s_k).
+\end{equation}
+%
+At fixed number of particles $\ell$ and number $q$ of independent strings 
+one can calculate
+%
+\begin{equation}
+\label{eq}
+Z(L,\ell,q)=\sum\limits_{\sum ms_m=\ell\atop\sum s_m=q}Z(L,{\mathcal S}).
+\end{equation}
+%
+Notice that in~\eref{eq} there is a sum over all possible string contents. 
+
+It is useful to shift the string content by one, i.e., defining 
+%
+\begin{equation}
+s'_m=s_{m+1}.
+\end{equation}
+%
+Observing that 
+%
+\begin{equation}
+t_{ij}=t_{i-1,j-1}+2,
+\end{equation}
+%
+one can write for $n>1$ that 
+%
+\begin{equation}
+Z_n(L,{\mathcal S})=\Big\lceil\frac{L}{2}-\frac{1}{2}\Big\rceil-2t_{n,1}s_1-2
+\sum\limits_{m>1}t_{nm}s_m=
+\Big\lceil\frac{L}{2}-\frac{1}{2}\Big\rceil-2s_1-2
+\sum\limits_{m>1}(t_{n-1,m-1}+2)s_m=
+
+\end{equation}
+%
+
+
+\begin{table}[h]
+\scriptsize
+\centering
+Bethe states with nonzero N\'eel overlap ($N=12$)\\[1ex]
+\begin{tabular}{rrrrr}
+String content & $2I^+_n$ & E & $|\langle \{\lambda\}| \Psi_0 \rangle|^2$ & here \\[0.3em]
+\toprule
+6 inf & - & $0$ & $0.002164502165$ & $0.002164502165$ \\
+\midrule
+2 one, 4 inf &$1_1 $ & $-3.918985947229$ & $0.096183409244$ & $0.096183409244237$ \\
+ &$3_1 $ & $-3.309721467891$ & $0.011288497947$ &  $0.0112884979464673$\\
+ &$5_1 $ & $-2.284629676547$ & $0.004542580506$ &  $0.0045425805061850$\\
+ &$7_1 $ & $-1.169169973996$ & $0.002752622983$ &  $0.0027526229835876$\\
+ &$9_1 $ & $-0.317492934338$ & $0.002116006203$ &  $0.0021160062026402$\\
+\midrule
+4 one, 2 inf &$1_1 3_1 $ & $-7.070529325964$ & $0.310133033838$ &$ 0.554809782804$ \\
+  &$1_1 5_1 $ & $-5.847128730477$ & $0.129277023687$ \\
+  &$ 1_1 7_1$ & $-4.570746557876$ & $0.085992436024$ \\
+  &$ 3_1 5_1$ & $-5.153853093221$ & $0.015256395523$ \\
+  &$3_1 7_1 $ & $-3.916336243695$ & $0.010091113504$ \\
+  &$5_1 7_1 $ & $-2.817696043731$ & $0.004059780228$ \\
+  \midrule
+2 two, 2 inf &$1_2 $ & $-1.905667167442$ & $0.001207238321$ & $0.005468702625$\\
+  &$3_2 $ & $-1.368837200825$ & $0.002340453815$ \\
+  &$5_2 $ & $-0.681173793635$ & $0.001921010489$ \\
+    \midrule
+1 one, 1 three, 2 inf &$0_1 0_3 $ & $-2.668031843135$ & $0.034959609810$ & $0.034959609810$ \\
+    \midrule
+6 one &$1_1 3_1 5_1 $ & $-8.387390917445$ & $0.153412152966$ & $0.153412152966$ \\
+  \midrule
+2 two, 2 one &$1_1 1_2 $ & $-5.401838225870$ & $0.040162686361$ & $0.046134750850$ \\
+  &$3_1 1_2 $ & $-4.613929948329$ & $0.004636541934$ \\
+  &$5_1 1_2 $ & $-3.147465758841$ & $0.001335522556$ \\
+    \midrule
+1 three, 3 one &$0_1 2_1 0_3$ & $-6.340207488736$ & $0.052743525774$ & $0.078910020729$ \\
+  &$0_1 4_1 0_3$ & $-5.203653009936$ & $0.015022005621$ \\
+  &$0_1 6_1 0_3$ & $-3.788693957250$ & $0.011144489334$ \\
+      \midrule
+1 five, 1 one &$0_1 0_5$ & $-2.444293750583$ & $0.005887902992$ & $0.005887902992$ \\
+      \midrule
+2 three &$1_3$ & $-1.111855930538$ & $0.001342476001$ & $0.001342476001$ \\
+      \midrule
+1 two, 1 four &$0_2 0_4$ & $-1.560671012472$ & $0.000026982174$ & $0.000026982174$ \\
+  \bottomrule
+ \end{tabular}
+\caption{All Bethe states for $N=12$ with nonzero overlap with the zero-momentum N\'eel state. The 
+overlap squares add up to $1$ up to the precision in which the Bethe equations were solved. The 
+$2I^+_n$ in the second column give the positive $n$-string quantum numbers of the parity-invariant 
+Bethe states.}
+\label{table:RV:sumruleN12}
+\end{table}
+
+\begin{table}[h]
+\scriptsize
+\centering
+Bethe states with nonzero M-G overlap ($L=12$)\\[1ex]
+\begin{tabular}{rrrr}
+String content & Energy (ED) & $|\langle \{\lambda\}| \Psi_0 \rangle|^2$ (ED) & $|\langle \{\lambda\}| \Psi_0 \rangle|^2$ (B-T) \\[0.3em]
+\toprule
+$1_1 3_1 5_1$ & $-8.38739$  & $0.716616$     &  $0.7166157692239$\\
+              & $-6.34021$  & $0.205891$     &  \\
+$5_1 1_2$     & $-5.40184$  & $0.0556247$    & $0.05403336654338$\\
+              & $-5.20365$  & $0.0388322$    & \\
+$3_1 1_2$     & $-4.61393$  & $0.00568743$   & $0.005582983043235$\\
+              & $-3.78869$  & $0.00601941$   & \\
+$1_1 1_2$     & $-3.14747$  & $0.00210748$   & $0.0021070869333835$\\
+              & $-2.44429$  & $0.000129601$  & \\
+              & $-1.56067$  & $0.000330573$  & \\
+$1_3$         & $-1.11186$  & $0.0000117278$ & $0.000012785579923275$\\
+\bottomrule
+\end{tabular}
+\caption{All Bethe states for $L=12$ with nonzero overlap with the zero-momentum 
+ M-G state. The first column show the string content of the eigenstate. The second 
+ and third columns show the exact diagonalization resutls for the energy and the 
+ overlap, respectively. The last colum is the overlap obtained in the Bethe ansatz 
+ approach using the Bethe-Takahashi equations.
+}
+\label{table:RV:sumruleN12}
+\end{table}
+
+
+\begin{table}[h]
+\scriptsize
+\centering
+Bethe states with nonzero M-G overlap ($L=16$)\\[1ex]
+\begin{tabular}{rrrr}
+String content & Energy (ED) & $|\langle \{\lambda\}| \Psi_0 \rangle|^2$ (ED) & $|\langle \{\lambda\}| \Psi_0 \rangle|^2$ (B-T) \\[0.3em]
+\toprule
+$7_1 5_1 3_1 1_1$ & $-11.1423$ & $0.517742$         & $0.5177418283152$\\
+& $-9.59129$ & $0.244845$         &\\
+$7_1 5_1 1_2$ & $-8.81424$ & $0.0727096$        & $0.07100180464371$\\
+& $-8.56579$ & $0.082852$         &\\
+$7_1 3_1 1_2$ & $-7.96995$ & $0.0232953$        & $0.02300602650371$\\
+& $-7.89112$  & $0.0181713$        &\\
+$7_1 1_1 1_2$ & $-7.51522$ & $0.00245007$       & $0.002427999643379$\\
+& $-7.41983$ & $0.0192443$        &\\
+$5_1 3_1 1_2$ & $-6.80829$ & $0.012519$         & $0.012518660407092$\\
+& $-6.78357$ & $0.00398018$       &\\
+$5_1 1_1 1_2$ & $-6.3398$  &  $0.00135119$      & $0.0013511980854654$\\
+& $-6.25276$ & $0.000721952$      &\\
+& $-5.86683$ & $0.00112415$       &\\
+& $-5.69103$ & $0.000141052$      &\\
+& $-5.50802$ & $0.00373666$       &\\
+$3_1 1_2$ & $-5.45276$ & $0.000466819$      & $0.0004668223478716$\\
+& $-5.06385$ & $0.000380056$      & $0.000166548883431$\\
+& $-4.86668$ & $0.0000395855$     &\\
+& $-4.64743$ & $0.000014786$      & $0.000016403668846624$\\
+& $-4.49059$ & $0.00155894$       &\\
+& $-4.25924$ & $0.000109932$      &\\
+& $-3.93068$ & $4.12108e-6$       & $4.6283550855711e-6$\\
+& $-3.92645$ & $0.0000102752$     &\\
+& $-3.77995$ & $0.0000732808$     &\\
+& $-3.259$   & $0.0000348879$     &\\
+& $-3.12751$ & $0.0000739906$     & $0.00007017294942524$\\
+& $-3.04176$ & $1.62543e-6$       &\\
+& $-3.00072$ & $1.4684e-6$        & $1.6374806913113e-6$\\
+& $-2.32465$ & $2.01172e-8$       &\\
+& $-2.26529$ & $7.53377e-6$       &\\
+& $-2.02465$ & $5.8028e-7$        & $5.722094498217e-7$\\
+& $-1.38078$ & $2.17607e-7$       &\\
+& $-1.11438$ & $1.825e-7$         &\\
+& $-0.844856$& $1.84715e-9$       & $2.4957509639475e-9$\\
+\bottomrule
+\end{tabular}
+\caption{All Bethe states for $L=12$ with nonzero overlap with the zero-momentum 
+ M-G state. The first column show the string content of the eigenstate. The second 
+ and third columns show the exact diagonalization resutls for the energy and the 
+ overlap, respectively. The last colum is the overlap obtained in the Bethe ansatz 
+ approach using the Bethe-Takahashi equations.
+}
+\label{table:RV:sumruleN12}
+\end{table}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%% REFERENCES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{thebibliography}{99}
+
+
+%\end{thebibliography}
+
+
+\end{document}
+
+

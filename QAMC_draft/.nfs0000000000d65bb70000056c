@@ -1,0 +1,79 @@
+\relax 
+\ifx\hyper@anchor\@undefined
+\global \let \oldcontentsline\contentsline
+\gdef \contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global \let \oldnewlabel\newlabel
+\gdef \newlabel#1#2{\newlabelxx{#1}#2}
+\gdef \newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\let \contentsline\oldcontentsline
+\let \newlabel\oldnewlabel}
+\else
+\global \let \hyper@last\relax 
+\fi
+
+\select@language{english}
+\@writefile{toc}{\select@language{english}}
+\@writefile{lof}{\select@language{english}}
+\@writefile{lot}{\select@language{english}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{2}{section.1}}
+\newlabel{intro}{{1}{2}{Introduction\relax }{section.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}The Heisenberg spin chain}{2}{section.2}}
+\newlabel{xxx-chain}{{2}{2}{The Heisenberg spin chain\relax }{section.2}{}}
+\newlabel{xxx-ham}{{1}{2}{The Heisenberg spin chain\relax }{equation.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Bethe equations and wavefunctions}{2}{subsection.2.1}}
+\newlabel{bethe_equations}{{2.1}{2}{Bethe equations and wavefunctions\relax }{subsection.2.1}{}}
+\newlabel{ba_eig}{{2}{2}{Bethe equations and wavefunctions\relax }{equation.2}{}}
+\newlabel{ba_amp}{{3}{2}{Bethe equations and wavefunctions\relax }{equation.3}{}}
+\newlabel{s_phases}{{4}{2}{Bethe equations and wavefunctions\relax }{equation.4}{}}
+\citation{bethe-1931}
+\citation{taka-book}
+\newlabel{ba_ener}{{5}{3}{Bethe equations and wavefunctions\relax }{equation.5}{}}
+\newlabel{ba_eq}{{6}{3}{Bethe equations and wavefunctions\relax }{equation.6}{}}
+\newlabel{rap}{{7}{3}{Bethe equations and wavefunctions\relax }{equation.7}{}}
+\newlabel{ba_eq_log}{{8}{3}{Bethe equations and wavefunctions\relax }{equation.8}{}}
+\newlabel{str_hyp}{{9}{3}{Bethe equations and wavefunctions\relax }{equation.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Bethe-Takahashi equations.}{3}{subsection.2.2}}
+\newlabel{bt_eq}{{10}{3}{Bethe-Takahashi equations}{equation.10}{}}
+\citation{calabrese-2014}
+\newlabel{bt_qn_bound}{{11}{4}{Bethe-Takahashi equations}{equation.11}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Overlap with the Neel state}{4}{section.3}}
+\newlabel{neel-ov}{{12}{4}{Overlap with the Neel state\relax }{equation.12}{}}
+\newlabel{G-pm}{{13}{4}{Overlap with the Neel state\relax }{equation.13}{}}
+\newlabel{K-1}{{14}{4}{Overlap with the Neel state\relax }{equation.14}{}}
+\newlabel{K-alpha}{{15}{4}{Overlap with the Neel state\relax }{equation.15}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Reduced Neel overlap}{4}{subsection.3.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Overlap with the Majumdar-Ghosh state}{5}{section.4}}
+\newlabel{ov-MG}{{19}{5}{Overlap with the Majumdar-Ghosh state\relax }{equation.19}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Counting of eigenstates with non-zero Neel overlap}{5}{subsection.4.1}}
+\newlabel{Neel-count}{{21}{5}{Counting of eigenstates with non-zero Neel overlap\relax }{equation.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces  The squared overlap $|\delimiter "426830A \Psi _0|\{\lambda \}\delimiter "526930B |^2$ between the the Neel state $|\Psi _0\delimiter "526930B $ and the eigenstates $|\{\lambda \}\delimiter "526930B $ of the $XXX$ chain with $L=22$ sites. Only non-zero overlaps are shown. In all the panels the $x$-axis shows the eigenstate energy density $E/L$. The circles are the exact diagonalization results for all the non-zero overlaps. The crosses are the Bethe ansatz results obtained using the Bethe-Gaudin-Takahashi equations. The missing crosses correspond to eigenstates containing zero-momentum strings. (a) Overview of all the non-zero overlaps. (b)(c)(d) The same overlaps as in (a) zooming in the regions $[0,0.2]$, $[0,0.020]$, and $[0,4\cdot 10^{-5}]$. The discrepancies between the ED and the Bethe ansatz results are attributed to the string deviations. }}{6}{figure.1}}
+\newlabel{fig1-BGT-check}{{1}{6}{ The squared overlap $|\langle \Psi _0|\{\lambda \}\rangle |^2$ between the the Neel state $|\Psi _0\rangle $ and the eigenstates $|\{\lambda \}\rangle $ of the $XXX$ chain with $L=22$ sites. Only non-zero overlaps are shown. In all the panels the $x$-axis shows the eigenstate energy density $E/L$. The circles are the exact diagonalization results for all the non-zero overlaps. The crosses are the Bethe ansatz results obtained using the Bethe-Gaudin-Takahashi equations. The missing crosses correspond to eigenstates containing zero-momentum strings. (a) Overview of all the non-zero overlaps. (b)(c)(d) The same overlaps as in (a) zooming in the regions $[0,0.2]$, $[0,0.020]$, and $[0,4\cdot 10^{-5}]$. The discrepancies between the ED and the Bethe ansatz results are attributed to the string deviations. \relax }{figure.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces  Overlap sum rules for the Neel state. (a) The overlap sum rule $\sum _{\{\lambda \}}|\delimiter "426830A \{\lambda \}|N\delimiter "526930B |^2=1$, with $|N\delimiter "526930B $ the Neel state and $|\{\lambda \}\delimiter "526930B $ the eigenstates of the $XXX$ spin chain. The $x$-axis shows $1/L$, with $L$ the chain length. The circles are Bethe ansatz results for chains up to $L=36$. The results are obtained via a full scanning of the chain Hilbert space. Only the eigenstates with no zero-momentum strings are considered. The dash-dotted line is a fit to $A/L^{1/2}+B/L$, with $A,B$ fitting parameters. Inset: The same data as in the main Figure plotted versus $1/L^{1/2}$. (b) The same as in (a) for the sum rule $\sum _{\{\lambda \}}|\delimiter "426830A \{ \lambda \}|N\delimiter "526930B |^2e(\{\lambda \})=1/2$, with $e(\{\lambda \})$ the eigenstates energy density. }}{6}{figure.2}}
+\newlabel{fig2-neel-sr}{{2}{6}{ Overlap sum rules for the Neel state. (a) The overlap sum rule $\sum _{\{\lambda \}}|\langle \{\lambda \}|N\rangle |^2=1$, with $|N\rangle $ the Neel state and $|\{\lambda \}\rangle $ the eigenstates of the $XXX$ spin chain. The $x$-axis shows $1/L$, with $L$ the chain length. The circles are Bethe ansatz results for chains up to $L=36$. The results are obtained via a full scanning of the chain Hilbert space. Only the eigenstates with no zero-momentum strings are considered. The dash-dotted line is a fit to $A/L^{1/2}+B/L$, with $A,B$ fitting parameters. Inset: The same data as in the main Figure plotted versus $1/L^{1/2}$. (b) The same as in (a) for the sum rule $\sum _{\{\lambda \}}|\langle \{ \lambda \}|N\rangle |^2e(\{\lambda \})=1/2$, with $e(\{\lambda \})$ the eigenstates energy density. \relax }{figure.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces  Overlap sum rules for the Majumdar-Ghosh (MG) state. (a) The overlap sum rule $\sum _{\{\lambda \}}|\delimiter "426830A \{\lambda \}|MG\delimiter "526930B |^2=1$, with $|MG\delimiter "526930B $ the Majumdar-Ghosh state and $|\{\lambda \}\delimiter "526930B $ the eigenstates of the $XXX$ spin chain. The $x$-axis shows $1/L$, with $L$ the chain length. The circles are Bethe ansatz results for chains up to $L=36$. The results are obtained via a full scanning of the chain Hilbert space. Only the eigenstates with no zero-momentum strings are considered. The dash-dotted line is a fit to $A/L+B/L^2$, with $A,B$ fitting parameters. (b) The same as in (a) for the sum rule $\sum _{\{\lambda \}}|\delimiter "426830A \{\lambda \}|MG\delimiter "526930B |^2e(\{\lambda \})= 2/3$, with $e(\{\lambda \})$ the eigenstates energy density. }}{7}{figure.3}}
+\newlabel{fig3-dimer-sr}{{3}{7}{ Overlap sum rules for the Majumdar-Ghosh (MG) state. (a) The overlap sum rule $\sum _{\{\lambda \}}|\langle \{\lambda \}|MG\rangle |^2=1$, with $|MG\rangle $ the Majumdar-Ghosh state and $|\{\lambda \}\rangle $ the eigenstates of the $XXX$ spin chain. The $x$-axis shows $1/L$, with $L$ the chain length. The circles are Bethe ansatz results for chains up to $L=36$. The results are obtained via a full scanning of the chain Hilbert space. Only the eigenstates with no zero-momentum strings are considered. The dash-dotted line is a fit to $A/L+B/L^2$, with $A,B$ fitting parameters. (b) The same as in (a) for the sum rule $\sum _{\{\lambda \}}|\langle \{\lambda \}|MG\rangle |^2e(\{\lambda \})= 2/3$, with $e(\{\lambda \})$ the eigenstates energy density. \relax }{figure.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces  The overlap sum rules for the Neel state: Numerical results obtained using the Hilbert space Monte Carlo sampling approach. (a) The energy sum rule $\delimiter "426830A N|Q_2|N\delimiter "526930B /L=-1/2$, with $Q_2/L$ the Hamiltonian density. We plot $\sum _{\{\lambda \}}|\delimiter "426830A \{\lambda \}| N\delimiter "526930B |^2Q_2(\{\lambda \})/L=1/2$, with $|\{\lambda \}\delimiter "526930B $ the eigenstates of the $XXX$ chain, versus the inverse chain length $1/L$. The symbols are Monte Carlo data obtained by sampling the eigenstates of the $XXX$ chain. The dash-dotted line is the expected result. The dashed line is a fit to the behavior $-1/2+A/L+B/L^2$, with $A,B$ fitting parameters. (b) The energy fluctuations sum rule $\sigma ^2(Q_2)/ L\equiv (\delimiter "426830A N|Q_2^2|N\delimiter "526930B -\delimiter "426830A N|Q_2|N\delimiter "526930B ^2)/L=1/4$. The horizontal line is the expected result. (c)(d) Same as in (a)(b) for the charge $Q_4$ and its fluctuations. }}{7}{figure.4}}
+\newlabel{fig5-neel-sum-rules}{{4}{7}{ The overlap sum rules for the Neel state: Numerical results obtained using the Hilbert space Monte Carlo sampling approach. (a) The energy sum rule $\langle N|Q_2|N\rangle /L=-1/2$, with $Q_2/L$ the Hamiltonian density. We plot $\sum _{\{\lambda \}}|\langle \{\lambda \}| N\rangle |^2Q_2(\{\lambda \})/L=1/2$, with $|\{\lambda \}\rangle $ the eigenstates of the $XXX$ chain, versus the inverse chain length $1/L$. The symbols are Monte Carlo data obtained by sampling the eigenstates of the $XXX$ chain. The dash-dotted line is the expected result. The dashed line is a fit to the behavior $-1/2+A/L+B/L^2$, with $A,B$ fitting parameters. (b) The energy fluctuations sum rule $\sigma ^2(Q_2)/ L\equiv (\langle N|Q_2^2|N\rangle -\langle N|Q_2|N\rangle ^2)/L=1/4$. The horizontal line is the expected result. (c)(d) Same as in (a)(b) for the charge $Q_4$ and its fluctuations. \relax }{figure.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces  The steady-state root densities $\rho _1(x)$ (panel (a)) and $\rho _2(x)$ (panel (b)), plotted versus the root $x$. The histograms are Monte Carlo data for the Heisenberg chain with $L=56$ sites and $\sim 10^7$ Monte Carlo steps. The $y$-axis is divided by $10^6$ for convenience. The continuous lines are the analytical Quench-Action results in the thermodynamic limit. }}{8}{figure.5}}
+\newlabel{fig6-neel-roots}{{5}{8}{ The steady-state root densities $\rho _1(x)$ (panel (a)) and $\rho _2(x)$ (panel (b)), plotted versus the root $x$. The histograms are Monte Carlo data for the Heisenberg chain with $L=56$ sites and $\sim 10^7$ Monte Carlo steps. The $y$-axis is divided by $10^6$ for convenience. The continuous lines are the analytical Quench-Action results in the thermodynamic limit. \relax }{figure.5}{}}
+\newlabel{neel-ov-count}{{22}{8}{Counting of eigenstates with non-zero Neel overlap\relax }{equation.22}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Eigenstates with nonzero N\'eel overlap: eigenstates counting and string content}{8}{subsection.4.2}}
+\newlabel{app-1}{{4.2}{8}{Eigenstates with nonzero N\'eel overlap: eigenstates counting and string content\relax }{subsection.4.2}{}}
+\newlabel{N-count}{{24}{8}{Eigenstates with nonzero N\'eel overlap: eigenstates counting and string content\relax }{equation.24}{}}
+\newlabel{NnLS}{{25}{9}{Eigenstates with nonzero N\'eel overlap: eigenstates counting and string content\relax }{equation.25}{}}
+\newlabel{NLS}{{26}{9}{Eigenstates with nonzero N\'eel overlap: eigenstates counting and string content\relax }{equation.26}{}}
+\newlabel{NLlq}{{27}{9}{Eigenstates with nonzero N\'eel overlap: eigenstates counting and string content\relax }{equation.27}{}}
+\newlabel{NLSr}{{31}{9}{Eigenstates with nonzero N\'eel overlap: eigenstates counting and string content\relax }{equation.31}{}}
+\newlabel{NpLlq}{{32}{9}{Eigenstates with nonzero N\'eel overlap: eigenstates counting and string content\relax }{equation.32}{}}
+\newlabel{sum1}{{36}{10}{Eigenstates with nonzero N\'eel overlap: eigenstates counting and string content\relax }{equation.36}{}}
+\newlabel{N-count-p}{{39}{10}{Eigenstates with nonzero N\'eel overlap: eigenstates counting and string content\relax }{equation.39}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Excluding the zero-momentum strings}{10}{subsection.4.3}}
+\newlabel{app-2}{{4.3}{10}{Excluding the zero-momentum strings\relax }{subsection.4.3}{}}
+\bibcite{calabrese-2014}{1}
+\newlabel{NpLlq-1}{{42}{11}{Excluding the zero-momentum strings\relax }{equation.42}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces All Bethe states for $N=12$ with nonzero overlap with the zero-momentum N\'eel state. The overlap squares add up to $1$ up to the precision in which the Bethe equations were solved. The $2I^+_n$ in the second column give the positive $n$-string quantum numbers of the parity-invariant Bethe states.}}{12}{table.1}}
+\newlabel{table:RV:sumruleN12}{{1}{12}{All Bethe states for $N=12$ with nonzero overlap with the zero-momentum N\'eel state. The overlap squares add up to $1$ up to the precision in which the Bethe equations were solved. The $2I^+_n$ in the second column give the positive $n$-string quantum numbers of the parity-invariant Bethe states}{table.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces All Bethe states for $L=12$ with nonzero overlap with the zero-momentum M-G state. The first column show the string content of the eigenstate. The second and third columns show the exact diagonalization resutls for the energy and the overlap, respectively. The last colum is the overlap obtained in the Bethe ansatz approach using the Bethe-Takahashi equations. }}{12}{table.2}}
+\newlabel{table:RV:sumruleN12}{{2}{12}{All Bethe states for $L=12$ with nonzero overlap with the zero-momentum M-G state. The first column show the string content of the eigenstate. The second and third columns show the exact diagonalization resutls for the energy and the overlap, respectively. The last colum is the overlap obtained in the Bethe ansatz approach using the Bethe-Takahashi equations. \relax }{table.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces All Bethe states for $L=12$ with nonzero overlap with the zero-momentum M-G state. The first column show the string content of the eigenstate. The second and third columns show the exact diagonalization resutls for the energy and the overlap, respectively. The last colum is the overlap obtained in the Bethe ansatz approach using the Bethe-Takahashi equations. }}{13}{table.3}}
+\newlabel{table:RV:sumruleN12}{{3}{13}{All Bethe states for $L=12$ with nonzero overlap with the zero-momentum M-G state. The first column show the string content of the eigenstate. The second and third columns show the exact diagonalization resutls for the energy and the overlap, respectively. The last colum is the overlap obtained in the Bethe ansatz approach using the Bethe-Takahashi equations. \relax }{table.3}{}}

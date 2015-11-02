@@ -82,21 +82,20 @@ fdasfa
 
 Understanding the out-of-equilibrium dynamics in {\it isolated} quantum 
 many-body systems is one of the most intriguing research topics in 
-contemporary physics, both theoretically~\cite{polkovnikov-2011} and 
-experimentally~\cite{bloch-2008,greiner-2002,kinoshita-2006,
-hofferberth-2007,trotzky-2012,gring-2012,cheneau-2012,
+contemporary physics, both experimentally~\cite{bloch-2008,greiner-2002,
+kinoshita-2006,hofferberth-2007,trotzky-2012,gring-2012,cheneau-2012,
 schneider-2012,kunhert-2013,langen-2013,meinert-2013,fukuhara-2013,
-ronzheimer-2013,braun-2014,langen-2015}. The most popular out-of-equilibrium 
-protocol is that of the {\it quantum quench} in which a system is initially 
-prepared in an eigenstate $|\Psi_0\rangle$ of a many-body hamiltonian ${\mathcal H}_0$. 
-Then a global parameter is suddenly changed, and the system is let to evolve 
-unitarily under a new hamiltonian ${\mathcal H}$. There is now compelling 
-evidence that at long times after the quench an equilibrium steady state 
-arises (see for instance Ref.~\cite{kinoshita-2006}). 
-
-In the thermodynamic limit, due to dephasing, it is natural to expect that the 
-equilibrium value of any local observable ${\mathcal O}$ is described by the 
-so-called diagonal ensemble as 
+ronzheimer-2013,braun-2014,langen-2015} and theoretically~\cite{polkovnikov-2011}. 
+The most investigated protocol is that of the {\it quantum quench}, in 
+which a system is initially prepared in an eigenstate $|\Psi_0\rangle$ of 
+a many-body hamiltonian ${\mathcal H}_0$. Then a global parameter is 
+suddenly changed, and the system is let to evolve unitarily under a new 
+hamiltonian ${\mathcal H}$. There is now compelling evidence that at long 
+times after the quench an equilibrium steady state arises (see for instance 
+Ref.~\cite{kinoshita-2006}), although its nature is not fully understood yet. 
+In the thermodynamic limit, due to dephasing, it is natural to expect that 
+the equilibrium value of any local observable ${\mathcal O}$ is described 
+by the so-called diagonal ensemble as 
 %
 \begin{equation}
 \label{d-ensemble}
@@ -105,25 +104,16 @@ so-called diagonal ensemble as
 \end{equation}
 %
 where the sum is over the eigenstates $|\lambda\rangle$ of the post-quench 
-hamiltonian ${\mathcal H}$. For generic, i.e., non-integrable, models 
+hamiltonian ${\mathcal H}$. Moreover, for generic, i.e., non-integrable, models 
 the Eigenstate Thermalization Hypothesis~\cite{deutsch-1991,srednicki-1994} 
 (ETH) implies that the diagonal ensemble~\eref{d-ensemble} becomes equivalent 
 to the usual Gibbs (thermal) ensemble. 
-%, implying 
-%
-%\begin{equation}
-%\langle{\mathcal O}\rangle_{DE}=\langle{\mathcal O}\rangle_{Gibbs}\equiv
-%\frac{1}{Z}\Tr({\mathcal O}\rho^{Gibbs}),\quad\textrm{with}\quad\rho^{Gibbs}
-%=e^{-\beta{\mathcal H}},
-%\end{equation}
-%
-%where $\beta$ is the inverse temperature of the system and $Z$ a normalization 
-%factor. 
+
 In integrable models, however, the presence of an extensive number of local or 
-quasi-local integrals of motion strongly affects the dynamics, preventing the onset of 
-thermal behavior. It has been suggested in Ref.~\cite{rigol-2007,rigol-2008} that   
-in this situation the post-quench steady-state can be described by the so-called 
-Generalized Gibbs Ensemble ($GGE$) as 
+quasi-local integrals of motion strongly affects the dynamics, preventing the 
+onset of thermal behavior. It has been suggested in Ref.~\cite{rigol-2007,
+rigol-2008} that in this situation the post-quench steady-state can be described 
+by the so-called Generalized Gibbs Ensemble ($GGE$) as 
 %
 \begin{equation}
 \label{gge}
@@ -134,19 +124,22 @@ Generalized Gibbs Ensemble ($GGE$) as
 Here $Q_j$ are mutually commuting conserved quantities, i.e., $[{\mathcal H},Q_j]=0\,
 \forall j$ and $[Q_j,Q_k]=0\,\forall j,k$, whereas $\beta_j$ are Lagrange multipliers 
 to be fixed by imposing that  $\langle Q_j\rangle_{GGE}=\langle\Psi_0|Q_j|\Psi_0\rangle$. 
+Note that for the diagonal ensemble~\eref{d-ensemble}  one has trivially that $\langle
+{\mathcal O}\rangle_{DE}=\langle\Psi_0|{\mathcal O}|\Psi_0\rangle$. We anticipate that 
+this provides  useful sum rules that will be the main object of interest in the paper. 
 The validity of the GGE has been confirmed in non-interacting theories~\cite{calabrese-2011,
 calabrese-2012,fagotti-2013,kcc14,kcc14a}, whereas in interacting ones the scenario is 
-still not settled. A recent work~\cite{ilievski-2015a} suggests that the $GGE$ 
+still not settled. Note that a recent work~\cite{ilievski-2015a} suggests that the $GGE$ 
 description of the steady state  is complete provided that the so-called quasi-local 
 charges~\cite{prosen-2014,pereira-2014,ilievski-2015} are included in~\eref{gge}. 
 
 Valuable insights into this issue have been provided by the so-called quench-action 
-approach~\cite{caux-2013}. For Bethe ansatz integrable models this allows to construct 
-the diagonal ensemble average~\eref{d-ensemble} in the thermodynamic limit, provided 
-that the overlaps $\langle\lambda|\Psi_0\rangle$ are known. The physical idea is that 
-for large system sizes it is possible to approximate the sum over the eigenstates 
-in~\eref{d-ensemble} using a saddle point argument. Specifically, one starts with 
-rewriting~\eref{d-ensemble} as 
+approach~\cite{caux-2013}. For Bethe ansatz integrable models this method allows one 
+to construct the diagonal ensemble~\eref{d-ensemble} directly in the thermodynamic 
+limit, provided that the overlaps $\langle\lambda|\Psi_0\rangle$ are known. The 
+physical idea is that for large system sizes it is possible to approximate the sum 
+over the eigenstates in~\eref{d-ensemble} using a saddle point argument. Specifically, 
+one starts with rewriting~\eref{d-ensemble} as 
 %
 \begin{equation}
 \label{de1}
@@ -156,50 +149,124 @@ E}(\lambda)),
 \end{equation}
 %
 where ${\mathcal E}(\lambda)\equiv-\log\langle\lambda|\Psi_0\rangle$, and $\Re$ 
-denoting the real part. For typical initial states $|\Psi_0\rangle$
-one has ${\mathcal E}\propto L$, with $L$ the system size, reflecting  a typical 
-vanishing of the overlaps as $\langle\Psi_0|\lambda\rangle\propto e^{-c L}$. 
-Similar to the standard Thermodynamic Bethe Ansatz (TBA)~\cite{taka-book}, the 
-extensivity of 
-${\mathcal E}$ suggests that in the thermodynamic limit~\eref{de1} is dominated 
-by a saddle point. Surprisingly, for some Bethe ansatz solvable models and some 
-simple initial states standard TBA techniques, 
-complemented with analytical knowledge of the overlaps $\langle\Psi_0|\lambda
-\rangle$, allow to determine {\it analytically} this saddle point, and for some  
-local observables, the diagonal ensemble expectation values~\eref{de1}, in the 
-thermodynamic limit. This has been done succesfully for instance in the Lieb-Liniger 
-model for the quench from the Bose-Einstein condensate~\cite{de-nardis-2014} 
-(BEC) and for the $XXZ$ spin chain for the quench from the N\'eel state~\cite{wouters-2014,
-brockmann-2014}. Interestingly, recently it has been suggested that the quench action 
-approach could allow to reconstruct the full relaxation dynamics to the steady 
-state~\cite{de-nardis-2015a,de-nardis-2015}. 
+denotes the real part. For typical initial states $|\Psi_0\rangle$
+one has ${\mathcal E}\propto L$, with $L$ the system size. This reflects the 
+vanishing of the overlaps as $\langle\Psi_0|\lambda\rangle\propto e^{-c L}$.  
+As in the standard Thermodynamic Bethe Ansatz (TBA)~\cite{taka-book}, the 
+extensivity of ${\mathcal E}$ suggests that in the thermodynamic limit the 
+sum in~\eref{de1} is dominated by a saddle point. Remarkably, for some Bethe 
+ansatz solvable models and for simple-enough initial states, it is possible to 
+determine this saddle point {\it analytically}. This has been done succesfully, 
+for instance, for the quench from the Bose-Einstein condensate~\cite{de-nardis-2014} 
+(BEC) in the Lieb-Liniger model and for the quench from the N\'eel 
+state~\cite{wouters-2014,brockmann-2014} in the $XXZ$ spin chain. Interestingly, 
+it has been suggested recently that the quench action approach could allow to 
+reconstruct the full relaxation dynamics to the steady state~\cite{de-nardis-2015a,
+de-nardis-2015}. 
 
-%Formally,~\eref{de1} is equivalent to the standard Gibbs 
-%ensemble after replacing ${\mathcal H}\to{\mathcal E}$. A crucial difference is 
-%that while typical hamiltonians are local, ensuring the extensivity of the energy, 
-%this is not guaranteed for ${\mathcal E}$. 
+\paragraph*{Outline of the results.} 
+In this paper, by combining exact Bethe ansatz and Monte Carlo techniques, we investigate 
+the diagonal ensemble and the quench action approach in {\it finite} size integrable models. 
+We focus on the spin-$1/2$ isotropic Heisenberg ($XXX$) chain with $L$ sites, which is 
+defined by the Hamiltonian 
+%
+\begin{equation}
+\label{xxx-ham}
+{\mathcal H}\equiv J\sum\limits_{i=1}^L\left[\frac{1}{2}(S_i^+S^-_{i+1} 
++S_i^{-}S_{i+1}^+)+S_i^zS_{i+1}^z-\frac{1}{4}\right].
+\end{equation}
+%
+Here $S^{\pm}_i\equiv (\sigma_i^x\pm i\sigma_i^y)/2$ are spin operators acting on the 
+site $i$, $S_i^z\equiv\sigma_i^z/2$, and $\sigma^{x,y,z}_i$ the Pauli matrices. We 
+fix $J=1$ in~\eref{xxx-ham} and use periodic boundary conditions, identifying sites 
+$L+1$ and $1$. The total magnetization $S_{T}^z\equiv\sum_iS_i^z=L/2-M$, with $M$ number 
+of down spins (particles), commutes with~\eref{xxx-ham}, and it is used to label its 
+eigenstates. The $XXX$ chain is Bethe ansatz solvable~\cite{bethe-1931} and its eigenstates 
+are in one-to-one correspondence with the solutions of the so-called Bethe equations 
+(see~\ref{sec:1.2}). We restrict ourselves to quenches from the zero-momentum N\'eel 
+state $|N\rangle$ and the Majumdar-Ghosh state $|MG\rangle$, which are defined as  
+%
+\begin{equation}
+\label{psi0}
+|N\rangle\equiv\Big(\frac{|N_1\rangle
++|N_2\rangle}{\sqrt{2}}\Big), \qquad 
+|MG\rangle\equiv \Big(\frac{|\uparrow\downarrow\rangle-|\downarrow\uparrow\rangle}
+{\sqrt{2}}\Big)^{\otimes L/2}. 
+\end{equation}
+%
+Here $|N_1\rangle\equiv |\uparrow\downarrow\rangle^{\otimes L/2}$, and $|N_2\rangle
+\equiv |\downarrow\uparrow\rangle^{\otimes L/2}$, with $\otimes$ denoting the tensor 
+product. Note that both $|N\rangle$ and $|MG\rangle$ are invariant under one site 
+translations. Our study relies on the analytical knowledge of the overlaps between 
+the N\'eel and Majumdar-Ghosh state and the eigenstates of~\eref{xxx-ham}~\cite{
+brockmann-2014,brockmann-2014a,brockmann-2014b,brockmann-2014c,pozsgay-2014a,
+piroli-2014}. 
+
+We first present a detailed overview of the distribution of the overlaps between 
+the initial states and the eigenstates of the model (overlap distribution function). 
+Precisely, we provide numerical results for all the overlaps for finite chains up 
+to $L\le 38$. Our results are obtained exploiting the analytical formulas 
+presented in Ref.~\cite{brockmann-2014} and~\cite{pozsgay-2014a}. Crucially, 
+we restrict ourselves to a truncated Hilbert space, considering only eigenstates 
+of~\eref{xxx-ham} that do not contain zero-momentum strings. Physically, 
+zero-momentum strings correspond to eigenstates amplitudes containing multi-particle  
+bound states which are fully delocalized in the chain. From the Bethe ansatz perspective, 
+in the thermodynamic limit the presence of zero-momentum strings leads to fictitious 
+singularities in the overlap formulas. Dealing with these singularities is 
+a formidable task that requires detailed knowledge of the solutions of the 
+Bethe equations, and it can be done only in very simple cases, e.g., for small 
+chains. On the other hand, it has been argued that zero-momentum strings are irrelevant 
+in the thermodynamic limtit~\cite{brockmann-2014a}. 
+
+For a finite chain here we find that for both the N\'eel and the Majumdar-Ghosh 
+cases, the fraction of eigenstates that do not contain zero-momentum strings 
+is vanishing in the thermodynamic limit, meaning that for finite large-enough 
+systems the vast majority of the eigenstates contain zero momentum strings. Specifically, 
+the total number of eigenstates without zero-momentum strings is given in terms of the 
+chain size $L$ by simple combinatorial formulas that we provide. We investigate the 
+effect of the Hilbert space truncation on the diagonal ensemble focusing on the  
+sum rules $\langle Q_j\rangle_{DE}=\langle\Psi_0|Q_j|\Psi_0\rangle$ for the conserved 
+quantities $Q_j$. We numerically demonstrate that truncating the diagonal ensemble to 
+eigenstates with no zero-momentum strings leads to striking violations of the sum 
+rules. Precisely, we numerically observe that the truncated diagonal ensemble 
+average $\langle Q_j\rangle$ vanish in the thermodynamic limit reflecting the 
+vanishing behavior of the fraction of finite-momentum strings eigenstates. 
+This allows us to conclude that for finite chaings eigenstates corresponding 
+to zero-momentum strings cannot be trivially neglected when considering 
+diagonal ensemble averages. 
+
+However, we provide numerical evidence that the correct diagonal ensemble 
+sum rules can be recovered in the thermodynamic limit by appropriately 
+reweighting the contribution of the finite-momentum strings eigenstates.  
+We focus only on the situation with the N\'eel state (cf.~\eref{psi0}) as 
+initial state. The key idea is to sample the eigenstates with no zero-momentum 
+strings with the diagonal ensemble probability measure $\rho^{DE}$ (cf.~\eref{de1}). 
+To this purpose we develop a Monte Carlo scheme, which is a generalization of 
+the approach presented in Ref.~\cite{alba-2015} to simulate the Generalize 
+Gibbs Ensemble. The method is based on the knowledge of the N\'eel overlaps 
+$\langle\lambda|N\rangle$ and on the knowledge of the Hilbert space structure 
+of the $XXX$ chain in the Bethe ansatz formalism. The approach allowed us to 
+simulate effectively chain with $L\lesssim 60$, although larger systems 
+sizes can in principle be reached. 
+
+Strikingly, although for small chains violations of the conserved quantities 
+sum rules are present, these violations vanish in the thermodynamic limit 
+and the sum rules are restored. This implies that the only effect of the 
+Hilbert space truncation is to introduce scaling corrections. In the quench 
+action language, this means that the eigenstates corresponding to no 
+zero-momentum strings contain enough physical information about saddle point. 
+This is numerically confirmed by extracting the so-called saddle point 
+root distributions, which in the Bethe ansatz language fully characterize 
+the diagonal ensemble averages in the thermodynamic limit. In the numerical  
+ approach these are obtained from the histograms of the Bethe ansatz 
+solutions sampled during the Monte Carlo. A part from finite size scaling 
+corrections, we observe striking agreement with analytical results, at least 
+for the first few root distributions. 
 
 
-Here we provide a Monte Carlo implementation of the quench action approach in the 
-finite-size spin-$1/2$ Heisenberg chain ($XXX$ chain). combining Monte Carlo methods and Bethe ansatz techniques. 
 
-We focus on the situation in which the pre-quench initial state is the Neel 
-state or the Majumdar-Ghosh state. 
 
-We investigate the importance of the zero-momentum strings in the Quench Action. 
 
-Without zero-momentum strings the overlap saturation rules are not valid, 
-i.e., in finite size systems the vast majority of the eigenstates contain 
-zero momentum strings. 
-
-The details on the eigenstates counting depend on the pre-quench initial state. 
-
-However, we show that one can restrict to the set of non-zero momentum strings. 
-The fact that one neglects zero-momentum strings gives rise only to scaling 
-corrections. 
-
-We also investigate the validity of the Bethe-Takahashi approximation for the 
-calculation of the overlap. 
 
 %It is useful to rewrite~\eref{d-ensemble} as 
 %
@@ -213,26 +280,23 @@ calculation of the overlap.
 %Here $\rho^{DE}(\alpha)$ is a diagonal ensemble density matrix, and ${\mathcal E}(\alpha)
 %\equiv-\log\langle\alpha|\Psi_0\rangle$, with $\Re$ denoting the real part. 
 
-The N\'eel state is defined as 
+%The N\'eel state is defined as 
 %
-\begin{equation}
-\label{neel}
-|N\rangle\equiv\frac{1}{\sqrt{2}}\big(|N_1\rangle
-+|N_2\rangle\big), 
-\end{equation}
+%\begin{equation}
+%\label{neel}
+%|N\rangle\equiv\frac{1}{\sqrt{2}}\big(|N_1\rangle
+%+|N_2\rangle\big), 
+%\end{equation}
 %
-with $|N_1\rangle\equiv |\uparrow\downarrow\rangle^{\otimes L/2}$, and $|N_2\rangle\equiv 
-|\downarrow\uparrow\rangle^{\otimes L/2}$. Note that $|N_1\rangle=\hat T|N_2\rangle$, 
-with $\hat T$ the one-site shift operator. 
 
 
-The Majumdar-Ghosh state $|MG\rangle$ is defined as 
+%The Majumdar-Ghosh state $|MG\rangle$ is defined as 
 %
-\begin{equation}
-\label{mg}
-|MG\rangle\equiv \Big(\frac{|\uparrow\downarrow\rangle-|\downarrow\uparrow\rangle}
-{\sqrt{2}}\Big)^{\otimes L/2}. 
-\end{equation}
+%\begin{equation}
+%\label{mg}
+%|MG\rangle\equiv \Big(\frac{|\uparrow\downarrow\rangle-|\downarrow\uparrow\rangle}
+%{\sqrt{2}}\Big)^{\otimes L/2}. 
+%\end{equation}
 %
 
 %%%%%%%%%%%%%%%%%%%%%%% BETHE ANSATZ FOR THE XXX CHAIN %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -240,9 +304,9 @@ The Majumdar-Ghosh state $|MG\rangle$ is defined as
 \label{sec:1}
 
 Here we review some Bethe ansatz results for the spin-$\frac{1}{2}$ Heisenberg 
-($XXX$) chain. Specifically, in section~\ref{sec:1.1} we introduce the model. 
-Its eigenstates (Bethe states) and the Bethe equations are discussed in 
-section~\ref{sec:1.2}. Section~\ref{sec:1.3} focuses on the string hypothesis 
+($XXX$) chain. Specifically, in section~\ref{sec:1.2} discuss the structure of  
+its eigenstates (Bethe states) and the associated Bethe equations. 
+Section~\ref{sec:1.3} focuses on the string hypothesis 
 and the so-called Bethe-Gaudin-Takahashi (BGT) equations. The form of the 
 BGT equations in the thermodynamic limit is discussed in section~\ref{sec:1.4}. 
 Finally, in section~\ref{sec:1.5} we provide the exact formulas for the 
@@ -250,23 +314,9 @@ local conserved charges of the model.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{The spin-$\frac{1}{2}$ Heisenberg chain}
-\label{sec:1.1}
+%\subsection{The spin-$\frac{1}{2}$ Heisenberg chain}
+%\label{sec:1.1}
 
-The spin-$\frac{1}{2}$ isotropic Heisenberg chain ($XXX$ chain) with $L$ sites 
-is defined by the Hamiltonian 
-%
-\begin{equation}
-\label{xxx-ham}
-{\mathcal H}\equiv J\sum\limits_{i=1}^L\left[\frac{1}{2}(S_i^+S^-_{i+1} 
-+S_i^{-}S_{i+1}^+)+S_i^zS_{i+1}^z-\frac{1}{4}\right],  
-\end{equation}
-%
-where $S^{\pm}_i\equiv (\sigma_i^x\pm i\sigma_i^y)/2$ are spin operators acting on the 
-site $i$, $S_i^z\equiv\sigma_i^z/2$, and $\sigma^{x,y,z}_i$ the Pauli matrices. Here we 
-fix $J=1$ and use periodic boundary conditions, identifying sites $L+1$ and $1$. The 
-total magnetization $S_{T}^z\equiv\sum_iS_i^z=L/2-M$, with $M$ number of down spins 
-(particles), commutes with~\eref{xxx-ham}, and it is used to label its eigenstates. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -734,6 +784,7 @@ This implies that
 However, it is straightforward to check that  
 %
 \begin{equation}
+\label{wrong}
 \prod_{j=1}^{n/2}\frac{\sqrt{\lambda_j^2+1}}{4\lambda_j}\propto\sqrt{\delta_n^{n/2}}.
 \end{equation}
 %
@@ -755,11 +806,13 @@ Note that the product above is over all the string components.
 For a single string one gets 
 %
 \begin{equation}
+\label{wrong1}
 \prod\limits_{j=1}^n\frac{1}{2}
 \Big(1-\frac{\lambda_j-i}{\lambda_j+i}\Big)\propto\frac{1}{\delta_n^{n/2}}.
 \end{equation}
 %
-Putting everything together one would get a diverging MG overlap which is clearly wrong. 
+Putting everything together (\eref{wrong} and~\eref{wrong1}) one would get a 
+diverging MG overlap, which is clearly impossible. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Overlap with the Majumdar-Ghosh state}
