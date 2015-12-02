@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.10.16)  29 OCT 2015 13:11
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2015.10.16)  23 NOV 2015 11:55
 entering extended mode
  %&-line parsing enabled.
 **fs_qa_v5.tex
@@ -587,11 +587,11 @@ File: ./draft_figs/Neel.pdf Graphic file (type pdf)
 File: ./draft_figs/Dimer.pdf Graphic file (type pdf)
 
 <use ./draft_figs/Dimer.pdf> [16 <./draft_figs/Dimer.pdf>] [17] [18]
-<./draft_figs/QAMC_Obs_Neel.pdf, id=483, 791.95876pt x 328.22626pt>
+<./draft_figs/QAMC_Obs_Neel.pdf, id=483, 734.745pt x 335.2525pt>
 File: ./draft_figs/QAMC_Obs_Neel.pdf Graphic file (type pdf)
 
 <use ./draft_figs/QAMC_Obs_Neel.pdf> [19 <./draft_figs/QAMC_Obs_Neel.pdf>]
-<./draft_figs/Neel_rho.pdf, id=510, 1283.79625pt x 578.16pt>
+<./draft_figs/Neel_rho.pdf, id=508, 1283.79625pt x 578.16pt>
 File: ./draft_figs/Neel_rho.pdf Graphic file (type pdf)
 
 <use ./draft_figs/Neel_rho.pdf> [20] [21 <./draft_figs/Neel_rho.pdf>]
@@ -611,7 +611,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./draft_figs/L20_BT_check.pdf, id=647, 791.95876pt x 335.2525pt>
+<./draft_figs/L20_BT_check.pdf, id=645, 791.95876pt x 335.2525pt>
 File: ./draft_figs/L20_BT_check.pdf Graphic file (type pdf)
 
 <use ./draft_figs/L20_BT_check.pdf>
@@ -651,7 +651,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  7986 strings out of 256214
  117695 string characters out of 1916999
- 216480 words of memory out of 1500000
+ 216477 words of memory out of 1500000
  10777 multiletter control sequences out of 10000+200000
  18528 words of font info for 70 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
@@ -671,9 +671,9 @@ fb></usr/share/texmf/fonts/type1/bluesky/cm/cmti10.pfb></usr/share/texmf/fonts/
 type1/bluesky/cm/cmti12.pfb></usr/share/texmf/fonts/type1/public/cmex/fmex8.pfb
 ></usr/share/texmf/fonts/type1/bluesky/ams/msam10.pfb></usr/share/texmf/fonts/t
 ype1/bluesky/ams/msbm10.pfb>
-Output written on fs_qa_v5.pdf (32 pages, 678503 bytes).
+Output written on fs_qa_v5.pdf (32 pages, 676153 bytes).
 PDF statistics:
- 846 PDF objects out of 1000 (max. 8388607)
+ 844 PDF objects out of 1000 (max. 8388607)
  244 named destinations out of 1000 (max. 131072)
  47 words of extra memory for PDF output out of 10000 (max. 10000000)
 
