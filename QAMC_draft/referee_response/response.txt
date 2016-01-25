@@ -1,0 +1,310 @@
+
+Dear editor,
+
+We are submitting a revised version of our manuscript "The quench action approach 
+in finite integrable spin chains" in which we address all the points raised 
+by the referee. 
+
+
+Sincerely,
+
+Vincenzo Alba
+Pasquale Calabrese
+
+---------------------------------------------------------------------
+RESPONSE TO THE REFEREE
+---------------------------------------------------------------------
+
+
+REFEREE:
+
+This paper represents a numerical implementation of the quench action approach,
+introduced in [Phys. Rev. Lett. 110, 257203 (2013)], and in particular
+addresses some questions raised in [J. Stat. Mech. (2014) P05004, Phys.
+Rev. Lett. 113, 117202 (2014), J. Stat. Mech. (2014) P12009], concerning
+the applicability of the method to interacting integrable models (where the
+scattering matrix allows for the creation of bound states). These questions
+are answered in full details and the developed numerical algorithm can be
+generalized to other studies of the XXZ model in- and out-of-equilibrium.
+
+
+RESPONSE: 
+
+	We thank the referee for the appreciating our work and for the positive 
+	evaluation. 
+
+REFEREE: 
+
+	Abstract: There is probably a typo: ”charged” should indeed be ”charges”.
+
+RESPONSE:
+
+	We corrected the typo in the new version of the manuscript.
+
+REFEREE:
+
+	After formula 2: mutually conserved charges may be replaced with
+	”mutually conserved local (and quasi-local) charges” which are the only
+	one relevant for the application of the GGE logic.
+
+RESPONSE:
+
+	We modified the sentence according to the referee suggestion. 
+
+
+REFEREE:
+
+	Page 4 : ” Physically, zero-momentum strings correspond to eigenstates
+	amplitudes containing multi-particle bound states which are fully delocalized
+	in the chain”. All the strings in each eigenstate are fully delocalized
+	being eigenstate of the momentum operator. One may say that
+	the zero momentum ones correspond to bound states of spins with zero
+	propagation velocity (the post-quench light-cone velocity associated to
+	them is zero).
+
+RESPONSE:
+
+	We thank the referee for the useful suggestion. We rephrased the sentence 
+	in the new version of the manuscript to meet the referee suggestion. 
+
+REFEREE:
+
+	Page 6 : ”the string deviations, which typically, i.e., for most of the
+	chain eigenstates, vanish exponentially with L in the thermodynamic
+	limit”. One may add that the complications arise when this condition
+	is not valid, namely for zero momentum strings, when the deviation
+	decay as power laws.
+
+RESPONSE:
+
+	We would like to thank the referee for the useful suggestion. We now 
+	mention in the manuscript that zero-momentum strings exhibit deviations 
+	which decay with a power law. 
+
+REFEREE:
+
+	Page 8 : the observable ${\mathcal O}$ in formula 20 must be local for its matrix
+	elements to be described by only a set of macroscopic distributions.
+
+RESPONSE:
+
+	We now rephrased the sentence as 
+
+		Moreover, for all the local observables ${\mathcal O}$ (the ones considered here)
+		the contribution of the ...
+
+	to stress the importance of the locality or quasilocality of ${\mathcal O}$
+
+REFEREE:
+
+	Formula 21: please define B (it is indeed defined later but here
+	appears for the first time).
+
+RESPONSE:
+
+	We now define the Newton binomial after formula 21. 
+
+
+REFEREE:
+
+	Formula 57: better use the same notation as in the determinant for the 
+	string centers ($\lambda_{n;j}) since j is already used for the complex 
+	rapidities)
+
+RESPONSE:
+
+	We modified the notation as suggested by the referee in formula 57 and 
+	formula 59 as well. 
+
+REFEREE:
+
+	After formula 71: One may comment that the vanishing of the overlaps
+	with zero momentum even strings is related to the conservation laws
+	of quasi-local charges [Phys. Rev. Lett. 115, 157201 (2015)]
+
+RESPONSE:
+
+	We now added the sentence after formula 71 as 
+
+		"This is because parity-invariant eigenstates with a single zero-momentum even-length ^M
+		string, which are included in~\eref{zNeel1}, have identically zero N\'eel ^M
+		overlap~\cite{brockmann-2014}. This is not related to the symmetries of the N\'eel ^M
+		state, but to an ``accidental'' vanishing of the prefactor in the overlap ^M
+		formula~\eref{Neel-ov}. In particular, this is related to the conservation of quasi-local
+		charges~\cite{ilievski-2015a}."		
+
+
+	to mention the relationship between vanishing of the overlaps with zero-momentum strings 
+	and conservation of quasi-local charges. 
+
+
+REFEREE:
+
+	section 5.2 contains repetitions and numerous overlaps with section 2.4,
+	maybe a rearrangement of the content of the two sections is necessary?
+
+RESPONSE:
+
+	We understand the point of the referee. However, we believe that having 
+	section 5.2 somehow self-contained could be useful to the readers who are 
+	numerically oriented and not interested in the Bethe ansatz details 
+	of the result. Therefore, we would prefer, if the referee does not have 
+	further objections, to keep section 5.2 as it is. 
+
+REFEREE:
+
+	Monte Carlo algorithm: The authors may explain why one cannot simply
+	restrict to the sector with N1 = 0 and then re-weight the whole
+	sum. Indeed in reference [Phys. Rev. Lett. 110, 257203 (2013)] the
+	representative state was chosen to have N1 = 0, as it was for the
+	amount of zero momentum strings, therefore the logic should work in
+	the same way.
+
+RESPONSE:
+
+	We thank the referee for this useful comment. We agree with the referee 
+	that it should be possible to obtain the same results restricting to 
+	the sector with N1=0. However, in our work we tried to present a numerical 
+	procedure that was as general as possible. In doing so we decided to 
+	include in our treatment all the spin sectors, including N1\ne0. The fact 
+	that only N1=0 is the only relevant one in the thermodynamic limit 
+	is not a necessary ingredient of the algorithm. Moreover, restricting to 
+	N1=0 should not provide a significant improvement of the method as 
+	the majority of the eigenstates of the XXX chain are in the sector with 
+	N1=0; 
+
+REFEREE:
+
+	Also would be very nice to have a plot of convergence of the Monte
+	Carlo as a function of the Nsteps. One would expect that for larger
+	system sizes the number of steps required is smaller if the initial state
+	is chosen to be very close to the representative state. How the initial
+	state of the algorithm is chosen? Did the authors try to select a proper
+	discretization of the thermodynamic saddle point state ? (as done for
+	example in [Phys. Rev. A 89, 033605 (2014), J. Phys. A: Math. Theor.
+	48, 43FT01 (2015)])
+
+
+RESPONSE:
+
+	We thank the referee for raising these very important points. First, 
+	the chosen initial state is not, in principle, important for the method. 
+	The eigenstates sampled at large Monte Carlo times should not be affected 
+	by the choice of the initial state. Of course a careful choice of the  
+	initial state could could speed up the equilibration of the Monte Carlo. 
+	However, we did not perform a sistematic study of that, and for simplicity, 
+	we started the Monte Carlo simulations from the ground state of the XXX 
+	chain. 
+
+	Regarding the possibility of using as initial state the discretization of 
+	the saddle point state, this could certainly provide a way to improve 
+	the algorithm. However, in our study we preferred not to exploit this 
+	possibility in order to provide an unbiased benchmark of our numerical 
+	method. 
+
+	Finally, regarding the convergence of the Monte Carlo procedure as a 
+	function of the number of Monte Carlo steps, the behavior is more 
+	complicated than the one described by the referee. First, in our Metropolis 
+	step (formula (82) in the manuscript) we chose the proposed new eigenstate 
+	|\lambda_j'\rangle completely random. This implies that in general 
+	one has 
+
+		Re(\epilon'-\epsilon) \sim O(L) 
+
+	In turn this implies that if an eigenstate |\lambda_j\rangle corresponds to a 
+	local minimum (not the global  one) it can be ''difficult'' for 
+	the algorithm to get to a different eigenstate, because the Metropolis 
+	transition probability decays exponentially as the system size increases. 
+
+	The main consequence is that at fixed number of Monte Carlo steps 
+	the error bar increases dramatically upon increasing chain size. This is the 
+	reason why we provide only results for L\le 60. 
+
+	This problem could be solved by changing the update scheme. The key idea would 
+	be to provide in the Metropolis step a proposed new eigenstate |\lambda_j'
+	\rangle such that
+
+		\epsilon'-\epsilon \sim O(1)
+
+	This can be clearly achieved if the Bethe number configuration corresponding to 
+	|\lambda'_j\rangle are obtained from that of |\lambda_j\rangle by change only 
+	``few'' Bethe numbers. 
+
+	However, the non triviality of the string content of the generic eigenstates 
+	of the XXX chain, makes the implementation of this tricky, and we decided no to 
+	do that in the present version of the code. 
+
+REFEREE:
+
+	Formula 84 is generically wrong since a generic observable is a more
+	involved function of the different string contents of the state (i.e. a
+	determinant) and not simply a sum (which is true for the local and
+	quasi-local conserved quantities). The authors should then rephrase
+	then this point. 
+
+RESPONSE: 
+
+	We agree with the referee about this point. Below formula 84 we now added 
+	the sentence 
+
+		"We should stress again that~\eref{ref-form} is true only
+		for local or quasi-local observables, while generic observables are more complicated
+		functions of the rapidities." 
+
+	to stress the importance of locality (and quasi-locality). 
+
+
+REFEREE: 
+
+	The authors should compute the expectation values of some simple
+	local operators assion for the matrix elements are
+	indeed well known (for example in arXiv:1108.6224).
+
+RESPONSE:
+
+	We thank the referee for this very useful comment. In fact, being able to calculate  
+	generic correlation functions, besides being interesting on its own, would also provide 
+	a more stringent check of the validity of the numerical method. However, 
+	the correlation function proposed by the referee corresponds to the local energy 
+	that we already provided in the manuscript. 
+
+	In order to benchmark our results for higher spins correlation functions we 
+	now include in Figure 5 Monte Carlo results for the fluctuations of the local energy 
+	density Q_2. Similar to Q4 this  corresponds to a four-spin opearator. 
+
+	We could also calculate higher spin correlation functions or some long range 
+	correalation functions using known results (similar to 	the one mentioned by the 
+	referee). However, this would imply a considerable numerical effort and we believe 
+	it goes beyond the scope of the present paper. 
+
+
+REFEREE:
+
+	Once implemented this last point, the ensemble of states created by the
+	Monte Carlo algorithm should be enough to reproduce the whole time
+	evolution after the quench with the logic of the quench action method
+	(see [Phys. Rev. Lett. 110, 257203 (2013), J. Phys. A: Math. Theor.
+	48, 43FT01 (2015)]). Can the authors comment on this?
+
+
+RESPONSE:
+
+	We thank the referee for raising this interesting point. We are in fact aware 
+	of the possibility of simulating the full time evolution after a quantum quench 
+	starting from the saddle point result. We believe that this would represent 
+	a breaktrhough and could provide valuable insights to improve for instance 
+	existing numerical methods such as tDMRG. We think that this would deserve a lot 
+	of attention on its own and we plan to address it in future work. 
+
+
+
+
+
+
+
+
+
+
+
+
+
